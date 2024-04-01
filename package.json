@@ -33,7 +33,7 @@
     "@storybook/addon-links": "^7.6.15",
     "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.15",
-    "@storybook/nextjs": "^7.6.15",
+    "@storybook/nextjs": "^8.0.5",
     "@storybook/react": "^7.6.15",
     "@storybook/test": "^7.6.15",
     "@types/jest": "^29.5.12",
