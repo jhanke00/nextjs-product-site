@@ -3,6 +3,7 @@ export type Item = {
   name: string;
   price: number;
   count: number;
+  time?: Date;
 };
 
 export type Order = {
@@ -10,4 +11,8 @@ export type Order = {
   items: Array<Item>;
   total: number;
   time: Date;
+};
+
+export type IOrderTable = {
+  order: Order;
 };
