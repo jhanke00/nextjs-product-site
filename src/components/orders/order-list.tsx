@@ -9,7 +9,7 @@ const OrderList = ({ orderList }: PropsType) => {
   return (
     <div className='flex flex-1 flex-col'>
       {orderList.map((order) => (
-        <div className='flex flex-1 flex-col p-8'>
+        <div key={order.id} className='flex flex-1 flex-col p-8'>
           <p className='text-2xl text-center p-8'>Product: {order.name}</p>
           <div className='flex justify-around'>
             <p>Order Id: {order.id}</p>
