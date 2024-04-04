@@ -15,7 +15,7 @@ Navigate to `/users`  see the list of users available.
 # User Specific Order Details Single Page(`/users/[userId]`)
 
 - Single Page for complete list of Order Details by a specific user:
-  Introduced a feature that offers all the order details associated with a user. On selection of any user from the previous page list, the user is taken to a new page where all the orders asscciated with the user will be listed. Specifications including order id, order name, Quantity ordered and Price is displayed. An extra column with the total price for each order is also shown for smooth experience of total calculation.
+  Introduced a feature that offers all the order details associated with a user. On selection of any user from the previous page list, the user is taken to a new page where all the orders asscciated with the user will be listed. Specifications including order id, order name, Quantity ordered and Price is displayed. An extra column with the total price for each order is also shown for smooth experience of total calculation. If there are no orders done by selected user, an appropriate message is shown to indicate no orders.
 
   The total expense by the user on all orders is also displayed on the top.
   To take in consideration of large amount of data(if there are), a loader message is added till the page gets populated with all the order details for a user.
