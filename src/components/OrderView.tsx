@@ -2,6 +2,7 @@ import React from 'react';
 import { Order } from '../../src/type/orders';
 import { User } from '../../src/type/users';
 import Link from 'next/link';
+import '../styles/styles.css';
 
 interface OrderViewProps {
   orders: Order[];
@@ -15,48 +16,9 @@ const OrderView: React.FC<OrderViewProps> = ({ orders, user }) => {
 
   return (
     <>
-      <style jsx>{`
-        table {
-          width: 100%;
-          border-collapse: collapse;
-          margin-bottom: 20px;
-        }
-        th,
-        td {
-          border: 1px solid #dddddd;
-          padding: 8px;
-          text-align: left;
-        }
-        th {
-          background-color: #3498db;
-          border: 1px solid #dddddd;
-          padding: 8px;
-          text-align: left;
-          color: white;
-        }
-        .total {
-          font-weight: 900;
-          color: green;
-        }
-        button {
-          border: none;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 14px;
-          margin: 4px 2px;
-          border-radius: 4px;
-          background-image: none;
-          background-color: transparent;
-          text-transform: none;
-          color: black;
-          cursor: pointer;
-        }
-      `}</style>
       <div className='userNav' style={{ float: 'right' }}>
         <Link href='/users'>
-          <button>Back to User&#39;s List</button>
+          <button style={{ width: '100%' }}>Back to User&#39;s List</button>
         </Link>
       </div>
       <h2>User Details</h2>
@@ -81,11 +43,13 @@ const OrderView: React.FC<OrderViewProps> = ({ orders, user }) => {
       </div>
       <div className='total'>Overall Total Spent by User: {totalSpent}</div>
       <h2>Order&#39;s Details </h2>
-      <table>
+      <table style={{ width: '100%' }}>
         <thead>
           <tr>
             {TABLE_HEAD.map((head, index) => (
-              <th key={index}>{head}</th>
+              <th className='noOfOrders' key={index}>
+                {head}
+              </th>
             ))}
           </tr>
         </thead>
@@ -102,14 +66,14 @@ const OrderView: React.FC<OrderViewProps> = ({ orders, user }) => {
               ))}
               <tr>
                 <td></td>
-                <th>Sub Total</th>
+                <th className='noOfOrders'>Sub Total</th>
                 <td colSpan={3} style={{ fontWeight: 'bold' }}>
                   {order.total}
                 </td>
               </tr>
               <tr>
                 <td></td>
-                <th>Purchase Date</th>
+                <th className='noOfOrders'>Purchase Date</th>
                 <td colSpan={3} style={{ fontWeight: 'bold' }}>
                   {new Date(order.time).toISOString().slice(0, 10)}
                 </td>

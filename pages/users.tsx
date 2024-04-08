@@ -1,6 +1,7 @@
 import usersMockData from '../src/mock/large/users.json';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import '../src/styles/styles.css';
 
 const PAGE_SIZE = 10;
 
@@ -25,46 +26,6 @@ const Users = () => {
 
   return (
     <>
-      <style jsx>{`
-        table {
-          width: 60%;
-          border-collapse: collapse;
-          margin-bottom: 20px;
-        }
-        th,
-        td {
-          border: 1px solid #dddddd;
-          padding: 8px;
-          text-align: left;
-        }
-        th {
-          background-color: #f2f2f2;
-          border: 1px solid #dddddd;
-          padding: 8px;
-          text-align: left;
-        }
-        button {
-          border: none;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 14px;
-          margin: 4px 2px;
-          border-radius: 4px;
-          width: 38%;
-          background-image: none;
-          background-color: transparent;
-          text-transform: none;
-          color: black;
-          cursor: pointer;
-        }
-        .pagination {
-          justify-content: center;
-          display: flex;
-          align-items: center;
-        }
-      `}</style>
       <h1 style={{ textAlign: 'center' }}>User&#39;s List</h1>
       <table align='center'>
         <thead>
@@ -80,7 +41,7 @@ const Users = () => {
                 {user.firstName} {user.lastName}
               </td>
               <td>
-                <Link href={`orders?userId=${user.id}`}>View Orders</Link>
+                <Link href={`orders/${user.id}`}>View Orders</Link>
               </td>
             </tr>
           ))}

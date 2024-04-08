@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import OrderView from '../src/components/OrderView';
-import ordersMockData from '../src/mock/large/orders.json';
-import usersMockData from '../src/mock/large/users.json';
-import { Order, Item } from '../src/type/orders';
-import { User } from '../src/type/users';
+import OrderView from '../../../src/components/OrderView';
+import ordersMockData from '../../../src/mock/large/orders.json';
+import usersMockData from '../../../src/mock/large/users.json';
+import { Order, Item } from '../../../src/type/orders';
+import { User } from '../../../src/type/users';
 
-const Orders = () => {
+const OrderPage = () => {
   const router = useRouter();
   const { userId } = router.query;
   const [userOrders, setUserOrders] = useState<Order[]>([]);
@@ -32,4 +32,4 @@ const Orders = () => {
   );
 };
 
-export default Orders;
+export default OrderPage;
