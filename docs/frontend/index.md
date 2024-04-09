@@ -23,18 +23,12 @@ Documentation on any Frontend capabilities or changes made.
 - `src/mock/small/products-new.json` - Mock JSON for Prodcut list
 - `src/mock/large/products-new.json` - Mock JSON for Prodcut list
 
-
-
-
 # Orders Listing Page
 
 - Displaying All Orders for Logged in User from Mock Data:
   We have implemented a feature that enables the display of all Orders available in our mock data for logged user. Users can now easily browse through the entire Order and ordered item details (name, price and count)
 
   user id and user total amount spent will appear on the top of list .
-
-
-
 
 ## Folder Structure
 
