@@ -1,3 +1,5 @@
+
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Image from 'next/image';
 
 export default function Home() {

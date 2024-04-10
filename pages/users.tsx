@@ -1,7 +1,9 @@
+
 import usersMockData from '../src/mock/large/users.json';
-import { useState, useEffect, SetStateAction } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import UserOrders from './orders';
+import '../app/globals.css';
 
 const PAGE_SIZE = 10;
 
@@ -29,31 +31,23 @@ const Users = () => {
   }, [currentPage]);
 
   return (
-    <main className='flex min-h-screen flex-col items-center p-24'>
-      <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex'>
-        <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-2 lg:text-left'>
+    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+    <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm'>
+
           {user ? (
             <UserOrders user={user} />
           ) : (
             <div>
-              <h1 style={{ textAlign: 'center' }}>Users</h1>
-
-              <div className='list-group list-group-horizontal'>
+              <h1 className='mb-2 text-center font-bold'>Users</h1>
+              <div className='row list-group list-group-horizontal' aria-current='true'>
                 {usersData.map((user) => (
-                  <div className='list-group-item  row  col-12 d-inline' aria-current='true' key={user.id}>
-                    <div className='mb-1 col-6 m-0 max-w-[30ch]'>
-                      {' '}
-                      <h5 className='mb-1 col-6 m-0 max-w-[30ch]'>
+                  <div className='grid grid-rows-2 grid-flow-col gap-2' aria-current='true' key={user.id}>
+                      <h5 className='row-span-3'>
                         {user.firstName} {user.lastName}
                       </h5>
-                    </div>
-                    <div className='col-6 justify-content-end'>
-                      <button onClick={() => showOrders(user)}>View Orders</button>
-                    </div>
+                      <button  type='button' className='row-span-3 bg-white border border-gray-300 rounded-lg text-sm px-5 py-2.5 me-2 mb-2' onClick={() => showOrders(user)}>View Orders</button>
                   </div>
-                ))}
-              </div>
-
+                ))}</div>
               <div className='pagination'>
                 <button onClick={prevPage} disabled={currentPage === 1}>
                   Previous
@@ -67,9 +61,8 @@ const Users = () => {
               </div>
             </div>
           )}
-        </div>
-      </div>
-    </main>
+          </div>
+        </main>
   );
 };
 
