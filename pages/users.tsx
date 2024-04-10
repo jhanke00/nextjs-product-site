@@ -38,7 +38,7 @@ const Users = () => {
             <UserOrders user={user} />
           ) : (
             <div>
-              <h1 className='mb-2 text-center font-bold'>Users</h1>
+              <h1 className='mb-3 ml-4 text-2xl font-semibold text-left'>Users</h1>
               <div className='row list-group list-group-horizontal' aria-current='true'>
                 {usersData.map((user) => (
                   <div className='grid grid-rows-2 grid-flow-col gap-2' aria-current='true' key={user.id}>
