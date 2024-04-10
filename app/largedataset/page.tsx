@@ -1,45 +1,70 @@
 'use client';
-import React, { useState } from 'react';
-import largeData from '@/src/mock/large/products.json';
+import smallData from '@/src/mock/large/users.json';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-export default function Searchbar() {
-  const data = [...largeData];
-  const itemList = data.map((product) => product);
-  console.log(itemList);
-  const [filteredList, setFilteredList] = useState(itemList);
+const PAGE_SIZE = 20;
 
-  const filterBySearch = (event) => {
-    const query = event.target.value;
-    var updatedList = [...itemList];
-    updatedList = updatedList.filter((item) => {
-      return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-    });
-    setFilteredList(updatedList);
+export default function Products() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const data = [...smallData];
+  const startIndex = (currentPage - 1) * PAGE_SIZE;
+  const endIndex = startIndex + PAGE_SIZE;
+  const userData = data.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(data.length / PAGE_SIZE);
+
+  const nextPage = () => {
+    setCurrentPage(currentPage + 1);
   };
 
+  const prevPage = () => {
+    setCurrentPage(currentPage - 1);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
   return (
-    <div className='search-text'>
+    <main className='flex min-h-screen flex-col items-center p-24'>
       <div className='left-0 top-0 w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-2 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30'>
         <p>Acceptance Criteria</p>
         <p>I need an endpoint that returns my user information</p>
         <p>I need an endpoint that returns all of my user's orders if there are any</p>
         <p>I need an endpoint that returns how much the user has spent on orders</p>
       </div>
-      <div style={{ textAlign: 'center' }}>
-        Search: <input id='search-box' onChange={filterBySearch} />
+      <table>
+        <tbody>
+          <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>PhoneNo</th>
+            <th>Email</th>
+            <th>View Orders</th>
+          </tr>
+          {userData.map((user) => (
+            <tr key={user.id}>
+              <td className={`m-0 max-w-[30ch] text-sm opacity-50`}> {user.firstName}</td>
+              <td className={`m-0 max-w-[30ch] text-sm opacity-50`}> {user.lastName}</td>
+              <td className={`m-0 max-w-[30ch] text-sm opacity-50`}> {user.phoneNumber}</td>
+              <td className={`m-0 max-w-[30ch] text-sm opacity-50`}> {user.email}</td>
+              <td>View Orders</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <div className='flex justify-around w-full border-t-2 pt-4'>
+        <button onClick={prevPage} disabled={currentPage === 1}>
+          Previous
+        </button>
+        <span>
+          Page {currentPage} of {totalPages}
+        </span>
+        <button onClick={nextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
       </div>
-      <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-3 lg:text-left'>
-        {filteredList.map((item) => (
-          <Link
-            href={`/products/${item.id}`}
-            className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
-          >
-            <h3 className={`mb-3 text-2xl font-semibold`}>{item.name}</h3>
-            <p>Click here to see product details</p>
-          </Link>
-        ))}
-      </div>
-    </div>
+    </main>
   );
 }
