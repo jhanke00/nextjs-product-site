@@ -99,18 +99,61 @@ export default function Home() {
         </a>
 
         <a
-          href='/products'
+          href='/users'
           className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
-            Example{' '}
+            Manage Users{' '}
             <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
               -&gt;
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            View example products page for this site.
+            [New Feature]: User API Endpoint for Small Dataset #14
           </p>
+        </a>
+
+        <a
+          href='/products'
+          className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Manage Product Small Dataset{' '}
+            <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
+            [New Feature]: Product API Endpoints for Small Dataset #8
+          </p>
+        </a>
+
+        <a
+          href='/largedataset'
+          className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Manage Product Large Dataset{' '}
+            <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
+            [New Feature]: User API Endpoints for Large Dataset #15
+          </p>
+        </a>
+
+        <a
+          href='/orders'
+          className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Manage Orders{' '}
+            <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>[New Feature]: User's Orders Page #16</p>
         </a>
       </div>
     </main>
