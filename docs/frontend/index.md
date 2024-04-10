@@ -33,7 +33,7 @@ Documentation on any Frontend capabilities or changes made.
 ## Folder Structure
 
 - `app/Orders/layout.tsx` - Order page layout
-- `app/Orders/page.tsx` - Order Main Page
-- `app/Orders/[productId]/page.tsx` - Page for the single page description
+- `pages/users.tsx` - user Main Page
+- `app/Orders.tsx` - Page for the order list for single user
 - `src/mock/small/Orders.json` - Mock JSON for Order list
 - `src/mock/large/Orders.json` - Mock JSON for Order list
