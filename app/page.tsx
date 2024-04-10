@@ -108,7 +108,9 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>View Users Information.</p>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
+            [New Feature]: User API Endpoint for Small Dataset #14
+          </p>
         </a>
 
         <a
@@ -121,7 +123,9 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>View Product Small Dataset</p>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
+            [New Feature]: Product API Endpoints for Small Dataset #8
+          </p>
         </a>
 
         <a
@@ -134,7 +138,9 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>View Product Large Dataset</p>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
+            [New Feature]: User API Endpoints for Large Dataset #15
+          </p>
         </a>
 
         <a
@@ -147,7 +153,7 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>View Order Details.</p>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>[New Feature]: User's Orders Page #16</p>
         </a>
       </div>
     </main>

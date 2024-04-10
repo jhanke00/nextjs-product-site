@@ -10,14 +10,29 @@ const userDetail = ({ params }: { params: { userId: string } }) => {
   }
 
   return (
-    <div className='flex min-h-screen flex-col p-24'>
-      <h1 className='text-2xl font-semibold'>User Detail :</h1>
-      <h3 className={`mb-3 text-2xl font-semibold`}>{user.firstName}</h3>
-      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Fistname: {user.firstName}</p>
-      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Lastname: {user.lastName}</p>
-      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Phone No: {user.phoneNumber}</p>
-      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Email: {user.email}</p>
-    </div>
+    <table className='flex min-h-screen flex-col p-24'>
+      <tbody>
+        <tr>
+          <th colSpan={2}>User Detail </th>
+        </tr>
+        <tr>
+          <th>Fistname</th>
+          <td>{user.firstName}</td>
+        </tr>
+        <tr>
+          <th>Lastname</th>
+          <td> {user.lastName}</td>
+        </tr>
+        <tr>
+          <th>Phone No</th>
+          <td> {user.phoneNumber}</td>
+        </tr>
+        <tr>
+          <th>Email: </th>
+          <td>{user.email}</td>
+        </tr>
+      </tbody>
+    </table>
   );
 };
 

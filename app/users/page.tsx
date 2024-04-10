@@ -28,16 +28,19 @@ export default function Products() {
   return (
     <main className='flex min-h-screen flex-col items-center p-24'>
       <div className='left-0 top-0 w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-2 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30'>
-        Manage User
+        <p>Acceptance Criteria</p>
+        <p>I need an endpoint that returns my user information</p>
+        <p>I need an endpoint that returns all of my user's orders if there are any</p>
+        <p>I need an endpoint that returns how much the user has spent on orders</p>
       </div>
       <table>
         <tbody>
           <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Phoneno</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>PhoneNo</th>
             <th>Email</th>
-            <th>ORDERS</th>
+            <th>View Orders</th>
           </tr>
           {userData.map((user) => (
             <tr key={user.id}>

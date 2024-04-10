@@ -10,22 +10,21 @@ export default function Searchbar() {
   const [filteredList, setFilteredList] = useState(itemList);
 
   const filterBySearch = (event) => {
-    // Access input value
     const query = event.target.value;
-    // Create copy of item list
     var updatedList = [...itemList];
-    // Include all elements which includes the search query
     updatedList = updatedList.filter((item) => {
       return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
     });
-    // Trigger render with updated values
     setFilteredList(updatedList);
   };
 
   return (
     <div className='search-text'>
       <div className='left-0 top-0 w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-2 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30'>
-        Product Details - Need an endpoint that serves the list of products that are available in the mock data
+        <p>Acceptance Criteria</p>
+        <p>I need an endpoint that returns my user information</p>
+        <p>I need an endpoint that returns all of my user's orders if there are any</p>
+        <p>I need an endpoint that returns how much the user has spent on orders</p>
       </div>
       <div style={{ textAlign: 'center' }}>
         Search: <input id='search-box' onChange={filterBySearch} />

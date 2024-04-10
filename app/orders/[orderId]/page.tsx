@@ -1,6 +1,4 @@
 'use client';
-//import React, { useState } from "react";
-//import largeData from '@/src/mock/large/orders.json';
 import smallData from '@/src/mock/small/orders.json';
 
 const productDetail = ({ params }: { params: { orderId: string } }) => {
@@ -25,27 +23,29 @@ const productDetail = ({ params }: { params: { orderId: string } }) => {
       </div>
       <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-3 lg:text-left'>
         <table>
-          <tr>
-            <th>Product Name</th>
-            <th>Count</th>
-            <th>Price</th>
-          </tr>
-          {product.items.map((item) => (
+          <tbody>
             <tr>
-              <td>{item.name}</td>
-              <td>{item.count}</td>
-              <td>{item.price}</td>
+              <th>Product Name</th>
+              <th>Count</th>
+              <th>Price</th>
             </tr>
-          ))}
-          <tr>
-            <td>
-              <b>Total Price</b>
-            </td>
-            <td>&nbsp;</td>
-            <td>
-              <b>{calculateTotal()}</b>
-            </td>
-          </tr>
+            {product.items.map((item) => (
+              <tr>
+                <td>{item.name}</td>
+                <td>{item.count}</td>
+                <td>{item.price}</td>
+              </tr>
+            ))}
+            <tr>
+              <td>
+                <b>Total Price</b>
+              </td>
+              <td>&nbsp;</td>
+              <td>
+                <b>{calculateTotal()}</b>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>

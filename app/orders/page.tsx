@@ -41,14 +41,10 @@ export default function Products() {
                   <tbody>
                     <tr>
                       <th>ProductName</th>
-                      <th>Count </th>
-                      <th>Price</th>{' '}
                     </tr>
                     {data.items.map((itemList) => (
                       <tr>
                         <td>{itemList.name}</td>
-                        <td>{itemList.count}</td>
-                        <td> {itemList.price}</td>
                       </tr>
                     ))}
                   </tbody>
