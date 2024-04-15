@@ -30,6 +30,19 @@ export default function ProductSearch() {
     // Alternatively, debouncing can be used.
   };
 
+  const handleButtonClick = async () => {
+    if (query.length >= 3) {
+      setCurrentPage(1);
+      const response = await fetch(
+        `/api/search?query=${query}&page=1&category=${category}&minPrice=${Number(minPrice)}&maxPrice=${Number(maxPrice)}&minReviews=${minReviews}&minRating=${minRating}`
+      );
+      const data = await response.json();
+      setResults(data);
+    } else {
+      setResults([]);
+    }
+  };
+
   const handlePages = async (pageNumber: number) => {
     const response = await fetch(
       `/api/search?query=${query}&page=${pageNumber}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}&minReviews=${minReviews}&minRating=${minRating}`
@@ -166,7 +179,7 @@ export default function ProductSearch() {
 
               <div className='w-full md:w-1/6 px-3 mb-6 md:mb-0 flex items-end'>
                 <button
-                  onClick={handleSearch}
+                  onClick={handleButtonClick}
                   value={query}
                   className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex-1'
                 >
