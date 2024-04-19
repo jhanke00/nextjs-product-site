@@ -33,12 +33,6 @@ The category is highlighted with a tag.
 
 The price is added to the bottom with a new button component for better user engagement.
 
-## Product Search API
-
-A new API is created to handle user search query requests. Instead of loading the mock data on every request to the frontend, I have created an API to serve only what is requested.
-
-The API sends only 15 results to not overload the network payload. Pagination feature is introduced to navigate easily for the requested data.
-
 ## Future Enhancements
 
 More functionalities can be implemented on the backend as well as on the frontend to optimize the solution even more which was not possible due to time constraint.
