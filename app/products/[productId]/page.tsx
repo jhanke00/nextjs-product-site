@@ -1,5 +1,5 @@
 import { getProductById } from '@/src/mock/products';
-import ProductComponent from '../product';
+import ProductComponent from '@/src/components/product';
 import { Product } from '@/src/type/products';
 
 const productDetail = ({ params }: { params: { productId: string } }) => {

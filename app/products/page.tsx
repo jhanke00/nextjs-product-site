@@ -3,7 +3,7 @@ import { Product } from '@/src/type/products';
 import { getProducts } from '@/src/mock/products';
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import ProductComponent from './product';
+import ProductComponent from '@/src/components/product';
 
 const PAGE_SIZE = 20;
 
