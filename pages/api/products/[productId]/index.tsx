@@ -15,7 +15,21 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       const oid = new ObjectId(_id);
 
       const product = await db.collection('products').findOne({ _id: oid });
-      res.json(product);
+      const orderCursor = db.collection('orders').find({ 'items._id': { $eq: oid } });
+      const orders = await orderCursor.limit(20).toArray();
+      let similarItems: ObjectId[] = [];
+      orders.forEach((o) => {
+        o.items.map((i: any) => {
+          if (i._id.toString() !== oid.toString()) similarItems.push(i._id);
+        });
+      });
+      const similarProducts = await db
+        .collection('products')
+        .find({ _id: { $in: similarItems } })
+        .limit(20)
+        .toArray();
+
+      res.json({ product, similarProducts });
     }
   } catch (e) {
     console.error(e);
