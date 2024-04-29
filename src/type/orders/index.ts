@@ -1,11 +1,10 @@
 export type Item = {
-  id: string;
-  name: string;
-  price: number;
+  _id: string;
   count: number;
 };
 
 export type Order = {
+  _id: string;
   user: string;
   items: Array<Item>;
   total: number;
