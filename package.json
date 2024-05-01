@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "@storybook/addon-essentials": "^7.6.15",
+    "@storybook/addon-essentials": "^8.0.9",
     "@storybook/addon-interactions": "^7.6.15",
     "@storybook/addon-links": "^7.6.15",
     "@storybook/addon-onboarding": "^1.0.11",
