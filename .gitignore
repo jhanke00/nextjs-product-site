@@ -31,3 +31,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# database data folders
+/knex/pgadmin
+/knex/postgres
+
+# local vscode settings
+/.vscode/settings.json
