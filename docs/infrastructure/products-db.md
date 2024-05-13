@@ -1,4 +1,5 @@
 # Purpose of Dockerfile
+
 The Dockerfile is included in the repository to facilitate the setup and deployment of the MongoDB database for the project. By defining the Dockerfile, we ensure consistency in the development, testing, and production environments. Docker allows us to package the MongoDB database along with its dependencies and configurations into a portable container, making it easy to deploy across different platforms.
 
 Why MongoDB?
@@ -14,8 +15,9 @@ Import Data: After creating the collections, the script imports data from JSON f
 By initializing the collections in this manner, we ensure that the MongoDB database is pre-populated with data required for development, testing, and demonstration purposes. This simplifies the setup process for developers and ensures consistency across environments.
 
 ### How to create the image and run it.
+
 From the project directory: docker build -t next-product-site-image -f infra/products/Dockerfile .
 Verify image has been created: docker images
 Run inside the container: docker run -d -p 27017:27017 --name mongodb-inside-container next-product-site-image
 
-access the running mongodb instance through mongodb://localhost:27017/next-product-site 
+access the running mongodb instance through mongodb://localhost:27017/next-product-site
