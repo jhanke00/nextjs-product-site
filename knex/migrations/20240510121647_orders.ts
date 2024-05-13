@@ -8,6 +8,9 @@ export async function up(knex: Knex): Promise<void> {
     table.timestamp('time');
 
     table.foreign('userId').references('users.userId');
+
+    table.index('userId', 'orders_user_index');
+    table.index('time', 'orders_time_index');
   });
 
   await knex.schema.createTable('order_products', (table) => {
@@ -18,6 +21,8 @@ export async function up(knex: Knex): Promise<void> {
     table.primary(['orderId', 'productId']);
     table.foreign('orderId').references('orders.orderId');
     table.foreign('productId').references('products.productId');
+
+    table.index(['orderId', 'productId'], 'order_products_primary_index');
   });
 }
 

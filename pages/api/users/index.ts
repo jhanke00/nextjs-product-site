@@ -6,23 +6,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const size = +(req.query.size ?? 20);
   const search = String(req.query.search || '');
 
-  if (page === 0 || size === 0) {
-    return res.status(400).json({ message: 'page and size must be greater than 0' });
-  }
-
   const knex = getKnex();
   const query = knex
-    .select('productId', 'name', 'price', 'description', 'category', 'rating', 'numReviews', 'countInStock')
-    .from('products')
-    .orderBy([{ column: 'productId', order: 'asc' }]);
+    .select('userId', 'firstName', 'lastName', 'email', 'phoneNumber')
+    .from('users')
+    .orderBy([
+      { column: 'firstName', order: 'asc' },
+      { column: 'lastName', order: 'asc' },
+    ]);
   if (search) {
     query
       .clearOrder()
-      .fromRaw(knex.raw('products, word_similarity(?, search) as score', search))
+      .fromRaw(knex.raw('users, word_similarity(?, search) as score', search))
       .whereRaw('? <% search', [search])
       .orderBy([
         { column: 'score', order: 'desc' },
-        { column: 'productId', order: 'asc' },
+        { column: 'firstName', order: 'asc' },
+        { column: 'lastName', order: 'asc' },
       ]);
   }
   const countQuery = knex.count('* as total').from(query.clone().offset(0)).first();
