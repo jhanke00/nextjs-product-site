@@ -13,8 +13,6 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky",
-    "generate-large-data": "node ./scripts/generateLargeData.js",
-    "generate-small-data": "node ./scripts/generateSmallData.js",
     "knex": "cross-env TS_NODE_PROJECT='./knex/tsconfig.knex.json' knex"
   },
   "engines": {
