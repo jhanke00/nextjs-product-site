@@ -1,12 +1,19 @@
-import largeData from '@/src/mock/large/products.json';
-import smallData from '@/src/mock/small/products.json';
+'use client';
+import { Product } from '@/src/type/products';
+import { useEffect, useState } from 'react';
 
-const productDetail = ({ params }: { params: { productId: string } }) => {
-  const data = [...largeData, ...smallData];
-  const product = data.find((item) => item.id === params.productId);
-  if (!product) {
-    return <p>Product not Found</p>;
-  }
+const ProductDetail = ({ params }: { params: { productId: string } }) => {
+  const [product, setProduct] = useState<Partial<Product>>({});
+
+  useEffect(() => {
+    fetch(`/api/products/${params.productId}`)
+      .then((res) => {
+        if (res.status !== 200) {
+        }
+        return res.json();
+      })
+      .then(setProduct);
+  }, [params.productId]);
 
   return (
     <div className='flex min-h-screen flex-col p-24'>
@@ -22,4 +29,4 @@ const productDetail = ({ params }: { params: { productId: string } }) => {
   );
 };
 
-export default productDetail;
+export default ProductDetail;

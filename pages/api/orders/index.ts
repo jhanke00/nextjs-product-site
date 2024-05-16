@@ -10,18 +10,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const knex = getKnex();
   const data = await knex
-    .select(
-      'o.orderId',
-      knex.raw(
-        "array_agg(json_object('productId': p.\"productId\", 'name': p.name, 'price': p.price, 'count': op.count)) as items"
-      ),
-      'o.total',
-      'o.time'
-    )
-    .from('orders as o')
-    .leftJoin('order_products as op', 'op.orderId', 'o.orderId')
-    .leftJoin('products as p', 'p.productId', 'op.productId')
-    .where({ userId })
+    .with('order_details', (qb) => {
+      qb.select('op.orderId', 'p.productId', 'p.name', knex.raw('??::text', 'p.price'), 'op.count')
+        .from('order_products as op')
+        .leftJoin('products as p', 'p.productId', 'op.productId');
+    })
+    .select('o.orderId', knex.raw("jsonb_agg(to_jsonb(od) - 'orderId') as items"), 'o.total', 'o.time')
+    .fromRaw(knex.raw('orders as o, order_details od'))
+    .where('o.orderId', '=', knex.ref('od.orderId'))
+    .andWhere({ userId })
     .groupBy('o.orderId')
     .orderBy('o.time', 'asc');
 
