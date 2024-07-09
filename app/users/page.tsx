@@ -29,7 +29,7 @@ export default function Users() {
   return (
     <main className='flex min-h-screen flex-col items-center'>
       <div className='text-xl font-bold my-2'>Users</div>
-      <div className='text-lg text-lime-950 my-6'>Select a user to get their corresponding order details</div>
+      <div className='text-lg text-lime-600 my-6'>Select a user to get their corresponding order details</div>
       <div className='z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex'>
         <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-4 lg:text-left'>
           {usersData.map((user) => (
