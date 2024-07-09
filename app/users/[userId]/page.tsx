@@ -10,6 +10,8 @@ const userOrders = ({ params }: { params: { userId: string } }) => {
   const userData = [...largeuserData, ...smalluserData];
 
   const orders = data.filter((item) => item.user === params.userId);
+  const sortedOrders = orders.sort((a: any, b: any) => new Date(b.time).getTime() - new Date(a.time).getTime());
+  console.log(typeof new Date(sortedOrders[0].time).getTime());
 
   const selectedUser = userData.find((user) => user.id === params.userId);
 
@@ -31,8 +33,8 @@ const userOrders = ({ params }: { params: { userId: string } }) => {
         <div className='text-lg text-lime-950 my-6 font-semibold'>Total Expenses: Rs. {totalExpenses}</div>
         <div className='z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex'>
           <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-4 lg:text-left'>
-            {orders.map((order: any, index: any) => (
-              <OrderDetails data={order} />
+            {sortedOrders.map((order: any, index: any) => (
+              <OrderDetails data={order} index={index} />
             ))}
           </div>
         </div>

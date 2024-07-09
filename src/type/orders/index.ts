@@ -14,4 +14,5 @@ export type Order = {
 
 export type OrderProps = {
   data: Order;
+  index: number;
 };
