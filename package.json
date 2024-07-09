@@ -21,10 +21,12 @@
     "pnpm": ">=8"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "fs": "0.0.1-security",
     "next": "14.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sass": "^1.77.6"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
@@ -38,7 +40,7 @@
     "@storybook/test": "^7.6.15",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.17",
-    "@types/react": "^18.2.55",
+    "@types/react": "^18.3.3",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
