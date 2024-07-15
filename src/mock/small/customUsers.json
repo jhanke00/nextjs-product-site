@@ -1,0 +1,17 @@
+[
+  {
+    "id": "fd7398ab-7968-4a1c-adfb-142d30b6a936",
+    "firstName": "Caroline",
+    "lastName": "Swift",
+    "phoneNumber": "1-446-490-1781 x3745",
+    "email": "Caroline_Swift50@hotmail.com"
+  },
+  {
+    "id": "eae20db4-4e04-4002-a548-80c68914f025",
+    "phoneNumber": 8965432111,
+    "email": "anu@mail.com",
+    "firstName": "anu",
+    "lastName": "babu",
+    "passwordHash": "$2b$10$5dYD2Rse9b5zuzfa.yB1DO2ohpOoSvLMFQNo44ESP2aHru/hHawJS"
+  }
+]
