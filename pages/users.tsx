@@ -1,0 +1,74 @@
+import React, { useState, useEffect } from 'react';
+import usersMockData from '../src/mock/small/users.json';
+import Link from 'next/link';
+import '../src/styles/styles.css';
+const PAGE_SIZE = 5;
+
+const Users = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [userId, setUserId] = useState();
+  const startIndex = (currentPage - 1) * PAGE_SIZE;
+  const endIndex = startIndex + PAGE_SIZE;
+  const usersData = usersMockData.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(usersMockData.length / PAGE_SIZE);
+
+  const nextPage = () => {
+    setCurrentPage(currentPage + 1);
+  };
+
+  const prevPage = () => {
+    setCurrentPage(currentPage - 1);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
+  const getUserID = (userID: any) => {
+    setUserId(userID);
+  };
+  console.log(userId, 'userId');
+  return (
+    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+      {/* <h1 style={{ textAlign: 'center' }}>User&#39;s List</h1> */}
+      <div className='header'>
+        <p>User's List</p>
+      </div>
+      <table id='table-container'>
+        <thead>
+          <tr>
+            <th>User&#39;s Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {usersData.map((user) => (
+            <tr key={user.id}>
+              <td>
+                {user.firstName} {user.lastName}
+              </td>
+              <td>
+                <Link className='link primary-button' href={`/orders/${user.id}`}>
+                  View Orders
+                </Link>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div className='pagination'>
+        <button onClick={prevPage} disabled={currentPage === 1} className='primary-button'>
+          Previous
+        </button>
+        <span>
+          Page {currentPage} of {totalPages}
+        </span>
+        <button onClick={nextPage} disabled={currentPage === totalPages} className='primary-button'>
+          Next
+        </button>
+      </div>
+    </main>
+  );
+};
+
+export default Users;
