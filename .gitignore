@@ -31,3 +31,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# api - users
+/app/api/node_modules
+/app/api/test/coverage
