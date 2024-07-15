@@ -1,12 +1,14 @@
+'use client';
 import React, { useState, useEffect } from 'react';
-import usersMockData from '../src/mock/small/users.json';
 import Link from 'next/link';
+import usersMockData from '../src/mock/small/users.json';
 import '../src/styles/styles.css';
+// import { useUserIdCotext } from '@/context/context';
+import Pagination from '@/src/components/common/pagination';
 const PAGE_SIZE = 5;
-
 const Users = () => {
+  // const { userId, updateUserId } = useUserIdCotext();
   const [currentPage, setCurrentPage] = useState(1);
-  const [userId, setUserId] = useState();
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = startIndex + PAGE_SIZE;
   const usersData = usersMockData.slice(startIndex, endIndex);
@@ -24,13 +26,8 @@ const Users = () => {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
-  const getUserID = (userID: any) => {
-    setUserId(userID);
-  };
-  console.log(userId, 'userId');
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      {/* <h1 style={{ textAlign: 'center' }}>User&#39;s List</h1> */}
       <div className='header'>
         <p>User's List</p>
       </div>
@@ -56,17 +53,7 @@ const Users = () => {
           ))}
         </tbody>
       </table>
-      <div className='pagination'>
-        <button onClick={prevPage} disabled={currentPage === 1} className='primary-button'>
-          Previous
-        </button>
-        <span>
-          Page {currentPage} of {totalPages}
-        </span>
-        <button onClick={nextPage} disabled={currentPage === totalPages} className='primary-button'>
-          Next
-        </button>
-      </div>
+      <Pagination currentPage={currentPage} totalPages={totalPages} nextPage={nextPage} prevPage={prevPage} />
     </main>
   );
 };

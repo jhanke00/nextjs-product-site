@@ -11,3 +11,17 @@ export type Order = {
   total: number;
   time: Date;
 };
+
+export type ButtonType = {
+  disable: boolean;
+  className: string;
+  buttonText: string;
+  handleClick: () => void;
+};
+
+export type PaginationType = {
+  currentPage: number;
+  totalPages: number;
+  prevPage: () => void;
+  nextPage: () => void;
+};

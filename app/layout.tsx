@@ -1,6 +1,9 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+// import { UserIdContextProvider } from '@/context/context';
 import './globals.css';
+import '../src/styles/styles.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,6 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      {/* <body className={inter.className}><UserIdContextProvider>{children}</UserIdContextProvider></body> */}
       <body className={inter.className}>{children}</body>
     </html>
   );
