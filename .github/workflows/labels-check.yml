@@ -14,11 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Git
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: 'Check for required labels'
-      - id: label-check
-      - run: |
+        id: label-check
+        run: |
           labels=$(jq -r '.pull_request.labels[].name' "$GITHUB_EVENT_PATH")
           required_labels=("Feature request" "Infrastructure" "Backend" "Frontend" "Devops")
           found=false
