@@ -35,3 +35,4 @@ next-env.d.ts
 # api - users
 /app/api/node_modules
 /app/api/test/coverage
+/app/api/.env
