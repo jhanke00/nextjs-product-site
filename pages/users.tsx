@@ -12,19 +12,6 @@ const Users = () => {
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = startIndex + PAGE_SIZE;
   const usersData = usersMockData.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(usersMockData.length / PAGE_SIZE);
-
-  const nextPage = () => {
-    setCurrentPage(currentPage + 1);
-  };
-
-  const prevPage = () => {
-    setCurrentPage(currentPage - 1);
-  };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [currentPage]);
 
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
@@ -53,7 +40,7 @@ const Users = () => {
           ))}
         </tbody>
       </table>
-      <Pagination currentPage={currentPage} totalPages={totalPages} nextPage={nextPage} prevPage={prevPage} />
+      <Pagination data={usersMockData} pageSize={PAGE_SIZE} setCurrentPage={setCurrentPage} currentPage={currentPage} />
     </main>
   );
 };

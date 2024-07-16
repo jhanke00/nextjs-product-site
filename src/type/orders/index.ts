@@ -20,8 +20,8 @@ export type ButtonType = {
 };
 
 export type PaginationType = {
+  data: Array<Item>;
+  pageSize: number;
+  setCurrentPage: ({}) => void;
   currentPage: number;
-  totalPages: number;
-  prevPage: () => void;
-  nextPage: () => void;
 };

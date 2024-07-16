@@ -71,7 +71,7 @@ button {
   color: black;
 }
 .header {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   background: #439a89;
   color: white;
@@ -119,4 +119,7 @@ section {
   background-color: #ffffff;
   padding: 5px;
   border: solid 1px #ddd;
+}
+section p {
+  margin: 5px;
 }
