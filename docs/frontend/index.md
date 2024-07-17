@@ -13,8 +13,7 @@ Documentation on any Frontend capabilities or changes made.
 # Products Detail Single Page
 
 - Single Page Description for Products:
-  We have introduced a feature that offers detailed product descriptions on a single page. Users can now access comprehensive information about each product, including s:w
-  pecifications, pricing, and additional details, all in one centralized location. This enhancement aims to provide users with a better understanding of our products, facilitating informed decision-making during their shopping experience.
+  We have introduced a feature that offers detailed product descriptions on a single page. Users can now access comprehensive information about each product, including specifications, pricing, and additional details, all in one centralized location. This enhancement aims to provide users with a better understanding of our products, facilitating informed decision-making during their shopping experience.
 
 ## Folder Structure
 
