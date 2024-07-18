@@ -14,7 +14,9 @@
     "build-storybook": "storybook build",
     "prepare": "husky",
     "generate-large-data": "node ./scripts/generateLargeData.js",
-    "generate-small-data": "node ./scripts/generateSmallData.js"
+    "generate-small-data": "node ./scripts/generateSmallData.js",
+    "tsc": "tsc",
+    "knip": "knip"
   },
   "engines": {
     "node": ">=18",
@@ -46,6 +48,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "husky": "^9.0.10",
     "jest": "^29.7.0",
+    "knip": "^5.26.0",
     "only-allow": "^1.2.1",
     "postcss": "^8.4.35",
     "prettier": "3.2.5",
