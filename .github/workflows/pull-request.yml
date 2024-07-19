@@ -22,6 +22,13 @@ jobs:
       - name: Build Project
         run: pnpm build
 
+      - name: Install Dependencies for API
+        working-directory: ./app/api
+        run: npm install
+
+      - name: Build Project
+        run: pnpm build
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -31,7 +38,7 @@ jobs:
       - name: Configure Worflow
         uses: ./.github/actions/configure
 
-      - name: Build Project
+      - name: Test Project
         run: pnpm test
 
   lint:
@@ -43,5 +50,5 @@ jobs:
       - name: Configure Worflow
         uses: ./.github/actions/configure
 
-      - name: Build Project
+      - name: Lint Project
         run: pnpm lint

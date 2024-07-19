@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "types": ["node", "jest"]
+  },
+  "include": ["/**/*.ts", "/**/**/*.ts", "/**/**/**/*.ts", "jest.config.js", "/**/__mock__/*.ts"],
+  "exclude": ["node_modules"]
+}
