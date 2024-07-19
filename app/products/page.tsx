@@ -22,6 +22,14 @@ export default function Products() {
     setCurrentPage(currentPage - 1);
   };
 
+  const goToFirstPage = () => {
+    setCurrentPage(1);
+  };
+
+  const goToLastPage = () => {
+    setCurrentPage(totalPages);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
@@ -50,15 +58,27 @@ export default function Products() {
       </div>
 
       <div className='flex justify-around w-full border-t-2 pt-4'>
-        <button onClick={prevPage} disabled={currentPage === 1}>
-          Previous
-        </button>
+        <div className='flex items-center gap-3'>
+          <button onClick={goToFirstPage} disabled={currentPage === 1} className='disabled:opacity-80'>
+            First page
+          </button>
+          ...
+          <button onClick={prevPage} disabled={currentPage === 1} className='disabled:opacity-80'>
+            Previous
+          </button>
+        </div>
         <span>
           Page {currentPage} of {totalPages}
         </span>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>
-          Next
-        </button>
+        <div className='flex items-center gap-3'>
+          <button onClick={nextPage} disabled={currentPage === totalPages} className='disabled:opacity-80'>
+            Next
+          </button>
+          ...
+          <button onClick={goToLastPage} disabled={currentPage === totalPages} className='disabled:opacity-80'>
+            Last page
+          </button>
+        </div>
       </div>
     </main>
   );
