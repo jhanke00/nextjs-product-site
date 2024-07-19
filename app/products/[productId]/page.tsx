@@ -17,7 +17,18 @@ export default function ProductDetails({ params }: { params: { productId: string
   }
 
   if (!product) {
-    return <p>Product not Found</p>;
+    return (
+      <div className='flex min-h-screen flex-col p-24 items-center justify-center'>
+        <p className='text-2xl font-semibold'>Product not found!</p>;
+        <button
+          type='button'
+          className='py-2 rounded-md flex items-center gap-2 pointer hover:underline'
+          onClick={handleGoBack}
+        >
+          <ArrowLeft className='text-black h-4 w-4' /> See all products
+        </button>
+      </div>
+    );
   }
 
   const productsFromSameCategory = data
