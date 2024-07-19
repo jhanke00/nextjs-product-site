@@ -3,31 +3,49 @@ import largeData from '@/src/mock/large/products.json';
 import smallData from '@/src/mock/small/products.json';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 const PAGE_SIZE = 20;
 
 export default function Products() {
-  const [currentPage, setCurrentPage] = useState(1);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+
+  let rawPageParam = searchParams?.get('page');
+  const currentPage = rawPageParam && !Number.isNaN(Number(rawPageParam)) ? Number(rawPageParam) : 1;
+
   const data = [...largeData, ...smallData];
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = startIndex + PAGE_SIZE;
   const productData = data.slice(startIndex, endIndex);
   const totalPages = Math.ceil(data.length / PAGE_SIZE);
 
+  const updateSearchParams = (key: string, value: any) => {
+    const params = searchParams ? new URLSearchParams(searchParams.toString()) : new URLSearchParams();
+    params.set(key, String(value));
+    const newParams = params.toString();
+    router.push(`${pathname}?${newParams}`);
+  };
+
+  if (Number.isNaN(Number(rawPageParam)) || currentPage <= 0 || currentPage > totalPages) {
+    updateSearchParams('page', 1);
+  }
+
   const nextPage = () => {
-    setCurrentPage(currentPage + 1);
+    updateSearchParams('page', currentPage + 1);
   };
 
   const prevPage = () => {
-    setCurrentPage(currentPage - 1);
+    updateSearchParams('page', currentPage - 1);
   };
 
   const goToFirstPage = () => {
-    setCurrentPage(1);
+    updateSearchParams('page', 1);
   };
 
   const goToLastPage = () => {
-    setCurrentPage(totalPages);
+    updateSearchParams('page', totalPages);
   };
 
   useEffect(() => {
