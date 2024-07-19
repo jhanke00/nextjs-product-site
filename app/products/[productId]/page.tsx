@@ -13,7 +13,7 @@ export default function ProductDetails({ params }: { params: { productId: string
   const router = useRouter();
 
   function handleGoBack() {
-    router.push('/products');
+    router.back();
   }
 
   if (!product) {
