@@ -26,6 +26,27 @@ export default function Products() {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
+  const handleProductClick = async (productId: string) => {
+    const userId = 'guest'; // Replace with actual user ID if available
+
+    try {
+      const response = await fetch('/api/viewed-products', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId, productId: parseInt(productId, 10) }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to record viewed product');
+      }
+
+      // Handle success (e.g., update UI, log to console)
+      console.log('Viewed product recorded successfully');
+    } catch (error) {
+      console.error('Error recording viewed product:', error);
+      // Handle error (e.g., display an error message to the user)
+    }
+  };
   return (
     <main className='flex min-h-screen flex-col items-center p-24'>
       <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex'>
@@ -35,7 +56,7 @@ export default function Products() {
               key={product.id}
               className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
             >
-              <Link href={`/products/${product.id}`}>
+              <Link href={`/products/${product.id}`} onClick={() => handleProductClick(product.id)}>
                 <h3 className={`mb-3 text-2xl font-semibold`}>{product.name}</h3>
                 <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Price: {product.price}</p>
                 <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Description: {product.description}</p>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { setupDatabase } from '@/src/lib/db';
 
 export const metadata: Metadata = {
   title: 'Products',
@@ -10,5 +11,7 @@ export default function ProductsLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  setupDatabase();
+
   return children;
 }

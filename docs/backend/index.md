@@ -4,7 +4,7 @@ Documentation on any Backend capabilities or changes made.
 
 ## Recommendation API
 
-- **Personalized Recommendations Endpoint:** 
+- **Personalized Recommendations Endpoint:**
   We have implemented a new API endpoint (`/api/recommendations`) to fetch personalized product recommendations for users. This endpoint leverages Google Gemini's generative AI capabilities and Langchain to process user data (viewed products and purchase history) and generate relevant recommendations.
 
 ### Folder Structure
@@ -16,11 +16,13 @@ Documentation on any Backend capabilities or changes made.
 ### Implementation Details
 
 - **Langchain Integration:**
+
   - Langchain is used to construct prompts for the Gemini API. These prompts include:
     - Recent purchase history from the mock order data.
     - Product IDs of products viewed by the user.
 
 - **Gemini API Interaction:**
+
   - The `recommendations.ts` utility functions handle sending the Langchain-generated prompts to the Gemini API.
   - The API response (product recommendations) is parsed and returned in a structured format.
 

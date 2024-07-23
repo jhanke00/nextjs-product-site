@@ -10,7 +10,7 @@ export async function GET(request: NextRequest): Promise<NextResponse<Recommenda
       return NextResponse.json({ error: 'Missing userId' }, { status: 400 });
     }
 
-    const recommendations = await getRecommendations(userId); 
+    const recommendations = await getRecommendations(userId);
 
     return NextResponse.json(recommendations);
   } catch (error) {

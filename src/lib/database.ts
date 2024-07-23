@@ -1,10 +1,13 @@
+import path from 'path';
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import { ViewedProduct } from '@/src/type/ViewedProduct'; // Assuming you have a type for viewed products
 
+const dbPath = process.env.DATABASE_FILE_PATH || path.join(__dirname, '../data/database.db');
+
 const dbPromise = open({
-  filename: './database.db', // Replace with your actual database file path
-  driver: sqlite3.Database
+  filename: dbPath, // Replace with your actual database file path
+  driver: sqlite3.Database,
 });
 
 export async function getViewedProducts(userId: string): Promise<ViewedProduct[]> {

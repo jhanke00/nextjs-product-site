@@ -7,7 +7,7 @@ interface RecommendationsListProps {
 
 export default function RecommendationsList({ recommendations }: RecommendationsListProps) {
   return (
-    <div className="recommendations-list">
+    <div className='recommendations-list'>
       {recommendations.map((recommendation) => (
         <RecommendationCard key={recommendation.id} recommendation={recommendation} />
       ))}

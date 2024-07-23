@@ -6,7 +6,7 @@ interface RecommendationCardProps {
 
 export default function RecommendationCard({ recommendation }: RecommendationCardProps) {
   return (
-    <div className="recommendation-card">
+    <div className='recommendation-card'>
       <img src={recommendation.imageUrl} alt={recommendation.title} />
       <h3>{recommendation.title}</h3>
       <p>Price: ${recommendation.price}</p>
