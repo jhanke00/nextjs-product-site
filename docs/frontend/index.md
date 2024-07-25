@@ -26,3 +26,11 @@ Documentation on any Frontend capabilities or changes made.
 ## Bug Fixes
 
 - Find error running pnpm storybook command, document it on [Issue 73](https://github.com/jhanke00/next-product-site/issues/73) and created a Pull Request solving the problem in baseUrl property in tsconfig file.
+
+# New Features
+
+## Feature [84] (https://github.com/jhanke00/next-product-site/issues/84)
+
+- Add Material UI lib to create a default style for components;
+- Create cards to show product data;
+- Create items per page property to choose how many products the user want to see in pagination;
