@@ -2,7 +2,7 @@ export type Item = {
   id: string;
   name: string;
   price: number;
-  count: number;
+  quantity: number;
 };
 
 export type Order = {
@@ -10,4 +10,22 @@ export type Order = {
   items: Array<Item>;
   total: number;
   time: Date;
+};
+
+export type TotalSummaryProps = {
+  data: Item[];
+};
+
+export type UserOrdersProps = {
+  params: {
+    userId: number;
+  };
+};
+
+export type SummaryProps = {
+  data: Item;
+};
+
+export type Users = {
+  data: Item[];
 };
