@@ -22,7 +22,10 @@
   },
   "dependencies": {
     "fs": "0.0.1-security",
-    "next": "14.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1",
+    "next": "^14.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -41,6 +44,7 @@
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.17",
+    "dotenv": "^16.4.5",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-storybook": "^0.6.15",

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "items": [
+      { "productId": 101, "name": "Chair", "quantity": 2, "price": 19.99 },
+      { "productId": 102, "name": "Keyboard", "quantity": 1, "price": 29.99 }
+    ],
+    "count": 2,
+    "totalPrice": 69.97
+  },
+  {
+    "id": 2,
+    "userId": 2,
+    "items": [{ "productId": 103, "name": "mouse", "quantity": 3, "price": 9.99 }],
+    "count": 1,
+    "totalPrice": 29.97
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "items": [{ "productId": 104, "quantity": 5, "name": "pen", "price": 4.99 }],
+    "count": 1,
+    "totalPrice": 24.95
+  },
+  {
+    "id": 4,
+    "userId": 3,
+    "items": [
+      { "productId": 101, "quantity": 1, "name": "sound", "price": 19.99 },
+      { "productId": 103, "quantity": 2, "name": "Keyboard", "price": 9.99 }
+    ],
+    "count": 2,
+    "totalPrice": 39.97
+  },
+  {
+    "id": 5,
+    "userId": 2,
+    "items": [
+      { "productId": 102, "quantity": 2, "name": "tv", "price": 29.99 },
+      { "productId": 104, "quantity": 3, "name": "dish", "price": 4.99 }
+    ],
+    "count": 2,
+    "totalPrice": 74.95
+  },
+  {
+    "id": 6,
+    "userId": 1,
+    "items": [{ "productId": 105, "quantity": 4, "name": "pendrive", "price": 7.99 }],
+    "count": 1,
+    "totalPrice": 31.96
+  },
+  {
+    "id": 7,
+    "userId": 3,
+    "items": [
+      { "productId": 101, "quantity": 3, "name": "monitor", "price": 19.99 },
+      { "productId": 102, "quantity": 1, "name": "Keyboard", "price": 29.99 }
+    ],
+    "count": 2,
+    "totalPrice": 89.97
+  },
+  {
+    "id": 8,
+    "userId": 2,
+    "items": [
+      { "productId": 103, "quantity": 1, "name": "lan", "price": 9.99 },
+      { "productId": 104, "quantity": 2, "name": "mause", "price": 4.99 }
+    ],
+    "count": 2,
+    "totalPrice": 19.97
+  },
+  {
+    "id": 9,
+    "userId": 11,
+    "items": [
+      { "productId": 102, "quantity": 1, "name": "lan", "price": 29.99 },
+      { "productId": 105, "quantity": 2, "name": "table", "price": 7.99 }
+    ],
+    "count": 2,
+    "totalPrice": 45.97
+  },
+  {
+    "id": 10,
+    "userId": 3,
+    "items": [{ "productId": 104, "name": "cable", "quantity": 6, "price": 4.99 }],
+    "count": 1,
+    "totalPrice": 29.94
+  }
+]
