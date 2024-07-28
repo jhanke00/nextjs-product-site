@@ -26,6 +26,13 @@ export type SummaryProps = {
   data: Item;
 };
 
-export type Users = {
-  data: Item[];
-};
+interface Users {
+  id: number;
+  // Other user properties
+}
+
+interface Orders {
+  userId: number;
+  items: Item[];
+  // Other order properties
+}

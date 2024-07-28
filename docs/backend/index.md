@@ -77,13 +77,10 @@ This document provides an overview of the user, order, and total spend API funct
 
 ## Folder Structure
 
-- `pages/api/users.ts` - endpoint that returns my user information
-- `pages/api/orders.ts` - endpoint that returns all of my user's orders and switch cases endpoint that returns how much the user has spent on orders and overall spent on orders
-- `pages/models/users.ts` - Page for the user page interface
-- `pages/models/order.ts` - Page for the order page interface
-- `pages/models/Error.ts` - Page for the Error page interface
-- `pages/data/users.json` - JSON for User list
-- `pages/data/orders.json` - JSON for Order list
+- `app/api/user/route.ts` - endpoint that returns my user information
+- `app/api/orders/route.ts` - endpoint that returns all of my user's orders and switch cases endpoint that returns how much the user has spent on orders and overall spent on orders
+- `public/data/users.json` - JSON for User list
+- `public/data/orders.json` - JSON for Order list
 - `utils/connectDb.js` - If required for Mongodb connection
 
 **Additional Notes:**

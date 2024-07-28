@@ -1,6 +1,6 @@
-# Backend
+## Backend
 
-### User API Endpoint for Small Dataset
+### User's Orders Page
 
 **Description:**
 
@@ -11,80 +11,41 @@ This document provides an overview of the user, order, and total spend API funct
 1. Ensure you have Node.js and npm (or yarn) installed.
 2. Clone this repository.
 3. Install dependencies: `pnpm install`
-4. Set the `MONGODB_URI` environment variable if migrating to MongoDB.
-5. Run the development server: `pnpm dev`
-6. Open http://localhost:3000 with your browser to see the result.
-7. Use tools like Postman to test the API endpoints.
+4. Run the development server: `pnpm dev`
+5. Open http://localhost:3000 with your browser to see the result.
 
-**API Endpoints:**
+#### Orders Endpoint
 
-- **Local URL:**
+- **URL:** `/orders/[userId]`
+- **Method:** GET
+- **Description:** Retrieves order details for a specific user.
+- **Example:** `http://localhost:3000/orders/1`
 
-  - http://localhost:3000/users
+#### Order Endpoint
 
-- **users (POST):**
+- **URL:** `/order/[userId]`
+- **Method:** GET
+- **Description:** Retrieves order details for a specific user. (Note: Consider if this endpoint is necessary or if it duplicates the `orders` endpoint)
+- **Example:** `http://localhost:3000/order/1`
 
-  - **Functionality:** Retrieves all users for a specific user.
-  - **Request:**
-    - Body: `{ userId: number }`
-  - **Response:**
-    - Success: `{  id: number, name: string, email: string }` (includes specific user )
-    - Error: `{ message: string, status: number }`
+### Folder Structure
 
-- **Local URL:**
+#### Orders Module
 
-  - http://localhost:3000/orders
+- `app/orders/[userId]/page.tsx` - This page returns user information for the specified user's orders using fetch method .
+- `src/orders/summary.tsx` - Calculates and returns product cost, quantity, and total for each product.
+- `src/orders/totalsummary.tsx` - Calculates and returns total products, shipping charges, taxes, and subtotal spent on orders.
 
-- **orders (POST):**
-  - **Functionality:** Retrieves all orders for a specific user.
-  - **Request:**
-    - Body: `{ userId: number,action: "order" }`
-  - **Response:**
-    - Success: `{ orders: Order[], totalSpent: number }` (includes user orders and total spend)
-    - Error: `{ message: string, status: number }`
-- **orders (POST):**
-  - **Functionality:** Calculates the total spend across all orders (specific user).
-  - **Request:**
-    - Body: `{ userId: number,action: "userspend" }`
-  - **Response:**
-    - Success: `{ totalSpent: number }`
-    - Error: `{ message: string, status: number }`
-    - **orders (POST):**
-  - **Functionality:** Calculates the total spend across all orders (without specifying a user).
-  - **Request:**
-    - Body: `{ action: "totalspend" }`
-  - **Response:**
-    - Success: `{ totalSpent: number }`
-    - Error: `{ message: string, status: number }`
+#### Order Module (Optional)
 
-**Database:**
+- `app/order/[userId]/page.tsx` - This page returns user information for the specified user's orders using json data .
+- `src/orders/summary.tsx` - Calculates and returns product cost, quantity, and total for each product.
+- `src/orders/totalsummary.tsx` - Calculates and returns total products, shipping charges, taxes, and subtotal spent on orders.
 
-- This example currently uses JSON files for data storage.
-- **Potential Change:** Consider migrating to a database like MongoDB for scalability and performance.
+#### Data
 
-**Implementation Details:**
-
-- The API routes are implemented in Next.js using TypeScript.
-- Mongoose (or a similar ODM) would be required for MongoDB integration.
-
-**Possible Enhancements:**
-
-- Authentication and Authorization
-- Pagination
-- Refined error handling
-- Security measures
-- Unit and integration testing
-
-## Folder Structure
-
-- `pages/api/users.ts` - endpoint that returns my user information
-- `pages/api/orders.ts` - endpoint that returns all of my user's orders and switch cases endpoint that returns how much the user has spent on orders and overall spent on orders
-- `pages/models/users.ts` - Page for the user page interface
-- `pages/models/order.ts` - Page for the order page interface
-- `pages/models/Error.ts` - Page for the Error page interface
-- `pages/data/users.json` - JSON for User list
-- `pages/data/orders.json` - JSON for Order list
-- `utils/connectDb.js` - If required for Mongodb connection
+- `public/data/users.json`: Contains user data.
+- `public/data/orders.json`: Contains order data.
 
 **Additional Notes:**
 
