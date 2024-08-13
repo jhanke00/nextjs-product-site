@@ -1,6 +1,6 @@
 # User API Endpoints
 
-This document describes the User API endpoints for large datasets.
+This document describes the User API endpoints for the large dataset.
 
 ## Endpoints
 
@@ -28,4 +28,13 @@ This document describes the User API endpoints for large datasets.
 
 - Pagination is implemented for the orders endpoint to handle large amounts of data efficiently.
 - Caching is used to improve response times for frequently accessed data.
-- Database queries are optimized for large datasets using indexing and pre-aggregation.
+- Queries are optimized for large datasets using in-memory indexing.
+
+## Setup
+
+To run the project:
+
+1. Ensure Node.js and pnpm are installed on your machine.
+2. Run `pnpm install` to install dependencies.
+3. Run `pnpm dev` to start the development server.
+4. The API will be available at `http://localhost:3000/api/users/`.
