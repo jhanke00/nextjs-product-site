@@ -1,27 +1,69 @@
 'use client';
 import largeData from '@/src/mock/large/products.json';
 import smallData from '@/src/mock/small/products.json';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import StarRating from '../../src/components/star-rating';
 
 const PAGE_SIZE = 20;
 
-export default function Products() {
+export default function Component() {
   const [currentPage, setCurrentPage] = useState(1);
   const data = [...largeData, ...smallData];
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = startIndex + PAGE_SIZE;
   const productData = data.slice(startIndex, endIndex);
   const totalPages = Math.ceil(data.length / PAGE_SIZE);
-
-  const formatPrice = (price: string) => {
-    const priceNumber = parseFloat(price);
-    if (isNaN(priceNumber)) {
-      return 'Invalid price';
-    }
-    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(priceNumber);
+  const [selectedRating, setSelectedRating] = useState<number[]>([]);
+  const priceRange = useMemo(() => {
+    const prices = productData.map((product) => parseFloat(product.price));
+    const minPrice = Math.min(...prices);
+    const maxPrice = Math.max(...prices);
+    return [minPrice, maxPrice];
+  }, [productData]);
+  const [selectedPriceRange, setSelectedPriceRange] = useState(priceRange);
+  const categories = useMemo(() => {
+    const uniqueCategories = new Set<string>();
+    productData.forEach((product) => {
+      uniqueCategories.add(product.category);
+    });
+    return Array.from(uniqueCategories);
+  }, [productData]);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const handleRatingChange = (rating: number) => {
+    setSelectedRating((prevRatings) => {
+      if (prevRatings.includes(rating)) {
+        return prevRatings.filter((r) => r !== rating);
+      } else {
+        return [...prevRatings, rating];
+      }
+    });
   };
+  const handlePriceRangeChange = (range: [number, number]) => {
+    setSelectedPriceRange(range);
+  };
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategories((prevCategories: string[]) => {
+      if (prevCategories.includes(category)) {
+        return prevCategories.filter((c) => c !== category);
+      } else {
+        return [...prevCategories, category];
+      }
+    });
+  };
+  const filteredProducts = useMemo(() => {
+    return productData.filter((product) => {
+      if (selectedRating.length > 0 && !selectedRating.includes(Math.floor(product.rating))) {
+        return false;
+      }
+      if (parseFloat(product.price) < selectedPriceRange[0] || parseFloat(product.price) > selectedPriceRange[1]) {
+        return false;
+      }
+      if (selectedCategories.length > 0 && !selectedCategories.includes(product.category)) {
+        return false;
+      }
+      return true;
+    });
+  }, [priceRange, productData, selectedCategories, selectedRating]);
 
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
@@ -36,41 +78,90 @@ export default function Products() {
   }, [currentPage]);
 
   return (
-    <main className='flex min-h-screen flex-col items-center'>
-      <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm mb-20 lg:flex'>
-        <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-2 lg:text-left lg:gap-6'>
-          {productData.map((product) => (
-            <div
-              key={product.id}
-              className={`flex group rounded-lg border px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 ${product.countInStock === 0 ? 'opacity-40' : ''}`}
-            >
-              <Link
-                href={product.countInStock === 0 ? '#' : `/products/${product.id}`}
-                className={`flex flex-col flex-auto ${product.countInStock === 0 ? 'cursor-default' : ''}`}
-                onClick={(e) => product.countInStock === 0 && e.preventDefault()}
-              >
-                <div className='flex-auto'>
-                  <h3 className={`text-2xl font-semibold`}>{product.name}</h3>
-                  <h4 className={`mb-3 text-md opacity-80`}>{product.category}</h4>
-                  <p className={`mb-6 m-0 text-sm opacity-50`}>Description: {product.description}</p>
-                  {product.countInStock === 0 ? (
-                    <span className='bg-red-500 flex justify-end pr-1'>Out of stock</span>
-                  ) : product.countInStock > 1 && product.countInStock < 10 ? (
-                    <span className='bg-red-500 flex justify-end pr-1'>Only {product.countInStock} left in stock!</span>
-                  ) : null}
+    <div className='grid md:grid-cols-[300px_1fr] gap-8 p-4 md:p-8'>
+      <div className='bg-background rounded-lg shadow-sm p-6'>
+        <h2 className='text-lg font-semibold mb-4'>Filters</h2>
+        <div className='grid gap-6'>
+          <div>
+            <h3 className='text-base font-medium mb-2'>Rating</h3>
+            <div className='grid gap-2'>
+              {[0, 1, 2, 3, 4, 5].map((rating) => (
+                <div key={rating} className='flex items-center gap-2'>
+                  <Checkbox
+                    checked={selectedRating.includes(rating)}
+                    onCheckedChange={() => handleRatingChange(rating)}
+                  />
+                  <div className='flex items-center gap-1'>
+                    {[...Array(rating)].map((_, i) => (
+                      <StarIcon key={i} className='w-4 h-4 fill-yellow-500' />
+                    ))}
+                    {[...Array(5 - rating)].map((_, i) => (
+                      <StarIcon key={i} className='w-4 h-4 fill-gray-300' />
+                    ))}
+                  </div>
                 </div>
-                <div className='flex items-center justify-right min-h-10'>
-                  {product.countInStock !== 0 ? (
-                    <span className={`m-0 opacity-50 font-bold text-2xl`}>{formatPrice(product.price)}</span>
-                  ) : null}
-                  <StarRating rating={product.rating} />
-                </div>
-              </Link>
+              ))}
             </div>
-          ))}
+          </div>
+          <div>
+            <h3 className='text-base font-medium mb-2'>Price</h3>
+            <input
+              type='range'
+              min={priceRange[0]}
+              max={priceRange[1]}
+              step={10}
+              value={selectedPriceRange[1]}
+              onChange={(e) => handlePriceRangeChange([priceRange[0], parseInt(e.target.value)])}
+              className='w-full'
+            />
+            <div className='flex justify-between text-sm text-muted-foreground'>
+              <span>${selectedPriceRange[0]}</span>
+              <span>${selectedPriceRange[1]}</span>
+            </div>
+          </div>
+          <div>
+            <h3 className='text-base font-medium mb-2'>Category</h3>
+            <div className='grid gap-2'>
+              {categories.map((category) => (
+                <div key={category} className='flex items-center gap-2'>
+                  <Checkbox
+                    checked={selectedCategories.includes(category)}
+                    onCheckedChange={() => handleCategoryChange(category)}
+                  />
+                  <span>{category}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+        {filteredProducts.map((product) => (
+          <div key={product.id} className='bg-background rounded-lg shadow-sm overflow-hidden'>
+            <Link href='#' className='block' prefetch={false}>
+              <div className='p-4 flex flex-col justify-between'>
+                <div>
+                  <h3 className='text-lg font-semibold'>{product.name}</h3>
+                  <div className='text-sm text-muted-foreground mb-2'>{product.category}</div>
+                  <p className='text-sm text-muted-foreground mb-2'>{product.description}</p>
+                  <div className='flex items-center gap-2 mb-2'>
+                    {[...Array(Math.floor(product.rating))].map((_, i) => (
+                      <StarIcon key={i} className='w-5 h-5 fill-primary' />
+                    ))}
+                    {[...Array(5 - Math.floor(product.rating))].map((_, i) => (
+                      <StarIcon key={i} className='w-5 h-5 fill-muted stroke-muted-foreground' />
+                    ))}
+                    <span className='text-sm text-muted-foreground'>({product.rating})</span>
+                  </div>
+                </div>
+                <div className='flex justify-between items-end mt-4'>
+                  <div className='font-semibold'>${product.price}</div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
       <div className='flex justify-around w-full border-t-2 pt-4'>
         <button onClick={prevPage} disabled={currentPage === 1}>
           Previous
@@ -82,6 +173,40 @@ export default function Products() {
           Next
         </button>
       </div>
-    </main>
+    </div>
+  );
+}
+
+function Checkbox({ checked, onCheckedChange }: { checked: boolean; onCheckedChange: () => void }) {
+  return <input type='checkbox' checked={checked} onChange={onCheckedChange} />;
+}
+
+interface StarIconProps {
+  className?: string;
+  width?: number;
+  height?: number;
+  fill?: string;
+  stroke?: string;
+  strokeWidth?: number;
+  strokeLinecap?: 'butt' | 'round' | 'square' | 'inherit';
+  strokeLinejoin?: 'miter' | 'round' | 'bevel' | 'inherit';
+}
+
+function StarIcon(props: StarIconProps) {
+  return (
+    <svg
+      {...props}
+      xmlns='http://www.w3.org/2000/svg'
+      width={props.width || 24}
+      height={props.height || 24}
+      viewBox='0 0 24 24'
+      fill={props.fill || 'none'}
+      stroke={props.stroke || 'currentColor'}
+      strokeWidth={props.strokeWidth || 0}
+      strokeLinecap={props.strokeLinecap || 'round'}
+      strokeLinejoin={props.strokeLinejoin || 'round'}
+    >
+      <polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' />
+    </svg>
   );
 }
