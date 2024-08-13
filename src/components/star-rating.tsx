@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 
 interface StarRatingProps {
@@ -24,7 +25,7 @@ const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
     const percentage = getStarPercentage(i);
     stars.push(
       <div key={i} className='relative text-2xl'>
-        <span className='filled top-0 left-0 text-yellow-500' style={{ width: `${percentage}%` }}>
+        <span className='absolute overflow-hidden text-yellow-500 top-0 left-0' style={{ width: `${percentage}%` }}>
           &#9733;
         </span>
         <span className='text-gray-300'>&#9733;</span>
@@ -34,7 +35,7 @@ const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
 
   return (
     <div
-      className='star-rating flex items-center'
+      className='flex items-center justify-end h-full w-20 ml-auto'
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
