@@ -21,6 +21,19 @@ body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
+.filled {
+  position: absolute;
+  overflow: hidden;
+  color: #eab308;
+}
+
+.star-rating {
+  margin-left: auto;
+  width: 5rem;
+  height: 100%;
+  justify-content: end;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
