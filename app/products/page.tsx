@@ -1,8 +1,8 @@
 'use client';
 import largeData from '@/src/mock/large/products.json';
 import smallData from '@/src/mock/small/products.json';
-import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
+import { useEffect, useMemo, useState } from 'react';
 
 const PAGE_SIZE = 20;
 
@@ -91,7 +91,7 @@ export default function Component() {
                     checked={selectedRating.includes(rating)}
                     onCheckedChange={() => handleRatingChange(rating)}
                   />
-                  <div className='flex items-center gap-1'>
+                  <div className='flex items-center'>
                     {[...Array(rating)].map((_, i) => (
                       <StarIcon key={i} className='w-4 h-4 fill-yellow-500' />
                     ))}
@@ -138,20 +138,31 @@ export default function Component() {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
         {filteredProducts.map((product) => (
           <div key={product.id} className='bg-background rounded-lg shadow-sm overflow-hidden'>
-            <Link href='#' className='block' prefetch={false}>
+            <Link
+              href={product.countInStock === 0 ? '#' : `/products/${product.id}`}
+              className='block'
+              prefetch={false}
+            >
               <div className='p-4 flex flex-col justify-between'>
                 <div>
                   <h3 className='text-lg font-semibold'>{product.name}</h3>
                   <div className='text-sm text-muted-foreground mb-2'>{product.category}</div>
                   <p className='text-sm text-muted-foreground mb-2'>{product.description}</p>
-                  <div className='flex items-center gap-2 mb-2'>
+                  {product.countInStock === 0 ? (
+                    <span className='bg-red-500 flex justify-end pr-1 text-sm'>Out of stock</span>
+                  ) : product.countInStock > 1 && product.countInStock < 10 ? (
+                    <span className='bg-red-500 flex justify-end pr-1 text-sm'>
+                      Only {product.countInStock} left in stock!
+                    </span>
+                  ) : null}
+                  <div className='flex items-center mb-2'>
                     {[...Array(Math.floor(product.rating))].map((_, i) => (
-                      <StarIcon key={i} className='w-5 h-5 fill-primary' />
+                      <StarIcon key={i} className='w-4 h-4 fill-yellow-500' />
                     ))}
                     {[...Array(5 - Math.floor(product.rating))].map((_, i) => (
-                      <StarIcon key={i} className='w-5 h-5 fill-muted stroke-muted-foreground' />
+                      <StarIcon key={i} className='w-4 h-4 fill-gray-300' />
                     ))}
-                    <span className='text-sm text-muted-foreground'>({product.rating})</span>
+                    <span className='text-sm text-muted-foreground'>({product.rating.toFixed(2)})</span>
                   </div>
                 </div>
                 <div className='flex justify-between items-end mt-4'>
