@@ -1,47 +1,31 @@
-'use client';
-import React, { useState } from 'react';
-
-interface StarRatingProps {
-  rating: number;
+interface StarIconProps {
+  className?: string;
+  width?: number;
+  height?: number;
+  fill?: string;
+  stroke?: string;
+  strokeWidth?: number;
+  strokeLinecap?: 'butt' | 'round' | 'square' | 'inherit';
+  strokeLinejoin?: 'miter' | 'round' | 'bevel' | 'inherit';
 }
 
-const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
-  const [hovered, setHovered] = useState(false);
-
-  const getStarPercentage = (index: number) => {
-    const starValue = index + 1;
-    if (rating >= starValue) {
-      return 100;
-    } else if (rating < starValue - 1) {
-      return 0;
-    } else {
-      return (rating - Math.floor(rating)) * 100;
-    }
-  };
-
-  const stars = [];
-
-  for (let i = 0; i < 5; i++) {
-    const percentage = getStarPercentage(i);
-    stars.push(
-      <div key={i} className='relative text-2xl'>
-        <span className='absolute overflow-hidden text-yellow-500 top-0 left-0' style={{ width: `${percentage}%` }}>
-          &#9733;
-        </span>
-        <span className='text-gray-300'>&#9733;</span>
-      </div>
-    );
-  }
-
+function StarRating(props: StarIconProps) {
   return (
-    <div
-      className='flex items-center justify-end h-full w-20 ml-auto'
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+    <svg
+      {...props}
+      xmlns='http://www.w3.org/2000/svg'
+      width={props.width || 24}
+      height={props.height || 24}
+      viewBox='0 0 24 24'
+      fill={props.fill || 'none'}
+      stroke={props.stroke || 'currentColor'}
+      strokeWidth={props.strokeWidth || 0}
+      strokeLinecap={props.strokeLinecap || 'round'}
+      strokeLinejoin={props.strokeLinejoin || 'round'}
     >
-      {hovered ? <span className='rating-value text-sm opacity-50'>({rating.toFixed(2)})</span> : stars}
-    </div>
+      <polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' />
+    </svg>
   );
-};
+}
 
 export default StarRating;

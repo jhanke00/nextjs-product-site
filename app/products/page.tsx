@@ -1,4 +1,6 @@
 'use client';
+import Checkbox from '@/src/components/checkbox';
+import StarRating from '@/src/components/star-rating';
 import largeData from '@/src/mock/large/products.json';
 import smallData from '@/src/mock/small/products.json';
 import Link from 'next/link';
@@ -21,6 +23,7 @@ export default function Component() {
     return [minPrice, maxPrice];
   }, [productData]);
   const [selectedPriceRange, setSelectedPriceRange] = useState(priceRange);
+
   const categories = useMemo(() => {
     const uniqueCategories = new Set<string>();
     productData.forEach((product) => {
@@ -29,6 +32,7 @@ export default function Component() {
     return Array.from(uniqueCategories);
   }, [productData]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+
   const handleRatingChange = (rating: number) => {
     setSelectedRating((prevRatings) => {
       if (prevRatings.includes(rating)) {
@@ -38,9 +42,11 @@ export default function Component() {
       }
     });
   };
+
   const handlePriceRangeChange = (range: [number, number]) => {
     setSelectedPriceRange(range);
   };
+
   const handleCategoryChange = (category: string) => {
     setSelectedCategories((prevCategories: string[]) => {
       if (prevCategories.includes(category)) {
@@ -50,6 +56,7 @@ export default function Component() {
       }
     });
   };
+
   const filteredProducts = useMemo(() => {
     return productData.filter((product) => {
       if (selectedRating.length > 0 && !selectedRating.includes(Math.floor(product.rating))) {
@@ -63,7 +70,7 @@ export default function Component() {
       }
       return true;
     });
-  }, [priceRange, productData, selectedCategories, selectedRating]);
+  }, [productData, selectedCategories, selectedPriceRange, selectedRating]);
 
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
@@ -93,10 +100,10 @@ export default function Component() {
                   />
                   <div className='flex items-center'>
                     {[...Array(rating)].map((_, i) => (
-                      <StarIcon key={i} className='w-4 h-4 fill-yellow-500' />
+                      <StarRating key={i} className='w-4 h-4 fill-yellow-500' />
                     ))}
                     {[...Array(5 - rating)].map((_, i) => (
-                      <StarIcon key={i} className='w-4 h-4 fill-gray-300' />
+                      <StarRating key={i} className='w-4 h-4 fill-gray-300' />
                     ))}
                   </div>
                 </div>
@@ -140,7 +147,7 @@ export default function Component() {
           <div key={product.id} className='bg-background rounded-lg shadow-sm overflow-hidden'>
             <Link
               href={product.countInStock === 0 ? '#' : `/products/${product.id}`}
-              className='block'
+              className='flex h-full'
               prefetch={false}
             >
               <div className='p-4 flex flex-col justify-between'>
@@ -157,10 +164,10 @@ export default function Component() {
                   ) : null}
                   <div className='flex items-center mb-2'>
                     {[...Array(Math.floor(product.rating))].map((_, i) => (
-                      <StarIcon key={i} className='w-4 h-4 fill-yellow-500' />
+                      <StarRating key={i} className='w-4 h-4 fill-yellow-500' />
                     ))}
                     {[...Array(5 - Math.floor(product.rating))].map((_, i) => (
-                      <StarIcon key={i} className='w-4 h-4 fill-gray-300' />
+                      <StarRating key={i} className='w-4 h-4 fill-gray-300' />
                     ))}
                     <span className='text-sm text-muted-foreground'>({product.rating.toFixed(2)})</span>
                   </div>
@@ -185,39 +192,5 @@ export default function Component() {
         </button>
       </div>
     </div>
-  );
-}
-
-function Checkbox({ checked, onCheckedChange }: { checked: boolean; onCheckedChange: () => void }) {
-  return <input type='checkbox' checked={checked} onChange={onCheckedChange} />;
-}
-
-interface StarIconProps {
-  className?: string;
-  width?: number;
-  height?: number;
-  fill?: string;
-  stroke?: string;
-  strokeWidth?: number;
-  strokeLinecap?: 'butt' | 'round' | 'square' | 'inherit';
-  strokeLinejoin?: 'miter' | 'round' | 'bevel' | 'inherit';
-}
-
-function StarIcon(props: StarIconProps) {
-  return (
-    <svg
-      {...props}
-      xmlns='http://www.w3.org/2000/svg'
-      width={props.width || 24}
-      height={props.height || 24}
-      viewBox='0 0 24 24'
-      fill={props.fill || 'none'}
-      stroke={props.stroke || 'currentColor'}
-      strokeWidth={props.strokeWidth || 0}
-      strokeLinecap={props.strokeLinecap || 'round'}
-      strokeLinejoin={props.strokeLinejoin || 'round'}
-    >
-      <polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' />
-    </svg>
   );
 }
