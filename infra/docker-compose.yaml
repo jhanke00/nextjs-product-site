@@ -1,7 +1,7 @@
 services:
   app:
-    build: 
+    build:
       context: ../
-      dockerfile: ./infra/app/Dockerfile 
+      dockerfile: ./infra/app/Dockerfile
     ports:
       - 3000:3000
