@@ -14,3 +14,4 @@ Documentation on any Infrastructure setup or changes made.
 
 - `infra/app/Dockerfile` - Dockerfile to build the app
 - `infra/docker-compose.yaml` - Docker compose file to orchestrate the build and local run
+- `.dockerignore` - Docker ignore files to build.
