@@ -11,6 +11,12 @@ env:
   NODE_VERSION: 18.x
   PNPM_VERSION: 8
 
+permissions:
+  contents: read
+  issues: read
+  checks: write
+  pull-requests: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -70,7 +76,7 @@ jobs:
           "npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook --junit"
 
       - name: Publish Tests
-        uses: actions/upload-artifact@v4
+        uses: EnricoMi/publish-unit-test-result-action@v2
         with:
-          name: storybook-results
-          path: junit.xml
+          files: |
+            junit.xml
