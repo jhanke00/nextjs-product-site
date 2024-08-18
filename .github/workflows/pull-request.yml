@@ -4,8 +4,6 @@ on:
   pull_request:
     types: [opened, synchronize]
     branches: [main]
-  push:
-    branches: [feat/storybook-tests]
 
 env:
   NODE_VERSION: 18.x
