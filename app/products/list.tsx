@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Product } from '@type/products';
 import ReactPaginate from 'react-paginate';
 
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 21;
 
 const originalData: Product[] = [...largeData, ...smallData].map((product) => {
   return {
@@ -31,7 +31,7 @@ const ProductList: React.FC = () => {
     return data.filter(
       (product) =>
         (categoryFilter === '' || product.category === categoryFilter) &&
-        product.rating >= ratingFilter &&
+        Math.round(product.rating) >= ratingFilter &&
         product.price >= priceFilter[0] &&
         product.price <= priceFilter[1]
     );
@@ -57,28 +57,47 @@ const ProductList: React.FC = () => {
 
   return (
     <div className='w-3/4'>
-      <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex'>
-        <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-2 lg:text-left'>
+      <div className='z-10 w-full items-center justify-between text-sm lg:flex'>
+        <div className='grid w-full lg:grid-cols-3 lg:gap-6 lg:text-left'>
           {paginatedData.map((product) => (
             <div
               key={product.id}
-              className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
+              className='group rounded-lg shadow-lg overflow-hidden border border-gray-700 bg-gray-800 transition-colors duration-300 hover:bg-gray-700'
             >
               <Link href={`/products/${product.id}`}>
-                <h3 className={`mb-3 text-2xl font-semibold`}>{product.name}</h3>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Price: {product.price}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Description: {product.description}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Category: {product.category}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Rating: {product.rating}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Reviews: {product.numReviews}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Stock: {product.countInStock}</p>
+                <div className='p-5'>
+                  <h3 className='mb-3 text-2xl font-semibold text-white'>{product.name}</h3>
+                  <p className='m-0 text-lg text-gray-300 font-bold'>${product.price}</p>
+                  <p className='mt-2 text-sm text-gray-400'>{product.description}</p>
+                  <span className='inline-block mt-3 px-2 py-1 text-xs font-semibold text-white bg-blue-600 rounded'>
+                    {product.category}
+                  </span>
+                  <div className='mt-3 flex items-center'>
+                    <div className='flex items-center'>
+                      {Array.from({ length: 5 }, (_, index) => (
+                        <svg
+                          key={index}
+                          className={`w-4 h-4 ${index < product.rating ? 'text-yellow-400' : 'text-gray-500'}`}
+                          fill='currentColor'
+                          viewBox='0 0 20 20'
+                        >
+                          <path d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.39 2.46a1 1 0 00-.364 1.118l1.287 3.97c.3.921-.755 1.688-1.54 1.118l-3.39-2.46a1 1 0 00-1.175 0l-3.39 2.46c-.784.57-1.838-.197-1.54-1.118l1.287-3.97a1 1 0 00-.364-1.118l-3.39-2.46c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z' />
+                        </svg>
+                      ))}
+                    </div>
+                    <span className='ml-2 text-sm text-gray-400'>({product.numReviews} reviews)</span>
+                  </div>
+                  <div className='mt-3 text-sm text-gray-400'>
+                    <p>Stock: {product.countInStock}</p>
+                  </div>
+                </div>
               </Link>
             </div>
           ))}
         </div>
       </div>
 
-      <div className='flex justify-around w-full border-t-2 pt-4'>
+      <div className='flex justify-around w-full border-t-2 pt-4 mt-8'>
         <ReactPaginate
           previousLabel={'Previous'}
           nextLabel={'Next'}

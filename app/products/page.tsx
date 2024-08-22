@@ -8,7 +8,7 @@ export default function Products() {
     <FilterProvider>
       <main className='flex min-h-screen flex-col items-center p-24'>
         <div className='flex w-full'>
-          <aside className='w-1/4 p-4'>
+          <aside className='w-1/4 px-4'>
             <FilterSidebar />
           </aside>
           <ProductList />
