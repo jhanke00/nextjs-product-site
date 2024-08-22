@@ -1,5 +1,5 @@
 import FilterContext from '@/app/contexts/product-filter/filter.context';
 import FilterProvider from '@/app/contexts/product-filter/filter.provider';
-import useFilterContext from '@/app/contexts/product-filter/use.filter.context';
+import useFilter from '@/app/contexts/product-filter/use.filter';
 
-export { FilterProvider, useFilterContext, FilterContext };
+export { FilterProvider, useFilter, FilterContext };
