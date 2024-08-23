@@ -33,6 +33,12 @@ const FilterSidebar = () => {
   };
 
   useEffect(() => {
+    if (searchFilter !== searchInput) {
+      setSearchInput(searchFilter);
+    }
+  }, [searchFilter]);
+
+  useEffect(() => {
     return () => {
       debouncedSearch.cancel();
     };
