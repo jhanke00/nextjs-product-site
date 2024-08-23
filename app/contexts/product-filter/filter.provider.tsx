@@ -5,6 +5,7 @@ const FilterProvider = ({ children }: { children: ReactNode }) => {
   const [ratingFilter, setRatingFilter] = useState(0);
   const [priceFilter, setPriceFilter] = useState<[number, number]>([0, 1000]);
   const [categoryFilter, setCategoryFilter] = useState('');
+  const [searchFilter, setSearchFilter] = useState('');
 
   return (
     <FilterContext.Provider
@@ -15,6 +16,8 @@ const FilterProvider = ({ children }: { children: ReactNode }) => {
         setPriceFilter,
         categoryFilter,
         setCategoryFilter,
+        searchFilter,
+        setSearchFilter,
       }}
     >
       {children}

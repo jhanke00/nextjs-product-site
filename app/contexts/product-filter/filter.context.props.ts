@@ -7,4 +7,6 @@ export default interface FilterContextProps {
   setPriceFilter: Dispatch<SetStateAction<[number, number]>>;
   categoryFilter: string;
   setCategoryFilter: Dispatch<SetStateAction<string>>;
+  searchFilter: string;
+  setSearchFilter: Dispatch<SetStateAction<string>>;
 }

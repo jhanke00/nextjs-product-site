@@ -24,7 +24,7 @@ const originalData: Product[] = [...largeData, ...smallData].map((product) => {
 
 const ProductList: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(0);
-  const { ratingFilter, priceFilter, categoryFilter } = useFilter();
+  const { ratingFilter, priceFilter, categoryFilter, searchFilter } = useFilter();
   const [data, setData] = useState<Product[]>(originalData);
 
   const filteredData = useMemo<Product[]>(() => {
@@ -33,9 +33,10 @@ const ProductList: React.FC = () => {
         (categoryFilter === '' || product.category === categoryFilter) &&
         Math.round(product.rating) >= ratingFilter &&
         product.price >= priceFilter[0] &&
-        product.price <= priceFilter[1]
+        product.price <= priceFilter[1] &&
+        (searchFilter === '' || product.name.toLowerCase().includes(searchFilter.toLowerCase()))
     );
-  }, [data, categoryFilter, ratingFilter, priceFilter]);
+  }, [data, categoryFilter, ratingFilter, priceFilter, searchFilter]);
 
   const pageCount = Math.ceil(filteredData.length / PAGE_SIZE);
 
