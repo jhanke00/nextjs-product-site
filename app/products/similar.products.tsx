@@ -1,23 +1,31 @@
 import { Product } from '@type/products';
 import Image from 'next/image';
 import Link from 'next/link';
-import findSimilarProducts from '@utils/find.similar.products';
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { getSimilarProduct } from '@/src/services/products/get.similar.product';
+import { Loading } from '@/src/components/Loading';
 
 interface SimilarProductsProps {
   currentProduct: Product;
-  products: Product[];
 }
 
-function SimilarProducts({ currentProduct, products }: SimilarProductsProps) {
-  const similarProducts = findSimilarProducts(products, currentProduct);
+function SimilarProducts({ currentProduct }: SimilarProductsProps) {
+  const { data, isLoading } = getSimilarProduct({ productId: currentProduct.id });
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (!data || !data.length) {
+    return <p>Not found similar products</p>;
+  }
 
   return (
     <div className='mt-8'>
       <h2 className='text-2xl font-semibold text-white mb-4'>You may also like</h2>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4'>
-        {similarProducts.map((product) => (
+        {data.map((product) => (
           <div
             key={product.id}
             className='group p-5 rounded-lg shadow-lg overflow-hidden border border-gray-700 bg-gray-800 transition-colors duration-300 hover:bg-gray-700'

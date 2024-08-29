@@ -9,4 +9,14 @@ export default interface FilterContextProps {
   setCategoryFilter: Dispatch<SetStateAction<string>>;
   searchFilter: string;
   setSearchFilter: Dispatch<SetStateAction<string>>;
+  currentPage: number;
+  setCurrentPage: Dispatch<SetStateAction<number>>;
+  applyFilters: () => void;
+  filters: {
+    rating: number;
+    price: [number, number];
+    category: string;
+    search: string;
+    page: number;
+  };
 }

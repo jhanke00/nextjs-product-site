@@ -1,54 +1,18 @@
 'use client';
-import React, { useEffect, useMemo, useState } from 'react';
-import largeData from '@mock/large/products.json';
-import smallData from '@mock/small/products.json';
+import React, { useEffect } from 'react';
 import { useFilter } from '@/app/contexts/product-filter';
 import Link from 'next/link';
-import { Product } from '@type/products';
 import ReactPaginate from 'react-paginate';
 import { FaStar } from 'react-icons/fa';
-
-const PAGE_SIZE = 21;
-
-const originalData: Product[] = [...largeData, ...smallData].map((product) => {
-  return {
-    id: product.id,
-    name: product.name,
-    price: product.price as unknown as number,
-    description: product.description,
-    category: product.category,
-    rating: product.rating,
-    numReviews: product.numReviews,
-    countInStock: product.countInStock,
-  };
-});
+import { getProducts } from '@/src/services/products/get.products';
+import { Loading } from '@components/Loading';
 
 const ProductList: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<number>(0);
-  const { ratingFilter, priceFilter, categoryFilter, searchFilter } = useFilter();
-  const [data, setData] = useState<Product[]>(originalData);
+  const { filters, currentPage, setCurrentPage } = useFilter();
 
-  const filteredData = useMemo<Product[]>(() => {
-    return data.filter(
-      (product) =>
-        (categoryFilter === '' || product.category === categoryFilter) &&
-        Math.round(product.rating) >= ratingFilter &&
-        product.price >= priceFilter[0] &&
-        product.price <= priceFilter[1] &&
-        (searchFilter === '' || product.name.toLowerCase().includes(searchFilter.toLowerCase()))
-    );
-  }, [data, categoryFilter, ratingFilter, priceFilter, searchFilter]);
-
-  const pageCount = Math.ceil(filteredData.length / PAGE_SIZE);
-
-  const handlePageClick = ({ selected }: { selected: number }) => {
-    setCurrentPage(selected);
-  };
-
-  const paginatedData = useMemo<Product[]>(() => {
-    const startIndex = currentPage * PAGE_SIZE;
-    return filteredData.slice(startIndex, startIndex + PAGE_SIZE);
-  }, [currentPage, filteredData]);
+  const { data, pagination, isLoading } = getProducts({
+    ...filters,
+  });
 
   useEffect(() => {
     window.scrollTo({
@@ -57,11 +21,21 @@ const ProductList: React.FC = () => {
     });
   }, [currentPage]);
 
+  const handlePageClick = ({ selected }: { selected: number }) => {
+    setCurrentPage(selected);
+  };
+
+  if (isLoading) return <Loading />;
+
+  if (!data || !data.length) {
+    return <p>Not products found</p>;
+  }
+
   return (
     <div className='w-3/4'>
       <div className='z-10 w-full items-center justify-between text-sm lg:flex'>
         <div className='grid w-full lg:grid-cols-3 lg:gap-6 lg:text-left'>
-          {paginatedData.map((product) => (
+          {data.map((product) => (
             <div
               key={product.id}
               className='group rounded-lg shadow-lg overflow-hidden border border-gray-700 bg-gray-800 transition-colors duration-300 hover:bg-gray-700'
@@ -97,14 +71,15 @@ const ProductList: React.FC = () => {
           previousLabel={'Previous'}
           nextLabel={'Next'}
           breakLabel={'...'}
-          breakClassName={'break-me'}
-          pageCount={pageCount}
+          pageCount={pagination!.pageCount}
           marginPagesDisplayed={2}
           pageRangeDisplayed={3}
+          initialPage={currentPage}
           onPageChange={handlePageClick}
+          breakClassName={'break-me'}
           containerClassName={'flex justify-center items-center space-x-2 mt-4'}
           pageClassName={'px-3 py-1 rounded bg-gray-800 text-white hover:bg-gray-700'}
-          activeClassName={'bg-blue-600'}
+          activeClassName={'bg-blue-500'}
           previousClassName={'px-3 py-1 rounded bg-gray-800 text-white hover:bg-gray-700'}
           nextClassName={'px-3 py-1 rounded bg-gray-800 text-white hover:bg-gray-700'}
           disabledClassName={'opacity-50 cursor-not-allowed'}

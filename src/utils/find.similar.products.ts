@@ -25,10 +25,6 @@ const findSimilarProducts = (products: Product[], currentProduct: Product, maxRe
         similarityScore -= 10;
       }
 
-      // Match features
-      // const commonFeatures = (product.rating + product.numReviews + product.countInStock) / 3;
-      // similarityScore += commonFeatures;
-
       return { product, similarityScore };
     })
     .sort((a, b) => b.similarityScore - a.similarityScore) // Sort by highest similarity score

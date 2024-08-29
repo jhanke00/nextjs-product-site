@@ -17,6 +17,7 @@ const FilterSidebar = () => {
     setCategoryFilter,
     searchFilter,
     setSearchFilter,
+    applyFilters,
   } = useFilter();
   const data = [...largeData, ...smallData];
   const [searchInput, setSearchInput] = useState<string>(searchFilter);
@@ -36,7 +37,7 @@ const FilterSidebar = () => {
     if (searchFilter !== searchInput) {
       setSearchInput(searchFilter);
     }
-  }, [searchFilter]);
+  }, []);
 
   useEffect(() => {
     return () => {
@@ -106,9 +107,6 @@ const FilterSidebar = () => {
               className='bg-gray-800 text-white border border-gray-600 rounded p-2 w-1/2 ml-2'
             />
           </div>
-          <span className='text-white mt-2'>
-            ${priceFilter[0]} - ${priceFilter[1]}
-          </span>
         </div>
       </div>
       <div>
@@ -125,6 +123,14 @@ const FilterSidebar = () => {
             </option>
           ))}
         </select>
+      </div>
+      <div className='mt-6'>
+        <button
+          className='w-full text-white bg-blue-500 border border-blue-500 rounded py-2 px-4'
+          onClick={applyFilters}
+        >
+          Apply Filters
+        </button>
       </div>
     </div>
   );
