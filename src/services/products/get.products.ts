@@ -13,8 +13,6 @@ type ProductQueryData = {
   page: number;
 };
 
-const PAGE_SIZE = 21;
-
 /**
  * Retrieves a list of products based on the provided query data.
  *
