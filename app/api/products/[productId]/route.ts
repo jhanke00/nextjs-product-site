@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Product } from '@type/products';
-import largeData from '@mock/large/products.json';
-import smallData from '@mock/small/products.json';
+import { connectToDatabase } from '@/src/database/datasource';
 
 type Params = {
   productId: string;
@@ -10,8 +8,12 @@ type Params = {
 export async function GET(req: NextRequest, context: { params: Params }) {
   const { params } = context;
 
-  const data: Product[] = [...largeData, ...smallData] as unknown as Product[];
-  const product = data.find((item) => item.id === params.productId);
+  const prisma = await connectToDatabase();
+  const product = await prisma.product.findFirst({
+    where: {
+      id: params.productId,
+    },
+  });
 
   if (product) {
     return NextResponse.json({ data: product });

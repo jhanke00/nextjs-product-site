@@ -79,7 +79,7 @@ const ProductList: React.FC = () => {
           breakClassName={'break-me'}
           containerClassName={'flex justify-center items-center space-x-2 mt-4'}
           pageClassName={'px-3 py-1 rounded bg-gray-800 text-white hover:bg-gray-700'}
-          activeClassName={'bg-blue-500'}
+          activeClassName={'!bg-blue-500'}
           previousClassName={'px-3 py-1 rounded bg-gray-800 text-white hover:bg-gray-700'}
           nextClassName={'px-3 py-1 rounded bg-gray-800 text-white hover:bg-gray-700'}
           disabledClassName={'opacity-50 cursor-not-allowed'}

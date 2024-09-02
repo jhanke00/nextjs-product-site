@@ -1,13 +1,15 @@
-export type Item = {
+import { User } from '@type/users';
+
+export interface Item {
   id: string;
   name: string;
   price: number;
   count: number;
-};
+}
 
-export type Order = {
-  user: string;
+export interface Order {
+  user: User;
   items: Array<Item>;
   total: number;
   time: Date;
-};
+}

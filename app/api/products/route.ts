@@ -1,21 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
-import largeData from '@mock/large/products.json';
-import smallData from '@mock/small/products.json';
 import { Product } from '@type/products';
+import { connectToDatabase } from '@/src/database/datasource';
 
 const PAGE_SIZE = 21;
 
 export async function GET(request: NextRequest) {
-  const data: Product[] = [...largeData, ...smallData] as unknown as Product[];
-
   const searchParams = request.nextUrl.searchParams;
   const filters: Partial<Record<keyof Product, string | number | [number, number]>> = {};
-
   const page = searchParams.get('page');
+  const prisma = await connectToDatabase();
 
-  // Build filters based on search parameters
   searchParams.forEach((value, key) => {
-    if (key in data[0]) {
+    if (key !== 'page') {
       if (value !== '' && value !== undefined) {
         if (value.includes(',')) {
           const range = value.split(',').map(Number);
@@ -27,33 +23,30 @@ export async function GET(request: NextRequest) {
     }
   });
 
-  // Filter the data based on the filters
-  const filteredData = data.filter((product) => {
-    return Object.entries(filters).every(([key, value]) => {
-      const productValue = product[key as keyof Product];
+  const mongoFilters: any = {};
+  Object.entries(filters).forEach(([key, value]) => {
+    if (Array.isArray(value)) {
+      mongoFilters[key] = { gte: value[0], lte: value[1] };
+    } else if (typeof value === 'string') {
+      mongoFilters[key] = { contains: value }; // Case-insensitive regex search
+    } else {
+      mongoFilters[key] = { gte: value };
+    }
+  });
+  //
+  const totalCount = await prisma.product.count({
+    where: mongoFilters,
+  });
+  const pageCount = Math.ceil(totalCount / PAGE_SIZE);
 
-      if (Array.isArray(value)) {
-        return +productValue >= value[0] && +productValue <= value[1];
-      }
-
-      if (typeof value === 'string') {
-        return productValue?.toString().toLowerCase().includes(value.toString().toLowerCase());
-      }
-
-      if (typeof value === 'number') {
-        return +productValue >= value - 1;
-      }
-
-      return productValue === value;
-    });
+  const products = await prisma.product.findMany({
+    where: mongoFilters,
+    take: PAGE_SIZE,
+    skip: Number(page),
   });
 
-  const totalCount = filteredData.length;
-  const pageCount = Math.ceil(totalCount / PAGE_SIZE);
-  const startIndex = page !== null ? Number(page) * PAGE_SIZE : 0;
-
   return NextResponse.json({
-    data: filteredData.slice(startIndex, startIndex + PAGE_SIZE),
+    data: products,
     pagination: {
       pageCount,
       totalCount,
