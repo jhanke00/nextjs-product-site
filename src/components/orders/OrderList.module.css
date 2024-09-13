@@ -1,0 +1,13 @@
+/* OrderList.module.css */
+.orderList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .orderList {
+    justify-content: center;
+  }
+}
