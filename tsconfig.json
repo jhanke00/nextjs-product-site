@@ -22,7 +22,10 @@
       "@components/*": ["./src/components/*"],
       "@type/*": ["./src/type/*"],
       "@utils/*": ["./src/utils/*"],
-      "@mock/*": ["./src/mock/*"]
+      "@mock/*": ["./src/mock/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@enums/*": ["./src/enums/*"],
+      "@pages/*": ["./pages/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
