@@ -1,5 +1,7 @@
 import { prisma } from '@/src/utils/prisma-client';
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+
+export const revalidate = 3600; // revalidate every hour
 
 export async function GET(_request: NextRequest) {
   try {
@@ -13,18 +15,13 @@ export async function GET(_request: NextRequest) {
       price: `${(product.price / 100).toFixed(2)}`,
     }));
 
-    return new Response(JSON.stringify(stringPricedProducts), {
+    return NextResponse.json(stringPricedProducts, {
       status: 200,
       headers: {
-        'Content-Type': 'application/json',
+        'Cache-Control': 'max-age=3600, s-maxage=3600, stale-while-revalidate=86400',
       },
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: (error as Error).message }), {
-      status: 500,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    return NextResponse.json({ error: (error as Error).message }, { status: 500 });
   }
 }
