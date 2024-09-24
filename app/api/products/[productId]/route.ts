@@ -5,6 +5,8 @@ type Context = {
   params: { productId: string };
 };
 
+export const revalidate = 3600; // revalidate every hour
+
 export async function GET(_request: NextRequest, context: Context) {
   const { productId } = context.params;
 
@@ -23,9 +25,12 @@ export async function GET(_request: NextRequest, context: Context) {
       price: `$${(product.price / 100).toFixed(2)}`,
     };
 
-    return NextResponse.json(formattedProduct);
+    return NextResponse.json(formattedProduct, {
+      headers: {
+        'Cache-Control': 'max-age=3600, s-maxage=3600, stale-while-revalidate=86400',
+      },
+    });
   } catch (error) {
-    console.error('Error fetching product:', error);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return NextResponse.json({ error: (error as Error).message }, { status: 500 });
   }
 }
