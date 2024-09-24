@@ -14,13 +14,15 @@
     "build-storybook": "storybook build",
     "prepare": "husky",
     "generate-large-data": "node ./scripts/generateLargeData.js",
-    "generate-small-data": "node ./scripts/generateSmallData.js"
+    "generate-small-data": "node ./scripts/generateSmallData.js",
+    "prismaDev": "dotenv -e .env.local -- pnpm prisma --"
   },
   "engines": {
     "node": ">=18",
     "pnpm": ">=8"
   },
   "dependencies": {
+    "@prisma/client": "5.19.1",
     "fs": "0.0.1-security",
     "next": "14.1.0",
     "react": "^18.2.0",
@@ -43,6 +45,7 @@
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.17",
+    "dotenv-cli": "^7.4.2",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-storybook": "^0.6.15",
@@ -52,6 +55,7 @@
     "only-allow": "^1.2.1",
     "postcss": "^8.4.35",
     "prettier": "3.2.5",
+    "prisma": "^5.19.1",
     "storybook": "^7.6.15",
     "tailwindcss": "^3.4.1",
     "ts-jest": "^29.1.2",
