@@ -15,7 +15,8 @@
     "prepare": "husky",
     "generate-large-data": "node ./scripts/generateLargeData.js",
     "generate-small-data": "node ./scripts/generateSmallData.js",
-    "prismaDev": "dotenv -e .env.local -- pnpm prisma --"
+    "prismaDev": "dotenv -e .env.local -- pnpm prisma --",
+    "seed-mongodb": "dotenv -e .env.local -- tsx ./scripts/seed-database.ts"
   },
   "engines": {
     "node": ">=18",
@@ -45,6 +46,7 @@
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.17",
+    "bson": "^6.8.0",
     "dotenv-cli": "^7.4.2",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
@@ -60,6 +62,7 @@
     "tailwindcss": "^3.4.1",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
     "typescript": "^5.3.3"
   }
 }

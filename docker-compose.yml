@@ -2,7 +2,6 @@ name: next-product-site-backend
 
 services:
   mongodb:
-    container_name: local-mongodb
     image: bitnami/mongodb
     restart: always
     ports:
@@ -18,3 +17,4 @@ services:
 
 volumes:
   mongodb-data:
+  mongodb-config-data:
