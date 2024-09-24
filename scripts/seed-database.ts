@@ -18,6 +18,9 @@ function uuidToObjectId(uuid: string) {
 }
 
 async function seed() {
+  await prisma.product.deleteMany({});
+  console.info('Product collection cleared!');
+
   const allProducts = [...largeData, ...smallData].map((product) => ({
     ...product,
     // converting id because of ObjectId
@@ -29,6 +32,7 @@ async function seed() {
   await prisma.product.createMany({
     data: allProducts,
   });
+  console.info('Products seeded!');
 }
 
 seed();
