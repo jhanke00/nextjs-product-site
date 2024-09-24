@@ -1,18 +1,18 @@
 'use client';
-import largeData from '@/src/mock/large/products.json';
-import smallData from '@/src/mock/small/products.json';
-import { useState, useEffect } from 'react';
+import { useProducts } from '@/src/utils/use-products';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const PAGE_SIZE = 20;
 
 export default function Products() {
   const [currentPage, setCurrentPage] = useState(1);
-  const data = [...largeData, ...smallData];
+  const { products, isLoading, error } = useProducts();
+
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = startIndex + PAGE_SIZE;
-  const productData = data.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(data.length / PAGE_SIZE);
+  const productData = products.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(products.length / PAGE_SIZE);
 
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
@@ -25,6 +25,9 @@ export default function Products() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <main className='flex min-h-screen flex-col items-center p-24'>

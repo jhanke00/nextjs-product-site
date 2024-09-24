@@ -21,6 +21,7 @@ This is a dummy product site that needs help adding new features and maturing th
 - ESLint
 - Folder Structure
 - Mock Product Page (`/app/products`)
+- Dev database with mongodb and docker
 
 ## Getting Started
 
@@ -35,7 +36,9 @@ This is a dummy product site that needs help adding new features and maturing th
 1. Clone the repository with `git clone` or fork the repository.
 2. Run `pnpm i` to install dependencies.
 3. Run `pnpm dev` to start application.
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Start the docker container for the mongodb database with `docker-compose up -d`
+5. Run `pnpm seed-mongodb` to seed the database with initial data
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Codespaces is also available and is pre-configured with node and pnpm.
 

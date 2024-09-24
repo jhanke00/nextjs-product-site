@@ -1,12 +1,19 @@
-import largeData from '@/src/mock/large/products.json';
-import smallData from '@/src/mock/small/products.json';
+'use client';
 
-const productDetail = ({ params }: { params: { productId: string } }) => {
-  const data = [...largeData, ...smallData];
-  const product = data.find((item) => item.id === params.productId);
-  if (!product) {
-    return <p>Product not Found</p>;
-  }
+import { useProduct } from '@/src/utils/use-product';
+import { notFound } from 'next/navigation';
+
+interface ProductDetailProps {
+  params: { productId: string };
+}
+
+export default function ProductDetail({ params }: ProductDetailProps) {
+  const { productId } = params;
+  const { product, isLoading, error } = useProduct(productId as string);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+  if (!product) return notFound();
 
   return (
     <div className='flex min-h-screen flex-col p-24'>
@@ -20,6 +27,4 @@ const productDetail = ({ params }: { params: { productId: string } }) => {
       <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Stock: {product.countInStock}</p>
     </div>
   );
-};
-
-export default productDetail;
+}
