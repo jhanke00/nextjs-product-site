@@ -1,0 +1,33 @@
+# Ignore pnpm and node_modules
+node_modules
+.pnpm
+.pnpm-store
+npm-debug.log
+
+# Ignore logs
+logs
+*.log
+
+# Ignore dotenv files (if you're using environment variables locally)
+.env
+.env.local
+.env.*.local
+
+# Ignore Docker-related files
+Dockerfile
+docker-compose.yml
+/infra/Dockerfile
+/infra/docker-compose.yml
+
+# Ignore build artifacts
+.next
+out
+dist
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Git-related files
+.git
+.gitignore

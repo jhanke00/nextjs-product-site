@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nextjs:
+    container_name: 'next-product-site'
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    ports:
+      - '3000:3000'
+    volumes:
+      - ../:/app
+    environment:
+      - NODE_ENV=development
