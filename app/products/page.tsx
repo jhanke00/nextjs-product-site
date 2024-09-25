@@ -27,13 +27,11 @@ export default function Products() {
   }, [currentPage]);
 
   return (
-    <main className='flex min-h-screen flex-col items-center p-24 dark'>
-      <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex'>
-        <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-2 lg:text-left'>
-          {productData.map((product) => (
-            <ProductCard product={product} key={product.id} />
-          ))}
-        </div>
+    <main className='w-full container mx-auto px-4 dark min-h-screen'>
+      <div className='grid grid-cols1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-4'>
+        {productData.map((product) => (
+          <ProductCard product={product} key={product.id} />
+        ))}
       </div>
 
       <div className='flex justify-around w-full border-t-2 pt-4'>
