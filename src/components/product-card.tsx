@@ -16,7 +16,7 @@ const descriptionFont = Roboto_Mono({ weight: '400', subsets: ['latin'], style: 
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className=''>
+    <div className='w-full min-w-[250px] md:min-w-[490px] max-w-[490px]'>
       <Link key={product.id} href={`/products/${product.id}`}>
         <Card isPressable>
           <CardHeader>

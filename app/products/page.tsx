@@ -1,5 +1,6 @@
 'use client';
 import ProductCard from '@/src/components/product-card';
+import { ProductPagination } from '@/src/components/product-pagination';
 import largeData from '@/src/mock/large/products.json';
 import smallData from '@/src/mock/small/products.json';
 import { useEffect, useState } from 'react';
@@ -14,36 +15,22 @@ export default function Products() {
   const productData = data.slice(startIndex, endIndex);
   const totalPages = Math.ceil(data.length / PAGE_SIZE);
 
-  const nextPage = () => {
-    setCurrentPage(currentPage + 1);
-  };
-
-  const prevPage = () => {
-    setCurrentPage(currentPage - 1);
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
   return (
     <main className='w-full container mx-auto px-4 dark min-h-screen'>
-      <div className='grid grid-cols1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-4'>
+      <ProductPagination initialPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
+
+      <div className='flex flex-wrap justify-center gap-4 py-4'>
         {productData.map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}
-      </div>
-
-      <div className='flex justify-around w-full border-t-2 pt-4'>
-        <button onClick={prevPage} disabled={currentPage === 1}>
-          Previous
-        </button>
-        <span>
-          Page {currentPage} of {totalPages}
-        </span>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>
-          Next
-        </button>
       </div>
     </main>
   );
