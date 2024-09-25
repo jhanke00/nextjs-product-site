@@ -1,9 +1,11 @@
 'use client';
+
 import ProductCard from '@/src/components/product-card';
 import { ProductPagination } from '@/src/components/product-pagination';
+import ScrollToTop from '@/src/components/scroll-to-top';
 import largeData from '@/src/mock/large/products.json';
 import smallData from '@/src/mock/small/products.json';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const PAGE_SIZE = 20;
 
@@ -14,10 +16,6 @@ export default function Products() {
   const endIndex = startIndex + PAGE_SIZE;
   const productData = data.slice(startIndex, endIndex);
   const totalPages = Math.ceil(data.length / PAGE_SIZE);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [currentPage]);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -32,6 +30,8 @@ export default function Products() {
           <ProductCard product={product} key={product.id} />
         ))}
       </div>
+
+      <ScrollToTop />
     </main>
   );
 }
