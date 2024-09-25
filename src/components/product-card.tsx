@@ -32,7 +32,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             <div className={`text-md overflow-hidden ${descriptionFont.className} h-24 mb-4`}>
               {product.description.length > 100 ? product.description.slice(0, 100) + '...' : product.description}
             </div>
-            <div className='flex flex-row flex-nowrap items-center gap-4 mt-auto'>
+            <div className='flex flex-row flex-nowrap items-center justify-end gap-4 mt-auto'>
               <CardRating rating={product.rating} />
               <div className='flex flex-row flex-nowrap items-center gap-2' title={`${product.numReviews} reviews`}>
                 <MdRateReview />
@@ -41,7 +41,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             </div>
           </CardBody>
 
-          <CardFooter>
+          <CardFooter className='border-t-1 border-gray-300'>
             <div className='w-full flex justify-between items-end'>
               {product.countInStock === 0 && <p className='text-sm opacity-50'>Out of Stock</p>}
               {product.countInStock > 0 && (

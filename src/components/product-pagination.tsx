@@ -25,6 +25,7 @@ export function ProductPagination({ initialPage, totalPages, onPageChange }: Pag
   return (
     <div className='w-full flex justify-center pt-4'>
       <Pagination
+        color='warning'
         showControls
         isCompact={isMobile}
         initialPage={initialPage}
