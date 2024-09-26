@@ -1,6 +1,5 @@
 import { GET } from './route';
-import { NextApiRequest } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { getUserById } from '@utils/user/userService';
 import { handleError } from '@utils/apiErrors';
 
@@ -10,7 +9,7 @@ jest.mock('@utils/apiErrors');
 describe('GET /api/user/[userId]', () => {
   const mockUserId = '123';
   const mockContext = { params: { userId: mockUserId } } as any;
-  const mockRequest = {} as NextApiRequest;
+  const mockRequest = {} as NextRequest;
 
   beforeEach(() => {
     jest.clearAllMocks();

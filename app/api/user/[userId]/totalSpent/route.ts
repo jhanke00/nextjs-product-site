@@ -1,5 +1,4 @@
-import type { NextApiRequest } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { getUserTotalSpent } from '@utils/order/orderService';
 import { handleError } from '@utils/apiErrors';
 
@@ -9,7 +8,7 @@ type Context = {
   };
 };
 
-export async function GET(req: NextApiRequest, context: Context) {
+export async function GET(req: NextRequest, context: Context) {
   const res = NextResponse;
   try {
     const userId = context.params.userId;

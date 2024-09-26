@@ -1,8 +1,7 @@
-import type { NextApiRequest } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { NotFoundError, ValidationError } from '@utils/apiErrors';
 
-function handleError(req: NextApiRequest, error: any) {
+function handleError(req: NextRequest, error: any) {
   if (error instanceof NotFoundError) {
     return NextResponse.json({ success: false, message: error.message }, { status: 404 });
   }

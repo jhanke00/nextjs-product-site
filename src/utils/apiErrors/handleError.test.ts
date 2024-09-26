@@ -1,5 +1,4 @@
-import { NextApiRequest } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { NotFoundError, ValidationError } from '@utils/apiErrors';
 import { handleError } from './handleError';
 
@@ -10,12 +9,12 @@ jest.mock('next/server', () => ({
 }));
 
 describe('handleError', () => {
-  let req: NextApiRequest;
+  let req: NextRequest;
 
   beforeEach(() => {
     req = {
       url: '/api/test',
-    } as NextApiRequest;
+    } as NextRequest;
     jest.clearAllMocks();
   });
 
