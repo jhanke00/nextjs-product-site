@@ -10,4 +10,9 @@ export class ProductsMongoRepository implements IProductRepository {
 
     return;
   }
+
+  async findById(id: string): Promise<IProduct | null> {
+    await mongoDbConnection();
+    return await Product.findById(id);
+  }
 }

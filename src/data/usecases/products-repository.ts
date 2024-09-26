@@ -1,5 +1,6 @@
 import { ProductsMongoRepository } from '@/infra/db/mongodb/products/products-mongo-repository';
 import { IProductInserManyInput } from '../protocols/db/dtos/products-repository.dto';
+import { IProduct } from '@/src/domain/models/products';
 
 export class ProductsDbRepository {
   private readonly productMongoRepository: ProductsMongoRepository;
@@ -19,5 +20,9 @@ export class ProductsDbRepository {
       countInStock: product.countInStock,
     }));
     await this.productMongoRepository.insertMany(transformedProducts);
+  }
+
+  async findById(id: string): Promise<IProduct | null> {
+    return await this.productMongoRepository.findById(id);
   }
 }

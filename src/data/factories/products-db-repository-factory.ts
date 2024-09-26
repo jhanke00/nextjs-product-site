@@ -2,7 +2,6 @@ import { ProductsMongoRepository } from '@/infra/db/mongodb/products/products-mo
 import { ProductsDbRepository } from '../usecases/products-repository';
 
 export const makeProductsDbRepository = () => {
-
   const mongoProductsRepository = new ProductsMongoRepository();
   return new ProductsDbRepository(mongoProductsRepository);
 };

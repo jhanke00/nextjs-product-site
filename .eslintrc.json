@@ -2,11 +2,11 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "no-unused-vars": "warn",
-    "react/react-in-jsx-scope": "off", 
+    "react/react-in-jsx-scope": "off",
     "quotes": ["error", "single"],
-    "semi": ["error", "always"], 
-    "indent": ["error", 2], 
-    "react/prop-types": "off" 
+    "semi": ["error", "always"],
+    "indent": ["error", 2],
+    "react/prop-types": "off"
   },
   "env": {
     "browser": true,
