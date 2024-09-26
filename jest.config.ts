@@ -9,7 +9,7 @@ const config: Config = {
   transform: { '^.+\\.ts$': 'ts-jest' },
   verbose: true,
   passWithNoTests: true,
-  collectCoverageFrom: ['src/**/*.ts'],
+  collectCoverageFrom: ['src/**/*.ts', 'app/api/**/*.ts'],
   collectCoverage: true,
 };
 
