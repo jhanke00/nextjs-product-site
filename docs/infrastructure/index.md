@@ -1,3 +1,4 @@
 # Infrastructure
 
-Documentation on any Infrastructure setup or changes made.
+Implemented Docker in the project.
+Implemented Prisma ORM in the project.
