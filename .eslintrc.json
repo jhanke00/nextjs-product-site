@@ -2,11 +2,11 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "no-unused-vars": "warn",
-    "react/react-in-jsx-scope": "off", // Para versões do React 17+
-    "quotes": ["error", "single"], // Forçar uso de aspas simples
-    "semi": ["error", "always"], // Forçar uso de ponto e vírgula
-    "indent": ["error", 2], // Forçar indentação de 2 espaços
-    "react/prop-types": "off" // Desativar verificação de prop-types (se você estiver usando TypeScript)
+    "react/react-in-jsx-scope": "off", 
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"], 
+    "indent": ["error", 2], 
+    "react/prop-types": "off" 
   },
   "env": {
     "browser": true,

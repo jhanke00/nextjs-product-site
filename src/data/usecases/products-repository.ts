@@ -2,8 +2,11 @@ import { ProductsMongoRepository } from '@/infra/db/mongodb/products/products-mo
 import { IProductInserManyInput } from '../protocols/db/dtos/products-repository.dto';
 
 export class ProductsDbRepository {
-  constructor(private readonly productMongoRepository = new ProductsMongoRepository()) {}
+  private readonly productMongoRepository: ProductsMongoRepository;
 
+  constructor(productMongoRepository: ProductsMongoRepository) {
+    this.productMongoRepository = productMongoRepository;
+  }
   async insertMany(products: IProductInserManyInput[]): Promise<void> {
     const transformedProducts = products.map((product) => ({
       _id: product.id,
