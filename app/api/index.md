@@ -1,3 +1,3 @@
-# Page Router
+# Api Router
 
-Add pages here for [Page Router](https://nextjs.org/docs/getting-started/project-structure)
+Route for seed products [POST - /api/seed-products](http://localhost:3000/api/seed-products)

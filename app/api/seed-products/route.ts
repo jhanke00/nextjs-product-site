@@ -1,5 +1,3 @@
-// pages/api/hello.ts
-
 import { seedProductsTable } from '@/scripts/seed-products';
 import {  NextResponse } from 'next/server';
 
