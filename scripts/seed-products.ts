@@ -12,5 +12,3 @@ export const seedProductsTable = async () => {
     return 'Error while seeding!';
   }
 };
-
-seedProductsTable();
