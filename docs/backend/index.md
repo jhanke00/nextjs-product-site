@@ -1,6 +1,6 @@
 # Changes Documentation
 
-###### This document outlines the changes I made to the project according to some issues on GitHub. I focused on the backend issues.
+###### This document outlines the changes I made to the project according to some issues on GitHub. I focused on the backend issues I created only one branch with all the changes, called `bruno_changes`.
 
 I handle the large json files differently from the small json files.
 They both have similiar endpoints but here are some main differences:
