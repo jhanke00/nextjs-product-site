@@ -29,6 +29,8 @@ Documentation on any Frontend capabilities or changes made.
 
 The **Product Card** component is designed to display individual product details in a visually appealing and organized manner. This component enhances the user experience by providing key information about each product in a concise format.
 
+![Product Card](./images/ProductCard.png)
+
 ### File Location
 
 - `src/components/ui/ProductCard/index.tsx`
