@@ -72,7 +72,7 @@ model Order {
   total  Float
   time   DateTime
 
-  user  User        @relation(fields: [userId], references: [id])
+  user  User        @relation(fields: [userId], references: [id], onDelete: Cascade)
   items OrderItem[]
 
   @@map("orders")
@@ -85,8 +85,8 @@ model OrderItem {
   price     Float
   count     Int
 
-  order   Order   @relation(fields: [orderId], references: [id])
-  product Product @relation(fields: [productId], references: [id])
+  order   Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
 
   @@map("order_items")
 }
@@ -107,4 +107,4 @@ To make the seed you have to check if you have the code below in `package.json` 
 },
 ```
 
-After the you can run the command `npx prisma db seed` to populate the database.
+After the you can run the command `pnpm prisma db seed` to populate the database.
