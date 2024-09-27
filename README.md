@@ -36,6 +36,7 @@ This is a dummy product site that needs help adding new features and maturing th
 2. Run `pnpm i` to install dependencies.
 3. Run `pnpm dev` to start application.
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Run with [Docker](./docs/infrastructure/docker/docker-commands.md)
 
 Codespaces is also available and is pre-configured with node and pnpm.
 

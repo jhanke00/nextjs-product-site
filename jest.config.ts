@@ -11,6 +11,7 @@ const config: Config = {
   passWithNoTests: true,
   collectCoverageFrom: ['src/**/*.ts'],
   collectCoverage: true,
+  testMatch: ['**/*.spec.ts'],
 };
 
 export default config;

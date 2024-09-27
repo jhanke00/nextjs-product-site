@@ -1,6 +1,6 @@
 {
   "name": "next-product-site",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,12 +9,20 @@
     "build": "next build",
     "format": "prettier . --write",
     "preinstall": "only-allow pnpm",
-    "test": "jest",
+    "test": "jest ",
+    "test-integration": "pnpm test -- -c ./jest-integration-config.ts",
+
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky",
     "generate-large-data": "node ./scripts/generateLargeData.js",
-    "generate-small-data": "node ./scripts/generateSmallData.js"
+    "generate-small-data": "node ./scripts/generateSmallData.js",
+    "docker-build": "docker-compose -f infra/docker-compose.yml build",
+    "docker-up": "docker-compose -f infra/docker-compose.yml up",
+    "docker-down": "docker-compose -f infra/docker-compose.yml down",
+    "docker-restart": "docker-compose -f infra/docker-compose.yml restart",
+    "docker-logs": "docker-compose -f infra/docker-compose.yml logs",
+    "docker-exec": "docker-compose -f infra/docker-compose.yml exec nextjs sh"
   },
   "engines": {
     "node": ">=18",
@@ -22,6 +30,7 @@
   },
   "dependencies": {
     "fs": "0.0.1-security",
+    "mongoose": "^8.6.3",
     "next": "14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
