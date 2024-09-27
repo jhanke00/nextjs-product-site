@@ -12,6 +12,6 @@ const ProductSchema: Schema<IProduct> = new Schema({
   countInStock: { type: Number, required: true },
 });
 
-const Product = mongoose.model<IProduct>('Product', ProductSchema);
+const Product = mongoose.models.Product || mongoose.model<IProduct>('Product', ProductSchema);
 
 export default Product;
