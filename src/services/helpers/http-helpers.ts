@@ -12,7 +12,6 @@ const  extractErrorData = (error: Error) => ({
 
 
 export const badRequest = (error: Error): IHttpResponse => {
-  console.log({error});
   return {
     statusCode: 400,
     body: extractErrorData(error)
