@@ -1,23 +1,14 @@
-import { ProductsDbRepository } from '@/src/data/usecases/products-repository';
-import { IValidator } from '@/src/domain/validators/validator';
 import { FindProductByIdService } from './find-product-by-id-service';
 import { ok } from '../../helpers/http-helpers';
+import { makeProductsDbRepositoryStub } from '@/src/data/usecases/tests/products-repository-stub';
+import { makeValidatorStub } from '@/infra/tests/validator-stub';
 
-const makeProductsDbRepository = (): ProductsDbRepository => {
-  return {
-    findById: jest.fn(),
-  } as unknown as ProductsDbRepository;
-};
 
-const makeValidator = (): IValidator<{ id: string }> => {
-  return {
-    validate: jest.fn(),
-  };
-};
+
 
 const makeSut = () => {
-  const productDbRepository = makeProductsDbRepository();
-  const validator = makeValidator();
+  const productDbRepository = makeProductsDbRepositoryStub();
+  const validator = makeValidatorStub();
   const sut = new FindProductByIdService(productDbRepository, validator);
 
   return {
