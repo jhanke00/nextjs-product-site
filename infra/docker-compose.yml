@@ -14,6 +14,7 @@ services:
       - NODE_ENV=development
       - MONGO_URL=mongodb://mongo:27017/next-product-site-db
       - JWT_SECRET=eb1b953ae4f13d8dd1605917b5e75756
+      - INTEGRATION_TOKEN=2bf54c24a49e386e8482a28e3c5d6da3
     depends_on:
       - mongo
 

@@ -16,3 +16,7 @@ Implemented these routes using JWT and Joi packages. I followed the same steps m
 Here's the corrected version of your text:
 
 Implemented middleware handlers. This handler allows users to send any middleware simultaneously for each route, providing more control over the routes and allowing them to have different authentications.
+
+5- Creating Integration middleware
+
+This middleware can be used for various purposes. In this case, I'm using it to allow someone to run the seed. Another use could be for integrating other applications with this API.
