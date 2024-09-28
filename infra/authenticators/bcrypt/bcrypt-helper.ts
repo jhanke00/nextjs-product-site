@@ -5,7 +5,7 @@ export default class BcryptHelper implements IPasswordsManager {
   private readonly saltAmount: number;
 
   constructor(saltAmount?: number) {
-    // Obs: For testing purposes, a salt of 6 is good, but for production, I recommend 10.
+    // Note: For testing purposes, a salt of 6 is good, but for production, i recommend 10.
     this.saltAmount = saltAmount || 6;
   }
   async hashPassword(password: string): Promise<string> {
