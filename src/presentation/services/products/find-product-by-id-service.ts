@@ -1,6 +1,6 @@
 import { ProductsDbRepository } from '@/src/data/usecases/products-repository';
 import { IValidator } from '@/src/domain/validators/validator';
-import { IHttpResponse, badRequest, ok } from '../helpers/http-helpers';
+import { IHttpResponse, badRequest, ok } from '../../helpers/http-helpers';
 
 export class FindProductByIdService {
   private readonly productDbRepository: ProductsDbRepository;

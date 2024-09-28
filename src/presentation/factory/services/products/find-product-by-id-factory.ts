@@ -1,7 +1,8 @@
 import { makeProductsDbRepository } from '@/src/data/factories/products-db-repository-factory';
-import { FindProductByIdService } from '../services/find-product-by-id-service';
+
 import { SchemaValidator } from '@/infra/validators/schema-validator';
 import { FindByIdSchema } from '@/infra/validators/schemas';
+import { FindProductByIdService } from '@/src/presentation/services/products/find-product-by-id-service';
 
 
 export const makeFindProductByIdService = () => {

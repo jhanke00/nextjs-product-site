@@ -1,7 +1,9 @@
-import { FindProductByIdService } from '@/src/services/services/find-product-by-id-service';
+
 import { ProductsDbRepository } from '@/src/data/usecases/products-repository';
 import { IValidator } from '@/src/domain/validators/validator';
-import {  badRequest, ok } from '@/src/services/helpers/http-helpers';
+import { FindProductByIdService } from './find-product-by-id-service';
+import { ok } from '../../helpers/http-helpers';
+
 
 const makeProductsDbRepository = (): ProductsDbRepository => {
   return {
