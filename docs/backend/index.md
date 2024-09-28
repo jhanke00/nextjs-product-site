@@ -8,6 +8,6 @@ This route was built using several DDD principles. As you can see, all dependenc
 
 This route allows users to list all products stored in the database, following the same principles as previous routes by segregating core logic from the outside world. Additionally, utility functions for pagination have been implemented.
 
-3- Creating `/login` and `/login`
+3- Creating `/login` and `/sign-up`
 
 Implemented these routes using JWT and Joi packages. I followed the same steps mentioned here and didn't use them directly in the service, because we don't want external dependencies linked with the source code.
