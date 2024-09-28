@@ -1,5 +1,5 @@
 import { UsersMongoRepository } from '@/infra/db/mongodb/repositories/users-mongo-repository';
-import { IUsersInserManyInput } from '../protocols/db/dtos/users-repository.dto';
+import { ICreateUserInput, IUsersInserManyInput } from '../protocols/db/dtos/users-repository.dto';
 import { IPasswordsManager } from '@/src/domain/authenticators/passwords-manager';
 import { IUser } from '@/src/domain/models';
 
@@ -47,6 +47,10 @@ export class UsersDbRepository {
 
   async findByEmail(email: string): Promise<IUser | null>{
     return await this.usersMongoRepository.getByEmail(email);
+  }
+
+  async createUser(data: ICreateUserInput): Promise<IUser>{
+    return await this.usersMongoRepository.createUser(data)
   }
 
   private generateDefaultPassword(email: string, phone: string) {

@@ -3,6 +3,7 @@ import { IUser } from '@/src/domain/models';
 import { IUserRepository } from '@/src/data/protocols/db/users-repository';
 import User from '../schemas/users-schema';
 import { ICreateUserInput } from '@/src/data/protocols/db/dtos/users-repository.dto';
+import { v4 as uuidv4 } from 'uuid';
 
 export class UsersMongoRepository implements IUserRepository {
   async insertMany(users: IUser[]) {
@@ -21,6 +22,11 @@ export class UsersMongoRepository implements IUserRepository {
   async createUser(data: ICreateUserInput){
     await mongoDbConnection();
     const newUser = new User({
+      /*
+        Note: I choose to set uuid function here, because on relational DB's we can have function that auto generate it,
+        and in case of change it will not affect current structure
+      */
+      _id:  uuidv4(),
       firstName: data.firstName,
       lastName: data.lastName,
       phoneNumber: data.phoneNumber,
@@ -33,3 +39,5 @@ export class UsersMongoRepository implements IUserRepository {
   }
 
 }
+
+

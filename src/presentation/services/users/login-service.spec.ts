@@ -4,10 +4,11 @@ import { makeUsersDbRepositoryStub } from '@/src/data/usecases/tests/users-repos
 import { makeValidatorStub } from '@/src/domain/validators/test/validator-stub';
 import { makePasswordsManagerStub } from '@/src/domain/authenticators/tests/password-manager-stub';
 import { makeAuthenticatorStub } from '@/src/domain/authenticators/tests/authenticator-stub';
+import { ILoginInput } from '@/src/presentation/services/users/login-service'
 
 const makeSut = () => {
   const usersDbRepositoryStub = makeUsersDbRepositoryStub();
-  const validatorStub = makeValidatorStub();
+  const validatorStub = makeValidatorStub<ILoginInput>();
   const passwordsManagerStub = makePasswordsManagerStub();
   const authenticatorStub = makeAuthenticatorStub();
 
@@ -30,10 +31,17 @@ const mockedUserData = {
   password: 'hashed_password',
 };
 
+const mockedLoginInput = { email: 'valid@test.com', password: 'wrong_password' }
+
 describe('LoginService', () => {
   it('should return error if validation fails', async () => {
     const { sut, validatorStub } = makeSut();
-    validatorStub.validate.mockReturnValueOnce(false);
+    const mockedInvalidUser = { email: 'notfound@test.com', password: '123456' }
+
+    validatorStub.validate.mockReturnValueOnce({
+      isValid: false,
+      output: mockedInvalidUser
+    });
 
     const response = await sut.exec({ email: 'invalid@test.com', password: '123456' });
 
@@ -42,33 +50,44 @@ describe('LoginService', () => {
 
   it('should return error if user not found', async () => {
     const { sut, validatorStub, usersDbRepositoryStub } = makeSut();
-    validatorStub.validate.mockReturnValueOnce(true);
+    const mockedNotFoundUser = { email: 'notfound@test.com', password: '123456' }
+
+    validatorStub.validate.mockReturnValueOnce({
+      isValid: true,
+      output: mockedNotFoundUser
+    });
     usersDbRepositoryStub.findByEmail.mockResolvedValueOnce(null);
 
-    const response = await sut.exec({ email: 'notfound@test.com', password: '123456' });
+    const response = await sut.exec(mockedNotFoundUser);
 
     expect(response.body['message']).toEqual('Invalid email or password.');
   });
 
   it('should return error if password is incorrect', async () => {
     const { sut, validatorStub, usersDbRepositoryStub, passwordsManagerStub } = makeSut();
-    validatorStub.validate.mockReturnValueOnce(true);
+    validatorStub.validate.mockReturnValueOnce({
+      isValid: true,
+      output: mockedLoginInput
+    });
     usersDbRepositoryStub.findByEmail.mockResolvedValueOnce(mockedUserData);
     passwordsManagerStub.comparePasswords.mockResolvedValueOnce(false);
 
-    const response = await sut.exec({ email: 'valid@test.com', password: 'wrong_password' });
+    const response = await sut.exec(mockedLoginInput);
 
    expect(response.body['message']).toEqual('Invalid email or password.');
   });
 
   it('should return success and a token on successful login', async () => {
     const { sut, validatorStub, usersDbRepositoryStub, passwordsManagerStub, authenticatorStub } = makeSut();
-    validatorStub.validate.mockReturnValueOnce(true);
+    validatorStub.validate.mockReturnValueOnce({
+      isValid: true,
+      output: mockedLoginInput
+    });
     usersDbRepositoryStub.findByEmail.mockResolvedValueOnce(mockedUserData);
     passwordsManagerStub.comparePasswords.mockResolvedValueOnce(true);
     authenticatorStub.createNewToken.mockResolvedValueOnce('valid_token');
 
-    const response = await sut.exec({ email: 'valid@test.com', password: 'correct_password' });
+    const response = await sut.exec(mockedLoginInput);
 
     expect(response).toEqual(
       ok({

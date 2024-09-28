@@ -11,10 +11,10 @@ export class FindProductByIdService {
   }
 
   async exec(id: string): Promise<IHttpResponse> {
-    const isValid = this.validator.validate({ id: id });
+    const { isValid,output } = this.validator.validate({ id: id });
     if (!isValid) {
       return badRequest(new Error('Id should be provided!'));
     }
-    return ok(await this.productDbRepository.findById(id));
+    return ok(await this.productDbRepository.findById(output.id));
   }
 }

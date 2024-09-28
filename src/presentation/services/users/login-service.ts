@@ -4,7 +4,7 @@ import { UsersDbRepository } from '@/src/data/usecases/users-repository';
 import { IPasswordsManager } from '@/src/domain/authenticators/passwords-manager';
 import { IAuthenticator } from '@/src/domain/authenticators/authenticator';
 
-interface ILoginInput {
+export interface ILoginInput {
   email: string,
   password: string
 }
@@ -27,12 +27,12 @@ export class LoginService {
     this.authenticator = authenticator;
   }
   async exec({ email, password }: ILoginInput): Promise<IHttpResponse> {
-    const isValid = this.validator.validate({ email, password });
+    const { isValid, output} = this.validator.validate({ email, password });
     if (!isValid) {
       return badRequest(new Error('Invalid email or password.'));
     }
 
-    const user = await this.usersDbRepository.findByEmail(email);
+    const user = await this.usersDbRepository.findByEmail(output.email);
     if (!user) {
       return badRequest(new Error('Invalid email or password.'));
     }

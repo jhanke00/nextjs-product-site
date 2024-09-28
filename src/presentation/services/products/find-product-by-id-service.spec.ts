@@ -5,7 +5,7 @@ import { makeValidatorStub } from '@/src/domain/validators/test/validator-stub';
 
 const makeSut = () => {
   const productDbRepository = makeProductsDbRepositoryStub();
-  const validator = makeValidatorStub();
+  const validator = makeValidatorStub<{ id: string }>();
   const sut = new FindProductByIdService(productDbRepository, validator);
 
   return {
@@ -19,7 +19,10 @@ describe('FindProductByIdService', () => {
   test('should return 400 if id is invalid', async () => {
     const { sut, validator } = makeSut();
 
-    validator.validate.mockReturnValueOnce(false);
+    validator.validate.mockReturnValueOnce({
+      isValid: false,
+      output: { id: ''}
+    });
 
     const response = await sut.exec('');
 
@@ -28,6 +31,12 @@ describe('FindProductByIdService', () => {
 
   test('should call validator with correct id', async () => {
     const { sut, validator } = makeSut();
+
+    validator.validate.mockReturnValueOnce({
+      isValid: true,
+      output: { id: '123'}
+    });
+
 
     await sut.exec('123');
 
@@ -48,7 +57,10 @@ describe('FindProductByIdService', () => {
     };
     
 
-    validator.validate.mockReturnValueOnce(true);
+    validator.validate.mockReturnValueOnce({
+      isValid: true,
+      output: { id: '123'}
+    });
     productDbRepository.findById.mockResolvedValueOnce(mockProductData);
     
 
@@ -61,7 +73,10 @@ describe('FindProductByIdService', () => {
   test('should throw if productDbRepository.findById throws', async () => {
     const { sut, productDbRepository, validator } = makeSut();
 
-    validator.validate.mockReturnValueOnce(true);
+    validator.validate.mockReturnValueOnce({
+      isValid: true,
+      output: { id: ''}
+    });
 
     productDbRepository.findById.mockRejectedValueOnce(new Error('any_error'));
 
