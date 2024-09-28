@@ -14,3 +14,9 @@
 ### Feature - 2024-09-27
 
 - Implementing products routes, and refactoring API structure [ISSUES-7](https://github.com/jhanke00/next-product-site/issues/7)
+
+### Feature - 2024-09-28
+
+- Implementing LOGIN and SIGNUP sistem [ISSUES-10](https://github.com/jhanke00/next-product-site/issues/10)
+
+Next step is gonna be create the middlewares for products routes.
