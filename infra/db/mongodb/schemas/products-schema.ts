@@ -1,4 +1,4 @@
-import { IProduct } from '@/src/domain/models/products';
+import { IProduct } from '@/src/domain/models';
 import mongoose, { Schema } from 'mongoose';
 
 const ProductSchema: Schema<IProduct> = new Schema({
@@ -12,6 +12,7 @@ const ProductSchema: Schema<IProduct> = new Schema({
   countInStock: { type: Number, required: true },
 });
 
-const Product = mongoose.models.Product || mongoose.model<IProduct>('Product', ProductSchema);
+const Product =
+  mongoose.models.Product || mongoose.model<IProduct>('Product', ProductSchema);
 
 export default Product;
