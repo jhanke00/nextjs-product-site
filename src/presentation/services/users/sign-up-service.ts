@@ -8,13 +8,13 @@ import { ICreateUserInput } from '@/src/data/protocols/db/dtos/users-repository.
 
 export class SignupService {
   private readonly usersDbRepository: UsersDbRepository;
-  private readonly validator: IValidator<ICreateUserInput & {confimPassword: string}>;
+  private readonly validator: IValidator<ICreateUserInput & {confirmPassword: string}>;
   private readonly passwordsManager: IPasswordsManager;
   private readonly authenticator: IAuthenticator;
 
   constructor(
     usersDbRepository: UsersDbRepository,
-    validator: IValidator<ICreateUserInput & {confimPassword: string}>,
+    validator: IValidator<ICreateUserInput & {confirmPassword: string}>,
     passwordsManager: IPasswordsManager,
     authenticator: IAuthenticator
   ) {
@@ -23,13 +23,19 @@ export class SignupService {
     this.passwordsManager = passwordsManager;
     this.authenticator = authenticator;
   }
-  async exec(data: ICreateUserInput & {confimPassword: string}): Promise<IHttpResponse> {
+  async exec(data: ICreateUserInput & {confirmPassword: string}): Promise<IHttpResponse> {
     const {isValid, output} = this.validator.validate(data);
     if (!isValid) {
       return badRequest(new Error('Check if all fields are filled correctly and password is greater than 6 characters'));
     }
 
-    if (output.password !== output.confimPassword) {
+    const user = await this.usersDbRepository.findByEmail(output.email);
+
+    if (user) {
+      return badRequest(new Error(`User already exists`));
+    }
+
+    if (output.password !== output.confirmPassword) {
       return badRequest(new Error(`Passwords doesn't match`));
     }
 
@@ -38,8 +44,8 @@ export class SignupService {
           ...output,
       password: hashedToken
     }
-    const user = await this.usersDbRepository.createUser(formattedData);
-    const accessToken = await this.authenticator.createNewToken(user);
+    const newUser = await this.usersDbRepository.createUser(formattedData);
+    const accessToken = await this.authenticator.createNewToken(newUser);
 
     return ok({
       firstName: output.firstName,

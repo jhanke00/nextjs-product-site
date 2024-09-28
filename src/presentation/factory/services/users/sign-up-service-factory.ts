@@ -9,7 +9,7 @@ import { SignupService } from '@/src/presentation/services/users/sign-up-service
 export const makeSignUpService = () => {
   const jwtHelper = new JwtHelper();
   const bcryptHelper = new BcryptHelper();
-  const validator = new SchemaValidator<ICreateUserInput & { confimPassword: string; }>(SignUpSchema);
+  const validator = new SchemaValidator<ICreateUserInput & { confirmPassword: string; }>(SignUpSchema);
   const usersDbRepository = makeUsersDbRepository();
   const signupService = new SignupService(usersDbRepository,validator,bcryptHelper, jwtHelper);
 
