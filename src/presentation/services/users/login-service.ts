@@ -34,12 +34,12 @@ export class LoginService {
 
     const user = await this.usersDbRepository.findByEmail(email);
     if (!user) {
-      return badRequest(new Error('User not found.'));
+      return badRequest(new Error('Invalid email or password.'));
     }
 
     const isPasswordCorrect = await this.passwordsManager.comparePasswords(password, user.password);
     if (!isPasswordCorrect) {
-      return badRequest(new Error('Incorrect password.'));
+      return badRequest(new Error('Invalid email or password.'));
     }
 
     const accessToken = await this.authenticator.createNewToken(user);

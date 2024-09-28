@@ -1,7 +1,7 @@
 import { FindProductByIdService } from './find-product-by-id-service';
 import { ok } from '../../helpers/http-helpers';
 import { makeProductsDbRepositoryStub } from '@/src/data/usecases/tests/products-repository-stub';
-import { makeValidatorStub } from '@/infra/tests/validator-stub';
+import { makeValidatorStub } from '@/src/domain/validators/test/validator-stub';
 
 const makeSut = () => {
   const productDbRepository = makeProductsDbRepositoryStub();

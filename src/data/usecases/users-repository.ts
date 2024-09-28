@@ -45,7 +45,7 @@ export class UsersDbRepository {
     return;
   }
 
-  async findByEmail(email: string): Promise<IUser>{
+  async findByEmail(email: string): Promise<IUser | null>{
     return await this.usersMongoRepository.getByEmail(email);
   }
 
