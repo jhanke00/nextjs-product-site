@@ -1,4 +1,4 @@
-import { ProductsMongoRepository } from '@/infra/db/mongodb/products/products-mongo-repository';
+import { ProductsMongoRepository } from '@/infra/db/mongodb/repositories/products-mongo-repository';
 import { IProductInserManyInput } from '../protocols/db/dtos/products-repository.dto';
 import { IProduct } from '@/src/domain/models/products';
 import { PaginationInputUtil } from '@/src/utils/pagination-input-util';
