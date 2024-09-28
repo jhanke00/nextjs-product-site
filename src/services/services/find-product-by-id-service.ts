@@ -1,13 +1,18 @@
-/* eslint-disable no-unused-vars */
 import { ProductsDbRepository } from '@/src/data/usecases/products-repository';
 import { IValidator } from '@/src/domain/validators/validator';
 import { IHttpResponse, badRequest, ok } from '../helpers/http-helpers';
 
 export class FindProductByIdService {
+  private readonly productDbRepository: ProductsDbRepository;
+  private readonly validator: IValidator<{id: string}>;
+
   constructor(
-    private readonly productDbRepository: ProductsDbRepository, 
-    private readonly validator: IValidator<{id: string}>
-  ) {}
+    productDbRepository: ProductsDbRepository, 
+    validator: IValidator<{id: string}>
+  ) {
+    this.productDbRepository = productDbRepository,
+    this.validator = validator;
+  }
 
   async exec(id: string): Promise<IHttpResponse> {
     const isValid = this.validator.validate({id: id});
