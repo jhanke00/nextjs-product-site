@@ -19,7 +19,7 @@ describe('FindProductByIdService', () => {
   test('should return 400 if id is invalid', async () => {
     const { sut, validator } = makeSut();
 
-    (validator.validate as jest.Mock).mockReturnValueOnce(false);
+    validator.validate.mockReturnValueOnce(false);
 
     const response = await sut.exec('');
 
@@ -36,24 +36,34 @@ describe('FindProductByIdService', () => {
 
   test('should return 200 and call productDbRepository.findById if id is valid', async () => {
     const { sut, productDbRepository, validator } = makeSut();
+    const mockProductData = {
+      _id: "64e8f75f1d6d9a0001f4b123",
+      name: "Smartphone XYZ",
+      price: 699.99,
+      description: "A powerful smartphone with the latest features and sleek design.",
+      category: "Electronics",
+      rating: 4.5,
+      numReviews: 234,
+      countInStock: 120,
+    };
+    
 
-    (validator.validate as jest.Mock).mockReturnValueOnce(true);
-
-    const product = { id: '123', name: 'Test Product' };
-    (productDbRepository.findById as jest.Mock).mockResolvedValueOnce(product);
+    validator.validate.mockReturnValueOnce(true);
+    productDbRepository.findById.mockResolvedValueOnce(mockProductData);
+    
 
     const response = await sut.exec('123');
 
-    expect(response).toEqual(ok(product));
+    expect(response).toEqual(ok(mockProductData));
     expect(productDbRepository.findById).toHaveBeenCalledWith('123');
   });
 
   test('should throw if productDbRepository.findById throws', async () => {
     const { sut, productDbRepository, validator } = makeSut();
 
-    (validator.validate as jest.Mock).mockReturnValueOnce(true);
+    validator.validate.mockReturnValueOnce(true);
 
-    (productDbRepository.findById as jest.Mock).mockRejectedValueOnce(new Error('any_error'));
+    productDbRepository.findById.mockRejectedValueOnce(new Error('any_error'));
 
     await expect(sut.exec('123')).rejects.toThrow('any_error');
   });
