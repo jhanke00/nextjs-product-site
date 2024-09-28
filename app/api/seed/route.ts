@@ -1,8 +1,8 @@
-import { seedProductsTable } from '@/scripts/seed-products';
+import { seedData } from '@/scripts/seed-data';
 import { NextResponse } from 'next/server';
 
 export async function POST() {
-  const response = await seedProductsTable();
+  const response = await seedData();
   return NextResponse.json({
     response,
   });

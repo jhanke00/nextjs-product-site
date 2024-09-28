@@ -11,3 +11,8 @@ This route allows users to list all products stored in the database, following t
 3- Creating `/login` and `/sign-up`
 
 Implemented these routes using JWT and Joi packages. I followed the same steps mentioned here and didn't use them directly in the service, because we don't want external dependencies linked with the source code.
+
+4- Middlewares
+Here's the corrected version of your text:
+
+Implemented middleware handlers. This handler allows users to send any middleware simultaneously for each route, providing more control over the routes and allowing them to have different authentications.

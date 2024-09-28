@@ -5,7 +5,7 @@ import { IUsersInserManyInput } from '@/src/data/protocols/db/dtos/users-reposit
 import products from '@/src/mock/large/products.json';
 import users from '@/src/mock/large/users.json';
 
-export const seedProductsTable = async () => {
+export const seedData = async () => {
   const productsDbRepository = makeProductsDbRepository();
   const usersDbRepository = makeUsersDbRepository();
 
