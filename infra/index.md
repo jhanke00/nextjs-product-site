@@ -1,5 +1,8 @@
 # Infrastructure
 
-### Feature - 2024-09-23
-
-- Implementing Docker in the project [ISSUES-91](https://github.com/jhanke00/next-product-site/issues/91)
+- Implementing Docker
+    - Created conteiner for API
+    - New container for MongoDb
+    
+- Validators
+    - Impleted [JOI](https://www.npmjs.com/package/joi) for input validation
