@@ -6,10 +6,7 @@ export class UsersDbRepository {
   private readonly usersMongoRepository: UsersMongoRepository;
   private readonly passwordsManager: IPasswordsManager;
 
-  constructor(
-    usersMongoRepository: UsersMongoRepository, 
-    passwordsManager: IPasswordsManager
-  ) {
+  constructor(usersMongoRepository: UsersMongoRepository, passwordsManager: IPasswordsManager) {
     this.usersMongoRepository = usersMongoRepository;
     this.passwordsManager = passwordsManager;
   }
@@ -18,31 +15,36 @@ export class UsersDbRepository {
     const promises = [];
     for (let i = 0; i < users.length; i += batchSize) {
       const batch = users.slice(i, i + batchSize);
-  
-      const transformedUsers = await Promise.all(batch.map(async (user) => {
-        const encodedPassword = await this.passwordsManager.hashPassword(this.generateDefaultPassword(user.email, user.phoneNumber));
-        return {
-          _id: user.id,
-          firstName: user.firstName,
-          lastName: user.lastName,
-          phoneNumber: user.phoneNumber,
-          email: user.email,
-          password: encodedPassword
-        };
-      }));
+
+      /* 
+        Note: In my opinion, the PasswordManager should not be here. 
+        It's the use case's responsibility to format the data and send it to the repository. 
+        However, since this is a migration, and there's no specific use case (service) involved, it's acceptable in this scenario.
+      */
+      const transformedUsers = await Promise.all(
+        batch.map(async (user) => {
+          const encodedPassword = await this.passwordsManager.hashPassword(
+            this.generateDefaultPassword(user.email, user.phoneNumber)
+          );
+          return {
+            _id: user.id,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            phoneNumber: user.phoneNumber,
+            email: user.email,
+            password: encodedPassword,
+          };
+        })
+      );
 
       promises.push(this.usersMongoRepository.insertMany(transformedUsers));
     }
 
     await Promise.all(promises);
-    return; 
+    return;
   }
-  
 
-  private generateDefaultPassword(
-    email: string,
-    phone:string,
-  ){
+  private generateDefaultPassword(email: string, phone: string) {
     const digitsOnly = phone.replace(/\D/g, '');
     const firstThreeNumbers = digitsOnly.split('').slice(0, 3).join('');
     const newPassword = `${email}${firstThreeNumbers}`;

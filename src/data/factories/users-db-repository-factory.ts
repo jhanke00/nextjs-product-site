@@ -5,5 +5,5 @@ import BcryptHelper from '@/infra/authenticators/bcrypt/bcrypt-helper';
 export const makeUsersDbRepository = () => {
   const mongoUsersRepository = new UsersMongoRepository();
   const bcryptHelper = new BcryptHelper();
-  return new UsersDbRepository(mongoUsersRepository,bcryptHelper);
+  return new UsersDbRepository(mongoUsersRepository, bcryptHelper);
 };

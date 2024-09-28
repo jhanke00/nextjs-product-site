@@ -28,10 +28,14 @@ export class ProductsDbRepository {
     return await this.productMongoRepository.findById(id);
   }
 
-  async getAll(page?: string, limit?: string ){
-    const paginationInput = new PaginationInputUtil({page, limit});
+  async getAll(page?: string, limit?: string) {
+    const paginationInput = new PaginationInputUtil({ page, limit });
     const products = await this.productMongoRepository.getAll(paginationInput.skip!, paginationInput.limit!);
-    
-    return paginateResponse({result: products.products, total: products.totalRecords},paginationInput.page, paginationInput.limit);
+
+    return paginateResponse(
+      { result: products.products, total: products.totalRecords },
+      paginationInput.page,
+      paginationInput.limit
+    );
   }
 }

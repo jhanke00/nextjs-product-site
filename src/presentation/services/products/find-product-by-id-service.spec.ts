@@ -3,9 +3,6 @@ import { ok } from '../../helpers/http-helpers';
 import { makeProductsDbRepositoryStub } from '@/src/data/usecases/tests/products-repository-stub';
 import { makeValidatorStub } from '@/infra/tests/validator-stub';
 
-
-
-
 const makeSut = () => {
   const productDbRepository = makeProductsDbRepositoryStub();
   const validator = makeValidatorStub();

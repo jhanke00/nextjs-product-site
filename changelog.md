@@ -4,7 +4,7 @@
 
 ### Fix - 2024-09-24
 
-- Storybook start issue  [ISSUES-78](https://github.com/jhanke00/next-product-site/issues/78)
+- Storybook start issue [ISSUES-78](https://github.com/jhanke00/next-product-site/issues/78)
 
 ### Feature - 2024-09-25
 
@@ -13,4 +13,4 @@
 
 ### Feature - 2024-09-27
 
--  Implementing products routes, and refactoring API structure [ISSUES-7](https://github.com/jhanke00/next-product-site/issues/7)
+- Implementing products routes, and refactoring API structure [ISSUES-7](https://github.com/jhanke00/next-product-site/issues/7)

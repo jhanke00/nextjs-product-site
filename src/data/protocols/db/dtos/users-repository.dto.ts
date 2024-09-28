@@ -1,4 +1,4 @@
-export interface IUsersInserManyInput  {
+export interface IUsersInserManyInput {
   id: string;
   firstName: string;
   lastName: string;
