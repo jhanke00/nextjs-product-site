@@ -1,6 +1,7 @@
 import { UsersMongoRepository } from '@/infra/db/mongodb/repositories/users-mongo-repository';
 import { IUsersInserManyInput } from '../protocols/db/dtos/users-repository.dto';
 import { IPasswordsManager } from '@/src/domain/authenticators/passwords-manager';
+import { IUser } from '@/src/domain/models';
 
 export class UsersDbRepository {
   private readonly usersMongoRepository: UsersMongoRepository;
@@ -42,6 +43,10 @@ export class UsersDbRepository {
 
     await Promise.all(promises);
     return;
+  }
+
+  async findByEmail(email: string): Promise<IUser>{
+    return await this.usersMongoRepository.getByEmail(email);
   }
 
   private generateDefaultPassword(email: string, phone: string) {

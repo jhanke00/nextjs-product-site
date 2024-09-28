@@ -10,4 +10,11 @@ export class UsersMongoRepository implements IUserRepository {
 
     return;
   }
+  async getByEmail(email: string) {
+    await mongoDbConnection();
+    const user = await User.findOne({ email });
+
+    return user;
+  }
+
 }

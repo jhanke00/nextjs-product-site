@@ -1,4 +1,5 @@
 import { IAuthenticator } from '@/src/domain/authenticators/authenticator';
+import { IUser } from '@/src/domain/models';
 import { sign, verify } from 'jsonwebtoken';
 
 const JWT_SECRET = process.env.JWT_SECRET as string;
@@ -18,8 +19,10 @@ export default class JwtHelper implements IAuthenticator {
     this.options = options || defaultOptions;
   }
 
-  async createNewToken(value: string) {
-    return sign(value, JWT_SECRET, this.options);
+  async createNewToken(user: IUser) {
+    return sign({
+      email: user.email,  
+    }, JWT_SECRET, this.options);
   }
 
   async verifyToken(token: string) {
