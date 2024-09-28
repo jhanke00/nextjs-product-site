@@ -1,10 +1,7 @@
-export interface IProductInserManyInput {
+export interface IUsersInserManyInput  {
   id: string;
-  name: string;
-  price: number;
-  description: string;
-  category: string;
-  rating: number;
-  numReviews: number;
-  countInStock: number;
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  email: string;
 }
