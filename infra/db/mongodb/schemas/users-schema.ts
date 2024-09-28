@@ -20,10 +20,14 @@ const UserSchema: Schema<IUser> = new Schema({
     required: true,
     unique: true,
   },
+  password: {
+    type: String,
+    required: true,
+  },
 });
 
 const User =
   mongoose.models.User || mongoose.model<IUser>('User', UserSchema);
 
-  export default User;
+export default User;
 

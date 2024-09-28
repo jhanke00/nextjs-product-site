@@ -28,7 +28,9 @@
     "pnpm": ">=8"
   },
   "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.7",
+    "bcryptjs": "^2.4.3",
     "fs": "0.0.1-security",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
