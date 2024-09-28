@@ -15,4 +15,21 @@ export class ProductsMongoRepository implements IProductRepository {
     await mongoDbConnection();
     return await Product.findById(id);
   }
+
+  async getAll(
+    skip: number,
+    limit: number
+  ): Promise<{
+    products: IProduct[];
+    totalRecords: number;
+  }> {
+    const products = await Product.find().skip(skip).limit(limit).exec();
+
+    const totalRecords = await Product.countDocuments();
+
+    return {
+      products,
+      totalRecords,
+    };
+  }
 }

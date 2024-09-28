@@ -1,8 +1,4 @@
-export function paginateResponse<T>(
-  data: { result: T; total: number },
-  page = 1,
-  limit = 20,
-) {
+export function paginateResponse<T>(data: { result: T; total: number }, page = 1, limit = 20) {
   const { result, total } = data;
   limit = Number(limit);
   page = Number(page);
@@ -10,7 +6,7 @@ export function paginateResponse<T>(
   return {
     total,
     currentPage: page,
-    lastPage, 
+    lastPage,
     data: result,
   };
 }
