@@ -8,7 +8,8 @@
 
 ### Feature - 2024-09-25
 
--  Implementing MongoDb on docker, and repositories structures [ISSUES-113](https://github.com/jhanke00/next-product-site/issues/113)
+- Implementing MongoDb and repositories structures [ISSUES-113](https://github.com/jhanke00/next-product-site/issues/113)
+- Implementing MongoDb on docker [ISSUES-59](https://github.com/jhanke00/next-product-site/issues/59)
 
 ### Feature - 2024-09-27
 
