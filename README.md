@@ -40,6 +40,14 @@ This is a dummy product site that needs help adding new features and maturing th
 
 Codespaces is also available and is pre-configured with node and pnpm.
 
+### Guides
+
+Below are a few links if you would like to better understand why the current implementations were made, as well as guides on important tools.
+
+1. [Api Guide](docs/backend/index.md)
+2. [Infrastructure Guide](docs/infrastructure/index.md)
+3. [Changelog](changelog.md)
+
 ### Storybook
 
 1. Run `pnpm storybook`

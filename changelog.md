@@ -20,3 +20,9 @@
 - Implementing LOGIN and SIGNUP sistem [ISSUES-10](https://github.com/jhanke00/next-product-site/issues/10)
 
 Next step is gonna be create the middlewares for products routes.
+
+### Feature - 2024-09-29
+
+- Implementing Orders routes [ISSUES-15](https://github.com/jhanke00/next-product-site/issues/15)
+
+New routes where added , and now all API routes has middlewares except for (login and sign-up)

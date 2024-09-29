@@ -1,4 +1,4 @@
-# Backend
+# Backend Features
 
 1- Creating products route find by id `(/products/:id)`
 
@@ -20,3 +20,19 @@ Implemented middleware handlers. This handler allows users to send any middlewar
 5- Creating Integration middleware
 
 This middleware can be used for various purposes. In this case, I'm using it to allow someone to run the seed. Another use could be for integrating other applications with this API.
+
+6 - New Routes for User Data and Orders
+
+For the /me route, I used a decode middleware to extract the user's email from the token. I then called the service to retrieve the data from the repository.
+
+All routes, except for /login and /sign-up, have authentication middleware.
+
+### Topics I Would Like to Address but Didn't Have Time For
+
+Improve MongoDB Repository Connection: Avoid making calls every time a connection is needed.
+
+Create a Custom Global Error Handler: This would make it easier to implement observability tools such as Elastic or Sentry.
+
+New Route for Seeding the Database: I added a new route to seed the database and implemented a different authentication middleware for it, demonstrating that we can divide route flows. However, I could have set up the seeding function as just a package script.
+
+Seed Execution Time: I am not satisfied with the time it takes to run the seeding; this is a drawback I would like to improve if I had more time available.
