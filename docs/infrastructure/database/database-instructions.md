@@ -20,7 +20,7 @@ Thus, we have a few DOMAINS:
 
 ## Test Implementation
 
-I created a route located at `POST - /api/seed-products`. This route will use a large mock dataset of products, feel free to test it.
+I created a route located at `POST - /api/seed-products`. This route will use a large mock dataset of products, feel free to test it. This route has authentication middleware, it's needed to send bearer token located at [docker-compose](../../../infra/docker-compose.yml) name INTEGRATION_TOKEN
 
 I suggest using this [Mongo extension](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode) to check the seeded data.
 
