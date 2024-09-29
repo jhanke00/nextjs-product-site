@@ -11,11 +11,11 @@ export class FindUserByEmailService {
     const userData = await this.usersDbRepository.findByEmail(email);
 
     return ok({
-      _id: userData?._id,
-      firstName: userData?.firstName,
-      lastName: userData?.lastName,
-      phoneNumber: userData?.phoneNumber,
-      email: userData?.email,
+      _id: userData?._id || '',
+      firstName: userData?.firstName || '',
+      lastName: userData?.lastName || '',
+      phoneNumber: userData?.phoneNumber || '',
+      email: userData?.email || '',
     });
   }
 }
