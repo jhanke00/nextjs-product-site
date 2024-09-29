@@ -47,6 +47,7 @@ Below are a few links if you would like to better understand why the current imp
 1. [Api Guide](docs/backend/index.md)
 2. [Infrastructure Guide](docs/infrastructure/index.md)
 3. [Changelog](changelog.md)
+4. [Postman Collection](./docs/collections/post-man-collection.md)
 
 ### Storybook
 
