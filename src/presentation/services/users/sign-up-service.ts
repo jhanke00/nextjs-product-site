@@ -33,11 +33,11 @@ export class SignupService {
     const user = await this.usersDbRepository.findByEmail(output.email);
 
     if (user) {
-      return badRequest(new Error(`User already exists`));
+      return badRequest(new Error('User already exists'));
     }
 
     if (output.password !== output.confirmPassword) {
-      return badRequest(new Error(`Passwords doesn't match`));
+      return badRequest(new Error('Passwords doesn\'t match'));
     }
 
     const hashedToken = await this.passwordsManager.hashPassword(output.password);

@@ -1,8 +1,5 @@
-import { IValidator } from '@/src/domain/validators/validator';
-import { UsersDbRepository } from '@/src/data/usecases/users-repository';
-import { IPasswordsManager } from '@/src/domain/authenticators/passwords-manager';
-import { IAuthenticator } from '@/src/domain/authenticators/authenticator';
-import { badRequest, ok } from '../../helpers/http-helpers';
+
+import { ok } from '../../helpers/http-helpers';
 import { ICreateUserInput } from '@/src/data/protocols/db/dtos/users-repository.dto';
 import { makeValidatorStub } from '@/src/domain/validators/test/validator-stub';
 import { makeUsersDbRepositoryStub } from '@/src/data/usecases/tests/users-repository-stub';

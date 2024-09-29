@@ -1,5 +1,5 @@
-import { LoginService } from './login-service'; // caminho para o seu arquivo
-import { badRequest, ok } from '../../helpers/http-helpers';
+import { LoginService } from './login-service';
+import { ok } from '../../helpers/http-helpers';
 import { makeUsersDbRepositoryStub } from '@/src/data/usecases/tests/users-repository-stub';
 import { makeValidatorStub } from '@/src/domain/validators/test/validator-stub';
 import { makePasswordsManagerStub } from '@/src/domain/authenticators/tests/password-manager-stub';

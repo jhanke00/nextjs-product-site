@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { seedData } from '@/scripts/seed-data';
 import { makeIntegrationMiddleware } from '@/src/presentation/factory/middlewares/integration-middleware-factory.ts';
 import { middlewaresHandler } from '@/src/presentation/middlewares';
