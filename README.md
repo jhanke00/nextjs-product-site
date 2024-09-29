@@ -36,8 +36,18 @@ This is a dummy product site that needs help adding new features and maturing th
 2. Run `pnpm i` to install dependencies.
 3. Run `pnpm dev` to start application.
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Run with [Docker](./docs/infrastructure/docker/docker-commands.md)
 
 Codespaces is also available and is pre-configured with node and pnpm.
+
+### Guides
+
+Below are a few links if you would like to better understand why the current implementations were made, as well as guides on important tools.
+
+1. [Api Guide](docs/backend/index.md)
+2. [Infrastructure Guide](docs/infrastructure/index.md)
+3. [Changelog](changelog.md)
+4. [Postman Collection](./docs/collections/post-man-collection.md)
 
 ### Storybook
 
