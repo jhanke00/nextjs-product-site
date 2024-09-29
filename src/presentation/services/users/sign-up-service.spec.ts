@@ -73,7 +73,7 @@ describe('SignupService', () => {
 
     const response = await sut.exec(input);
 
-    expect(response.body['message']).toEqual(`Passwords doesn't match`);
+    expect(response.body['message']).toEqual('Passwords doesn\'t match');
   });
 
   it('should hash the password and create a user successfully', async () => {
