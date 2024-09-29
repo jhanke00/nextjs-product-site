@@ -20,7 +20,7 @@ export class OrdersDbRepository {
     return;
   }
 
-  async getUserOrders(userId: string): Promise<IOrder[]> {
+  async getUserOrders(userId: string): Promise<IOrder[] | null> {
     return await this.ordersMongoRepository.getUserOrders(userId);
   }
 }
