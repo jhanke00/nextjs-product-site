@@ -8,5 +8,4 @@ export interface IUsersInserManyInput {
   email: string;
 }
 
-
 export type ICreateUserInput = Omit<IUser, '_id'>;

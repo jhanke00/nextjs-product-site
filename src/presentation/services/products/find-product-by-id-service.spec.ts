@@ -21,7 +21,7 @@ describe('FindProductByIdService', () => {
 
     validator.validate.mockReturnValueOnce({
       isValid: false,
-      output: { id: ''}
+      output: { id: '' },
     });
 
     const response = await sut.exec('');
@@ -34,9 +34,8 @@ describe('FindProductByIdService', () => {
 
     validator.validate.mockReturnValueOnce({
       isValid: true,
-      output: { id: '123'}
+      output: { id: '123' },
     });
-
 
     await sut.exec('123');
 
@@ -46,23 +45,21 @@ describe('FindProductByIdService', () => {
   test('should return 200 and call productDbRepository.findById if id is valid', async () => {
     const { sut, productDbRepository, validator } = makeSut();
     const mockProductData = {
-      _id: "64e8f75f1d6d9a0001f4b123",
-      name: "Smartphone XYZ",
+      _id: '64e8f75f1d6d9a0001f4b123',
+      name: 'Smartphone XYZ',
       price: 699.99,
-      description: "A powerful smartphone with the latest features and sleek design.",
-      category: "Electronics",
+      description: 'A powerful smartphone with the latest features and sleek design.',
+      category: 'Electronics',
       rating: 4.5,
       numReviews: 234,
       countInStock: 120,
     };
-    
 
     validator.validate.mockReturnValueOnce({
       isValid: true,
-      output: { id: '123'}
+      output: { id: '123' },
     });
     productDbRepository.findById.mockResolvedValueOnce(mockProductData);
-    
 
     const response = await sut.exec('123');
 
@@ -75,7 +72,7 @@ describe('FindProductByIdService', () => {
 
     validator.validate.mockReturnValueOnce({
       isValid: true,
-      output: { id: ''}
+      output: { id: '' },
     });
 
     productDbRepository.findById.mockRejectedValueOnce(new Error('any_error'));

@@ -19,4 +19,8 @@ export class OrdersDbRepository {
     await Promise.all(promises);
     return;
   }
+
+  async getUserOrders(userId: string): Promise<IOrder[]> {
+    return await this.ordersMongoRepository.getUserOrders(userId);
+  }
 }

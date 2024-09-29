@@ -20,16 +20,20 @@ export default class JwtHelper implements IAuthenticator {
   }
 
   async createNewToken(user: IUser) {
-    return sign({
-      email: user.email,  
-    }, JWT_SECRET, this.options);
+    return sign(
+      {
+        email: user.email,
+      },
+      JWT_SECRET,
+      this.options
+    );
   }
 
-  async verifyToken<T>(token: string): Promise<{ isValid: boolean; data: T; }> {
-    const data = verify(token, JWT_SECRET) as T
+  async verifyToken<T>(token: string): Promise<{ isValid: boolean; data: T }> {
+    const data = verify(token, JWT_SECRET) as T;
     return {
       isValid: data ? true : false,
-      data
-    }
+      data,
+    };
   }
 }

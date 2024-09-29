@@ -10,4 +10,9 @@ export class OrdersMongoRepository implements IOrdersRepository {
 
     return;
   }
+
+  async getUserOrders(userId: string): Promise<IOrder[]> {
+    await mongoDbConnection();
+    return await Order.find({ user: userId });
+  }
 }

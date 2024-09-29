@@ -34,7 +34,6 @@ export class AuthMiddleware {
       });
 
       return modifiedRequest;
-
     } catch (error) {
       return NextResponse.json(unauthorizedResponse, { status: unauthorizedResponse.statusCode });
     }

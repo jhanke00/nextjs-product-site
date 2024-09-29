@@ -4,6 +4,6 @@ import { ICreateUserInput } from './dtos/users-repository.dto';
 
 export interface IUserRepository {
   insertMany: (users: IUser[]) => Promise<void>;
-  getByEmail: (email:string) => Promise<IUser>;
+  getByEmail: (email: string) => Promise<IUser>;
   createUser: (data: ICreateUserInput) => Promise<IUser>;
 }

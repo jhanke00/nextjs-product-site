@@ -4,10 +4,8 @@ import { middlewaresHandler } from '@/src/presentation/middlewares';
 import { NextResponse, NextRequest } from 'next/server';
 
 export async function getProductByIdHandler(request: NextRequest, { params }: { params: { id: string } }) {
-
   const response = await makeFindProductByIdService().exec(params.id);
   return NextResponse.json(response, { status: response.statusCode });
 }
-
 
 export const GET = middlewaresHandler(getProductByIdHandler, makeAuthMiddleware());

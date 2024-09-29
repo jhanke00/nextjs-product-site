@@ -19,14 +19,14 @@ export class UsersMongoRepository implements IUserRepository {
     return user;
   }
 
-  async createUser(data: ICreateUserInput){
+  async createUser(data: ICreateUserInput) {
     await mongoDbConnection();
     const newUser = new User({
       /*
         Note: I choose to set uuid function here, because on relational DB's we can have function that auto generate it,
         and in case of change it will not affect current structure
       */
-      _id:  uuidv4(),
+      _id: uuidv4(),
       firstName: data.firstName,
       lastName: data.lastName,
       phoneNumber: data.phoneNumber,
@@ -37,7 +37,4 @@ export class UsersMongoRepository implements IUserRepository {
     const savedUser = await newUser.save();
     return savedUser;
   }
-
 }
-
-

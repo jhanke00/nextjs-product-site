@@ -25,11 +25,11 @@ describe('GetAllProductsService', () => {
     const { sut, productDbRepository } = makeSut();
 
     const fakeProducts = {
-      _id: "64e8f75f1d6d9a0001f4b123",
-      name: "Smartphone XYZ",
+      _id: '64e8f75f1d6d9a0001f4b123',
+      name: 'Smartphone XYZ',
       price: 699.99,
-      description: "A powerful smartphone with the latest features and sleek design.",
-      category: "Electronics",
+      description: 'A powerful smartphone with the latest features and sleek design.',
+      category: 'Electronics',
       rating: 4.5,
       numReviews: 234,
       countInStock: 120,

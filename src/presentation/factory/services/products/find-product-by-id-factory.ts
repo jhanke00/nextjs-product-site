@@ -5,7 +5,7 @@ import { FindByIdSchema } from '@/infra/validators/schemas';
 import { FindProductByIdService } from '@/src/presentation/services/products/find-product-by-id-service';
 
 export const makeFindProductByIdService = () => {
-  const validator = new SchemaValidator<{ id: string; }>(FindByIdSchema);
+  const validator = new SchemaValidator<{ id: string }>(FindByIdSchema);
   const productsDbRepository = makeProductsDbRepository();
   const findProductByIdService = new FindProductByIdService(productsDbRepository, validator);
   return findProductByIdService;

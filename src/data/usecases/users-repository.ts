@@ -45,12 +45,12 @@ export class UsersDbRepository {
     return;
   }
 
-  async findByEmail(email: string): Promise<IUser | null>{
+  async findByEmail(email: string): Promise<IUser | null> {
     return await this.usersMongoRepository.getByEmail(email);
   }
 
-  async createUser(data: ICreateUserInput): Promise<IUser>{
-    return await this.usersMongoRepository.createUser(data)
+  async createUser(data: ICreateUserInput): Promise<IUser> {
+    return await this.usersMongoRepository.createUser(data);
   }
 
   private generateDefaultPassword(email: string, phone: string) {

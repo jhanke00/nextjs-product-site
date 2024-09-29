@@ -1,4 +1,3 @@
-
 import { IValidator } from '@/src/domain/validators/validator';
 import { UsersDbRepository } from '@/src/data/usecases/users-repository';
 import { IPasswordsManager } from '@/src/domain/authenticators/passwords-manager';
@@ -18,37 +17,39 @@ const makeSut = () => {
   const passwordsManagerStub = makePasswordsManagerStub();
   const authenticatorStub = makeAuthenticatorStub();
   const sut = new SignupService(usersDbRepositoryStub, validatorStub, passwordsManagerStub, authenticatorStub);
-  
+
   return { sut, usersDbRepositoryStub, validatorStub, passwordsManagerStub, authenticatorStub };
 };
 
 describe('SignupService', () => {
   it('should return error if validation fails', async () => {
     const { sut, validatorStub } = makeSut();
-    const input = { 
+    const input = {
       firstName: 'John',
       lastName: 'Doe',
       phoneNumber: '123456789',
-      email: 'test@test.com', 
-      password: '123456', 
-      confirmPassword: '123456' 
+      email: 'test@test.com',
+      password: '123456',
+      confirmPassword: '123456',
     };
     validatorStub.validate.mockReturnValueOnce({ isValid: false, output: input });
 
     const response = await sut.exec(input);
 
-    expect(response.body['message']).toEqual('Check if all fields are filled correctly and password is greater than 6 characters');
+    expect(response.body['message']).toEqual(
+      'Check if all fields are filled correctly and password is greater than 6 characters'
+    );
   });
 
   it('should return error if user already exists', async () => {
     const { sut, usersDbRepositoryStub, validatorStub } = makeSut();
-    const input = { 
+    const input = {
       firstName: 'John',
       lastName: 'Doe',
       phoneNumber: '123456789',
-      email: 'test@test.com', 
-      password: 'password1', 
-      confirmPassword: 'password1' 
+      email: 'test@test.com',
+      password: 'password1',
+      confirmPassword: 'password1',
     };
     validatorStub.validate.mockReturnValueOnce({ isValid: true, output: input });
     usersDbRepositoryStub.findByEmail.mockResolvedValueOnce({ email: 'existing_user_id' } as IUser);
@@ -60,13 +61,13 @@ describe('SignupService', () => {
 
   it('should return error if password and confirmPassword do not match', async () => {
     const { sut, validatorStub } = makeSut();
-    const input = { 
+    const input = {
       firstName: 'John',
       lastName: 'Doe',
       phoneNumber: '123456789',
-      email: 'test@test.com', 
-      password: 'password1', 
-      confirmPassword: 'password2' 
+      email: 'test@test.com',
+      password: 'password1',
+      confirmPassword: 'password2',
     };
     validatorStub.validate.mockReturnValueOnce({ isValid: true, output: input });
 
@@ -77,13 +78,13 @@ describe('SignupService', () => {
 
   it('should hash the password and create a user successfully', async () => {
     const { sut, validatorStub, usersDbRepositoryStub, passwordsManagerStub, authenticatorStub } = makeSut();
-    const input = { 
+    const input = {
       firstName: 'John',
       lastName: 'Doe',
       phoneNumber: '123456789',
-      email: 'test@test.com', 
-      password: 'password1', 
-      confirmPassword: 'password1' 
+      email: 'test@test.com',
+      password: 'password1',
+      confirmPassword: 'password1',
     };
     validatorStub.validate.mockReturnValueOnce({ isValid: true, output: input });
     passwordsManagerStub.hashPassword.mockResolvedValueOnce('hashed_password');
@@ -93,18 +94,20 @@ describe('SignupService', () => {
       lastName: 'Doe',
       phoneNumber: '123456789',
       email: 'test@test.com',
-      password: 'any_password'
+      password: 'any_password',
     });
     authenticatorStub.createNewToken.mockResolvedValueOnce('valid_token');
 
     const response = await sut.exec(input);
-    
-    expect(response).toEqual(ok({
-      firstName: 'John',
-      lastName: 'Doe',
-      phoneNumber: '123456789',
-      email: 'test@test.com',
-      accessToken: 'valid_token',
-    }));
+
+    expect(response).toEqual(
+      ok({
+        firstName: 'John',
+        lastName: 'Doe',
+        phoneNumber: '123456789',
+        email: 'test@test.com',
+        accessToken: 'valid_token',
+      })
+    );
   });
 });

@@ -10,8 +10,7 @@ export const makeLoginService = () => {
   const bcryptHelper = new BcryptHelper();
   const validator = new SchemaValidator<ILoginInput>(LoginSchema);
   const usersDbRepository = makeUsersDbRepository();
-  const loginService = new LoginService(usersDbRepository,validator,bcryptHelper, jwtHelper);
+  const loginService = new LoginService(usersDbRepository, validator, bcryptHelper, jwtHelper);
 
   return loginService;
 };
-  

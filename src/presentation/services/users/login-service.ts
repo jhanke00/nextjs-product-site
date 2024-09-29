@@ -5,8 +5,8 @@ import { IPasswordsManager } from '@/src/domain/authenticators/passwords-manager
 import { IAuthenticator } from '@/src/domain/authenticators/authenticator';
 
 export interface ILoginInput {
-  email: string,
-  password: string
+  email: string;
+  password: string;
 }
 
 export class LoginService {
@@ -27,7 +27,7 @@ export class LoginService {
     this.authenticator = authenticator;
   }
   async exec({ email, password }: ILoginInput): Promise<IHttpResponse> {
-    const { isValid, output} = this.validator.validate({ email, password });
+    const { isValid, output } = this.validator.validate({ email, password });
     if (!isValid) {
       return badRequest(new Error('Invalid email or password.'));
     }

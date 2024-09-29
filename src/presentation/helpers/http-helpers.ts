@@ -25,6 +25,6 @@ export const unauthorized = (): IHttpResponse => ({
   statusCode: 401,
   body: extractErrorData({
     message: 'Unauthorized',
-    name: "INVALID_TOKEN"
+    name: 'INVALID_TOKEN',
   }),
 });

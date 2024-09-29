@@ -10,5 +10,4 @@ export async function seedHandler(request: NextRequest) {
   });
 }
 
-
 export const POST = middlewaresHandler(seedHandler, makeIntegrationMiddleware());

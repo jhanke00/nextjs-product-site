@@ -11,7 +11,7 @@ export class FindProductByIdService {
   }
 
   async exec(id: string): Promise<IHttpResponse> {
-    const { isValid,output } = this.validator.validate({ id: id });
+    const { isValid, output } = this.validator.validate({ id: id });
     if (!isValid) {
       return badRequest(new Error('Id should be provided!'));
     }

@@ -7,7 +7,7 @@ export class IntegrationMiddleware {
   async exec(request: NextRequest): Promise<NextResponse | null> {
     const bearerToken = request.headers.get('Authorization');
     const token = bearerToken?.split(' ')[1];
-    
+
     const unauthorizedResponse = unauthorized();
 
     if (!token || token !== INTEGRATION_TOKEN) {
