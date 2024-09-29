@@ -3,7 +3,7 @@ import { paginatedProducts, Product, IProductService, IProductModel } from '@/sr
 
 export default class ProductService implements IProductService {
   private model: IProductModel;
-  private static instances: { [key: string]: ProductService | undefined } = {};
+  private static instances: { [key: string]: ProductService } = {};
 
   public static getInstance(dataset: string): ProductService {
     if (!ProductService.instances[dataset]) {
