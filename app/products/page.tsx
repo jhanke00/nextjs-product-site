@@ -4,6 +4,8 @@ import smallData from '@/src/mock/small/products.json';
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { Product } from '@/src/type/products';
+import { StarRating } from '@/src/components/StarRating';
+import { ChipPicker } from '@/src/components/ChipPicker';
 
 const PAGE_SIZE = 20;
 
@@ -66,7 +68,7 @@ export default function Products() {
 
       return true;
     });
-    console.log(filteredItems.length);
+
     setFilteredItems(filteredItems);
   };
 
@@ -79,6 +81,7 @@ export default function Products() {
       .map((item) => item.category)
       .filter((value, index, array) => array.indexOf(value) === index)
       .sort((a, b) => a.localeCompare(b));
+
     const priceRange = items.reduce(
       (acc, item) => {
         if (item.price > acc.max) acc.max = item.price;
@@ -95,12 +98,8 @@ export default function Products() {
     });
   };
 
-  const handleChangeCategory = (category: string) => {
-    if (filter.categories.includes(category)) {
-      setFilter((a) => ({ ...a, categories: a.categories.filter((i) => i !== category) }));
-    } else {
-      setFilter((a) => ({ ...a, categories: [...a.categories, category] }));
-    }
+  const handleChangeCategories = (categories: string[]) => {
+    setFilter((a) => ({ ...a, categories }));
   };
 
   const handleChangePriceRange = (min: number, max: number) => {
@@ -111,23 +110,29 @@ export default function Products() {
     }
   };
 
+  const handleChangeStarRating = (rating: number) => {
+    setFilter((a) => ({ ...a, rating: rating }));
+  };
+
+  const [valueMin, setValueMin] = useState(0);
+
   return (
-    <main className='flex min-h-screen flex-col items-center p-24'>
-      <div>
-        <div className='flex gap-2'>
-          {filterOptions.categoryOptions.map((op) => (
-            <div key={op}>
-              <button
-                onClick={() => handleChangeCategory(op)}
-                className={`${filter.categories.includes(op) ? 'bg-purple-700' : 'bg-gray-500'} rounded-md p-2`}
-              >
-                {op}
-              </button>
-            </div>
-          ))}
-        </div>
-        <input type='range' min={filterOptions.priceRange.min} max={filterOptions.priceRange.max}></input>
-        {filterOptions.priceRange.min}- {filterOptions.priceRange.max}
+    <main className='flex min-h-screen flex-col items-center p-24 '>
+      <div className='flex flex-col gap-10'>
+        <ChipPicker
+          title='Categories'
+          chipOptions={filterOptions.categoryOptions}
+          selectedChips={filter.categories}
+          handleSelectedChipsChange={handleChangeCategories}
+        />
+        {/* <input
+          type='range'
+          min={filterOptions.priceRange.min}
+          max={filterOptions.priceRange.max}
+          value={valueMin}
+          onChange={(e) => setValueMin(Number(e.target.value))}
+        ></input> */}
+        <StarRating selectedRating={filter.rating} handleSelectedRating={handleChangeStarRating} title='Star Rating' />
       </div>
 
       <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex'>
