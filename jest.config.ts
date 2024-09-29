@@ -10,7 +10,8 @@ const config: Config = {
   verbose: true,
   passWithNoTests: true,
   collectCoverageFrom: ['src/**/*.ts'],
-  collectCoverage: true,
+  // Note: disabled for now, it's not been used
+  collectCoverage: false,
   testMatch: ['**/*.spec.ts'],
 };
 

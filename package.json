@@ -9,7 +9,7 @@
     "build": "next build",
     "format": "prettier . --write",
     "preinstall": "only-allow pnpm",
-    "test": "jest ",
+    "test": "jest --detectOpenHandles",
     "test-integration": "pnpm test -- -c ./jest-integration-config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
