@@ -1,7 +1,6 @@
 import React from 'react';
-import { Card, CardContent, CardActions, Typography, Button, Rating, Chip } from '@mui/material';
+import { Card, CardContent, Typography, Rating, Chip } from '@mui/material';
 import { Product } from '@/src/type/products';
-import Link from 'next/link';
 
 interface Props {
   product: Product;

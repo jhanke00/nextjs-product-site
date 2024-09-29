@@ -1,4 +1,4 @@
-import ProductCard from '@/src/components/ui/ProductCard';
+import ProductCard from '@/src/components/ui/ProductList/ProductCard';
 import largeData from '@/src/mock/large/products.json';
 import smallData from '@/src/mock/small/products.json';
 
