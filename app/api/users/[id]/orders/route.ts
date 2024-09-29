@@ -3,9 +3,18 @@ import { makeGetUserOrdersService } from '@/src/presentation/factory/services/us
 import { middlewaresHandler } from '@/src/presentation/middlewares';
 import { NextResponse, NextRequest } from 'next/server';
 
-export async function getUserOrdersHandler(request: NextRequest, { params }: { params: { id: string } }) {
+interface IExpectedParams { 
+  params: { id: string };
+}
+
+async function getUserOrdersHandler(
+  request: NextRequest,
+  { params }: IExpectedParams
+) {
   const response = await makeGetUserOrdersService().exec(params.id);
   return NextResponse.json(response, { status: response.statusCode });
 }
 
-export const GET = middlewaresHandler(getUserOrdersHandler, makeAuthMiddleware());
+export const GET = async (request: NextRequest, { params }: IExpectedParams) => {
+  return middlewaresHandler(getUserOrdersHandler, makeAuthMiddleware())(request, { params });
+};

@@ -16,7 +16,7 @@ export const seedData = async () => {
   try {
     await productsDbRepository.insertMany(products as unknown as IProductInserManyInput[]);
     await usersDbRepository.insertMany(users as unknown as IUsersInserManyInput[]);
-    await ordersDbRepository.insertMany(orders as IOrder[]);
+    await ordersDbRepository.insertMany(orders as unknown as IOrder[]);
     return 'Seed added successfully !';
   } catch (error) {
     return 'Error while seeding!';

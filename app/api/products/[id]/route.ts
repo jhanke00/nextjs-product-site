@@ -3,9 +3,15 @@ import { makeFindProductByIdService } from '@/src/presentation/factory/services/
 import { middlewaresHandler } from '@/src/presentation/middlewares';
 import { NextResponse, NextRequest } from 'next/server';
 
-export async function getProductByIdHandler(request: NextRequest, { params }: { params: { id: string } }) {
+interface IExpectedParams { 
+  params: {id: string}
+ }
+
+async function getProductByIdHandler(request: NextRequest, { params }: IExpectedParams ) {
   const response = await makeFindProductByIdService().exec(params.id);
   return NextResponse.json(response, { status: response.statusCode });
 }
 
-export const GET = middlewaresHandler(getProductByIdHandler, makeAuthMiddleware());
+export const GET = async (request: NextRequest, { params }: IExpectedParams ) => {
+  return middlewaresHandler(getProductByIdHandler, makeAuthMiddleware())(request, { params });
+};

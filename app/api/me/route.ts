@@ -3,7 +3,7 @@ import { makeFindUserByEmailService } from '@/src/presentation/factory/services/
 import { middlewaresHandler } from '@/src/presentation/middlewares';
 import { NextResponse, NextRequest } from 'next/server';
 
-export async function medHandler(request: NextRequest) {
+async function medHandler(request: NextRequest) {
   const userEmail = request.headers.get('x-user-email');
 
   const response = await makeFindUserByEmailService().exec(userEmail!);
@@ -11,4 +11,6 @@ export async function medHandler(request: NextRequest) {
   return NextResponse.json(response, { status: response.statusCode });
 }
 
-export const GET = middlewaresHandler(medHandler, makeAuthMiddleware());
+export const GET = async (request: NextRequest) => {
+  return middlewaresHandler(medHandler, makeAuthMiddleware())(request);
+};
