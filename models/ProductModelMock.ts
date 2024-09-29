@@ -8,7 +8,7 @@ const datasets: { [key: string]: Product[] } = { small: smallProductsData, large
 
 export default class MockModel implements IProductModel {
   private mockData: Product[];
-  private static instances: { [key: string]: MockModel | undefined } = {};
+  private static instances: { [key: string]: MockModel } = {};
 
   public static getInstance(dataset: string): MockModel {
     if (!MockModel.instances[dataset]) {
