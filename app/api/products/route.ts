@@ -4,6 +4,7 @@ import {  middlewaresHandler } from '@/src/presentation/middlewares';
 import { NextResponse, NextRequest } from 'next/server';
 
 export async function getAllProductsHandler(request: NextRequest) {
+  
   const { limit, page } = Object.fromEntries(request.nextUrl.searchParams.entries()) as { limit: string; page: string };
   const response = await makeGetAllProductsService().exec(page, limit);
 
