@@ -5,7 +5,6 @@ import { NextResponse, NextRequest } from 'next/server';
 
 export async function getProductByIdHandler(request: NextRequest, { params }: { params: { id: string } }) {
 
-  console.log({params})
   const response = await makeFindProductByIdService().exec(params.id);
   return NextResponse.json(response, { status: response.statusCode });
 }

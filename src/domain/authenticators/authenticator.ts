@@ -2,5 +2,5 @@
 
 export interface IAuthenticator {
   createNewToken(input: object): Promise<string | undefined>;
-  verifyToken(input: string): Promise<boolean>;
+  verifyToken<T>(input: string): Promise<{isValid: boolean, data: T}>;
 }

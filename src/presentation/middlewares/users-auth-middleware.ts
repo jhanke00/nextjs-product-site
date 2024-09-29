@@ -22,9 +22,14 @@ export class AuthMiddleware{
         }
 
         try {
-            await this.authenticator.verifyToken(token)
-        } catch (error) {
+          const {isValid} = await this.authenticator.verifyToken<{email: string}>(token)
+
+          if(!isValid){
             return NextResponse.json(unauthorizedResponse, { status: unauthorizedResponse.statusCode });
+          }
+            
+        } catch (error) {
+          return NextResponse.json(unauthorizedResponse, { status: unauthorizedResponse.statusCode });
         }
 
         return null;
