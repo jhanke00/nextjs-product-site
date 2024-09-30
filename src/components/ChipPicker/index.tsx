@@ -24,14 +24,13 @@ export const ChipPicker = ({ chipOptions, selectedChips, handleSelectedChipsChan
       <h2 className='text-lg font-semibold'>{title}</h2>
       <div className='flex gap-2 flex-wrap'>
         {chipOptions.map((op) => (
-          <div key={'chip-' + op}>
-            <button
-              onClick={() => handleChipSelected(op)}
-              className={`${selectedChips.includes(op) ? 'bg-purple-700' : 'bg-gray-500'} rounded-md p-2`}
-            >
-              {op}
-            </button>
-          </div>
+          <button
+            key={'chip-' + op}
+            onClick={() => handleChipSelected(op)}
+            className={`${selectedChips.includes(op) ? 'bg-blue-600' : 'bg-gray-500'} rounded-md p-2`}
+          >
+            {op}
+          </button>
         ))}
       </div>
     </div>

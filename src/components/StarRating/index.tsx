@@ -1,6 +1,3 @@
-import { title } from 'process';
-import { Dispatch, SetStateAction } from 'react';
-
 export type StarRatingProps = {
   max?: number;
   title?: string;
@@ -10,7 +7,7 @@ export type StarRatingProps = {
 
 export const StarRating = ({ max = 5, selectedRating, handleSelectedRating, title }: StarRatingProps) => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col gap-2 flex-wrap'>
       <h2 className='text-lg font-semibold'>{title}</h2>
       <div className='flex gap-2'>
         {Array.from(Array(max).keys()).map((starRating) => (
