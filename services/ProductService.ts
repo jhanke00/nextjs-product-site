@@ -35,15 +35,26 @@ export default class ProductService implements IProductService {
     page: number,
     productsPerPage: number,
     query?: string,
-    category?: string
+    category?: string,
+    minPrice?: number,
+    maxPrice?: number,
+    rating?: number
   ): Promise<paginatedProducts> {
-    const products = await this.model.getPaginatedProducts(page, productsPerPage, query, category);
+    const { products, pages } = await this.model.getPaginatedProducts(
+      page,
+      productsPerPage,
+      query,
+      category,
+      minPrice ? Number(minPrice) : undefined,
+      maxPrice ? Number(maxPrice) : undefined,
+      rating ? Number(rating) : undefined
+    );
     const count = await this.model.getCount();
     return {
       products,
       count,
       page,
-      pages: Math.ceil((count || 0) / productsPerPage),
+      pages,
     };
   }
 }

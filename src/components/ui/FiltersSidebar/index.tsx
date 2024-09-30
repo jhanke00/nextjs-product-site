@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import useDebouncedValue from './useDebouncedValue'; // Import the custom hook
 
 interface FiltersSidebarProps {
   ratingFilter: number;
@@ -7,7 +8,10 @@ interface FiltersSidebarProps {
   setPriceRange: React.Dispatch<React.SetStateAction<{ min: number; max: number }>>;
   categoryFilter: string;
   setCategoryFilter: React.Dispatch<React.SetStateAction<string>>;
+  query: string;
+  setQuery: React.Dispatch<React.SetStateAction<string>>;
   categories: string[];
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function FiltersSidebar({
@@ -17,15 +21,39 @@ export default function FiltersSidebar({
   setPriceRange,
   categoryFilter,
   setCategoryFilter,
+  query,
+  setQuery,
+  setLoading,
   categories,
 }: FiltersSidebarProps) {
-  const handlePriceInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setPriceRange((prevRange) => ({
-      ...prevRange,
-      [name]: Number(value),
-    }));
-  };
+  // Internal state to track input changes before debouncing
+  const [queryInput, setQueryInput] = useState(query);
+  const [ratingInput, setRatingInput] = useState(ratingFilter);
+  const [minPriceInput, setMinPriceInput] = useState(priceRange.min);
+  const [maxPriceInput, setMaxPriceInput] = useState(priceRange.max);
+  const [categoryInput, setCategoryInput] = useState(categoryFilter);
+
+  const debouncedQuery = useDebouncedValue(queryInput);
+  const debouncedRating = useDebouncedValue(ratingInput);
+  const debouncedMinPrice = useDebouncedValue(minPriceInput);
+  const debouncedMaxPrice = useDebouncedValue(maxPriceInput);
+  const debouncedCategory = useDebouncedValue(categoryInput);
+
+  useEffect(() => {
+    if (debouncedQuery) setQuery(debouncedQuery);
+  }, [debouncedQuery, setQuery]);
+
+  useEffect(() => {
+    if (debouncedRating) setRatingFilter(debouncedRating);
+  }, [debouncedRating, setRatingFilter]);
+
+  useEffect(() => {
+    if (debouncedMinPrice && debouncedMaxPrice) setPriceRange({ min: debouncedMinPrice, max: debouncedMaxPrice });
+  }, [debouncedMinPrice, debouncedMaxPrice, setPriceRange]);
+
+  useEffect(() => {
+    if (debouncedCategory) setCategoryFilter(debouncedCategory);
+  }, [debouncedCategory, setCategoryFilter]);
 
   return (
     <aside className='w-64 h-auto border-r-2 pr-4'>
@@ -37,10 +65,15 @@ export default function FiltersSidebar({
           min='0'
           max='5'
           step='1'
-          value={ratingFilter}
-          onChange={(e) => setRatingFilter(Number(e.target.value))}
+          value={ratingInput}
+          onChange={(e) => setRatingInput(Number(e.target.value))}
         />
         <span>{ratingFilter} Stars</span>
+      </div>
+
+      <div className='mb-4'>
+        <h4 className='font-bold'>Product Name</h4>
+        <input value={queryInput} onChange={(e) => setQueryInput(e.target.value)} style={{ color: 'black' }} />
       </div>
 
       <div className='mb-4'>
@@ -52,8 +85,8 @@ export default function FiltersSidebar({
               style={{ color: 'black' }}
               type='number'
               name='min'
-              value={priceRange.min}
-              onChange={handlePriceInputChange}
+              value={minPriceInput}
+              onChange={(e) => setMinPriceInput(Number(e.target.value))}
               className='border p-1 w-20'
               placeholder='Min price'
             />
@@ -64,8 +97,8 @@ export default function FiltersSidebar({
               style={{ color: 'black' }}
               type='number'
               name='max'
-              value={priceRange.max}
-              onChange={handlePriceInputChange}
+              value={maxPriceInput}
+              onChange={(e) => setMaxPriceInput(Number(e.target.value))}
               className='border p-1 w-20'
               placeholder='Max price'
             />
@@ -75,7 +108,7 @@ export default function FiltersSidebar({
 
       <div className='mb-4'>
         <h4 className='font-bold'>Category</h4>
-        <select style={{ color: 'black' }} value={categoryFilter} onChange={(e) => setCategoryFilter(e.target.value)}>
+        <select style={{ color: 'black' }} value={categoryInput} onChange={(e) => setCategoryInput(e.target.value)}>
           <option value=''>All Categories</option>
           {categories.map((category) => (
             <option key={category} value={category}>

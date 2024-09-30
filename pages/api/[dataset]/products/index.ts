@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(405).end(`Method ${req.method} Not Allowed`);
     }
 
-    const { query, category, page = '1', productsPerPage = '10', dataset } = req.query;
+    const { query, category, page = '1', productsPerPage = '10', dataset, minPrice, maxPrice, rating } = req.query;
 
     const normalizedQuery = query?.toString().toLowerCase() || '';
     const normalizedCategory = category?.toString().toLowerCase() || '';
@@ -19,9 +19,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const pageNumber = parseInt(page as string, 10);
     const itemsPerPage = parseInt(productsPerPage as string, 10);
 
+    const priceRange = {
+      min: minPrice ? parseInt(minPrice as string, 10) : undefined,
+      max: maxPrice ? parseInt(maxPrice as string, 10) : undefined,
+    };
+
+    const ratingStars = rating ? parseInt(rating as string, 10) : undefined;
+
     const service: ProductService = ProductService.getInstance(dataset as serviceAvailable);
 
-    const products = await service.getPaginatedProducts(pageNumber, itemsPerPage, normalizedQuery, normalizedCategory);
+    const products = await service.getPaginatedProducts(
+      pageNumber,
+      itemsPerPage,
+      normalizedQuery,
+      normalizedCategory,
+      priceRange.min,
+      priceRange.max,
+      ratingStars
+    );
 
     return res.status(200).json(products);
   } catch (error: unknown) {

@@ -1,4 +1,4 @@
-import { Product, IProductModel } from '@/src/type/products';
+import { Product, IProductModel, paginatedProducts } from '@/src/type/products';
 import HttpStatusCode from '@/src/utils/HttpStatusCode';
 import largeProductsData from '@mock/large/products.json';
 import smallProductsData from '@mock/small/products.json';
@@ -25,31 +25,53 @@ export default class MockModel implements IProductModel {
   async getCount(): Promise<number> {
     return this.mockData.length;
   }
+
   async getPaginatedProducts(
     page: number,
     productsPerPage: number,
     query: string,
-    category: string
-  ): Promise<Product[]> {
+    category: string,
+    minPrice: number,
+    maxPrice: number,
+    rating: number
+  ): Promise<{ products: Product[]; pages: number }> {
     const startIndex = (page - 1) * productsPerPage;
     const endIndex = startIndex + productsPerPage;
 
     let filteredProducts = this.mockData;
 
+    // Filter by query (product name)
     if (query) {
       filteredProducts = filteredProducts.filter((product) => product.name.toLowerCase().includes(query.toLowerCase()));
     }
 
+    // Filter by category
     if (category) {
       filteredProducts = filteredProducts.filter(
         (product) => product.category.toLowerCase() === category.toLowerCase()
       );
     }
 
+    // Filter by rating
+    if (rating > 0) {
+      filteredProducts = filteredProducts.filter((product) => Number(product.rating) >= rating);
+    }
+
+    // Filter by price range
+    filteredProducts = filteredProducts.filter((product) => {
+      const productPrice = Number(product.price);
+      return productPrice >= minPrice && productPrice <= maxPrice;
+    });
+
+    // Calculate total pages based on filtered products
+    const pages = Math.ceil(filteredProducts.length / productsPerPage);
+
+    // Slice the products for pagination
     const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
 
-    return paginatedProducts;
+    return { products: paginatedProducts, pages };
   }
+
   async getAll(): Promise<Product[]> {
     return this.mockData;
   }

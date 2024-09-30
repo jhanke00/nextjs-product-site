@@ -20,13 +20,24 @@ export type paginatedProducts = {
 };
 
 export interface IProductModel extends Model<Product> {
-  getPaginatedProducts(page: number, productsPerPage: number, query?: string, category?: string): Promise<Product[]>;
+  getPaginatedProducts(
+    page: number,
+    productsPerPage: number,
+    query?: string,
+    category?: string,
+    minPrice?: number,
+    maxPrice?: number,
+    rating?: number
+  ): Promise<Omit<paginatedProducts, 'page' | 'count'>>;
 }
 export interface IProductService extends Service<Product> {
   getPaginatedProducts(
     page: number,
     productsPerPage: number,
     query?: string,
-    category?: string
+    category?: string,
+    minPrice?: number,
+    maxPrice?: number,
+    rating?: number
   ): Promise<paginatedProducts>;
 }

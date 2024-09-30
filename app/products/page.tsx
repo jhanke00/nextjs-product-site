@@ -2,47 +2,71 @@
 import FiltersSidebar from '@/src/components/ui/FiltersSidebar';
 import Pagination from '@/src/components/ui/Pagination';
 import ProductsList from '@/src/components/ui/ProductList';
-import largeData from '@/src/mock/large/products.json';
-import smallData from '@/src/mock/small/products.json';
+import { paginatedProducts } from '@/src/type/products';
 import { useState, useEffect } from 'react';
 
 const PAGE_SIZE = 20;
+const DATASET = 'large';
 
 export default function Products() {
   const [currentPage, setCurrentPage] = useState(1);
   const [ratingFilter, setRatingFilter] = useState(0);
   const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
   const [categoryFilter, setCategoryFilter] = useState('');
+  const [query, setQuery] = useState('');
+  const [data, setData] = useState<paginatedProducts>(); // State to store fetched data
+  const [loading, setLoading] = useState(true); // State to handle loading
 
-  const data = [...largeData, ...smallData];
-  const categories = Array.from(new Set(data.map((product) => product.category))).sort();
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `/api/${DATASET}/products?page=${currentPage}&productsPerPage=${PAGE_SIZE}&query=${query}&category=${categoryFilter}&minPrice=${priceRange.min}&maxPrice=${priceRange.max}&rating=${ratingFilter}`
+      );
 
-  // Filtered Data
-  const filteredData = data.filter((product) => {
-    return (
-      Math.round(product.rating) >= ratingFilter &&
-      Number(product.price) >= priceRange.min &&
-      Number(product.price) <= priceRange.max &&
-      (categoryFilter === '' || product.category === categoryFilter)
-    );
-  });
-
-  const startIndex = (currentPage - 1) * PAGE_SIZE;
-  const endIndex = startIndex + PAGE_SIZE;
-  const productData = filteredData.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(filteredData.length / PAGE_SIZE);
-
-  const nextPage = () => {
-    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const result = await response.json();
+      console.log('Result:', result);
+      setData(result); // Set the fetched data
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    } finally {
+      setLoading(false); // Set loading to false after fetching
+    }
   };
 
-  const prevPage = () => {
-    setCurrentPage((prev) => Math.max(prev - 1, 1));
-  };
+  useEffect(() => {
+    currentPage === 1 ? fetchData() : setCurrentPage(1);
+  }, [query, categoryFilter, ratingFilter, priceRange]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
+
+  useEffect(() => {
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage]);
+
+  useEffect(() => {
+    setLoading(false);
+  }, [data]);
+
+  const nextPage = () => {
+    setLoading(true);
+    setCurrentPage((prev) => Math.min(prev + 1, data?.pages || 1));
+  };
+
+  const prevPage = () => {
+    setLoading(true);
+    setCurrentPage((prev) => Math.max(prev - 1, 1));
+  };
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <main className='flex min-h-screen p-24'>
@@ -53,12 +77,15 @@ export default function Products() {
         setPriceRange={setPriceRange}
         categoryFilter={categoryFilter}
         setCategoryFilter={setCategoryFilter}
-        categories={categories}
+        categories={Array.from(new Set(data?.products.map((product) => product.category)) || []).sort()}
+        setQuery={setQuery}
+        query={query}
+        setLoading={setLoading}
       />
       <section className='flex-1 pl-8'>
-        <ProductsList products={productData} />
-        {productData.length > 0 && (
-          <Pagination currentPage={currentPage} totalPages={totalPages} onNext={nextPage} onPrev={prevPage} />
+        <ProductsList products={data.products} loading={loading} />
+        {data.products.length > 0 && data && (
+          <Pagination currentPage={data.page} totalPages={data.pages} onNext={nextPage} onPrev={prevPage} />
         )}
       </section>
     </main>
