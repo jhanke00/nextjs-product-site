@@ -24,6 +24,9 @@ You need to change some fields to run the docker container:
 
 1. Where is **johdoe:randompassword** you must enter the username and password that are in the file [docker-compose.yml](./../../../infra/docker-compose.yml).
 2. Where is **mydb** you must enter the **container_name** which is also in the file [docker-compose.yml](./../../../infra/docker-compose.yml).
+3. Where is **postgresql** you must change to **mongodb** and change the localhost to **27017**.
+4. Add **?authSource=admin&directConnection=true** after the **container_name**.
+5. Check the `.env.local` to check how it should look.
 
 ## schema.prisma
 
@@ -35,64 +38,54 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id          String @id @default(uuid())
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
   firstName   String
   lastName    String
   phoneNumber String
-  email       String @unique
-
-  orders Order[]
-
-  @@map("users")
+  email       String  @unique
+  orders      Order[]
 }
 
 model Product {
-  id           String  @id @default(uuid())
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
   name         String
   price        Float
-  description  String?
+  description  String
   category     String
-  rating       Float
-  numReviews   Int
-  countInStock Int
-
-  orderItems OrderItem[]
-
-  @@map("products")
+  rating       Float       @default(0)
+  numReviews   Int         @default(0)
+  countInStock Int         @default(0)
+  items        OrderItem[]
 }
 
 model Order {
-  id     String   @id @default(uuid())
-  userId String
+  id     String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId String   @db.ObjectId
   total  Float
-  time   DateTime
+  time   DateTime @default(now())
 
   user  User        @relation(fields: [userId], references: [id], onDelete: Cascade)
   items OrderItem[]
-
-  @@map("orders")
 }
 
 model OrderItem {
-  id        String @id @default(uuid())
-  orderId   String
-  productId String
-  price     Float
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  productId String  @db.ObjectId
   count     Int
+  orderId   String? @db.ObjectId
+  price     Float
 
-  order   Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
   product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
-
-  @@map("order_items")
+  Order   Order?  @relation(fields: [orderId], references: [id], onDelete: Cascade)
 }
 ```
 
-After that, run the command `pnpm prisma migrate dev` and choose a name to the migration.
+After that, run the command `pnpm prisma generate`.
 Your database is now set, and you can use the command `pnpm prisma studio` to view the database.
 
 ## Seed
@@ -107,4 +100,4 @@ To make the seed you have to check if you have the code below in `package.json` 
 },
 ```
 
-After the you can run the command `pnpm prisma db seed` to populate the database.
+After the you can run the command `pnpm prisma db seed` to populate the database with the small mock data. To seed the data, I used a _utility function_ to convert `uuid` to `ObjectId` in **id** fields.

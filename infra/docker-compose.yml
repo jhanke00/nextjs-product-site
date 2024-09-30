@@ -1,15 +1,22 @@
 version: '3.8'
 
+name: next-product-site-db
+
 services:
-  postgres:
-    container_name: 'nextproductsite-pg'
-    image: 'bitnami/postgresql:latest'
+  mongodb:
+    container_name: next-product-site-db
+    image: bitnami/mongodb
+    restart: always
     ports:
-      - 5432:5432
+      - 27017:27017
     environment:
-      POSTGRES_USER: docker
-      POSTGRES_PASSWORD: docker
-      POSTGRES_DB: nextproductsite
-      PG_DATA: /data/postgres
+      MONGODB_ADVERTISED_HOSTNAME: '127.0.0.1'
+      MONGODB_REPLICA_SET_MODE: primary
+      MONGODB_REPLICA_SET_KEY: replicasetkey
+      MONGODB_ROOT_USER: root
+      MONGODB_ROOT_PASSWORD: root
     volumes:
-      - ./data/pg:/data/postgres
+      - mongodb-data:/bitnami/mongodb
+
+volumes:
+  mongodb-data:

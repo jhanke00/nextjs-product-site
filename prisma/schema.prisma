@@ -1,66 +1,50 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id          String @id @default(uuid())
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
   firstName   String
   lastName    String
   phoneNumber String
-  email       String @unique
-
-  orders Order[]
-
-  @@map("users")
+  email       String  @unique
+  orders      Order[]
 }
 
 model Product {
-  id           String  @id @default(uuid())
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
   name         String
   price        Float
-  description  String?
+  description  String
   category     String
-  rating       Float
-  numReviews   Int
-  countInStock Int
-
-  orderItems OrderItem[]
-
-  @@map("products")
+  rating       Float       @default(0)
+  numReviews   Int         @default(0)
+  countInStock Int         @default(0)
+  items        OrderItem[]
 }
 
 model Order {
-  id     String   @id @default(uuid())
-  userId String
+  id     String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId String   @db.ObjectId
   total  Float
-  time   DateTime
+  time   DateTime @default(now())
 
   user  User        @relation(fields: [userId], references: [id], onDelete: Cascade)
   items OrderItem[]
-
-  @@map("orders")
 }
 
 model OrderItem {
-  id        String @id @default(uuid())
-  orderId   String
-  productId String
-  price     Float
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  productId String  @db.ObjectId
   count     Int
+  orderId   String? @db.ObjectId
+  price     Float
 
-  order   Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
   product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
-
-  @@map("order_items")
+  Order   Order?  @relation(fields: [orderId], references: [id], onDelete: Cascade)
 }

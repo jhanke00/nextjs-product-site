@@ -38,7 +38,7 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
-  const { userId, items, time }: OrderProps = await request.json();
+  const { userId, items }: OrderProps = await request.json();
 
   const userExists = await prisma.user.findUnique({
     where: {
@@ -65,11 +65,10 @@ export async function POST(request: NextRequest) {
   const total = calculateTotal(items);
 
   try {
-    const order = await prisma.order.create({
+    await prisma.order.create({
       data: {
         userId: userId,
         total,
-        time: new Date(time),
         items: {
           create: items.map((item: any) => ({
             productId: item.productId,
