@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  firstName   String
+  lastName    String
+  phoneNumber String
+  email       String  @unique
+  orders      Order[]
+}
+
+model Product {
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  price        Float
+  description  String
+  category     String
+  rating       Float       @default(0)
+  numReviews   Int         @default(0)
+  countInStock Int         @default(0)
+  items        OrderItem[]
+}
+
+model Order {
+  id     String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId String   @db.ObjectId
+  total  Float
+  time   DateTime @default(now())
+
+  user  User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items OrderItem[]
+}
+
+model OrderItem {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  productId String  @db.ObjectId
+  count     Int
+  orderId   String? @db.ObjectId
+  price     Float
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  Order   Order?  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+}

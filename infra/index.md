@@ -1,3 +1,4 @@
 # Infrastructure
 
-Make changes with setting up infrastructure locally here with Docker.
+Run with [Docker](./../docs/infrastructure/docker/docker-instructions.md)
+Run with [Prisma ORM](./../docs/infrastructure/prisma/prisma-instructions.md)
