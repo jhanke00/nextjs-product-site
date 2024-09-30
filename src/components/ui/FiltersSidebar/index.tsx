@@ -11,7 +11,6 @@ interface FiltersSidebarProps {
   query: string;
   setQuery: React.Dispatch<React.SetStateAction<string>>;
   categories: string[];
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function FiltersSidebar({
@@ -23,7 +22,6 @@ export default function FiltersSidebar({
   setCategoryFilter,
   query,
   setQuery,
-  setLoading,
   categories,
 }: FiltersSidebarProps) {
   // Internal state to track input changes before debouncing

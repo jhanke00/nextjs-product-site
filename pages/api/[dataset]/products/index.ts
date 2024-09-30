@@ -21,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const priceRange = {
       min: minPrice ? parseInt(minPrice as string, 10) : undefined,
-      max: maxPrice ? parseInt(maxPrice as string, 10) : undefined,
+      max: maxPrice ? parseInt(maxPrice as string, 10) : Infinity,
     };
 
     const ratingStars = rating ? parseInt(rating as string, 10) : undefined;

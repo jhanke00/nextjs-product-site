@@ -11,7 +11,7 @@ const DATASET = 'large';
 export default function Products() {
   const [currentPage, setCurrentPage] = useState(1);
   const [ratingFilter, setRatingFilter] = useState(0);
-  const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
+  const [priceRange, setPriceRange] = useState({ min: 0, max: 0 });
   const [categoryFilter, setCategoryFilter] = useState('');
   const [query, setQuery] = useState('');
   const [data, setData] = useState<paginatedProducts>(); // State to store fetched data
