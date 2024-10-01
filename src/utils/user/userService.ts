@@ -1,16 +1,7 @@
-import { User } from '@/src/type/users';
+import { User } from '@type/users';
 import users from '@mock/small/users.json';
-import { NotFoundError, ValidationError } from '@utils/apiErrors';
-
-// TODO: it should be moved to a common place
-function isUUID(value: string) {
-  const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
-  return uuidRegex.test(value);
-}
-
-function validateUUID(value: string) {
-  if (!isUUID(value)) throw new ValidationError('Invalid UUID');
-}
+import { NotFoundError } from '@utils/apiErrors';
+import { validateUUID } from '@utils/auth/authService';
 
 async function getUserById(userId: string): Promise<User> {
   validateUUID(userId);

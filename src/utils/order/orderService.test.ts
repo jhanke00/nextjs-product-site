@@ -1,7 +1,7 @@
 import { getOrdersByUserId, getUserTotalSpent } from './orderService';
 import { getUserById } from '@utils/user/userService';
 import ordersData from '@mock/small/orders.json';
-import { Order } from '@type/orders';
+import type { Order } from '@type/orders';
 
 jest.mock('@utils/user/userService');
 

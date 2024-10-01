@@ -1,20 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getUserTotalSpent } from '@utils/order/orderService';
 import { handleError } from '@utils/apiErrors';
+import type { ApiResponse } from '@type/http';
+import type { UserRouterContext } from '@type/users';
 
-type Context = {
-  params: {
-    userId: string;
-  };
-};
-
-export async function GET(req: NextRequest, context: Context) {
-  const res = NextResponse;
+export async function GET(req: NextRequest, context: UserRouterContext): Promise<ApiResponse<number>> {
   try {
     const userId = context.params.userId;
     const data = await getUserTotalSpent(userId);
 
-    return res.json({ data, message: 'User spent found' }, { status: 200 });
+    return NextResponse.json({ data, message: 'User spent found', success: true }, { status: 200 });
   } catch (error) {
     return handleError(req, error);
   }
