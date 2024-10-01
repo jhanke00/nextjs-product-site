@@ -1,3 +1,3 @@
 # Infrastructure
 
-Documentation on any Infrastructure setup or changes made.
+- Mongo Database connection configuration at `src/lib/db.ts`.
