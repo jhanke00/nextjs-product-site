@@ -80,7 +80,6 @@ export default function Products() {
         categories={Array.from(new Set(data?.products.map((product) => product.category)) || []).sort()}
         setQuery={setQuery}
         query={query}
-        setLoading={setLoading}
       />
       <section className='flex-1 pl-8'>
         <ProductsList products={data.products} loading={loading} />
