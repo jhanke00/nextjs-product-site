@@ -15,7 +15,7 @@
     "prepare": "husky",
     "generate-large-data": "node ./scripts/generateLargeData.js",
     "generate-small-data": "node ./scripts/generateSmallData.js",
-    "docker:build": "docker build -t next-product-site .",
+    "docker:build": "docker build -f infra/Dockerfile -t next-product-site .",
     "docker:run": "docker run -p 3000:3000 next-product-site"
   },
   "engines": {

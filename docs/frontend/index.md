@@ -20,7 +20,7 @@ Documentation on any Frontend capabilities or changes made.
 - Pages for user login and registration are available.
 - Example of protected route that requires authentication.
 - Middleware to check user authentication status before allowing access.
-- Single instance of axios for API calls and handle authentication token at `src/utils/api.ts`.
+- Single instance of axios for API calls and handle authentication token.
 
 ## Folder Structure
 
