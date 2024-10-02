@@ -14,17 +14,25 @@
     "build-storybook": "storybook build",
     "prepare": "husky",
     "generate-large-data": "node ./scripts/generateLargeData.js",
-    "generate-small-data": "node ./scripts/generateSmallData.js"
+    "generate-small-data": "node ./scripts/generateSmallData.js",
+    "docker:build": "docker build -f infra/Dockerfile -t next-product-site .",
+    "docker:run": "docker run -p 3000:3000 next-product-site"
   },
   "engines": {
     "node": ">=18",
     "pnpm": ">=8"
   },
   "dependencies": {
+    "@next/env": "^14.2.13",
+    "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
     "fs": "0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0",
     "next": "14.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
@@ -36,16 +44,20 @@
     "@storybook/nextjs": "^7.6.15",
     "@storybook/react": "^7.6.15",
     "@storybook/test": "^7.6.15",
+    "@types/bcrypt": "^5.0.2",
     "@types/jest": "^29.5.12",
+    "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^20.11.17",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "@types/uuid": "^10.0.0",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-storybook": "^0.6.15",
     "husky": "^9.0.10",
     "jest": "^29.7.0",
+    "mongodb-memory-server": "^10.0.1",
     "only-allow": "^1.2.1",
     "postcss": "^8.4.35",
     "prettier": "3.2.5",

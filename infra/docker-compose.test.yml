@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  app:
+    environment:
+      - NODE_ENV=test
+      - MONGO_URI=mongodb://mongo:27017/testdatabase
+    command: ['pnpm', 'test']
