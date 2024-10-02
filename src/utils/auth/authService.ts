@@ -37,4 +37,8 @@ async function generatePasswordHash(password: string): Promise<string> {
   return bcrypt.hash(password, saltOrRounds);
 }
 
-export { validateUUID, generateToken, validatePassword, generatePasswordHash };
+async function verifyToken(token: string) {
+  return jwt.verify(token, secretKey);
+}
+
+export { validateUUID, generateToken, validatePassword, generatePasswordHash, verifyToken };

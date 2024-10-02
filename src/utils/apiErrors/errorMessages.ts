@@ -1,15 +1,34 @@
-class NotFoundError extends Error {
+interface ApiError {
+  name: string;
+  statusCode: number;
+}
+
+class ValidationError extends Error implements ApiError {
+  name = 'ValidationError';
+  statusCode = 400;
+
   constructor(message: string) {
     super(message);
-    this.name = 'NotFoundError';
   }
 }
 
-class ValidationError extends Error {
+class UnauthorizedError extends Error implements ApiError {
+  name = 'UnauthorizedError';
+  statusCode = 401;
+
   constructor(message: string) {
     super(message);
-    this.name = 'ValidationError';
   }
 }
 
-export { NotFoundError, ValidationError };
+class NotFoundError extends Error implements ApiError {
+  statusCode = 404;
+  name = 'NotFoundError';
+
+  constructor(message: string) {
+    super(message);
+  }
+}
+
+export type { ApiError };
+export { NotFoundError, ValidationError, UnauthorizedError };

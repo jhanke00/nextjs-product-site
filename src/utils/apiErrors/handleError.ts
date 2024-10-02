@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { NotFoundError, ValidationError } from '@utils/apiErrors';
+import type { ApiError } from './errorMessages';
 
 function handleError(req: NextRequest, error: any) {
-  if (error instanceof NotFoundError) {
-    return NextResponse.json({ success: false, message: error.message }, { status: 404 });
-  }
-
-  if (error instanceof ValidationError) {
-    return NextResponse.json({ success: false, message: error.message }, { status: 400 });
+  const isApiError = error instanceof Error && 'statusCode' in error;
+  if (isApiError) {
+    const apiError = error as ApiError;
+    return NextResponse.json({ success: false, message: error.message }, { status: apiError.statusCode });
   }
 
   console.error(error, `\n[Unexpected error] ${error.message}: ${req.url}`);
