@@ -58,9 +58,13 @@ export default class MockModel implements IProductModel {
     }
 
     // Filter by price range
+
+    const min = minPrice || 0;
+    const max = maxPrice || Number.MAX_SAFE_INTEGER;
+
     filteredProducts = filteredProducts.filter((product) => {
       const productPrice = Number(product.price);
-      return productPrice >= minPrice && productPrice <= maxPrice;
+      return productPrice >= min && productPrice <= max;
     });
 
     // Calculate total pages based on filtered products

@@ -46,7 +46,10 @@ export default function FiltersSidebar({
   }, [debouncedRating, setRatingFilter]);
 
   useEffect(() => {
-    if (debouncedMinPrice && debouncedMaxPrice) setPriceRange({ min: debouncedMinPrice, max: debouncedMaxPrice });
+    const min = debouncedMinPrice || 0;
+    const max = debouncedMaxPrice || Number.MAX_SAFE_INTEGER;
+
+    setPriceRange({ min, max });
   }, [debouncedMinPrice, debouncedMaxPrice, setPriceRange]);
 
   useEffect(() => {
