@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import User from '@/models/User';
+import User from '@/src/models/User';
 import dbConnect from '@/src/utils/dbConnect';
 import * as Yup from 'yup';
-import { formatValidationErrors, FormattedErrors } from '@/src/utils/commonUtilities';
+import response from '@/src/utils/response';
 
 const schema = Yup.object().shape({
   firstName: Yup.string().required('First name is required'),
@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await schema.validate(req.body, { abortEarly: false });
 
         if (await User.findOne({ email: req.body.email })) {
-          return res.status(409).json({ error: `email ${req.body.email} already exists` });
+          return res.status(409).json({ message: `email ${req.body.email} already exists` });
         }
 
         const user = new User(req.body);
@@ -37,21 +37,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           phoneNumber: user.phoneNumber,
         });
       } catch (error) {
-        if (error instanceof Yup.ValidationError) {
-          const formattedErrors: FormattedErrors = formatValidationErrors(error);
-
-          return res.status(422).json({
-            error: 'Validation Error',
-            details: formattedErrors,
-          });
-        }
-
-        console.error(error);
-        res.status(500).json({ error: 'Internal Server Error. Please try again.' });
+        response.error(res, error as Error);
       }
 
     default:
-      res.setHeader('Allow', ['POST']);
-      res.status(405).end(`Method ${req.method} Not Allowed`);
+      response.methodNotAllowed(res, req.method as string, ['POST']);
   }
 }

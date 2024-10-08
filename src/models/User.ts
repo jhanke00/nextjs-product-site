@@ -1,17 +1,13 @@
 import mongoose, { CallbackError } from 'mongoose';
 import crypto from 'crypto';
 import bcrypt from 'bcrypt';
+import { IUser } from '@/src/types/users';
 
-export interface IUser extends mongoose.Document {
+interface IUserDocument extends IUser, Omit<mongoose.Document, '_id'> {
   _id: string;
-  firstName: string;
-  lastName: string;
-  phoneNumber: string;
-  email: string;
-  password: string;
 }
 
-const userSchema = new mongoose.Schema<IUser>({
+const userSchema = new mongoose.Schema<IUserDocument>({
   _id: {
     type: String,
     default: () => crypto.randomUUID(),
@@ -39,7 +35,7 @@ const userSchema = new mongoose.Schema<IUser>({
   },
 });
 
-userSchema.pre<IUser>('save', async function (next) {
+userSchema.pre<IUserDocument>('save', async function (next) {
   if (!this.isModified('password')) return next();
 
   try {
@@ -55,4 +51,4 @@ userSchema.methods.comparePassword = function (password: string) {
   return bcrypt.compare(password, this.password);
 };
 
-export default mongoose.models.User || mongoose.model<IUser>('User', userSchema, 'User');
+export default mongoose.models.User || mongoose.model<IUserDocument>('User', userSchema, 'User');

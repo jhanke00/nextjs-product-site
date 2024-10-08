@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import products from '@/src/mock/small/products.json';
-import { Product } from '@/src/type/products';
+import { IProduct } from '@/src/types/products';
+import response from '@/src/utils/response';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;
@@ -22,12 +23,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } = req.query;
 
       // Convert price from string to number
-      const convertedProducts: Product[] = products.map((product) => ({
+      const convertedProducts: IProduct[] = products.map((product) => ({
         ...product,
+        _id: product.id,
         price: Number(product.price),
       }));
 
-      let filteredProducts: Product[] = [...convertedProducts];
+      let filteredProducts: IProduct[] = [...convertedProducts];
 
       if (search) {
         filteredProducts = filteredProducts.filter(
@@ -61,8 +63,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       const orderMultiplier = order === 'desc' ? -1 : 1;
       filteredProducts.sort((a, b) => {
-        if (a[sort as keyof Product] < b[sort as keyof Product]) return -1 * orderMultiplier;
-        if (a[sort as keyof Product] > b[sort as keyof Product]) return 1 * orderMultiplier;
+        if (a[sort as keyof IProduct] < b[sort as keyof IProduct]) return -1 * orderMultiplier;
+        if (a[sort as keyof IProduct] > b[sort as keyof IProduct]) return 1 * orderMultiplier;
         return 0;
       });
 
@@ -78,7 +80,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         currentPage: Number(page),
       });
     default:
-      res.setHeader('Allow', ['GET']);
-      res.status(405).end(`Method ${req.method} Not Allowed`);
+      response.methodNotAllowed(res, req.method as string, ['GET']);
   }
 }

@@ -1,10 +1,10 @@
 import type { NextApiResponse } from 'next';
-import { CustomNextApiUserRequest } from '@/src/type/customUserRequest';
-import User from '@/models/User';
+import { CustomNextApiRequest } from '@/src/types/next';
+import User from '@/src/models/User';
 import dbConnect from '@/src/utils/dbConnect';
-import authMiddleware from '@/src/utils/middlewares/authMiddleware';
+import authMiddleware from '@/src/utils/middlewares/auth';
 import * as Yup from 'yup';
-import { formatValidationErrors, FormattedErrors } from '@/src/utils/commonUtilities';
+import response from '@/src/utils/response';
 
 const schema = Yup.object().shape({
   currentPassword: Yup.string().required('Current password is required'),
@@ -13,7 +13,7 @@ const schema = Yup.object().shape({
     .required('New password is required'),
 });
 
-async function handler(req: CustomNextApiUserRequest, res: NextApiResponse) {
+async function handler(req: CustomNextApiRequest, res: NextApiResponse) {
   const { method } = req;
 
   await dbConnect();
@@ -26,7 +26,7 @@ async function handler(req: CustomNextApiUserRequest, res: NextApiResponse) {
         const user = await User.findById(req.userId);
 
         if (!(await user.comparePassword(req.body.currentPassword))) {
-          return res.status(400).json({ error: 'Current password is incorrect' });
+          return res.status(400).json({ message: 'Current password is incorrect' });
         }
 
         user.password = req.body.newPassword;
@@ -34,22 +34,11 @@ async function handler(req: CustomNextApiUserRequest, res: NextApiResponse) {
 
         res.status(204).end();
       } catch (error) {
-        if (error instanceof Yup.ValidationError) {
-          const formattedErrors: FormattedErrors = formatValidationErrors(error);
-
-          return res.status(422).json({
-            error: 'Validation Error',
-            details: formattedErrors,
-          });
-        }
-
-        console.error(error);
-        res.status(500).json({ error: 'Internal Server Error. Please try again.' });
+        response.error(res, error as Error);
       }
 
     default:
-      res.setHeader('Allow', ['PUT']);
-      res.status(405).end(`Method ${req.method} Not Allowed`);
+      response.methodNotAllowed(res, req.method as string, ['PUT']);
   }
 }
 

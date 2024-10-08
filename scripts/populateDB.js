@@ -8,6 +8,19 @@ const { MongoClient } = require('mongodb');
 const MONGO_URI = process.env.MONGO_URI;
 const DB_NAME = process.env.MONGO_DB;
 
+function roundRating(rating) {
+  const integerPart = Math.floor(rating);
+  const decimalPart = rating - integerPart;
+
+  if (decimalPart < 0.4) {
+    return integerPart;
+  } else if (decimalPart < 0.8) {
+    return integerPart + 0.5;
+  } else {
+    return integerPart + 1;
+  }
+}
+
 async function importData(collection, data) {
   await collection.deleteMany({});
 
@@ -26,8 +39,8 @@ async function importData(collection, data) {
 
       // Map product id to _id and convert price to Number
       if (collection.collectionName === 'Product') {
-        const { id, price, ...rest } = newItem;
-        return { ...rest, _id: id, price: Number(price) };
+        const { id, price, rating, ...rest } = newItem;
+        return { ...rest, _id: id, price: Number(price), rating: roundRating(rating) };
       }
 
       // Add uuid to order _id field and convert item.price to Number

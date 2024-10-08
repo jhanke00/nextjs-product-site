@@ -1,18 +1,12 @@
 import mongoose from 'mongoose';
 import crypto from 'crypto';
+import { IProduct } from '../types/products';
 
-interface IProduct extends mongoose.Document {
+interface IProductDocument extends IProduct, Omit<mongoose.Document, '_id'> {
   _id: string;
-  name: string;
-  price: number;
-  description: string;
-  category: string;
-  rating: number;
-  numReviews: number;
-  countOnStock: number;
 }
 
-const productSchema = new mongoose.Schema<IProduct>({
+const productSchema = new mongoose.Schema<IProductDocument>({
   _id: {
     type: String,
     default: crypto.randomUUID(),
@@ -50,4 +44,4 @@ const productSchema = new mongoose.Schema<IProduct>({
   },
 });
 
-export default mongoose.models.Product || mongoose.model<IProduct>('Product', productSchema, 'Product');
+export default mongoose.models.Product || mongoose.model<IProductDocument>('Product', productSchema, 'Product');

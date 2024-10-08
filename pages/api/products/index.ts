@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import Product from '@/models/Product';
+import Product from '@/src/models/Product';
 import dbConnect from '@/src/utils/dbConnect';
+import response from '@/src/utils/response';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;
@@ -63,12 +64,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           currentPage: Number(page),
         });
       } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Internal Server Error. Please try again.' });
+        response.error(res, error as Error);
       }
 
     default:
-      res.setHeader('Allow', ['GET']);
-      res.status(405).end(`Method ${req.method} Not Allowed`);
+      response.methodNotAllowed(res, req.method as string, ['GET']);
   }
 }

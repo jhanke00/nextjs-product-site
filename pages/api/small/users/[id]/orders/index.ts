@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import orders from '@/src/mock/small/orders.json';
 import users from '@/src/mock/small/users.json';
-import { Order } from '@/src/type/orders/index';
+import { IOrderSmall } from '@/src/types/orders/index';
+import response from '@/src/utils/response';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;
@@ -28,8 +29,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           comparison = timeA - timeB;
         } else {
           // Handle string and other types based on the sort field
-          const valueA = a[sort as keyof Order];
-          const valueB = b[sort as keyof Order];
+          const valueA = a[sort as keyof IOrderSmall];
+          const valueB = b[sort as keyof IOrderSmall];
 
           if (typeof valueA === 'string' && typeof valueB === 'string') {
             comparison = valueA.localeCompare(valueB);
@@ -53,7 +54,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         currentPage: Number(page),
       });
     default:
-      res.setHeader('Allow', ['GET']);
-      res.status(405).end(`Method ${req.method} Not Allowed`);
+      response.methodNotAllowed(res, req.method as string, ['GET']);
   }
 }

@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import User from '@/models/User';
+import User from '@/src/models/User';
 import dbConnect from '@/src/utils/dbConnect';
 import jwt from 'jsonwebtoken';
 import * as Yup from 'yup';
-import { formatValidationErrors, FormattedErrors } from '@/src/utils/commonUtilities';
+import response from '@/src/utils/response';
 
 const schema = Yup.object().shape({
   email: Yup.string().email('Email must be valid').required('Email is required'),
@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const user = await User.findOne({ email: req.body.email });
 
         if (!user || !(await user.comparePassword(req.body.password))) {
-          return res.status(401).json({ error: `Invalid credentials` });
+          return res.status(401).json({ message: 'Invalid credentials' });
         }
 
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET as string, { expiresIn: '1w' });
@@ -36,21 +36,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           token,
         });
       } catch (error) {
-        if (error instanceof Yup.ValidationError) {
-          const formattedErrors: FormattedErrors = formatValidationErrors(error);
-
-          return res.status(422).json({
-            error: 'Validation Error',
-            details: formattedErrors,
-          });
-        }
-
-        console.error(error);
-        res.status(500).json({ error: 'Internal Server Error. Please try again.' });
+        response.error(res, error as Error);
       }
 
     default:
-      res.setHeader('Allow', ['POST']);
-      res.status(405).end(`Method ${req.method} Not Allowed`);
+      response.methodNotAllowed(res, req.method as string, ['POST']);
   }
 }

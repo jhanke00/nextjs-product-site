@@ -1,10 +1,11 @@
 import type { NextApiResponse } from 'next';
-import { CustomNextApiUserRequest } from '@/src/type/customUserRequest';
-import Order from '@/models/Order';
+import { CustomNextApiRequest } from '@/src/types/next';
+import Order from '@/src/models/Order';
 import dbConnect from '@/src/utils/dbConnect';
-import authMiddleware from '@/src/utils/middlewares/authMiddleware';
+import authMiddleware from '@/src/utils/middlewares/auth';
+import response from '@/src/utils/response';
 
-async function handler(req: CustomNextApiUserRequest, res: NextApiResponse) {
+async function handler(req: CustomNextApiRequest, res: NextApiResponse) {
   const { method } = req;
 
   await dbConnect();
@@ -31,13 +32,11 @@ async function handler(req: CustomNextApiUserRequest, res: NextApiResponse) {
           currentPage: Number(page),
         });
       } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Internal Server Error. Please try again.' });
+        response.error(res, error as Error);
       }
 
     default:
-      res.setHeader('Allow', ['GET']);
-      res.status(405).end(`Method ${req.method} Not Allowed`);
+      response.methodNotAllowed(res, req.method as string, ['GET']);
   }
 }
 

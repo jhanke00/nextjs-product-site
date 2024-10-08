@@ -1,5 +1,5 @@
-export type Product = {
-  id: string;
+export type IProduct = {
+  _id: string;
   name: string;
   price: number;
   description: string;

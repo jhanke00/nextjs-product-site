@@ -1,5 +1,5 @@
 import { NextApiRequest } from 'next';
 
-export interface CustomNextApiUserRequest extends NextApiRequest {
+export interface CustomNextApiRequest extends NextApiRequest {
   userId?: { id: string };
 }

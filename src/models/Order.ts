@@ -1,20 +1,12 @@
-import mongoose, { CallbackError } from 'mongoose';
+import mongoose from 'mongoose';
 import crypto from 'crypto';
+import { IOrder } from '../types/orders';
 
-export interface IOrder extends mongoose.Document {
+interface IOrderDocument extends IOrder, Omit<mongoose.Document, '_id'> {
   _id: string;
-  user: string;
-  items: {
-    id: string;
-    name: string;
-    price: number;
-    count: number;
-  }[];
-  total: number;
-  time: Date;
 }
 
-const orderSchema = new mongoose.Schema<IOrder>({
+const orderSchema = new mongoose.Schema<IOrderDocument>({
   _id: {
     type: String,
     default: () => crypto.randomUUID(),
@@ -57,7 +49,7 @@ const orderSchema = new mongoose.Schema<IOrder>({
 });
 
 // Calculate total based on items in case we create a endpoint to insert orders
-orderSchema.pre<IOrder>('save', function (next) {
+orderSchema.pre<IOrderDocument>('save', function (next) {
   this.total = this.items.reduce((acc, item) => {
     return acc + item.price * item.count;
   }, 0);
@@ -65,4 +57,4 @@ orderSchema.pre<IOrder>('save', function (next) {
   next();
 });
 
-export default mongoose.models.Order || mongoose.model<IOrder>('Order', orderSchema, 'Order');
+export default mongoose.models.Order || mongoose.model<IOrderDocument>('Order', orderSchema, 'Order');
