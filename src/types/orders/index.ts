@@ -1,5 +1,5 @@
 export type IItem = {
-  _id: string;
+  id: string;
   name: string;
   price: number;
   count: number;
