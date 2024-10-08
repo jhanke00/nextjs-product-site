@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "ES6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,7 +21,7 @@
     "paths": {
       "@/*": ["./*"],
       "@components/*": ["./src/components/*"],
-      "@type/*": ["./src/type/*"],
+      "@types/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"],
       "@mock/*": ["./src/mock/*"]
     }
