@@ -69,7 +69,7 @@ export default function FiltersSidebar({
           value={ratingInput}
           onChange={(e) => setRatingInput(Number(e.target.value))}
         />
-        <span>{ratingFilter} Stars</span>
+        <span>{ratingInput} Stars</span>
       </div>
 
       <div className='mb-4'>
