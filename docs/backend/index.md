@@ -188,7 +188,62 @@ curl -X GET /api/products/filters
 }
 ```
 
-### 4. Signup User
+### 4. Get Products recommendations
+
+**Endpoint:** `/api/products/recommendations`
+
+**Method:** `GET`
+
+**Query Parameters:**
+
+- `page`: The current page for pagination (default is `1`).
+- `limit`: The number of products to return per page (default is `10`).
+- `sort`: The field to sort by (default is `name`).
+- `order`: The sorting order, either `asc` or `desc` (default is `asc`).
+
+**Description:**
+Fetches products where at least two users purchased from MongoDB, applying pagination and sorting
+
+**Example Request:**
+
+```bash
+curl -X GET /api/products/recommendations
+     -H "Content-Type: application/json"
+```
+
+```bash
+curl -X GET /api/products/recommendations?page=1&limit=10&sort=name&order=asc \
+     -H "Content-Type: application/json"
+```
+
+**Example Response:**
+<small>Status Code `200 OK`</small>
+
+```json
+{
+    "products": [
+        {
+            "countOnStock": 0,
+            "_id": "15d9fd26-4bd3-469c-8c87-39ba881d1ecc",
+            "name": "Awesome Bronze Bacon",
+            "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+            "category": "Jewelery",
+            "rating": 1.0874778917059302,
+            "numReviews": 13,
+            "countInStock": 99,
+            "price": 158
+        },
+        {...},
+        {...},
+        {...},
+    ],
+    "totalCount": 10000,
+    "totalPages": 10000,
+    "currentPage": 1
+}
+```
+
+### 5. Signup User
 
 **Endpoint:** `/api/auth/signup`
 
@@ -225,7 +280,7 @@ curl -X POST /api/auth/signup
 }
 ```
 
-### 5. Login User
+### 6. Login User
 
 **Endpoint:** `/api/auth/login`
 
@@ -259,7 +314,7 @@ curl -X POST /api/auth/signup
 }
 ```
 
-### 6. Get Current User Details
+### 7. Get Current User Details
 
 **Endpoint:** `/api/me`
 
@@ -289,7 +344,7 @@ curl -X GET /api/me
 }
 ```
 
-### 7. Get Current User Orders
+### 8. Get Current User Orders
 
 **Endpoint:** `/api/me/orders`
 
@@ -350,7 +405,7 @@ curl -X GET /api/me/orders
 }
 ```
 
-### 8. Get Current User Orders Total Spent
+### 9. Get Current User Orders Total Spent
 
 **Endpoint:** `/api/me/orders/total`
 
@@ -376,7 +431,7 @@ curl -X GET /api/me/orders
 }
 ```
 
-### 9. Change Current User Password
+### 10. Change Current User Password
 
 **Endpoint:** `/api/me/password`
 
