@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 import FiltersSidebar from '@/src/components/ui/FiltersSidebar';
 import Pagination from '@/src/components/ui/Pagination';
@@ -47,7 +48,6 @@ export default function Products() {
 
   useEffect(() => {
     fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]);
 
   useEffect(() => {

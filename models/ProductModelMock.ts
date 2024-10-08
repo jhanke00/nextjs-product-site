@@ -54,7 +54,7 @@ export default class MockModel implements IProductModel {
 
     // Filter by rating
     if (rating > 0) {
-      filteredProducts = filteredProducts.filter((product) => Number(product.rating) >= rating);
+      filteredProducts = filteredProducts.filter((product) => Math.round(Number(product.rating)) >= rating);
     }
 
     // Filter by price range

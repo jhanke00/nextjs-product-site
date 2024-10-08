@@ -7,9 +7,9 @@ interface PaginationProps {
 
 export default function Pagination({ currentPage, totalPages, onNext, onPrev }: PaginationProps) {
   return (
-    <div className='flex justify-around w-full border-t-2 pt-4'>
+    <div className='flex justify-around w-full border-t-2 pt-4' style={{ justifyContent: 'space-around' }}>
       <button onClick={onPrev} disabled={currentPage === 1}>
-        Previous
+        {currentPage === 1 ? '' : 'Previous'}
       </button>
       <span>
         Page {currentPage} of {totalPages}
