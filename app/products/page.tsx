@@ -1,18 +1,38 @@
 'use client';
-import largeData from '@/src/mock/large/products.json';
-import smallData from '@/src/mock/small/products.json';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const PAGE_SIZE = 20;
 
+interface Product {
+  id: string;
+  name: string;
+  price: string;
+  description: string;
+  category: string;
+  rating: number;
+  numReviews: number;
+  countInStock: number;
+}
+
 export default function Products() {
   const [currentPage, setCurrentPage] = useState(1);
-  const data = [...largeData, ...smallData];
-  const startIndex = (currentPage - 1) * PAGE_SIZE;
-  const endIndex = startIndex + PAGE_SIZE;
-  const productData = data.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(data.length / PAGE_SIZE);
+  const [totalPages, setTotaltPages] = useState(1);
+  const [productData, setProductData] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      const response = await fetch(`/api/products?page=${currentPage}&size=${PAGE_SIZE}`);
+      const result = await response.json();
+      setProductData(result.data);
+      setTotaltPages(result.totalPages);
+      setLoading(false);
+    };
+
+    fetchData();
+  }, [currentPage]);
 
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
@@ -25,6 +45,10 @@ export default function Products() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
+
+  if (loading) {
+    return <div className='flex items-center justify-center min-h-screen'>Loading...</div>;
+  }
 
   return (
     <main className='flex min-h-screen flex-col items-center p-24'>
