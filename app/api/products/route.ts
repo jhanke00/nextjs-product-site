@@ -1,10 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest, NextResponse } from 'next/server';
 import largeData from '@/src/mock/large/products.json';
 import smallData from '@/src/mock/small/products.json';
 
 const allProducts = [...largeData, ...smallData];
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: NextRequest, res: NextResponse) {
   debugger;
   const { searchParams } = new URL(req.url) || {};
   const page = searchParams.get('page') || '1';
