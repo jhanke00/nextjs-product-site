@@ -1,4 +1,4 @@
-// Types
+// Libs
 import { ErrorCode } from './type';
 
 export default class Exception extends Error {
