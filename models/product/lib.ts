@@ -20,7 +20,7 @@ export default class ProductsMockModelLib {
     const queryProperties = Object.keys(queryFilters);
 
     return this.dataset.filter((product) => {
-      let isMatch = true;
+      let isMatch = false;
 
       for (const property of queryProperties) {
         if (!this.validators.queryableProperties.includes(property)) {
@@ -28,12 +28,12 @@ export default class ProductsMockModelLib {
         }
 
         if (
-          !product[property as keyof ProductType]
+          product[property as keyof ProductType]
             .toString()
             .toLocaleLowerCase()
             .includes(queryFilters[property as keyof ProductQueryFiltersInterface]!.toString().toLocaleLowerCase())
         ) {
-          isMatch = false;
+          isMatch = true;
         }
       }
 
