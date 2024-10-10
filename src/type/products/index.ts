@@ -1,7 +1,7 @@
-export type Product = {
-  id: number;
+export type ProductType = {
+  id: string;
   name: string;
-  price: number;
+  price: string;
   description: string;
   category: string;
   rating: number;
