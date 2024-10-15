@@ -1,6 +1,4 @@
 'use client';
-import largeData from '@/src/mock/large/products.json';
-import smallData from '@/src/mock/small/products.json';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -8,7 +6,26 @@ const PAGE_SIZE = 20;
 
 export default function Products() {
   const [currentPage, setCurrentPage] = useState(1);
-  const data = [...largeData, ...smallData];
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      setLoading(true);
+      try {
+        const response = await fetch('/api/getData');
+        const products = await response.json();
+        setData(products);
+      } catch (error) {
+        setError('Failed to fetch products');
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchProducts();
+  }, []);
+
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = startIndex + PAGE_SIZE;
   const productData = data.slice(startIndex, endIndex);
@@ -26,23 +43,33 @@ export default function Products() {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
+  if (loading) {
+    return <p>Loading products...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
   return (
     <main className='flex min-h-screen flex-col items-center p-24'>
       <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex'>
         <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-2 lg:text-left'>
           {productData.map((product) => (
             <div
-              key={product.id}
+              key={product.id.S}
               className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
             >
-              <Link href={`/products/${product.id}`}>
-                <h3 className={`mb-3 text-2xl font-semibold`}>{product.name}</h3>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Price: {product.price}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Description: {product.description}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Category: {product.category}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Rating: {product.rating}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Reviews: {product.numReviews}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Stock: {product.countInStock}</p>
+              <Link href={`/products/${product.id.S}`}>
+                {' '}
+                {/* Ensure you access the string value */}
+                <h3 className={`mb-3 text-2xl font-semibold`}>{product.name.S}</h3>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Price: {product.price.N}</p>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Description: {product.description.S}</p>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Category: {product.category.S}</p>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Rating: {product.rating.N}</p>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Reviews: {product.numReviews.N}</p>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Stock: {product.countInStock.N}</p>
               </Link>
             </div>
           ))}

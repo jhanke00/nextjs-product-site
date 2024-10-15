@@ -14,13 +14,16 @@
     "build-storybook": "storybook build",
     "prepare": "husky",
     "generate-large-data": "node ./scripts/generateLargeData.js",
-    "generate-small-data": "node ./scripts/generateSmallData.js"
+    "generate-small-data": "node ./scripts/generateSmallData.js",
+    "generate-large-data-dynamo": "node ./scripts/generateLargeDataDynamo.js",
+    "generate-small-data-dynamo": "node ./scripts/generateSmallDataDynamo.js"
   },
   "engines": {
     "node": ">=18",
     "pnpm": ">=8"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.670.0",
     "fs": "0.0.1-security",
     "next": "14.1.0",
     "react": "^18.2.0",

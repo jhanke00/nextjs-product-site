@@ -1,0 +1,41 @@
+# name: Build and Push Docker Image
+
+# on:
+#   push:
+#     branches:
+#       - espo-working-branch
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: '18'
+
+#       - name: Install pnpm
+#         run: npm install -g pnpm
+
+#       - name: Install dependencies
+#         run: pnpm install
+
+#       - name: Build the app
+#         run: pnpm build
+
+#       - name: Log in to Amazon ECR
+#         id: login-ecr
+#         uses: aws-actions/amazon-ecr-login@v1
+
+#       - name: Build Docker image
+#         run: |
+#           docker build -t nextjs:latest .
+#           docker tag nextjs:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/nextjs:latest
+
+#       - name: Push Docker image to ECR
+#         run: |
+#           docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/nextjs:latest
