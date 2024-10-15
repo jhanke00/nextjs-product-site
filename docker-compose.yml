@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  # Serviço da aplicação Node.js
+  app:
+    build:
+      context: . # Usa o Dockerfile no diretório atual (infra)
+    ports:
+      - '3000:3000' # Mapeia a porta 3000 do host para o contêiner
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=password
+      - DB_NAME=mydb
+    depends_on:
+      - db # Garante que o MySQL esteja rodando antes de iniciar a app
+
+  # Serviço do banco de dados MySQL
+  db:
+    image: mysql:8.0 # Usa a imagem oficial do MySQL 8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root # Senha do usuário root
+      MYSQL_DATABASE: baye # Nome do banco de dados
+      MYSQL_USER: root # Usuário do banco
+    ports:
+      - '3307:3306' # Mapeia a porta 3306 para o MySQL
+    volumes:
+      - db_data:/var/lib/mysql # Persistência dos dados
+
+# Configuração de volumes para persistência
+volumes:
+  db_data:

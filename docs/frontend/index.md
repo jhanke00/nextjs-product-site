@@ -22,3 +22,5 @@ Documentation on any Frontend capabilities or changes made.
 - `app/products/[productId]/page.tsx` - Page for the single page description
 - `src/mock/small/products-new.json` - Mock JSON for Prodcut list
 - `src/mock/large/products-new.json` - Mock JSON for Prodcut list
+
+Frontend: On the frontend, I built the login, registration, and registration confirmation screens (with email code verification). I also developed the dashboard with cards displaying information such as the number of users, products, and orders. Furthermore, I implemented screens to list users and products in organized tables. On the user page, I added a feature that retrieves all orders related to a specific user.
