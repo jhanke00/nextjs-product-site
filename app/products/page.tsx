@@ -4,19 +4,32 @@ import Link from 'next/link';
 
 const PAGE_SIZE = 20;
 
+// Define the type for your product data
+interface Product {
+  id: { S: string };
+  name: { S: string };
+  price: { N: string };
+  description: { S: string };
+  category: { S: string };
+  rating: { N: string };
+  numReviews: { N: string };
+  countInStock: { N: string };
+}
+
 export default function Products() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Product[]>([]); // Use the Product[] type for data
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<null | string>(null);
 
   useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
       try {
         const response = await fetch('/api/getData');
-        const products = await response.json();
+        const products: Product[] = await response.json(); // Expect products of type Product[]
         setData(products);
+        setError(null);
       } catch (error) {
         setError('Failed to fetch products');
       } finally {
@@ -61,8 +74,6 @@ export default function Products() {
               className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
             >
               <Link href={`/products/${product.id.S}`}>
-                {' '}
-                {/* Ensure you access the string value */}
                 <h3 className={`mb-3 text-2xl font-semibold`}>{product.name.S}</h3>
                 <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Price: {product.price.N}</p>
                 <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Description: {product.description.S}</p>
