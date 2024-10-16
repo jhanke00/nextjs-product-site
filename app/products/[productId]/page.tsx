@@ -2,9 +2,9 @@
 import { useState, useEffect } from 'react';
 
 const ProductDetail = ({ params }: { params: { productId: string } }) => {
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState<null | any>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<null | string>(null);
 
   useEffect(() => {
     async function fetchProduct() {
@@ -17,11 +17,14 @@ const ProductDetail = ({ params }: { params: { productId: string } }) => {
         const foundProduct = products.find((item: any) => item.id.S === params.productId);
         if (!foundProduct) {
           setError('Product not found');
+          setProduct(null);
         } else {
           setProduct(foundProduct);
+          setError(null);
         }
       } catch (err) {
         setError('Failed to fetch product');
+        setProduct(null);
       } finally {
         setLoading(false);
       }
