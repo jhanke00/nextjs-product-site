@@ -1,0 +1,754 @@
+{
+  "BCS_Next-Product-Site-Products": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "a3ae27c4-8f64-4ed5-a64c-94de783c250b"
+          },
+          "name": {
+            "S": "Small Wooden Bacon"
+          },
+          "price": {
+            "N": "427.00"
+          },
+          "description": {
+            "S": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016"
+          },
+          "category": {
+            "S": "Health"
+          },
+          "rating": {
+            "N": "4.133426726330072"
+          },
+          "numReviews": {
+            "N": "6"
+          },
+          "countInStock": {
+            "N": "62"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "8dfed915-285d-427c-80c5-fd41fefd88f4"
+          },
+          "name": {
+            "S": "Refined Fresh Mouse"
+          },
+          "price": {
+            "N": "153.00"
+          },
+          "description": {
+            "S": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J"
+          },
+          "category": {
+            "S": "Jewelery"
+          },
+          "rating": {
+            "N": "1.4635217189788818"
+          },
+          "numReviews": {
+            "N": "99"
+          },
+          "countInStock": {
+            "N": "78"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "231949a5-e50f-4679-b46d-623f138e3c44"
+          },
+          "name": {
+            "S": "Licensed Cotton Towels"
+          },
+          "price": {
+            "N": "147.00"
+          },
+          "description": {
+            "S": "The Football Is Good For Training And Recreational Purposes"
+          },
+          "category": {
+            "S": "Movies"
+          },
+          "rating": {
+            "N": "4.591201905859634"
+          },
+          "numReviews": {
+            "N": "97"
+          },
+          "countInStock": {
+            "N": "82"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "8ebd7886-e359-4f91-9088-73ff7632e38e"
+          },
+          "name": {
+            "S": "Handmade Soft Pizza"
+          },
+          "price": {
+            "N": "830.00"
+          },
+          "description": {
+            "S": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles"
+          },
+          "category": {
+            "S": "Baby"
+          },
+          "rating": {
+            "N": "1.1980474810115993"
+          },
+          "numReviews": {
+            "N": "78"
+          },
+          "countInStock": {
+            "N": "17"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "3c426e01-2e86-4ce9-b043-55c763a6b3f0"
+          },
+          "name": {
+            "S": "Ergonomic Steel Car"
+          },
+          "price": {
+            "N": "134.00"
+          },
+          "description": {
+            "S": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016"
+          },
+          "category": {
+            "S": "Baby"
+          },
+          "rating": {
+            "N": "2.5694074225611985"
+          },
+          "numReviews": {
+            "N": "79"
+          },
+          "countInStock": {
+            "N": "14"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "cbb0df6c-1382-4461-a67a-aad7b522a4f6"
+          },
+          "name": {
+            "S": "Electronic Metal Shoes"
+          },
+          "price": {
+            "N": "149.00"
+          },
+          "description": {
+            "S": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality"
+          },
+          "category": {
+            "S": "Sports"
+          },
+          "rating": {
+            "N": "4.6167760458774865"
+          },
+          "numReviews": {
+            "N": "47"
+          },
+          "countInStock": {
+            "N": "1"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "58d611c3-aa34-4c1f-a64d-ac63c32eac74"
+          },
+          "name": {
+            "S": "Fantastic Wooden Chair"
+          },
+          "price": {
+            "N": "537.00"
+          },
+          "description": {
+            "S": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016"
+          },
+          "category": {
+            "S": "Clothing"
+          },
+          "rating": {
+            "N": "4.193097078241408"
+          },
+          "numReviews": {
+            "N": "85"
+          },
+          "countInStock": {
+            "N": "24"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "033afcfa-be7d-438e-8820-abe11a07e510"
+          },
+          "name": {
+            "S": "Incredible Metal Computer"
+          },
+          "price": {
+            "N": "1000.00"
+          },
+          "description": {
+            "S": "The Football Is Good For Training And Recreational Purposes"
+          },
+          "category": {
+            "S": "Baby"
+          },
+          "rating": {
+            "N": "1.229547200491652"
+          },
+          "numReviews": {
+            "N": "32"
+          },
+          "countInStock": {
+            "N": "29"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "22fdecbe-461d-4940-82c7-5ae14850918e"
+          },
+          "name": {
+            "S": "Practical Rubber Cheese"
+          },
+          "price": {
+            "N": "128.00"
+          },
+          "description": {
+            "S": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients"
+          },
+          "category": {
+            "S": "Industrial"
+          },
+          "rating": {
+            "N": "4.615680517163128"
+          },
+          "numReviews": {
+            "N": "74"
+          },
+          "countInStock": {
+            "N": "71"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "1ae2cefe-d2d1-4f5f-94ac-63019fdd2643"
+          },
+          "name": {
+            "S": "Tasty Rubber Fish"
+          },
+          "price": {
+            "N": "160.00"
+          },
+          "description": {
+            "S": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles"
+          },
+          "category": {
+            "S": "Music"
+          },
+          "rating": {
+            "N": "3.5224725666921586"
+          },
+          "numReviews": {
+            "N": "19"
+          },
+          "countInStock": {
+            "N": "68"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "4e4e6b7b-594f-4a4f-87a3-fda5614b5e14"
+          },
+          "name": {
+            "S": "Refined Wooden Gloves"
+          },
+          "price": {
+            "N": "741.00"
+          },
+          "description": {
+            "S": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J"
+          },
+          "category": {
+            "S": "Automotive"
+          },
+          "rating": {
+            "N": "1.6247446252964437"
+          },
+          "numReviews": {
+            "N": "6"
+          },
+          "countInStock": {
+            "N": "56"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "9782ab95-65a1-4914-aeb9-ccc475862209"
+          },
+          "name": {
+            "S": "Gorgeous Cotton Chicken"
+          },
+          "price": {
+            "N": "396.00"
+          },
+          "description": {
+            "S": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support"
+          },
+          "category": {
+            "S": "Clothing"
+          },
+          "rating": {
+            "N": "3.9986374718137085"
+          },
+          "numReviews": {
+            "N": "57"
+          },
+          "countInStock": {
+            "N": "99"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "cdd00008-c0ba-4116-a530-b4850a24fd69"
+          },
+          "name": {
+            "S": "Practical Metal Salad"
+          },
+          "price": {
+            "N": "610.00"
+          },
+          "description": {
+            "S": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart"
+          },
+          "category": {
+            "S": "Baby"
+          },
+          "rating": {
+            "N": "1.9412243203260005"
+          },
+          "numReviews": {
+            "N": "3"
+          },
+          "countInStock": {
+            "N": "14"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "8413950f-a201-4f5d-a1c7-8c260152a9b1"
+          },
+          "name": {
+            "S": "Elegant Frozen Mouse"
+          },
+          "price": {
+            "N": "483.00"
+          },
+          "description": {
+            "S": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J"
+          },
+          "category": {
+            "S": "Baby"
+          },
+          "rating": {
+            "N": "3.5865843773353845"
+          },
+          "numReviews": {
+            "N": "39"
+          },
+          "countInStock": {
+            "N": "61"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "11475b17-50e7-42fc-910a-ac29d5b2ea43"
+          },
+          "name": {
+            "S": "Luxurious Fresh Keyboard"
+          },
+          "price": {
+            "N": "711.00"
+          },
+          "description": {
+            "S": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+          },
+          "category": {
+            "S": "Tools"
+          },
+          "rating": {
+            "N": "0.4281454940792173"
+          },
+          "numReviews": {
+            "N": "48"
+          },
+          "countInStock": {
+            "N": "68"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "babd2faa-3d86-4c0f-90c2-2a8f4b5a40e6"
+          },
+          "name": {
+            "S": "Licensed Bronze Cheese"
+          },
+          "price": {
+            "N": "198.00"
+          },
+          "description": {
+            "S": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+          },
+          "category": {
+            "S": "Computers"
+          },
+          "rating": {
+            "N": "4.790695488918573"
+          },
+          "numReviews": {
+            "N": "60"
+          },
+          "countInStock": {
+            "N": "94"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "2dd6af5d-7b91-410c-bd69-92e82101a44d"
+          },
+          "name": {
+            "S": "Bespoke Concrete Shoes"
+          },
+          "price": {
+            "N": "401.00"
+          },
+          "description": {
+            "S": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+          },
+          "category": {
+            "S": "Industrial"
+          },
+          "rating": {
+            "N": "0.5078907252755016"
+          },
+          "numReviews": {
+            "N": "31"
+          },
+          "countInStock": {
+            "N": "57"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "0b916a17-c1c0-4d43-8cc3-000d8208873c"
+          },
+          "name": {
+            "S": "Awesome Granite Chips"
+          },
+          "price": {
+            "N": "674.00"
+          },
+          "description": {
+            "S": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+          },
+          "category": {
+            "S": "Baby"
+          },
+          "rating": {
+            "N": "2.40346607984975"
+          },
+          "numReviews": {
+            "N": "22"
+          },
+          "countInStock": {
+            "N": "47"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "0e565943-e96f-4223-a4a3-a2fd0f593397"
+          },
+          "name": {
+            "S": "Luxurious Bronze Bike"
+          },
+          "price": {
+            "N": "355.00"
+          },
+          "description": {
+            "S": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+          },
+          "category": {
+            "S": "Electronics"
+          },
+          "rating": {
+            "N": "0.9659317450132221"
+          },
+          "numReviews": {
+            "N": "88"
+          },
+          "countInStock": {
+            "N": "41"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "b1974513-a42f-4b92-aefd-3e8d30584e56"
+          },
+          "name": {
+            "S": "Incredible Bronze Tuna"
+          },
+          "price": {
+            "N": "471.00"
+          },
+          "description": {
+            "S": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles"
+          },
+          "category": {
+            "S": "Clothing"
+          },
+          "rating": {
+            "N": "3.7196889612823725"
+          },
+          "numReviews": {
+            "N": "65"
+          },
+          "countInStock": {
+            "N": "73"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "9cb9b17d-9e0c-4d4b-b379-0c2c981927c3"
+          },
+          "name": {
+            "S": "Elegant Wooden Soap"
+          },
+          "price": {
+            "N": "250.00"
+          },
+          "description": {
+            "S": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality"
+          },
+          "category": {
+            "S": "Jewelery"
+          },
+          "rating": {
+            "N": "1.3993506832048297"
+          },
+          "numReviews": {
+            "N": "82"
+          },
+          "countInStock": {
+            "N": "66"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "fd2185b5-bb59-403a-a9d0-6e0bcad61136"
+          },
+          "name": {
+            "S": "Fantastic Wooden Towels"
+          },
+          "price": {
+            "N": "279.00"
+          },
+          "description": {
+            "S": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+          },
+          "category": {
+            "S": "Toys"
+          },
+          "rating": {
+            "N": "3.5985205695033073"
+          },
+          "numReviews": {
+            "N": "93"
+          },
+          "countInStock": {
+            "N": "31"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "c5d8926a-58ce-4139-81a2-541c6c846a76"
+          },
+          "name": {
+            "S": "Handmade Metal Shirt"
+          },
+          "price": {
+            "N": "650.00"
+          },
+          "description": {
+            "S": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals"
+          },
+          "category": {
+            "S": "Shoes"
+          },
+          "rating": {
+            "N": "1.602388417813927"
+          },
+          "numReviews": {
+            "N": "4"
+          },
+          "countInStock": {
+            "N": "100"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "f9e52b60-ea12-4520-be07-45ad5883b865"
+          },
+          "name": {
+            "S": "Fantastic Bronze Table"
+          },
+          "price": {
+            "N": "780.00"
+          },
+          "description": {
+            "S": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+          },
+          "category": {
+            "S": "Computers"
+          },
+          "rating": {
+            "N": "1.1577385046985"
+          },
+          "numReviews": {
+            "N": "7"
+          },
+          "countInStock": {
+            "N": "71"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "S": "4cebc7a4-2bfd-4249-84e3-0bf1da72ad62"
+          },
+          "name": {
+            "S": "Electronic Soft Computer"
+          },
+          "price": {
+            "N": "309.00"
+          },
+          "description": {
+            "S": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+          },
+          "category": {
+            "S": "Baby"
+          },
+          "rating": {
+            "N": "4.929098511347547"
+          },
+          "numReviews": {
+            "N": "88"
+          },
+          "countInStock": {
+            "N": "76"
+          }
+        }
+      }
+    }
+  ]
+}
