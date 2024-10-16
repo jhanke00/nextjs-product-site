@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-const productDetail = ({ params }: { params: { productId: string } }) => {
+const ProductDetail = ({ params }: { params: { productId: string } }) => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -52,4 +52,4 @@ const productDetail = ({ params }: { params: { productId: string } }) => {
   );
 };
 
-export default productDetail;
+export default ProductDetail;
