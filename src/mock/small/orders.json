@@ -1,2724 +1,2736 @@
 [
   {
-    "user": "c12f95dd-9446-48bc-b124-9e0142d53820",
+    "user": "c452edf2e1e8dacf61bc1f09",
     "items": [
       {
-        "id": "76e3acca-b997-4839-bc46-6fa81f50ea3b",
-        "name": "Rustic Concrete Chair",
-        "price": "545.00",
+        "id": "fee85f6a5e85e4f22febb53b",
+        "name": "Rustic Frozen Pizza",
+        "price": 501,
         "count": 3
       },
       {
-        "id": "7318e6c3-8520-4b2f-a77c-a53c659adec7",
-        "name": "Luxurious Soft Keyboard",
-        "price": "237.00",
-        "count": 4
-      },
-      {
-        "id": "5c276656-5b73-4a39-8a6b-6e191929ff80",
-        "name": "Small Bronze Ball",
-        "price": "106.00",
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
         "count": 1
       },
       {
-        "id": "bf0c09a7-dfdc-4755-8e79-bb56725c94cf",
-        "name": "Recycled Fresh Chicken",
-        "price": "758.00",
-        "count": 3
-      }
-    ],
-    "total": 4963,
-    "time": "2024-04-25T17:26:49.504Z"
-  },
-  {
-    "user": "6dee7d92-9e43-4e20-9a41-8b815fb812a3",
-    "items": [
-      {
-        "id": "87b48b08-f96a-400b-8142-325ab233cd9f",
-        "name": "Elegant Frozen Mouse",
-        "price": "382.00",
+        "id": "fee85f6a5e85e4f22febb53b",
+        "name": "Rustic Frozen Pizza",
+        "price": 501,
         "count": 2
       },
       {
-        "id": "87b48b08-f96a-400b-8142-325ab233cd9f",
-        "name": "Elegant Frozen Mouse",
-        "price": "382.00",
-        "count": 4
-      },
-      {
-        "id": "b0f11fba-922a-4e89-a342-b86a510a0b2b",
-        "name": "Fantastic Steel Bike",
-        "price": "868.00",
-        "count": 1
-      },
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 4
-      },
-      {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
+        "id": "f91d62c6c46f5def1adba5af",
+        "name": "Oriental Plastic Table",
+        "price": 509,
         "count": 2
       },
       {
-        "id": "576d6f88-af96-4883-8f17-ef7e0a70fefd",
-        "name": "Elegant Wooden Pants",
-        "price": "982.00",
-        "count": 1
-      }
-    ],
-    "total": 8290,
-    "time": "2023-07-11T12:56:29.698Z"
-  },
-  {
-    "user": "95e624f2-fdfb-45ca-bbd5-ee0fce02eb6d",
-    "items": [
-      {
-        "id": "1efd3555-e66d-4607-9c49-3977b8bc50c1",
-        "name": "Unbranded Plastic Bike",
-        "price": "549.00",
-        "count": 4
-      },
-      {
-        "id": "7318e6c3-8520-4b2f-a77c-a53c659adec7",
-        "name": "Luxurious Soft Keyboard",
-        "price": "237.00",
-        "count": 1
-      }
-    ],
-    "total": 2433,
-    "time": "2024-08-17T17:24:14.104Z"
-  },
-  {
-    "user": "1138f46e-b5d8-4c25-a1d4-fc01e1a5d3b0",
-    "items": [
-      {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
-        "count": 2
-      },
-      {
-        "id": "c249c9ad-36fb-4caf-8a17-34f09e112539",
-        "name": "Luxurious Granite Bike",
-        "price": "49.00",
-        "count": 1
-      },
-      {
-        "id": "e720b53b-b598-4bf6-a0c7-697f3664fd54",
-        "name": "Electronic Soft Car",
-        "price": "230.00",
-        "count": 2
-      }
-    ],
-    "total": 2505,
-    "time": "2024-03-01T07:47:59.453Z"
-  },
-  {
-    "user": "9ba59fbf-e435-4ef8-9a6a-f5f56f87d9cc",
-    "items": [
-      {
-        "id": "c5aee834-a22a-4ea7-85ba-cc2033446b94",
-        "name": "Electronic Cotton Keyboard",
-        "price": "451.00",
-        "count": 4
-      },
-      {
-        "id": "3e548ed6-7962-4eb5-aece-248c1aad2458",
-        "name": "Gorgeous Wooden Shoes",
-        "price": "16.00",
-        "count": 1
-      },
-      {
-        "id": "bc2134da-814e-43c7-8306-a002c4e8913b",
-        "name": "Recycled Soft Pants",
-        "price": "482.00",
-        "count": 1
-      },
-      {
-        "id": "76e3acca-b997-4839-bc46-6fa81f50ea3b",
-        "name": "Rustic Concrete Chair",
-        "price": "545.00",
-        "count": 1
-      }
-    ],
-    "total": 2847,
-    "time": "2023-02-28T15:25:35.449Z"
-  },
-  {
-    "user": "fd7398ab-7968-4a1c-adfb-142d30b6a936",
-    "items": [
-      {
-        "id": "3a6d6722-4274-47d3-8b7f-f0a3ddbe4d14",
-        "name": "Modern Soft Sausages",
-        "price": "119.00",
-        "count": 3
-      }
-    ],
-    "total": 357,
-    "time": "2023-03-16T19:01:13.700Z"
-  },
-  {
-    "user": "fd7398ab-7968-4a1c-adfb-142d30b6a936",
-    "items": [
-      {
-        "id": "b0f11fba-922a-4e89-a342-b86a510a0b2b",
-        "name": "Fantastic Steel Bike",
-        "price": "868.00",
-        "count": 3
-      },
-      {
-        "id": "7cd0d4f0-1bd8-4e4b-b030-ebac4a7e030d",
+        "id": "c1b0a2cfdf5307710b52fdab",
         "name": "Licensed Wooden Car",
-        "price": "998.00",
-        "count": 1
-      },
-      {
-        "id": "3a6d6722-4274-47d3-8b7f-f0a3ddbe4d14",
-        "name": "Modern Soft Sausages",
-        "price": "119.00",
-        "count": 4
-      },
-      {
-        "id": "576d6f88-af96-4883-8f17-ef7e0a70fefd",
-        "name": "Elegant Wooden Pants",
-        "price": "982.00",
-        "count": 3
-      }
-    ],
-    "total": 7024,
-    "time": "2023-07-23T02:19:03.924Z"
-  },
-  {
-    "user": "52a7b64e-804a-42c2-95ad-3a8e0b71630c",
-    "items": [
-      {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
-        "count": 4
-      },
-      {
-        "id": "3e548ed6-7962-4eb5-aece-248c1aad2458",
-        "name": "Gorgeous Wooden Shoes",
-        "price": "16.00",
-        "count": 1
-      },
-      {
-        "id": "060ff895-718e-4ed1-9559-6f23108fadc2",
-        "name": "Rustic Rubber Bacon",
-        "price": "717.00",
-        "count": 1
-      },
-      {
-        "id": "060ff895-718e-4ed1-9559-6f23108fadc2",
-        "name": "Rustic Rubber Bacon",
-        "price": "717.00",
-        "count": 1
-      },
-      {
-        "id": "c5aee834-a22a-4ea7-85ba-cc2033446b94",
-        "name": "Electronic Cotton Keyboard",
-        "price": "451.00",
-        "count": 3
-      }
-    ],
-    "total": 5751,
-    "time": "2023-10-15T14:16:28.728Z"
-  },
-  {
-    "user": "52a7b64e-804a-42c2-95ad-3a8e0b71630c",
-    "items": [
-      {
-        "id": "f017dc72-604d-43c4-98b5-6e6d13023919",
-        "name": "Ergonomic Concrete Table",
-        "price": "299.00",
-        "count": 3
-      }
-    ],
-    "total": 897,
-    "time": "2024-01-11T00:13:49.105Z"
-  },
-  {
-    "user": "9ba59fbf-e435-4ef8-9a6a-f5f56f87d9cc",
-    "items": [
-      {
-        "id": "7f074836-6dbb-458c-bf24-b70289b44ef1",
-        "name": "Oriental Wooden Ball",
-        "price": "722.00",
-        "count": 1
-      }
-    ],
-    "total": 722,
-    "time": "2024-11-07T08:15:00.779Z"
-  },
-  {
-    "user": "95e624f2-fdfb-45ca-bbd5-ee0fce02eb6d",
-    "items": [
-      {
-        "id": "060ff895-718e-4ed1-9559-6f23108fadc2",
-        "name": "Rustic Rubber Bacon",
-        "price": "717.00",
-        "count": 2
-      },
-      {
-        "id": "082ae09e-dac6-409f-98b1-b5ccb22d03d9",
-        "name": "Intelligent Fresh Tuna",
-        "price": "915.00",
+        "price": 421,
         "count": 2
       }
     ],
-    "total": 3264,
-    "time": "2023-12-17T12:14:49.911Z"
+    "total": 4916,
+    "time": "2025-03-08T12:46:14.462Z"
   },
   {
-    "user": "1138f46e-b5d8-4c25-a1d4-fc01e1a5d3b0",
+    "user": "e9aed6e4efe6e2bdc0fe874e",
     "items": [
       {
-        "id": "fa1e1117-7162-4be7-bfca-e120d26bf89c",
-        "name": "Intelligent Concrete Gloves",
-        "price": "684.00",
+        "id": "1b84fa8eaaafc6375ac739df",
+        "name": "Unbranded Frozen Car",
+        "price": 19,
+        "count": 1
+      },
+      {
+        "id": "2e3128bed6aa6e83b060eb7c",
+        "name": "Small Concrete Chair",
+        "price": 311,
         "count": 2
       },
       {
-        "id": "d7fe8e4c-6aae-4385-bd33-23720762d097",
-        "name": "Ergonomic Soft Shirt",
-        "price": "471.00",
-        "count": 3
-      },
-      {
-        "id": "b0f11fba-922a-4e89-a342-b86a510a0b2b",
-        "name": "Fantastic Steel Bike",
-        "price": "868.00",
-        "count": 4
-      },
-      {
-        "id": "c249c9ad-36fb-4caf-8a17-34f09e112539",
-        "name": "Luxurious Granite Bike",
-        "price": "49.00",
-        "count": 1
-      },
-      {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
-        "count": 4
-      },
-      {
-        "id": "bc511767-7c2b-4fb9-9dfe-4af2bad9f761",
-        "name": "Fantastic Concrete Keyboard",
-        "price": "514.00",
-        "count": 2
-      }
-    ],
-    "total": 10278,
-    "time": "2023-12-26T07:02:18.990Z"
-  },
-  {
-    "user": "c9d4b61a-679b-4a8c-b913-2ec7bdc1c3ff",
-    "items": [
-      {
-        "id": "ea535f49-34c8-4489-8561-f98ae422a3df",
-        "name": "Small Bronze Tuna",
-        "price": "763.00",
+        "id": "1b84fa8eaaafc6375ac739df",
+        "name": "Unbranded Frozen Car",
+        "price": 19,
         "count": 2
       },
       {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
-        "count": 2
-      },
-      {
-        "id": "ec3f05c4-20d5-496b-bc2f-97a4aa512f30",
-        "name": "Refined Concrete Car",
-        "price": "267.00",
-        "count": 3
-      }
-    ],
-    "total": 4323,
-    "time": "2024-06-13T01:36:36.486Z"
-  },
-  {
-    "user": "23c9802c-90c7-4035-9477-c75efa93e418",
-    "items": [
-      {
-        "id": "d1d2b703-f7fa-4b2f-bd1a-2709b32f9672",
-        "name": "Practical Rubber Salad",
-        "price": "368.00",
-        "count": 3
-      },
-      {
-        "id": "ec3f05c4-20d5-496b-bc2f-97a4aa512f30",
-        "name": "Refined Concrete Car",
-        "price": "267.00",
-        "count": 4
-      },
-      {
-        "id": "c5aee834-a22a-4ea7-85ba-cc2033446b94",
-        "name": "Electronic Cotton Keyboard",
-        "price": "451.00",
-        "count": 4
-      },
-      {
-        "id": "0bedd06f-7404-4d17-80f5-189046da30cd",
-        "name": "Gorgeous Concrete Bacon",
-        "price": "67.00",
-        "count": 3
-      },
-      {
-        "id": "a063535d-53ff-4815-883f-0899254c5ab9",
-        "name": "Elegant Granite Car",
-        "price": "540.00",
-        "count": 1
-      }
-    ],
-    "total": 4717,
-    "time": "2023-06-24T22:37:24.026Z"
-  },
-  {
-    "user": "52a7b64e-804a-42c2-95ad-3a8e0b71630c",
-    "items": [
-      {
-        "id": "576d6f88-af96-4883-8f17-ef7e0a70fefd",
-        "name": "Elegant Wooden Pants",
-        "price": "982.00",
-        "count": 2
-      },
-      {
-        "id": "d55c4cbb-349c-4cbb-b037-ee13c41fe1a4",
-        "name": "Licensed Fresh Tuna",
-        "price": "504.00",
-        "count": 2
-      },
-      {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
         "count": 2
       }
     ],
-    "total": 3500,
-    "time": "2024-04-20T14:50:34.822Z"
+    "total": 1781,
+    "time": "2024-04-26T22:02:07.155Z"
   },
   {
-    "user": "52a7b64e-804a-42c2-95ad-3a8e0b71630c",
+    "user": "1b7d4f3e6ca3f6f35c9ea416",
     "items": [
       {
-        "id": "1276e1e2-48eb-4fe4-8625-9aceae8dead0",
-        "name": "Gorgeous Plastic Keyboard",
-        "price": "35.00",
+        "id": "2e3128bed6aa6e83b060eb7c",
+        "name": "Small Concrete Chair",
+        "price": 311,
+        "count": 3
+      }
+    ],
+    "total": 933,
+    "time": "2025-07-02T12:47:00.179Z"
+  },
+  {
+    "user": "ddcdfbc6d6fb8afeb8c472ac",
+    "items": [
+      {
+        "id": "76591bff176d833cc88e845f",
+        "name": "Tasty Steel Sausages",
+        "price": 64,
+        "count": 3
+      },
+      {
+        "id": "0f7a9acf9dbacf2b9e0b71ce",
+        "name": "Awesome Granite Ball",
+        "price": 163,
         "count": 2
       },
       {
-        "id": "1efd3555-e66d-4607-9c49-3977b8bc50c1",
-        "name": "Unbranded Plastic Bike",
-        "price": "549.00",
-        "count": 1
-      },
-      {
-        "id": "56a4c219-8f05-42ad-a403-48a55744d5dc",
-        "name": "Unbranded Wooden Bike",
-        "price": "851.00",
-        "count": 1
-      },
-      {
-        "id": "5c276656-5b73-4a39-8a6b-6e191929ff80",
-        "name": "Small Bronze Ball",
-        "price": "106.00",
-        "count": 1
-      }
-    ],
-    "total": 1576,
-    "time": "2023-09-02T08:49:20.121Z"
-  },
-  {
-    "user": "c9d4b61a-679b-4a8c-b913-2ec7bdc1c3ff",
-    "items": [
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 4
-      },
-      {
-        "id": "6df1e259-f15a-48aa-b0ca-09bc29b5c102",
-        "name": "Elegant Bronze Bacon",
-        "price": "305.00",
-        "count": 2
-      },
-      {
-        "id": "082ae09e-dac6-409f-98b1-b5ccb22d03d9",
-        "name": "Intelligent Fresh Tuna",
-        "price": "915.00",
-        "count": 1
-      },
-      {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
-        "count": 3
-      }
-    ],
-    "total": 5888,
-    "time": "2023-07-10T10:09:05.620Z"
-  },
-  {
-    "user": "1157e469-98cb-4bc6-b16c-3b614a12272f",
-    "items": [
-      {
-        "id": "0db47ac4-f404-432a-ad76-2c2ed7e3b1e8",
-        "name": "Modern Cotton Chips",
-        "price": "862.00",
-        "count": 4
-      },
-      {
-        "id": "1a73db2c-6278-45e0-a2a2-65d159c0b22a",
-        "name": "Tasty Soft Bike",
-        "price": "590.00",
-        "count": 1
-      }
-    ],
-    "total": 4038,
-    "time": "2024-03-31T23:31:28.710Z"
-  },
-  {
-    "user": "cfc0ba28-e4b1-4416-9512-144d2ab524df",
-    "items": [
-      {
-        "id": "439177a8-3f6c-440d-a93b-901f519420ae",
-        "name": "Small Metal Table",
-        "price": "635.00",
-        "count": 4
-      },
-      {
-        "id": "a063535d-53ff-4815-883f-0899254c5ab9",
-        "name": "Elegant Granite Car",
-        "price": "540.00",
-        "count": 1
-      },
-      {
-        "id": "5c276656-5b73-4a39-8a6b-6e191929ff80",
-        "name": "Small Bronze Ball",
-        "price": "106.00",
-        "count": 1
-      }
-    ],
-    "total": 3186,
-    "time": "2023-03-10T23:14:18.266Z"
-  },
-  {
-    "user": "ed63cd7d-bdd3-4ec5-becf-14d2470dd805",
-    "items": [
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 3
-      },
-      {
-        "id": "b0f11fba-922a-4e89-a342-b86a510a0b2b",
-        "name": "Fantastic Steel Bike",
-        "price": "868.00",
-        "count": 2
-      },
-      {
-        "id": "0bedd06f-7404-4d17-80f5-189046da30cd",
-        "name": "Gorgeous Concrete Bacon",
-        "price": "67.00",
-        "count": 1
-      },
-      {
-        "id": "576d6f88-af96-4883-8f17-ef7e0a70fefd",
-        "name": "Elegant Wooden Pants",
-        "price": "982.00",
-        "count": 2
-      }
-    ],
-    "total": 5381,
-    "time": "2023-08-17T22:46:10.875Z"
-  },
-  {
-    "user": "2b6221e1-4141-4c83-98b2-8efbb0a7e355",
-    "items": [
-      {
-        "id": "1efd3555-e66d-4607-9c49-3977b8bc50c1",
-        "name": "Unbranded Plastic Bike",
-        "price": "549.00",
-        "count": 1
-      },
-      {
-        "id": "fa1e1117-7162-4be7-bfca-e120d26bf89c",
-        "name": "Intelligent Concrete Gloves",
-        "price": "684.00",
-        "count": 4
-      }
-    ],
-    "total": 3285,
-    "time": "2023-10-21T12:22:24.534Z"
-  },
-  {
-    "user": "95e624f2-fdfb-45ca-bbd5-ee0fce02eb6d",
-    "items": [
-      {
-        "id": "55e57cd8-1470-4551-802b-35841caa9636",
-        "name": "Licensed Wooden Cheese",
-        "price": "549.00",
-        "count": 3
-      },
-      {
-        "id": "bc511767-7c2b-4fb9-9dfe-4af2bad9f761",
-        "name": "Fantastic Concrete Keyboard",
-        "price": "514.00",
-        "count": 1
-      },
-      {
-        "id": "bc511767-7c2b-4fb9-9dfe-4af2bad9f761",
-        "name": "Fantastic Concrete Keyboard",
-        "price": "514.00",
-        "count": 2
-      },
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 3
-      },
-      {
-        "id": "7f074836-6dbb-458c-bf24-b70289b44ef1",
-        "name": "Oriental Wooden Ball",
-        "price": "722.00",
-        "count": 1
-      }
-    ],
-    "total": 5525,
-    "time": "2024-07-23T12:20:10.579Z"
-  },
-  {
-    "user": "a109278c-9f00-4d88-a5e6-0ac80925eacb",
-    "items": [
-      {
-        "id": "f017dc72-604d-43c4-98b5-6e6d13023919",
-        "name": "Ergonomic Concrete Table",
-        "price": "299.00",
-        "count": 2
-      },
-      {
-        "id": "55e57cd8-1470-4551-802b-35841caa9636",
-        "name": "Licensed Wooden Cheese",
-        "price": "549.00",
-        "count": 3
-      },
-      {
-        "id": "55e57cd8-1470-4551-802b-35841caa9636",
-        "name": "Licensed Wooden Cheese",
-        "price": "549.00",
-        "count": 4
-      },
-      {
-        "id": "7318e6c3-8520-4b2f-a77c-a53c659adec7",
-        "name": "Luxurious Soft Keyboard",
-        "price": "237.00",
-        "count": 2
-      },
-      {
-        "id": "7a0a02b6-b653-487e-8999-f7fef102b86d",
-        "name": "Recycled Granite Keyboard",
-        "price": "26.00",
-        "count": 1
-      }
-    ],
-    "total": 4941,
-    "time": "2024-05-10T18:12:51.880Z"
-  },
-  {
-    "user": "c9d4b61a-679b-4a8c-b913-2ec7bdc1c3ff",
-    "items": [
-      {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
-        "count": 3
-      },
-      {
-        "id": "b0f11fba-922a-4e89-a342-b86a510a0b2b",
-        "name": "Fantastic Steel Bike",
-        "price": "868.00",
-        "count": 2
-      },
-      {
-        "id": "c249c9ad-36fb-4caf-8a17-34f09e112539",
-        "name": "Luxurious Granite Bike",
-        "price": "49.00",
-        "count": 1
-      },
-      {
-        "id": "a063535d-53ff-4815-883f-0899254c5ab9",
-        "name": "Elegant Granite Car",
-        "price": "540.00",
-        "count": 4
-      },
-      {
-        "id": "576d6f88-af96-4883-8f17-ef7e0a70fefd",
-        "name": "Elegant Wooden Pants",
-        "price": "982.00",
-        "count": 4
-      }
-    ],
-    "total": 10867,
-    "time": "2024-06-15T21:52:49.868Z"
-  },
-  {
-    "user": "95e624f2-fdfb-45ca-bbd5-ee0fce02eb6d",
-    "items": [
-      {
-        "id": "576d6f88-af96-4883-8f17-ef7e0a70fefd",
-        "name": "Elegant Wooden Pants",
-        "price": "982.00",
-        "count": 3
-      },
-      {
-        "id": "c5aee834-a22a-4ea7-85ba-cc2033446b94",
-        "name": "Electronic Cotton Keyboard",
-        "price": "451.00",
-        "count": 2
-      },
-      {
-        "id": "d1d2b703-f7fa-4b2f-bd1a-2709b32f9672",
-        "name": "Practical Rubber Salad",
-        "price": "368.00",
-        "count": 1
-      }
-    ],
-    "total": 4216,
-    "time": "2024-04-17T17:32:41.445Z"
-  },
-  {
-    "user": "cfc0ba28-e4b1-4416-9512-144d2ab524df",
-    "items": [
-      {
-        "id": "7b95588c-da8b-4b85-a53a-a31251a318d1",
-        "name": "Small Frozen Hat",
-        "price": "299.00",
-        "count": 4
-      },
-      {
-        "id": "fe1d33a8-b6b9-403c-aa84-bc033973e0b1",
-        "name": "Practical Plastic Bike",
-        "price": "952.00",
-        "count": 2
-      },
-      {
-        "id": "7f074836-6dbb-458c-bf24-b70289b44ef1",
-        "name": "Oriental Wooden Ball",
-        "price": "722.00",
-        "count": 1
-      },
-      {
-        "id": "56a4c219-8f05-42ad-a403-48a55744d5dc",
-        "name": "Unbranded Wooden Bike",
-        "price": "851.00",
-        "count": 1
-      }
-    ],
-    "total": 4673,
-    "time": "2024-09-30T04:14:44.571Z"
-  },
-  {
-    "user": "6dee7d92-9e43-4e20-9a41-8b815fb812a3",
-    "items": [
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 4
-      },
-      {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
-        "count": 3
-      },
-      {
-        "id": "3ee5be6a-a099-420b-a2db-b659b77922eb",
-        "name": "Tasty Metal Fish",
-        "price": "714.00",
-        "count": 1
-      }
-    ],
-    "total": 5860,
-    "time": "2024-09-03T06:17:34.370Z"
-  },
-  {
-    "user": "ed63cd7d-bdd3-4ec5-becf-14d2470dd805",
-    "items": [
-      {
-        "id": "d812d50a-9695-4e8d-9e71-81d6a1068ef3",
-        "name": "Handmade Fresh Fish",
-        "price": "386.00",
-        "count": 4
-      },
-      {
-        "id": "c249c9ad-36fb-4caf-8a17-34f09e112539",
-        "name": "Luxurious Granite Bike",
-        "price": "49.00",
-        "count": 3
-      },
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 3
-      }
-    ],
-    "total": 3305,
-    "time": "2023-11-11T17:43:18.386Z"
-  },
-  {
-    "user": "24e1899b-101d-4580-acd8-70fc97c889a2",
-    "items": [
-      {
-        "id": "576d6f88-af96-4883-8f17-ef7e0a70fefd",
-        "name": "Elegant Wooden Pants",
-        "price": "982.00",
-        "count": 3
-      },
-      {
-        "id": "d7fe8e4c-6aae-4385-bd33-23720762d097",
-        "name": "Ergonomic Soft Shirt",
-        "price": "471.00",
-        "count": 1
-      }
-    ],
-    "total": 3417,
-    "time": "2024-03-31T12:06:20.360Z"
-  },
-  {
-    "user": "9ba59fbf-e435-4ef8-9a6a-f5f56f87d9cc",
-    "items": [
-      {
-        "id": "0bedd06f-7404-4d17-80f5-189046da30cd",
-        "name": "Gorgeous Concrete Bacon",
-        "price": "67.00",
-        "count": 4
-      },
-      {
-        "id": "c5aee834-a22a-4ea7-85ba-cc2033446b94",
-        "name": "Electronic Cotton Keyboard",
-        "price": "451.00",
-        "count": 3
-      },
-      {
-        "id": "56a4c219-8f05-42ad-a403-48a55744d5dc",
-        "name": "Unbranded Wooden Bike",
-        "price": "851.00",
-        "count": 4
-      },
-      {
-        "id": "56a4c219-8f05-42ad-a403-48a55744d5dc",
-        "name": "Unbranded Wooden Bike",
-        "price": "851.00",
-        "count": 2
-      },
-      {
-        "id": "a063535d-53ff-4815-883f-0899254c5ab9",
-        "name": "Elegant Granite Car",
-        "price": "540.00",
-        "count": 4
-      },
-      {
-        "id": "c249c9ad-36fb-4caf-8a17-34f09e112539",
-        "name": "Luxurious Granite Bike",
-        "price": "49.00",
-        "count": 4
-      }
-    ],
-    "total": 9083,
-    "time": "2023-11-11T13:58:14.928Z"
-  },
-  {
-    "user": "723fc0c9-78df-479c-bf08-985ee20446ad",
-    "items": [
-      {
-        "id": "1a73db2c-6278-45e0-a2a2-65d159c0b22a",
-        "name": "Tasty Soft Bike",
-        "price": "590.00",
-        "count": 4
-      },
-      {
-        "id": "ea535f49-34c8-4489-8561-f98ae422a3df",
-        "name": "Small Bronze Tuna",
-        "price": "763.00",
-        "count": 3
-      }
-    ],
-    "total": 4649,
-    "time": "2024-04-09T14:58:46.294Z"
-  },
-  {
-    "user": "def2c9e2-63b6-4fe8-adfb-6cff2643bbd3",
-    "items": [
-      {
-        "id": "b0f11fba-922a-4e89-a342-b86a510a0b2b",
-        "name": "Fantastic Steel Bike",
-        "price": "868.00",
-        "count": 3
-      },
-      {
-        "id": "fa6d6100-b2db-4d65-a022-06b98b9cb8de",
-        "name": "Modern Cotton Cheese",
-        "price": "35.00",
-        "count": 3
-      },
-      {
-        "id": "ea535f49-34c8-4489-8561-f98ae422a3df",
-        "name": "Small Bronze Tuna",
-        "price": "763.00",
-        "count": 1
-      }
-    ],
-    "total": 3472,
-    "time": "2023-09-21T00:46:29.000Z"
-  },
-  {
-    "user": "23c9802c-90c7-4035-9477-c75efa93e418",
-    "items": [
-      {
-        "id": "060ff895-718e-4ed1-9559-6f23108fadc2",
-        "name": "Rustic Rubber Bacon",
-        "price": "717.00",
-        "count": 3
-      },
-      {
-        "id": "bc2134da-814e-43c7-8306-a002c4e8913b",
-        "name": "Recycled Soft Pants",
-        "price": "482.00",
-        "count": 3
-      },
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 4
-      },
-      {
-        "id": "439177a8-3f6c-440d-a93b-901f519420ae",
-        "name": "Small Metal Table",
-        "price": "635.00",
-        "count": 3
-      }
-    ],
-    "total": 7654,
-    "time": "2024-11-09T13:40:58.922Z"
-  },
-  {
-    "user": "24e1899b-101d-4580-acd8-70fc97c889a2",
-    "items": [
-      {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
-        "count": 2
-      },
-      {
-        "id": "fa1e1117-7162-4be7-bfca-e120d26bf89c",
-        "name": "Intelligent Concrete Gloves",
-        "price": "684.00",
-        "count": 1
-      },
-      {
-        "id": "ae48520a-a7ce-4fd3-9db4-d33a228b5e1a",
-        "name": "Refined Fresh Fish",
-        "price": "214.00",
-        "count": 3
-      }
-    ],
-    "total": 3322,
-    "time": "2024-01-29T00:13:57.841Z"
-  },
-  {
-    "user": "8379e394-8d2f-4616-895f-3ae956cdc6e7",
-    "items": [
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 1
-      },
-      {
-        "id": "ae48520a-a7ce-4fd3-9db4-d33a228b5e1a",
-        "name": "Refined Fresh Fish",
-        "price": "214.00",
-        "count": 4
-      },
-      {
-        "id": "ec3f05c4-20d5-496b-bc2f-97a4aa512f30",
-        "name": "Refined Concrete Car",
-        "price": "267.00",
-        "count": 4
-      }
-    ],
-    "total": 2462,
-    "time": "2025-01-23T07:04:56.864Z"
-  },
-  {
-    "user": "fd7398ab-7968-4a1c-adfb-142d30b6a936",
-    "items": [
-      {
-        "id": "fa6d6100-b2db-4d65-a022-06b98b9cb8de",
-        "name": "Modern Cotton Cheese",
-        "price": "35.00",
-        "count": 4
-      },
-      {
-        "id": "0bedd06f-7404-4d17-80f5-189046da30cd",
-        "name": "Gorgeous Concrete Bacon",
-        "price": "67.00",
-        "count": 2
-      },
-      {
-        "id": "a063535d-53ff-4815-883f-0899254c5ab9",
-        "name": "Elegant Granite Car",
-        "price": "540.00",
-        "count": 1
-      },
-      {
-        "id": "d55c4cbb-349c-4cbb-b037-ee13c41fe1a4",
-        "name": "Licensed Fresh Tuna",
-        "price": "504.00",
-        "count": 1
-      },
-      {
-        "id": "bd655a07-3f2e-4bf3-93d3-2dbaba45e0af",
-        "name": "Rustic Concrete Cheese",
-        "price": "635.00",
-        "count": 1
-      }
-    ],
-    "total": 1953,
-    "time": "2024-10-20T18:07:44.968Z"
-  },
-  {
-    "user": "723fc0c9-78df-479c-bf08-985ee20446ad",
-    "items": [
-      {
-        "id": "0bedd06f-7404-4d17-80f5-189046da30cd",
-        "name": "Gorgeous Concrete Bacon",
-        "price": "67.00",
-        "count": 1
-      }
-    ],
-    "total": 67,
-    "time": "2023-09-05T05:15:55.182Z"
-  },
-  {
-    "user": "1138f46e-b5d8-4c25-a1d4-fc01e1a5d3b0",
-    "items": [
-      {
-        "id": "6df1e259-f15a-48aa-b0ca-09bc29b5c102",
-        "name": "Elegant Bronze Bacon",
-        "price": "305.00",
-        "count": 1
-      }
-    ],
-    "total": 305,
-    "time": "2023-04-10T01:54:41.242Z"
-  },
-  {
-    "user": "fd7398ab-7968-4a1c-adfb-142d30b6a936",
-    "items": [
-      {
-        "id": "fe1d33a8-b6b9-403c-aa84-bc033973e0b1",
-        "name": "Practical Plastic Bike",
-        "price": "952.00",
-        "count": 1
-      },
-      {
-        "id": "439177a8-3f6c-440d-a93b-901f519420ae",
-        "name": "Small Metal Table",
-        "price": "635.00",
-        "count": 3
-      },
-      {
-        "id": "bf0c09a7-dfdc-4755-8e79-bb56725c94cf",
-        "name": "Recycled Fresh Chicken",
-        "price": "758.00",
-        "count": 2
-      },
-      {
-        "id": "7f074836-6dbb-458c-bf24-b70289b44ef1",
-        "name": "Oriental Wooden Ball",
-        "price": "722.00",
-        "count": 1
-      },
-      {
-        "id": "7b95588c-da8b-4b85-a53a-a31251a318d1",
-        "name": "Small Frozen Hat",
-        "price": "299.00",
-        "count": 1
-      }
-    ],
-    "total": 5394,
-    "time": "2024-08-25T13:52:36.084Z"
-  },
-  {
-    "user": "24e1899b-101d-4580-acd8-70fc97c889a2",
-    "items": [
-      {
-        "id": "fe1d33a8-b6b9-403c-aa84-bc033973e0b1",
-        "name": "Practical Plastic Bike",
-        "price": "952.00",
-        "count": 3
-      },
-      {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
-        "count": 3
-      },
-      {
-        "id": "d7fe8e4c-6aae-4385-bd33-23720762d097",
-        "name": "Ergonomic Soft Shirt",
-        "price": "471.00",
-        "count": 3
-      },
-      {
-        "id": "7cd0d4f0-1bd8-4e4b-b030-ebac4a7e030d",
+        "id": "c1b0a2cfdf5307710b52fdab",
         "name": "Licensed Wooden Car",
-        "price": "998.00",
-        "count": 3
-      },
-      {
-        "id": "bc2134da-814e-43c7-8306-a002c4e8913b",
-        "name": "Recycled Soft Pants",
-        "price": "482.00",
-        "count": 4
-      }
-    ],
-    "total": 11402,
-    "time": "2023-02-21T06:14:15.306Z"
-  },
-  {
-    "user": "c12f95dd-9446-48bc-b124-9e0142d53820",
-    "items": [
-      {
-        "id": "3a6d6722-4274-47d3-8b7f-f0a3ddbe4d14",
-        "name": "Modern Soft Sausages",
-        "price": "119.00",
-        "count": 4
-      },
-      {
-        "id": "ec3f05c4-20d5-496b-bc2f-97a4aa512f30",
-        "name": "Refined Concrete Car",
-        "price": "267.00",
-        "count": 4
-      },
-      {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
+        "price": 421,
         "count": 1
       },
       {
-        "id": "082ae09e-dac6-409f-98b1-b5ccb22d03d9",
-        "name": "Intelligent Fresh Tuna",
-        "price": "915.00",
+        "id": "ffa24aae45173f7d2d7bea51",
+        "name": "Awesome Frozen Chips",
+        "price": 131,
+        "count": 2
+      },
+      {
+        "id": "99af9e6f98cfa1e1dbfe6c9f",
+        "name": "Rustic Fresh Chips",
+        "price": 649,
+        "count": 3
+      }
+    ],
+    "total": 3148,
+    "time": "2025-06-18T12:29:39.576Z"
+  },
+  {
+    "user": "fec6b030d45a04b9bafee4de",
+    "items": [
+      {
+        "id": "749e0d22ddb72eef124894bc",
+        "name": "Electronic Wooden Gloves",
+        "price": 541,
+        "count": 1
+      },
+      {
+        "id": "bbbee2fe7a799ae26f62ed70",
+        "name": "Oriental Rubber Cheese",
+        "price": 425,
+        "count": 2
+      },
+      {
+        "id": "749e0d22ddb72eef124894bc",
+        "name": "Electronic Wooden Gloves",
+        "price": 541,
+        "count": 2
+      },
+      {
+        "id": "0f7a9acf9dbacf2b9e0b71ce",
+        "name": "Awesome Granite Ball",
+        "price": 163,
+        "count": 3
+      },
+      {
+        "id": "b66e33f4c6e0bda80b027cfe",
+        "name": "Elegant Metal Ball",
+        "price": 540,
+        "count": 3
+      },
+      {
+        "id": "aca913b0ed43acc1aa6f0b04",
+        "name": "Awesome Granite Pizza",
+        "price": 323,
+        "count": 1
+      }
+    ],
+    "total": 4905,
+    "time": "2025-06-03T06:21:57.904Z"
+  },
+  {
+    "user": "bc1cfff42d0e49705d1d224a",
+    "items": [
+      {
+        "id": "c07f91e2cae82fe0702a06a7",
+        "name": "Handmade Steel Chips",
+        "price": 146,
         "count": 4
       },
       {
-        "id": "bc2134da-814e-43c7-8306-a002c4e8913b",
-        "name": "Recycled Soft Pants",
-        "price": "482.00",
-        "count": 3
-      }
-    ],
-    "total": 7648,
-    "time": "2023-08-25T09:07:45.495Z"
-  },
-  {
-    "user": "c9d12b2f-aca2-4eee-9538-219aa97a3746",
-    "items": [
-      {
-        "id": "060ff895-718e-4ed1-9559-6f23108fadc2",
-        "name": "Rustic Rubber Bacon",
-        "price": "717.00",
-        "count": 2
-      },
-      {
-        "id": "ec3f05c4-20d5-496b-bc2f-97a4aa512f30",
-        "name": "Refined Concrete Car",
-        "price": "267.00",
+        "id": "bbbee2fe7a799ae26f62ed70",
+        "name": "Oriental Rubber Cheese",
+        "price": 425,
         "count": 4
       }
     ],
-    "total": 2502,
-    "time": "2023-04-20T17:28:17.998Z"
+    "total": 2284,
+    "time": "2024-04-24T15:55:53.418Z"
   },
   {
-    "user": "8379e394-8d2f-4616-895f-3ae956cdc6e7",
+    "user": "ba4943ed76eaaafbc397e9af",
     "items": [
       {
-        "id": "b0f11fba-922a-4e89-a342-b86a510a0b2b",
-        "name": "Fantastic Steel Bike",
-        "price": "868.00",
+        "id": "de86d7c2d5822da17f11e8eb",
+        "name": "Recycled Metal Chair",
+        "price": 982,
         "count": 2
       },
       {
-        "id": "fe1d33a8-b6b9-403c-aa84-bc033973e0b1",
-        "name": "Practical Plastic Bike",
-        "price": "952.00",
-        "count": 1
+        "id": "aca913b0ed43acc1aa6f0b04",
+        "name": "Awesome Granite Pizza",
+        "price": 323,
+        "count": 3
       },
       {
-        "id": "76e3acca-b997-4839-bc46-6fa81f50ea3b",
-        "name": "Rustic Concrete Chair",
-        "price": "545.00",
+        "id": "e9baebd727fb9e4dcaf2cef0",
+        "name": "Refined Metal Cheese",
+        "price": 842,
         "count": 2
-      }
-    ],
-    "total": 3778,
-    "time": "2023-10-27T22:57:15.994Z"
-  },
-  {
-    "user": "1138f46e-b5d8-4c25-a1d4-fc01e1a5d3b0",
-    "items": [
+      },
       {
-        "id": "1e00b743-66b7-46d0-b2b1-8c33a049d53b",
-        "name": "Tasty Wooden Table",
-        "price": "432.00",
+        "id": "cc0ee7ca5fdccb9a2803ad3e",
+        "name": "Elegant Frozen Keyboard",
+        "price": 161,
         "count": 3
       },
       {
-        "id": "1276e1e2-48eb-4fe4-8625-9aceae8dead0",
-        "name": "Gorgeous Plastic Keyboard",
-        "price": "35.00",
-        "count": 3
-      },
-      {
-        "id": "ea535f49-34c8-4489-8561-f98ae422a3df",
-        "name": "Small Bronze Tuna",
-        "price": "763.00",
-        "count": 3
-      }
-    ],
-    "total": 3690,
-    "time": "2023-05-17T07:59:54.675Z"
-  },
-  {
-    "user": "cfc0ba28-e4b1-4416-9512-144d2ab524df",
-    "items": [
-      {
-        "id": "1e00b743-66b7-46d0-b2b1-8c33a049d53b",
-        "name": "Tasty Wooden Table",
-        "price": "432.00",
-        "count": 3
-      },
-      {
-        "id": "fe1d33a8-b6b9-403c-aa84-bc033973e0b1",
-        "name": "Practical Plastic Bike",
-        "price": "952.00",
-        "count": 1
-      },
-      {
-        "id": "bd655a07-3f2e-4bf3-93d3-2dbaba45e0af",
-        "name": "Rustic Concrete Cheese",
-        "price": "635.00",
+        "id": "6decbdc7aca22c2fabbd21fe",
+        "name": "Awesome Plastic Pants",
+        "price": 769,
         "count": 2
       }
     ],
-    "total": 3518,
-    "time": "2024-11-22T14:00:15.653Z"
+    "total": 6638,
+    "time": "2024-09-26T17:05:45.413Z"
   },
   {
-    "user": "a109278c-9f00-4d88-a5e6-0ac80925eacb",
+    "user": "6244d2baf304a16da3a564a9",
     "items": [
       {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
+        "id": "25e764ebde608da8cc28e41e",
+        "name": "Practical Metal Chair",
+        "price": 138,
         "count": 2
       },
       {
-        "id": "fe1d33a8-b6b9-403c-aa84-bc033973e0b1",
-        "name": "Practical Plastic Bike",
-        "price": "952.00",
-        "count": 3
-      },
-      {
-        "id": "1276e1e2-48eb-4fe4-8625-9aceae8dead0",
-        "name": "Gorgeous Plastic Keyboard",
-        "price": "35.00",
-        "count": 2
-      },
-      {
-        "id": "1a73db2c-6278-45e0-a2a2-65d159c0b22a",
-        "name": "Tasty Soft Bike",
-        "price": "590.00",
-        "count": 3
-      },
-      {
-        "id": "1e00b743-66b7-46d0-b2b1-8c33a049d53b",
-        "name": "Tasty Wooden Table",
-        "price": "432.00",
-        "count": 3
-      },
-      {
-        "id": "ea535f49-34c8-4489-8561-f98ae422a3df",
-        "name": "Small Bronze Tuna",
-        "price": "763.00",
-        "count": 3
-      },
-      {
-        "id": "7318e6c3-8520-4b2f-a77c-a53c659adec7",
-        "name": "Luxurious Soft Keyboard",
-        "price": "237.00",
-        "count": 1
+        "id": "33d07de9e6c86e777514fad0",
+        "name": "Ergonomic Soft Pizza",
+        "price": 810,
+        "count": 4
       }
     ],
-    "total": 9046,
-    "time": "2024-08-31T10:41:28.375Z"
+    "total": 3516,
+    "time": "2024-09-29T05:47:39.309Z"
   },
   {
-    "user": "723fc0c9-78df-479c-bf08-985ee20446ad",
+    "user": "14fea1a30bebd5faadcd448c",
     "items": [
       {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
-        "count": 3
-      },
-      {
-        "id": "d55c4cbb-349c-4cbb-b037-ee13c41fe1a4",
-        "name": "Licensed Fresh Tuna",
-        "price": "504.00",
-        "count": 2
-      }
-    ],
-    "total": 1800,
-    "time": "2025-01-05T09:54:55.532Z"
-  },
-  {
-    "user": "a109278c-9f00-4d88-a5e6-0ac80925eacb",
-    "items": [
-      {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
-        "count": 3
-      },
-      {
-        "id": "fa6d6100-b2db-4d65-a022-06b98b9cb8de",
-        "name": "Modern Cotton Cheese",
-        "price": "35.00",
+        "id": "9c9ee6a0b63dbfdd9b05245c",
+        "name": "Recycled Bronze Sausages",
+        "price": 286,
         "count": 4
       },
       {
-        "id": "bf0c09a7-dfdc-4755-8e79-bb56725c94cf",
-        "name": "Recycled Fresh Chicken",
-        "price": "758.00",
-        "count": 2
+        "id": "e5b1deff9cc0adbee21a9511",
+        "name": "Modern Wooden Fish",
+        "price": 335,
+        "count": 4
       },
       {
-        "id": "5c276656-5b73-4a39-8a6b-6e191929ff80",
-        "name": "Small Bronze Ball",
-        "price": "106.00",
+        "id": "eabb3dcdcdd6cdbbda9bf0c5",
+        "name": "Rustic Fresh Tuna",
+        "price": 33,
         "count": 1
       },
       {
-        "id": "55e57cd8-1470-4551-802b-35841caa9636",
-        "name": "Licensed Wooden Cheese",
-        "price": "549.00",
+        "id": "6decbdc7aca22c2fabbd21fe",
+        "name": "Awesome Plastic Pants",
+        "price": 769,
+        "count": 1
+      }
+    ],
+    "total": 3286,
+    "time": "2024-12-17T02:59:27.791Z"
+  },
+  {
+    "user": "d35a275151da1ae3eaaebea4",
+    "items": [
+      {
+        "id": "e9baebd727fb9e4dcaf2cef0",
+        "name": "Refined Metal Cheese",
+        "price": 842,
+        "count": 1
+      },
+      {
+        "id": "fee85f6a5e85e4f22febb53b",
+        "name": "Rustic Frozen Pizza",
+        "price": 501,
+        "count": 4
+      }
+    ],
+    "total": 2846,
+    "time": "2024-12-11T11:15:52.775Z"
+  },
+  {
+    "user": "351f3b4edd61449afedbf0b7",
+    "items": [
+      {
+        "id": "cffda107c4307ecc08ecbcfe",
+        "name": "Practical Metal Computer",
+        "price": 500,
+        "count": 1
+      },
+      {
+        "id": "6d061c1972d9a3d0509af1ef",
+        "name": "Generic Steel Soap",
+        "price": 454,
+        "count": 3
+      },
+      {
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
+        "count": 4
+      }
+    ],
+    "total": 3258,
+    "time": "2024-01-27T04:16:17.548Z"
+  },
+  {
+    "user": "ff047c5dcffb03d3744806ab",
+    "items": [
+      {
+        "id": "fdac5da0f210bb0fb792600c",
+        "name": "Modern Concrete Cheese",
+        "price": 313,
         "count": 2
       },
       {
-        "id": "1a73db2c-6278-45e0-a2a2-65d159c0b22a",
-        "name": "Tasty Soft Bike",
-        "price": "590.00",
-        "count": 2
+        "id": "6decbdc7aca22c2fabbd21fe",
+        "name": "Awesome Plastic Pants",
+        "price": 769,
+        "count": 4
       },
       {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
+        "id": "027ef7dfbbaaf0cfcbfee57f",
+        "name": "Tasty Frozen Salad",
+        "price": 694,
+        "count": 4
+      },
+      {
+        "id": "cf87ea6f5b03fe55a0bb0ec5",
+        "name": "Sleek Soft Hat",
+        "price": 475,
         "count": 3
       }
     ],
-    "total": 5624,
-    "time": "2023-02-21T16:54:00.880Z"
+    "total": 7903,
+    "time": "2024-10-09T23:21:22.011Z"
   },
   {
-    "user": "def2c9e2-63b6-4fe8-adfb-6cff2643bbd3",
+    "user": "1b9c57fbed2b55bf825ff42a",
     "items": [
       {
-        "id": "576d6f88-af96-4883-8f17-ef7e0a70fefd",
-        "name": "Elegant Wooden Pants",
-        "price": "982.00",
-        "count": 2
-      },
-      {
-        "id": "d1d2b703-f7fa-4b2f-bd1a-2709b32f9672",
-        "name": "Practical Rubber Salad",
-        "price": "368.00",
+        "id": "067b518d1471f5de7f8fdc7c",
+        "name": "Handmade Concrete Soap",
+        "price": 482,
         "count": 1
       },
       {
-        "id": "7cd0d4f0-1bd8-4e4b-b030-ebac4a7e030d",
+        "id": "ad841ffeace582ad7590dbf6",
+        "name": "Gorgeous Concrete Chips",
+        "price": 642,
+        "count": 4
+      },
+      {
+        "id": "e5b1deff9cc0adbee21a9511",
+        "name": "Modern Wooden Fish",
+        "price": 335,
+        "count": 1
+      }
+    ],
+    "total": 3385,
+    "time": "2025-04-11T00:28:21.110Z"
+  },
+  {
+    "user": "c452edf2e1e8dacf61bc1f09",
+    "items": [
+      {
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
+        "count": 2
+      },
+      {
+        "id": "c1b0a2cfdf5307710b52fdab",
         "name": "Licensed Wooden Car",
-        "price": "998.00",
+        "price": 421,
+        "count": 1
+      },
+      {
+        "id": "36dd4139af38afd4a6ef512f",
+        "name": "Awesome Steel Mouse",
+        "price": 56,
+        "count": 1
+      },
+      {
+        "id": "cba3857f2be66534d1994e90",
+        "name": "Practical Fresh Sausages",
+        "price": 300,
+        "count": 4
+      },
+      {
+        "id": "ec09c10d4d83f1c6bbb0dc3a",
+        "name": "Sleek Granite Pants",
+        "price": 992,
+        "count": 1
+      }
+    ],
+    "total": 3771,
+    "time": "2025-07-27T23:00:10.318Z"
+  },
+  {
+    "user": "1b9c57fbed2b55bf825ff42a",
+    "items": [
+      {
+        "id": "36dd4139af38afd4a6ef512f",
+        "name": "Awesome Steel Mouse",
+        "price": 56,
         "count": 2
       },
       {
-        "id": "0bedd06f-7404-4d17-80f5-189046da30cd",
-        "name": "Gorgeous Concrete Bacon",
-        "price": "67.00",
-        "count": 1
-      }
-    ],
-    "total": 4395,
-    "time": "2024-10-08T02:37:46.839Z"
-  },
-  {
-    "user": "9ba59fbf-e435-4ef8-9a6a-f5f56f87d9cc",
-    "items": [
-      {
-        "id": "d55c4cbb-349c-4cbb-b037-ee13c41fe1a4",
-        "name": "Licensed Fresh Tuna",
-        "price": "504.00",
-        "count": 1
-      },
-      {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
-        "count": 4
-      },
-      {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
-        "count": 2
-      }
-    ],
-    "total": 5448,
-    "time": "2024-10-20T22:28:33.434Z"
-  },
-  {
-    "user": "723fc0c9-78df-479c-bf08-985ee20446ad",
-    "items": [
-      {
-        "id": "57502793-5d3a-4c92-9b31-028f781428e3",
-        "name": "Ergonomic Soft Chips",
-        "price": "803.00",
-        "count": 1
-      },
-      {
-        "id": "fa6d6100-b2db-4d65-a022-06b98b9cb8de",
-        "name": "Modern Cotton Cheese",
-        "price": "35.00",
-        "count": 1
-      },
-      {
-        "id": "bc511767-7c2b-4fb9-9dfe-4af2bad9f761",
-        "name": "Fantastic Concrete Keyboard",
-        "price": "514.00",
+        "id": "36dd4139af38afd4a6ef512f",
+        "name": "Awesome Steel Mouse",
+        "price": 56,
         "count": 3
       },
       {
-        "id": "a063535d-53ff-4815-883f-0899254c5ab9",
-        "name": "Elegant Granite Car",
-        "price": "540.00",
-        "count": 4
-      },
-      {
-        "id": "d1d2b703-f7fa-4b2f-bd1a-2709b32f9672",
-        "name": "Practical Rubber Salad",
-        "price": "368.00",
-        "count": 1
-      }
-    ],
-    "total": 4908,
-    "time": "2024-04-27T08:25:57.302Z"
-  },
-  {
-    "user": "c9d12b2f-aca2-4eee-9538-219aa97a3746",
-    "items": [
-      {
-        "id": "576d6f88-af96-4883-8f17-ef7e0a70fefd",
-        "name": "Elegant Wooden Pants",
-        "price": "982.00",
-        "count": 1
-      },
-      {
-        "id": "56a4c219-8f05-42ad-a403-48a55744d5dc",
-        "name": "Unbranded Wooden Bike",
-        "price": "851.00",
-        "count": 3
-      },
-      {
-        "id": "c5aee834-a22a-4ea7-85ba-cc2033446b94",
-        "name": "Electronic Cotton Keyboard",
-        "price": "451.00",
-        "count": 1
-      }
-    ],
-    "total": 3986,
-    "time": "2023-12-25T04:54:07.538Z"
-  },
-  {
-    "user": "23c9802c-90c7-4035-9477-c75efa93e418",
-    "items": [
-      {
-        "id": "57502793-5d3a-4c92-9b31-028f781428e3",
-        "name": "Ergonomic Soft Chips",
-        "price": "803.00",
-        "count": 4
-      },
-      {
-        "id": "bc511767-7c2b-4fb9-9dfe-4af2bad9f761",
-        "name": "Fantastic Concrete Keyboard",
-        "price": "514.00",
-        "count": 3
-      },
-      {
-        "id": "0db47ac4-f404-432a-ad76-2c2ed7e3b1e8",
-        "name": "Modern Cotton Chips",
-        "price": "862.00",
-        "count": 4
-      }
-    ],
-    "total": 8202,
-    "time": "2024-11-05T00:36:10.056Z"
-  },
-  {
-    "user": "fd7398ab-7968-4a1c-adfb-142d30b6a936",
-    "items": [
-      {
-        "id": "7318e6c3-8520-4b2f-a77c-a53c659adec7",
-        "name": "Luxurious Soft Keyboard",
-        "price": "237.00",
-        "count": 4
-      },
-      {
-        "id": "7318e6c3-8520-4b2f-a77c-a53c659adec7",
-        "name": "Luxurious Soft Keyboard",
-        "price": "237.00",
-        "count": 4
-      },
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 1
-      },
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 1
-      },
-      {
-        "id": "fe1d33a8-b6b9-403c-aa84-bc033973e0b1",
-        "name": "Practical Plastic Bike",
-        "price": "952.00",
-        "count": 2
-      }
-    ],
-    "total": 4876,
-    "time": "2023-08-08T01:30:32.158Z"
-  },
-  {
-    "user": "9ba59fbf-e435-4ef8-9a6a-f5f56f87d9cc",
-    "items": [
-      {
-        "id": "082ae09e-dac6-409f-98b1-b5ccb22d03d9",
-        "name": "Intelligent Fresh Tuna",
-        "price": "915.00",
-        "count": 3
-      },
-      {
-        "id": "bc511767-7c2b-4fb9-9dfe-4af2bad9f761",
-        "name": "Fantastic Concrete Keyboard",
-        "price": "514.00",
-        "count": 4
-      },
-      {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
-        "count": 1
-      },
-      {
-        "id": "7b95588c-da8b-4b85-a53a-a31251a318d1",
-        "name": "Small Frozen Hat",
-        "price": "299.00",
-        "count": 1
-      },
-      {
-        "id": "bf0c09a7-dfdc-4755-8e79-bb56725c94cf",
-        "name": "Recycled Fresh Chicken",
-        "price": "758.00",
-        "count": 3
-      },
-      {
-        "id": "0bedd06f-7404-4d17-80f5-189046da30cd",
-        "name": "Gorgeous Concrete Bacon",
-        "price": "67.00",
-        "count": 4
-      }
-    ],
-    "total": 8379,
-    "time": "2023-11-05T19:42:31.261Z"
-  },
-  {
-    "user": "cfc0ba28-e4b1-4416-9512-144d2ab524df",
-    "items": [
-      {
-        "id": "3ee5be6a-a099-420b-a2db-b659b77922eb",
-        "name": "Tasty Metal Fish",
-        "price": "714.00",
-        "count": 4
-      },
-      {
-        "id": "d7fe8e4c-6aae-4385-bd33-23720762d097",
-        "name": "Ergonomic Soft Shirt",
-        "price": "471.00",
-        "count": 3
-      },
-      {
-        "id": "b0f11fba-922a-4e89-a342-b86a510a0b2b",
-        "name": "Fantastic Steel Bike",
-        "price": "868.00",
-        "count": 4
-      },
-      {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
-        "count": 4
-      }
-    ],
-    "total": 11733,
-    "time": "2024-12-25T12:32:01.429Z"
-  },
-  {
-    "user": "2b6221e1-4141-4c83-98b2-8efbb0a7e355",
-    "items": [
-      {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
-        "count": 3
-      },
-      {
-        "id": "1efd3555-e66d-4607-9c49-3977b8bc50c1",
-        "name": "Unbranded Plastic Bike",
-        "price": "549.00",
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
         "count": 2
       },
       {
-        "id": "3e548ed6-7962-4eb5-aece-248c1aad2458",
-        "name": "Gorgeous Wooden Shoes",
-        "price": "16.00",
+        "id": "fdac5da0f210bb0fb792600c",
+        "name": "Modern Concrete Cheese",
+        "price": 313,
         "count": 4
       },
       {
-        "id": "576d6f88-af96-4883-8f17-ef7e0a70fefd",
-        "name": "Elegant Wooden Pants",
-        "price": "982.00",
+        "id": "cf87ea6f5b03fe55a0bb0ec5",
+        "name": "Sleek Soft Hat",
+        "price": 475,
         "count": 2
       },
       {
-        "id": "7cd0d4f0-1bd8-4e4b-b030-ebac4a7e030d",
+        "id": "9c9ee6a0b63dbfdd9b05245c",
+        "name": "Recycled Bronze Sausages",
+        "price": 286,
+        "count": 2
+      }
+    ],
+    "total": 3752,
+    "time": "2024-05-10T22:21:03.652Z"
+  },
+  {
+    "user": "ff047c5dcffb03d3744806ab",
+    "items": [
+      {
+        "id": "de86d7c2d5822da17f11e8eb",
+        "name": "Recycled Metal Chair",
+        "price": 982,
+        "count": 3
+      },
+      {
+        "id": "ecaaf5e51334cccffb02ba1d",
+        "name": "Refined Concrete Chicken",
+        "price": 299,
+        "count": 1
+      },
+      {
+        "id": "76591bff176d833cc88e845f",
+        "name": "Tasty Steel Sausages",
+        "price": 64,
+        "count": 2
+      },
+      {
+        "id": "c07f91e2cae82fe0702a06a7",
+        "name": "Handmade Steel Chips",
+        "price": 146,
+        "count": 4
+      }
+    ],
+    "total": 3957,
+    "time": "2024-07-27T04:37:37.213Z"
+  },
+  {
+    "user": "6244d2baf304a16da3a564a9",
+    "items": [
+      {
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
+        "count": 1
+      }
+    ],
+    "total": 551,
+    "time": "2025-10-16T11:07:47.393Z"
+  },
+  {
+    "user": "6ffae7383ee9fa1dbf1ba912",
+    "items": [
+      {
+        "id": "067b518d1471f5de7f8fdc7c",
+        "name": "Handmade Concrete Soap",
+        "price": 482,
+        "count": 2
+      },
+      {
+        "id": "f91d62c6c46f5def1adba5af",
+        "name": "Oriental Plastic Table",
+        "price": 509,
+        "count": 4
+      },
+      {
+        "id": "1ebe3fba407cfe18123cb3a2",
+        "name": "Small Rubber Fish",
+        "price": 240,
+        "count": 3
+      },
+      {
+        "id": "36dd4139af38afd4a6ef512f",
+        "name": "Awesome Steel Mouse",
+        "price": 56,
+        "count": 3
+      }
+    ],
+    "total": 3888,
+    "time": "2023-12-03T16:33:33.904Z"
+  },
+  {
+    "user": "e9aed6e4efe6e2bdc0fe874e",
+    "items": [
+      {
+        "id": "cfc6dc7bbde6c7dba2c95faf",
+        "name": "Electronic Plastic Hat",
+        "price": 665,
+        "count": 2
+      },
+      {
+        "id": "9c9ee6a0b63dbfdd9b05245c",
+        "name": "Recycled Bronze Sausages",
+        "price": 286,
+        "count": 1
+      },
+      {
+        "id": "ffa24aae45173f7d2d7bea51",
+        "name": "Awesome Frozen Chips",
+        "price": 131,
+        "count": 1
+      }
+    ],
+    "total": 1747,
+    "time": "2025-09-27T00:48:45.457Z"
+  },
+  {
+    "user": "ba4943ed76eaaafbc397e9af",
+    "items": [
+      {
+        "id": "9c9ee6a0b63dbfdd9b05245c",
+        "name": "Recycled Bronze Sausages",
+        "price": 286,
+        "count": 3
+      },
+      {
+        "id": "36dd4139af38afd4a6ef512f",
+        "name": "Awesome Steel Mouse",
+        "price": 56,
+        "count": 2
+      },
+      {
+        "id": "4dbb4c2dbca7fbd3ccfa7e2e",
+        "name": "Unbranded Metal Fish",
+        "price": 256,
+        "count": 1
+      }
+    ],
+    "total": 1226,
+    "time": "2024-06-02T19:10:11.930Z"
+  },
+  {
+    "user": "bc1cfff42d0e49705d1d224a",
+    "items": [
+      {
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
+        "count": 3
+      }
+    ],
+    "total": 1047,
+    "time": "2023-12-27T00:07:14.248Z"
+  },
+  {
+    "user": "ff047c5dcffb03d3744806ab",
+    "items": [
+      {
+        "id": "fee85f6a5e85e4f22febb53b",
+        "name": "Rustic Frozen Pizza",
+        "price": 501,
+        "count": 3
+      },
+      {
+        "id": "aca913b0ed43acc1aa6f0b04",
+        "name": "Awesome Granite Pizza",
+        "price": 323,
+        "count": 4
+      }
+    ],
+    "total": 2795,
+    "time": "2025-07-02T17:25:57.001Z"
+  },
+  {
+    "user": "ce2b5e42525dbeadf4b8aebd",
+    "items": [
+      {
+        "id": "a37ea9c65de96da6a44f5ac3",
+        "name": "Incredible Granite Ball",
+        "price": 980,
+        "count": 3
+      },
+      {
+        "id": "067b518d1471f5de7f8fdc7c",
+        "name": "Handmade Concrete Soap",
+        "price": 482,
+        "count": 4
+      },
+      {
+        "id": "ecaaf5e51334cccffb02ba1d",
+        "name": "Refined Concrete Chicken",
+        "price": 299,
+        "count": 4
+      },
+      {
+        "id": "2e3128bed6aa6e83b060eb7c",
+        "name": "Small Concrete Chair",
+        "price": 311,
+        "count": 1
+      },
+      {
+        "id": "c07f91e2cae82fe0702a06a7",
+        "name": "Handmade Steel Chips",
+        "price": 146,
+        "count": 1
+      }
+    ],
+    "total": 6521,
+    "time": "2025-01-06T23:44:16.241Z"
+  },
+  {
+    "user": "ff047c5dcffb03d3744806ab",
+    "items": [
+      {
+        "id": "fee85f6a5e85e4f22febb53b",
+        "name": "Rustic Frozen Pizza",
+        "price": 501,
+        "count": 3
+      },
+      {
+        "id": "cf87ea6f5b03fe55a0bb0ec5",
+        "name": "Sleek Soft Hat",
+        "price": 475,
+        "count": 2
+      },
+      {
+        "id": "de86d7c2d5822da17f11e8eb",
+        "name": "Recycled Metal Chair",
+        "price": 982,
+        "count": 1
+      },
+      {
+        "id": "f91d62c6c46f5def1adba5af",
+        "name": "Oriental Plastic Table",
+        "price": 509,
+        "count": 4
+      }
+    ],
+    "total": 5471,
+    "time": "2024-06-20T21:51:07.627Z"
+  },
+  {
+    "user": "fec6b030d45a04b9bafee4de",
+    "items": [
+      {
+        "id": "cc0ee7ca5fdccb9a2803ad3e",
+        "name": "Elegant Frozen Keyboard",
+        "price": 161,
+        "count": 2
+      },
+      {
+        "id": "2e3128bed6aa6e83b060eb7c",
+        "name": "Small Concrete Chair",
+        "price": 311,
+        "count": 4
+      },
+      {
+        "id": "b66e33f4c6e0bda80b027cfe",
+        "name": "Elegant Metal Ball",
+        "price": 540,
+        "count": 4
+      }
+    ],
+    "total": 3726,
+    "time": "2023-10-30T02:05:56.385Z"
+  },
+  {
+    "user": "1b9c57fbed2b55bf825ff42a",
+    "items": [
+      {
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
+        "count": 3
+      },
+      {
+        "id": "0f7a9acf9dbacf2b9e0b71ce",
+        "name": "Awesome Granite Ball",
+        "price": 163,
+        "count": 4
+      },
+      {
+        "id": "027ef7dfbbaaf0cfcbfee57f",
+        "name": "Tasty Frozen Salad",
+        "price": 694,
+        "count": 2
+      }
+    ],
+    "total": 3693,
+    "time": "2024-01-11T14:02:36.741Z"
+  },
+  {
+    "user": "1a05b7a695cac0eacfc0f2ad",
+    "items": [
+      {
+        "id": "1b84fa8eaaafc6375ac739df",
+        "name": "Unbranded Frozen Car",
+        "price": 19,
+        "count": 1
+      },
+      {
+        "id": "bbbee2fe7a799ae26f62ed70",
+        "name": "Oriental Rubber Cheese",
+        "price": 425,
+        "count": 1
+      },
+      {
+        "id": "0f7a9acf9dbacf2b9e0b71ce",
+        "name": "Awesome Granite Ball",
+        "price": 163,
+        "count": 1
+      },
+      {
+        "id": "bbbee2fe7a799ae26f62ed70",
+        "name": "Oriental Rubber Cheese",
+        "price": 425,
+        "count": 4
+      },
+      {
+        "id": "ec09c10d4d83f1c6bbb0dc3a",
+        "name": "Sleek Granite Pants",
+        "price": 992,
+        "count": 3
+      },
+      {
+        "id": "ece956fbcc12b2bd2e79f4a1",
+        "name": "Fantastic Steel Pants",
+        "price": 889,
+        "count": 3
+      }
+    ],
+    "total": 7950,
+    "time": "2025-10-15T10:18:57.524Z"
+  },
+  {
+    "user": "d35a275151da1ae3eaaebea4",
+    "items": [
+      {
+        "id": "d69c88e02ada26e17b7be014",
+        "name": "Incredible Steel Towels",
+        "price": 572,
+        "count": 2
+      },
+      {
+        "id": "b4d0f67b936ba1083a80c103",
+        "name": "Handcrafted Soft Chips",
+        "price": 901,
+        "count": 4
+      }
+    ],
+    "total": 4748,
+    "time": "2024-04-22T04:31:18.822Z"
+  },
+  {
+    "user": "06cbf11b2b8e2f6926294dc6",
+    "items": [
+      {
+        "id": "e5b1deff9cc0adbee21a9511",
+        "name": "Modern Wooden Fish",
+        "price": 335,
+        "count": 3
+      },
+      {
+        "id": "fdac5da0f210bb0fb792600c",
+        "name": "Modern Concrete Cheese",
+        "price": 313,
+        "count": 2
+      },
+      {
+        "id": "6d061c1972d9a3d0509af1ef",
+        "name": "Generic Steel Soap",
+        "price": 454,
+        "count": 3
+      }
+    ],
+    "total": 2993,
+    "time": "2025-05-31T14:13:00.213Z"
+  },
+  {
+    "user": "1b9c57fbed2b55bf825ff42a",
+    "items": [
+      {
+        "id": "a5d73f8abfcea53ea7c404ef",
+        "name": "Intelligent Steel Hat",
+        "price": 836,
+        "count": 3
+      },
+      {
+        "id": "d8a7c9ecea7bbce8fcaa1bbd",
+        "name": "Gorgeous Fresh Towels",
+        "price": 327,
+        "count": 3
+      },
+      {
+        "id": "4dbb4c2dbca7fbd3ccfa7e2e",
+        "name": "Unbranded Metal Fish",
+        "price": 256,
+        "count": 4
+      },
+      {
+        "id": "33d07de9e6c86e777514fad0",
+        "name": "Ergonomic Soft Pizza",
+        "price": 810,
+        "count": 1
+      },
+      {
+        "id": "4dbb4c2dbca7fbd3ccfa7e2e",
+        "name": "Unbranded Metal Fish",
+        "price": 256,
+        "count": 1
+      },
+      {
+        "id": "ece956fbcc12b2bd2e79f4a1",
+        "name": "Fantastic Steel Pants",
+        "price": 889,
+        "count": 4
+      },
+      {
+        "id": "ec09c10d4d83f1c6bbb0dc3a",
+        "name": "Sleek Granite Pants",
+        "price": 992,
+        "count": 4
+      }
+    ],
+    "total": 13103,
+    "time": "2023-12-26T05:32:22.277Z"
+  },
+  {
+    "user": "14fea1a30bebd5faadcd448c",
+    "items": [
+      {
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
+        "count": 2
+      },
+      {
+        "id": "4dbb4c2dbca7fbd3ccfa7e2e",
+        "name": "Unbranded Metal Fish",
+        "price": 256,
+        "count": 2
+      },
+      {
+        "id": "cf87ea6f5b03fe55a0bb0ec5",
+        "name": "Sleek Soft Hat",
+        "price": 475,
+        "count": 2
+      }
+    ],
+    "total": 2564,
+    "time": "2025-08-25T21:18:20.035Z"
+  },
+  {
+    "user": "1b7d4f3e6ca3f6f35c9ea416",
+    "items": [
+      {
+        "id": "ece956fbcc12b2bd2e79f4a1",
+        "name": "Fantastic Steel Pants",
+        "price": 889,
+        "count": 4
+      },
+      {
+        "id": "ece956fbcc12b2bd2e79f4a1",
+        "name": "Fantastic Steel Pants",
+        "price": 889,
+        "count": 3
+      },
+      {
+        "id": "cba3857f2be66534d1994e90",
+        "name": "Practical Fresh Sausages",
+        "price": 300,
+        "count": 2
+      },
+      {
+        "id": "36dd4139af38afd4a6ef512f",
+        "name": "Awesome Steel Mouse",
+        "price": 56,
+        "count": 4
+      }
+    ],
+    "total": 7047,
+    "time": "2025-02-20T15:43:25.979Z"
+  },
+  {
+    "user": "ff047c5dcffb03d3744806ab",
+    "items": [
+      {
+        "id": "4dbb4c2dbca7fbd3ccfa7e2e",
+        "name": "Unbranded Metal Fish",
+        "price": 256,
+        "count": 4
+      },
+      {
+        "id": "749e0d22ddb72eef124894bc",
+        "name": "Electronic Wooden Gloves",
+        "price": 541,
+        "count": 3
+      },
+      {
+        "id": "de86d7c2d5822da17f11e8eb",
+        "name": "Recycled Metal Chair",
+        "price": 982,
+        "count": 3
+      }
+    ],
+    "total": 5593,
+    "time": "2024-01-26T10:44:53.217Z"
+  },
+  {
+    "user": "ddcdfbc6d6fb8afeb8c472ac",
+    "items": [
+      {
+        "id": "f91d62c6c46f5def1adba5af",
+        "name": "Oriental Plastic Table",
+        "price": 509,
+        "count": 4
+      },
+      {
+        "id": "31b1de1fcdd712e9e800b3de",
+        "name": "Modern Steel Towels",
+        "price": 753,
+        "count": 3
+      },
+      {
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
+        "count": 4
+      },
+      {
+        "id": "c1b0a2cfdf5307710b52fdab",
         "name": "Licensed Wooden Car",
-        "price": "998.00",
-        "count": 3
-      }
-    ],
-    "total": 6912,
-    "time": "2024-10-04T10:32:03.547Z"
-  },
-  {
-    "user": "1138f46e-b5d8-4c25-a1d4-fc01e1a5d3b0",
-    "items": [
-      {
-        "id": "ea535f49-34c8-4489-8561-f98ae422a3df",
-        "name": "Small Bronze Tuna",
-        "price": "763.00",
+        "price": 421,
         "count": 2
       },
       {
-        "id": "76e3acca-b997-4839-bc46-6fa81f50ea3b",
-        "name": "Rustic Concrete Chair",
-        "price": "545.00",
-        "count": 3
-      },
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 2
-      }
-    ],
-    "total": 4237,
-    "time": "2024-10-25T00:15:04.367Z"
-  },
-  {
-    "user": "723fc0c9-78df-479c-bf08-985ee20446ad",
-    "items": [
-      {
-        "id": "76e3acca-b997-4839-bc46-6fa81f50ea3b",
-        "name": "Rustic Concrete Chair",
-        "price": "545.00",
-        "count": 4
-      },
-      {
-        "id": "1a73db2c-6278-45e0-a2a2-65d159c0b22a",
-        "name": "Tasty Soft Bike",
-        "price": "590.00",
-        "count": 2
-      }
-    ],
-    "total": 3360,
-    "time": "2024-03-18T20:45:13.626Z"
-  },
-  {
-    "user": "8379e394-8d2f-4616-895f-3ae956cdc6e7",
-    "items": [
-      {
-        "id": "fa1e1117-7162-4be7-bfca-e120d26bf89c",
-        "name": "Intelligent Concrete Gloves",
-        "price": "684.00",
-        "count": 3
-      },
-      {
-        "id": "3ee5be6a-a099-420b-a2db-b659b77922eb",
-        "name": "Tasty Metal Fish",
-        "price": "714.00",
-        "count": 1
-      }
-    ],
-    "total": 2766,
-    "time": "2024-12-21T06:57:05.206Z"
-  },
-  {
-    "user": "1138f46e-b5d8-4c25-a1d4-fc01e1a5d3b0",
-    "items": [
-      {
-        "id": "d55c4cbb-349c-4cbb-b037-ee13c41fe1a4",
-        "name": "Licensed Fresh Tuna",
-        "price": "504.00",
-        "count": 3
-      },
-      {
-        "id": "fe1d33a8-b6b9-403c-aa84-bc033973e0b1",
-        "name": "Practical Plastic Bike",
-        "price": "952.00",
-        "count": 4
-      },
-      {
-        "id": "7a0a02b6-b653-487e-8999-f7fef102b86d",
-        "name": "Recycled Granite Keyboard",
-        "price": "26.00",
-        "count": 3
-      }
-    ],
-    "total": 5398,
-    "time": "2024-08-06T14:04:51.440Z"
-  },
-  {
-    "user": "9ba59fbf-e435-4ef8-9a6a-f5f56f87d9cc",
-    "items": [
-      {
-        "id": "87b48b08-f96a-400b-8142-325ab233cd9f",
-        "name": "Elegant Frozen Mouse",
-        "price": "382.00",
-        "count": 3
-      },
-      {
-        "id": "082ae09e-dac6-409f-98b1-b5ccb22d03d9",
-        "name": "Intelligent Fresh Tuna",
-        "price": "915.00",
-        "count": 2
-      },
-      {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
-        "count": 2
-      }
-    ],
-    "total": 3504,
-    "time": "2023-04-30T19:20:53.811Z"
-  },
-  {
-    "user": "c9d12b2f-aca2-4eee-9538-219aa97a3746",
-    "items": [
-      {
-        "id": "bf0c09a7-dfdc-4755-8e79-bb56725c94cf",
-        "name": "Recycled Fresh Chicken",
-        "price": "758.00",
-        "count": 4
-      }
-    ],
-    "total": 3032,
-    "time": "2023-07-31T21:27:26.832Z"
-  },
-  {
-    "user": "9ba59fbf-e435-4ef8-9a6a-f5f56f87d9cc",
-    "items": [
-      {
-        "id": "2f106f18-961c-49f6-af13-2ba22806a6f2",
-        "name": "Fantastic Metal Shoes",
-        "price": "300.00",
-        "count": 4
-      },
-      {
-        "id": "1a73db2c-6278-45e0-a2a2-65d159c0b22a",
-        "name": "Tasty Soft Bike",
-        "price": "590.00",
-        "count": 4
-      },
-      {
-        "id": "c249c9ad-36fb-4caf-8a17-34f09e112539",
-        "name": "Luxurious Granite Bike",
-        "price": "49.00",
-        "count": 4
-      },
-      {
-        "id": "7a0a02b6-b653-487e-8999-f7fef102b86d",
-        "name": "Recycled Granite Keyboard",
-        "price": "26.00",
-        "count": 3
-      },
-      {
-        "id": "7b95588c-da8b-4b85-a53a-a31251a318d1",
-        "name": "Small Frozen Hat",
-        "price": "299.00",
-        "count": 4
-      },
-      {
-        "id": "3ee5be6a-a099-420b-a2db-b659b77922eb",
-        "name": "Tasty Metal Fish",
-        "price": "714.00",
-        "count": 1
-      }
-    ],
-    "total": 5744,
-    "time": "2024-05-30T19:02:14.350Z"
-  },
-  {
-    "user": "723fc0c9-78df-479c-bf08-985ee20446ad",
-    "items": [
-      {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
-        "count": 2
-      }
-    ],
-    "total": 528,
-    "time": "2023-02-13T23:08:22.330Z"
-  },
-  {
-    "user": "1138f46e-b5d8-4c25-a1d4-fc01e1a5d3b0",
-    "items": [
-      {
-        "id": "7cd0d4f0-1bd8-4e4b-b030-ebac4a7e030d",
+        "id": "c1b0a2cfdf5307710b52fdab",
         "name": "Licensed Wooden Car",
-        "price": "998.00",
-        "count": 1
+        "price": 421,
+        "count": 4
       },
       {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
-        "count": 1
-      },
-      {
-        "id": "ec3f05c4-20d5-496b-bc2f-97a4aa512f30",
-        "name": "Refined Concrete Car",
-        "price": "267.00",
-        "count": 1
-      }
-    ],
-    "total": 2002,
-    "time": "2024-08-17T09:33:07.956Z"
-  },
-  {
-    "user": "23c9802c-90c7-4035-9477-c75efa93e418",
-    "items": [
-      {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
+        "id": "4dbb4c2dbca7fbd3ccfa7e2e",
+        "name": "Unbranded Metal Fish",
+        "price": 256,
         "count": 3
       },
       {
-        "id": "7f074836-6dbb-458c-bf24-b70289b44ef1",
-        "name": "Oriental Wooden Ball",
-        "price": "722.00",
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
         "count": 4
-      },
-      {
-        "id": "e720b53b-b598-4bf6-a0c7-697f3664fd54",
-        "name": "Electronic Soft Car",
-        "price": "230.00",
-        "count": 4
-      },
-      {
-        "id": "bc511767-7c2b-4fb9-9dfe-4af2bad9f761",
-        "name": "Fantastic Concrete Keyboard",
-        "price": "514.00",
-        "count": 2
       }
     ],
-    "total": 7830,
-    "time": "2024-05-22T16:00:13.261Z"
+    "total": 10381,
+    "time": "2025-04-20T11:07:54.017Z"
   },
   {
-    "user": "2b6221e1-4141-4c83-98b2-8efbb0a7e355",
+    "user": "883c30fe95ef809aa32ded8a",
     "items": [
       {
-        "id": "7b95588c-da8b-4b85-a53a-a31251a318d1",
-        "name": "Small Frozen Hat",
-        "price": "299.00",
+        "id": "9ed4d3a39d7f5f9aedf470fc",
+        "name": "Rustic Fresh Chips",
+        "price": 526,
+        "count": 3
+      },
+      {
+        "id": "36dd4139af38afd4a6ef512f",
+        "name": "Awesome Steel Mouse",
+        "price": 56,
+        "count": 1
+      },
+      {
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
+        "count": 1
+      }
+    ],
+    "total": 1983,
+    "time": "2024-09-02T07:09:35.156Z"
+  },
+  {
+    "user": "351f3b4edd61449afedbf0b7",
+    "items": [
+      {
+        "id": "b4d0f67b936ba1083a80c103",
+        "name": "Handcrafted Soft Chips",
+        "price": 901,
         "count": 2
       },
       {
-        "id": "3a6d6722-4274-47d3-8b7f-f0a3ddbe4d14",
-        "name": "Modern Soft Sausages",
-        "price": "119.00",
-        "count": 4
-      },
-      {
-        "id": "ea535f49-34c8-4489-8561-f98ae422a3df",
-        "name": "Small Bronze Tuna",
-        "price": "763.00",
-        "count": 2
-      },
-      {
-        "id": "bd655a07-3f2e-4bf3-93d3-2dbaba45e0af",
-        "name": "Rustic Concrete Cheese",
-        "price": "635.00",
+        "id": "d69c88e02ada26e17b7be014",
+        "name": "Incredible Steel Towels",
+        "price": 572,
         "count": 3
       },
       {
-        "id": "fa1e1117-7162-4be7-bfca-e120d26bf89c",
-        "name": "Intelligent Concrete Gloves",
-        "price": "684.00",
-        "count": 1
-      },
-      {
-        "id": "56a4c219-8f05-42ad-a403-48a55744d5dc",
-        "name": "Unbranded Wooden Bike",
-        "price": "851.00",
+        "id": "cc0ee7ca5fdccb9a2803ad3e",
+        "name": "Elegant Frozen Keyboard",
+        "price": 161,
         "count": 3
       },
       {
-        "id": "1a73db2c-6278-45e0-a2a2-65d159c0b22a",
-        "name": "Tasty Soft Bike",
-        "price": "590.00",
-        "count": 4
+        "id": "6decbdc7aca22c2fabbd21fe",
+        "name": "Awesome Plastic Pants",
+        "price": 769,
+        "count": 3
       }
     ],
-    "total": 10102,
-    "time": "2024-05-18T11:02:56.707Z"
+    "total": 6308,
+    "time": "2025-10-18T10:31:22.843Z"
   },
   {
-    "user": "24e1899b-101d-4580-acd8-70fc97c889a2",
+    "user": "1a05b7a695cac0eacfc0f2ad",
     "items": [
       {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
+        "id": "76591bff176d833cc88e845f",
+        "name": "Tasty Steel Sausages",
+        "price": 64,
+        "count": 4
+      },
+      {
+        "id": "b4d0f67b936ba1083a80c103",
+        "name": "Handcrafted Soft Chips",
+        "price": 901,
+        "count": 3
+      },
+      {
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
         "count": 2
       }
     ],
-    "total": 1474,
-    "time": "2024-05-14T06:33:53.521Z"
+    "total": 3657,
+    "time": "2024-07-14T07:42:33.490Z"
   },
   {
-    "user": "def2c9e2-63b6-4fe8-adfb-6cff2643bbd3",
+    "user": "ffb4fac28eeca9c592f9da2a",
     "items": [
       {
-        "id": "f017dc72-604d-43c4-98b5-6e6d13023919",
-        "name": "Ergonomic Concrete Table",
-        "price": "299.00",
+        "id": "cfc6dc7bbde6c7dba2c95faf",
+        "name": "Electronic Plastic Hat",
+        "price": 665,
         "count": 1
       },
       {
-        "id": "3e548ed6-7962-4eb5-aece-248c1aad2458",
-        "name": "Gorgeous Wooden Shoes",
-        "price": "16.00",
+        "id": "9c9ee6a0b63dbfdd9b05245c",
+        "name": "Recycled Bronze Sausages",
+        "price": 286,
         "count": 3
+      },
+      {
+        "id": "b66e33f4c6e0bda80b027cfe",
+        "name": "Elegant Metal Ball",
+        "price": 540,
+        "count": 4
+      },
+      {
+        "id": "ecaaf5e51334cccffb02ba1d",
+        "name": "Refined Concrete Chicken",
+        "price": 299,
+        "count": 4
+      },
+      {
+        "id": "f91d62c6c46f5def1adba5af",
+        "name": "Oriental Plastic Table",
+        "price": 509,
+        "count": 2
       }
     ],
-    "total": 347,
-    "time": "2024-01-30T20:33:25.386Z"
+    "total": 5897,
+    "time": "2024-09-22T21:35:07.775Z"
   },
   {
-    "user": "95e624f2-fdfb-45ca-bbd5-ee0fce02eb6d",
+    "user": "ff047c5dcffb03d3744806ab",
     "items": [
       {
-        "id": "e720b53b-b598-4bf6-a0c7-697f3664fd54",
-        "name": "Electronic Soft Car",
-        "price": "230.00",
+        "id": "ecaaf5e51334cccffb02ba1d",
+        "name": "Refined Concrete Chicken",
+        "price": 299,
         "count": 2
       },
       {
-        "id": "ec3f05c4-20d5-496b-bc2f-97a4aa512f30",
-        "name": "Refined Concrete Car",
-        "price": "267.00",
-        "count": 3
+        "id": "6d061c1972d9a3d0509af1ef",
+        "name": "Generic Steel Soap",
+        "price": 454,
+        "count": 1
       }
     ],
-    "total": 1261,
-    "time": "2024-05-19T23:22:03.786Z"
+    "total": 1052,
+    "time": "2025-03-11T01:30:22.697Z"
   },
   {
-    "user": "c9d4b61a-679b-4a8c-b913-2ec7bdc1c3ff",
+    "user": "1b9c57fbed2b55bf825ff42a",
     "items": [
       {
-        "id": "060ff895-718e-4ed1-9559-6f23108fadc2",
-        "name": "Rustic Rubber Bacon",
-        "price": "717.00",
-        "count": 4
-      },
-      {
-        "id": "ec3f05c4-20d5-496b-bc2f-97a4aa512f30",
-        "name": "Refined Concrete Car",
-        "price": "267.00",
+        "id": "9ed4d3a39d7f5f9aedf470fc",
+        "name": "Rustic Fresh Chips",
+        "price": 526,
         "count": 3
       },
       {
-        "id": "2f106f18-961c-49f6-af13-2ba22806a6f2",
-        "name": "Fantastic Metal Shoes",
-        "price": "300.00",
-        "count": 1
-      },
-      {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
-        "count": 3
-      }
-    ],
-    "total": 4761,
-    "time": "2023-08-24T22:33:04.519Z"
-  },
-  {
-    "user": "8379e394-8d2f-4616-895f-3ae956cdc6e7",
-    "items": [
-      {
-        "id": "fe1d33a8-b6b9-403c-aa84-bc033973e0b1",
-        "name": "Practical Plastic Bike",
-        "price": "952.00",
-        "count": 1
-      },
-      {
-        "id": "bc2134da-814e-43c7-8306-a002c4e8913b",
-        "name": "Recycled Soft Pants",
-        "price": "482.00",
-        "count": 1
-      },
-      {
-        "id": "3ee5be6a-a099-420b-a2db-b659b77922eb",
-        "name": "Tasty Metal Fish",
-        "price": "714.00",
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
         "count": 3
       },
       {
-        "id": "55e57cd8-1470-4551-802b-35841caa9636",
-        "name": "Licensed Wooden Cheese",
-        "price": "549.00",
-        "count": 3
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
+        "count": 2
       },
       {
-        "id": "c5aee834-a22a-4ea7-85ba-cc2033446b94",
-        "name": "Electronic Cotton Keyboard",
-        "price": "451.00",
+        "id": "9ed4d3a39d7f5f9aedf470fc",
+        "name": "Rustic Fresh Chips",
+        "price": 526,
+        "count": 2
+      },
+      {
+        "id": "25e764ebde608da8cc28e41e",
+        "name": "Practical Metal Chair",
+        "price": 138,
         "count": 4
       }
     ],
-    "total": 7027,
-    "time": "2024-03-04T15:05:14.925Z"
+    "total": 4927,
+    "time": "2024-03-18T07:41:09.617Z"
   },
   {
-    "user": "def2c9e2-63b6-4fe8-adfb-6cff2643bbd3",
+    "user": "6ffae7383ee9fa1dbf1ba912",
     "items": [
       {
-        "id": "439177a8-3f6c-440d-a93b-901f519420ae",
-        "name": "Small Metal Table",
-        "price": "635.00",
-        "count": 3
+        "id": "c07f91e2cae82fe0702a06a7",
+        "name": "Handmade Steel Chips",
+        "price": 146,
+        "count": 2
+      }
+    ],
+    "total": 292,
+    "time": "2025-05-10T16:34:32.231Z"
+  },
+  {
+    "user": "e9aed6e4efe6e2bdc0fe874e",
+    "items": [
+      {
+        "id": "d22b9faa55db25ac1fcaa1cc",
+        "name": "Electronic Fresh Bike",
+        "price": 719,
+        "count": 1
       },
       {
-        "id": "bc2134da-814e-43c7-8306-a002c4e8913b",
-        "name": "Recycled Soft Pants",
-        "price": "482.00",
+        "id": "9c9ee6a0b63dbfdd9b05245c",
+        "name": "Recycled Bronze Sausages",
+        "price": 286,
+        "count": 4
+      },
+      {
+        "id": "cffda107c4307ecc08ecbcfe",
+        "name": "Practical Metal Computer",
+        "price": 500,
         "count": 3
       }
     ],
-    "total": 3351,
-    "time": "2023-10-08T05:53:32.665Z"
+    "total": 3363,
+    "time": "2024-03-04T14:48:35.091Z"
   },
   {
-    "user": "52a7b64e-804a-42c2-95ad-3a8e0b71630c",
+    "user": "6ffae7383ee9fa1dbf1ba912",
     "items": [
       {
-        "id": "1a73db2c-6278-45e0-a2a2-65d159c0b22a",
-        "name": "Tasty Soft Bike",
-        "price": "590.00",
+        "id": "25e764ebde608da8cc28e41e",
+        "name": "Practical Metal Chair",
+        "price": 138,
+        "count": 4
+      },
+      {
+        "id": "cfc6dc7bbde6c7dba2c95faf",
+        "name": "Electronic Plastic Hat",
+        "price": 665,
+        "count": 1
+      },
+      {
+        "id": "b66e33f4c6e0bda80b027cfe",
+        "name": "Elegant Metal Ball",
+        "price": 540,
+        "count": 3
+      },
+      {
+        "id": "e9baebd727fb9e4dcaf2cef0",
+        "name": "Refined Metal Cheese",
+        "price": 842,
+        "count": 1
+      },
+      {
+        "id": "e5b1deff9cc0adbee21a9511",
+        "name": "Modern Wooden Fish",
+        "price": 335,
+        "count": 1
+      },
+      {
+        "id": "b66e33f4c6e0bda80b027cfe",
+        "name": "Elegant Metal Ball",
+        "price": 540,
+        "count": 3
+      }
+    ],
+    "total": 5634,
+    "time": "2024-10-21T21:40:50.180Z"
+  },
+  {
+    "user": "d35a275151da1ae3eaaebea4",
+    "items": [
+      {
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
+        "count": 2
+      },
+      {
+        "id": "b4d0f67b936ba1083a80c103",
+        "name": "Handcrafted Soft Chips",
+        "price": 901,
+        "count": 4
+      },
+      {
+        "id": "d8a7c9ecea7bbce8fcaa1bbd",
+        "name": "Gorgeous Fresh Towels",
+        "price": 327,
+        "count": 3
+      }
+    ],
+    "total": 5687,
+    "time": "2024-12-19T02:31:26.293Z"
+  },
+  {
+    "user": "1b7d4f3e6ca3f6f35c9ea416",
+    "items": [
+      {
+        "id": "fdac5da0f210bb0fb792600c",
+        "name": "Modern Concrete Cheese",
+        "price": 313,
+        "count": 2
+      },
+      {
+        "id": "33d07de9e6c86e777514fad0",
+        "name": "Ergonomic Soft Pizza",
+        "price": 810,
         "count": 4
       }
     ],
-    "total": 2360,
-    "time": "2023-05-04T11:40:06.134Z"
+    "total": 3866,
+    "time": "2025-10-08T02:42:57.576Z"
   },
   {
-    "user": "9ba59fbf-e435-4ef8-9a6a-f5f56f87d9cc",
+    "user": "ff047c5dcffb03d3744806ab",
     "items": [
       {
-        "id": "d1d2b703-f7fa-4b2f-bd1a-2709b32f9672",
-        "name": "Practical Rubber Salad",
-        "price": "368.00",
+        "id": "9ed4d3a39d7f5f9aedf470fc",
+        "name": "Rustic Fresh Chips",
+        "price": 526,
         "count": 1
       },
       {
-        "id": "7b95588c-da8b-4b85-a53a-a31251a318d1",
-        "name": "Small Frozen Hat",
-        "price": "299.00",
+        "id": "fdac5da0f210bb0fb792600c",
+        "name": "Modern Concrete Cheese",
+        "price": 313,
+        "count": 3
+      },
+      {
+        "id": "d22b9faa55db25ac1fcaa1cc",
+        "name": "Electronic Fresh Bike",
+        "price": 719,
+        "count": 4
+      }
+    ],
+    "total": 4341,
+    "time": "2025-03-04T03:50:33.745Z"
+  },
+  {
+    "user": "351f3b4edd61449afedbf0b7",
+    "items": [
+      {
+        "id": "9ccaee326d5c00161de944aa",
+        "name": "Gorgeous Granite Gloves",
+        "price": 550,
+        "count": 2
+      },
+      {
+        "id": "eabb3dcdcdd6cdbbda9bf0c5",
+        "name": "Rustic Fresh Tuna",
+        "price": 33,
+        "count": 4
+      },
+      {
+        "id": "de86d7c2d5822da17f11e8eb",
+        "name": "Recycled Metal Chair",
+        "price": 982,
+        "count": 3
+      }
+    ],
+    "total": 4178,
+    "time": "2024-01-27T01:05:11.088Z"
+  },
+  {
+    "user": "351f3b4edd61449afedbf0b7",
+    "items": [
+      {
+        "id": "aca913b0ed43acc1aa6f0b04",
+        "name": "Awesome Granite Pizza",
+        "price": 323,
+        "count": 3
+      },
+      {
+        "id": "a5d73f8abfcea53ea7c404ef",
+        "name": "Intelligent Steel Hat",
+        "price": 836,
+        "count": 4
+      }
+    ],
+    "total": 4313,
+    "time": "2025-08-02T01:02:00.232Z"
+  },
+  {
+    "user": "c452edf2e1e8dacf61bc1f09",
+    "items": [
+      {
+        "id": "ece956fbcc12b2bd2e79f4a1",
+        "name": "Fantastic Steel Pants",
+        "price": 889,
         "count": 1
       },
       {
-        "id": "7cd0d4f0-1bd8-4e4b-b030-ebac4a7e030d",
+        "id": "99af9e6f98cfa1e1dbfe6c9f",
+        "name": "Rustic Fresh Chips",
+        "price": 649,
+        "count": 1
+      },
+      {
+        "id": "d22b9faa55db25ac1fcaa1cc",
+        "name": "Electronic Fresh Bike",
+        "price": 719,
+        "count": 3
+      },
+      {
+        "id": "99af9e6f98cfa1e1dbfe6c9f",
+        "name": "Rustic Fresh Chips",
+        "price": 649,
+        "count": 1
+      },
+      {
+        "id": "d22b9faa55db25ac1fcaa1cc",
+        "name": "Electronic Fresh Bike",
+        "price": 719,
+        "count": 1
+      }
+    ],
+    "total": 5063,
+    "time": "2024-03-30T05:08:49.995Z"
+  },
+  {
+    "user": "e9aed6e4efe6e2bdc0fe874e",
+    "items": [
+      {
+        "id": "33d07de9e6c86e777514fad0",
+        "name": "Ergonomic Soft Pizza",
+        "price": 810,
+        "count": 3
+      },
+      {
+        "id": "cba3857f2be66534d1994e90",
+        "name": "Practical Fresh Sausages",
+        "price": 300,
+        "count": 1
+      },
+      {
+        "id": "de86d7c2d5822da17f11e8eb",
+        "name": "Recycled Metal Chair",
+        "price": 982,
+        "count": 2
+      }
+    ],
+    "total": 4694,
+    "time": "2023-11-27T22:01:15.425Z"
+  },
+  {
+    "user": "883c30fe95ef809aa32ded8a",
+    "items": [
+      {
+        "id": "1ebe3fba407cfe18123cb3a2",
+        "name": "Small Rubber Fish",
+        "price": 240,
+        "count": 3
+      },
+      {
+        "id": "a37ea9c65de96da6a44f5ac3",
+        "name": "Incredible Granite Ball",
+        "price": 980,
+        "count": 1
+      },
+      {
+        "id": "2e3128bed6aa6e83b060eb7c",
+        "name": "Small Concrete Chair",
+        "price": 311,
+        "count": 4
+      }
+    ],
+    "total": 2944,
+    "time": "2024-09-20T00:47:26.140Z"
+  },
+  {
+    "user": "ddcdfbc6d6fb8afeb8c472ac",
+    "items": [
+      {
+        "id": "eabb3dcdcdd6cdbbda9bf0c5",
+        "name": "Rustic Fresh Tuna",
+        "price": 33,
+        "count": 1
+      },
+      {
+        "id": "ffa24aae45173f7d2d7bea51",
+        "name": "Awesome Frozen Chips",
+        "price": 131,
+        "count": 3
+      },
+      {
+        "id": "a5d73f8abfcea53ea7c404ef",
+        "name": "Intelligent Steel Hat",
+        "price": 836,
+        "count": 1
+      }
+    ],
+    "total": 1262,
+    "time": "2025-03-08T16:10:57.457Z"
+  },
+  {
+    "user": "ba4943ed76eaaafbc397e9af",
+    "items": [
+      {
+        "id": "33d07de9e6c86e777514fad0",
+        "name": "Ergonomic Soft Pizza",
+        "price": 810,
+        "count": 1
+      },
+      {
+        "id": "c07f91e2cae82fe0702a06a7",
+        "name": "Handmade Steel Chips",
+        "price": 146,
+        "count": 4
+      }
+    ],
+    "total": 1394,
+    "time": "2023-11-01T12:49:38.687Z"
+  },
+  {
+    "user": "e9aed6e4efe6e2bdc0fe874e",
+    "items": [
+      {
+        "id": "027ef7dfbbaaf0cfcbfee57f",
+        "name": "Tasty Frozen Salad",
+        "price": 694,
+        "count": 1
+      },
+      {
+        "id": "067b518d1471f5de7f8fdc7c",
+        "name": "Handmade Concrete Soap",
+        "price": 482,
+        "count": 4
+      }
+    ],
+    "total": 2622,
+    "time": "2024-07-22T04:58:00.044Z"
+  },
+  {
+    "user": "6244d2baf304a16da3a564a9",
+    "items": [
+      {
+        "id": "fdac5da0f210bb0fb792600c",
+        "name": "Modern Concrete Cheese",
+        "price": 313,
+        "count": 3
+      },
+      {
+        "id": "0f7a9acf9dbacf2b9e0b71ce",
+        "name": "Awesome Granite Ball",
+        "price": 163,
+        "count": 3
+      },
+      {
+        "id": "99af9e6f98cfa1e1dbfe6c9f",
+        "name": "Rustic Fresh Chips",
+        "price": 649,
+        "count": 1
+      },
+      {
+        "id": "31b1de1fcdd712e9e800b3de",
+        "name": "Modern Steel Towels",
+        "price": 753,
+        "count": 4
+      },
+      {
+        "id": "ad841ffeace582ad7590dbf6",
+        "name": "Gorgeous Concrete Chips",
+        "price": 642,
+        "count": 1
+      },
+      {
+        "id": "e9baebd727fb9e4dcaf2cef0",
+        "name": "Refined Metal Cheese",
+        "price": 842,
+        "count": 1
+      }
+    ],
+    "total": 6573,
+    "time": "2025-05-25T10:44:32.728Z"
+  },
+  {
+    "user": "883c30fe95ef809aa32ded8a",
+    "items": [
+      {
+        "id": "6d061c1972d9a3d0509af1ef",
+        "name": "Generic Steel Soap",
+        "price": 454,
+        "count": 2
+      },
+      {
+        "id": "d69c88e02ada26e17b7be014",
+        "name": "Incredible Steel Towels",
+        "price": 572,
+        "count": 3
+      },
+      {
+        "id": "2e3128bed6aa6e83b060eb7c",
+        "name": "Small Concrete Chair",
+        "price": 311,
+        "count": 4
+      }
+    ],
+    "total": 3868,
+    "time": "2025-08-05T05:17:14.223Z"
+  },
+  {
+    "user": "d35a275151da1ae3eaaebea4",
+    "items": [
+      {
+        "id": "c07f91e2cae82fe0702a06a7",
+        "name": "Handmade Steel Chips",
+        "price": 146,
+        "count": 1
+      },
+      {
+        "id": "99af9e6f98cfa1e1dbfe6c9f",
+        "name": "Rustic Fresh Chips",
+        "price": 649,
+        "count": 1
+      },
+      {
+        "id": "cffda107c4307ecc08ecbcfe",
+        "name": "Practical Metal Computer",
+        "price": 500,
+        "count": 2
+      },
+      {
+        "id": "b66e33f4c6e0bda80b027cfe",
+        "name": "Elegant Metal Ball",
+        "price": 540,
+        "count": 1
+      }
+    ],
+    "total": 2335,
+    "time": "2025-07-08T07:49:58.156Z"
+  },
+  {
+    "user": "6ffae7383ee9fa1dbf1ba912",
+    "items": [
+      {
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
+        "count": 2
+      },
+      {
+        "id": "d8a7c9ecea7bbce8fcaa1bbd",
+        "name": "Gorgeous Fresh Towels",
+        "price": 327,
+        "count": 4
+      }
+    ],
+    "total": 2006,
+    "time": "2024-07-19T23:41:32.785Z"
+  },
+  {
+    "user": "6244d2baf304a16da3a564a9",
+    "items": [
+      {
+        "id": "cffda107c4307ecc08ecbcfe",
+        "name": "Practical Metal Computer",
+        "price": 500,
+        "count": 3
+      },
+      {
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
+        "count": 2
+      }
+    ],
+    "total": 2602,
+    "time": "2023-12-14T00:51:07.446Z"
+  },
+  {
+    "user": "14fea1a30bebd5faadcd448c",
+    "items": [
+      {
+        "id": "25e764ebde608da8cc28e41e",
+        "name": "Practical Metal Chair",
+        "price": 138,
+        "count": 2
+      },
+      {
+        "id": "d69c88e02ada26e17b7be014",
+        "name": "Incredible Steel Towels",
+        "price": 572,
+        "count": 1
+      }
+    ],
+    "total": 848,
+    "time": "2025-03-26T18:29:29.467Z"
+  },
+  {
+    "user": "1b9c57fbed2b55bf825ff42a",
+    "items": [
+      {
+        "id": "ad841ffeace582ad7590dbf6",
+        "name": "Gorgeous Concrete Chips",
+        "price": 642,
+        "count": 1
+      },
+      {
+        "id": "cba3857f2be66534d1994e90",
+        "name": "Practical Fresh Sausages",
+        "price": 300,
+        "count": 4
+      },
+      {
+        "id": "eca53ee6cf4cb2a6eb07ebcc",
+        "name": "Small Cotton Towels",
+        "price": 146,
+        "count": 2
+      },
+      {
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
+        "count": 4
+      }
+    ],
+    "total": 4338,
+    "time": "2023-11-17T17:31:04.071Z"
+  },
+  {
+    "user": "1a05b7a695cac0eacfc0f2ad",
+    "items": [
+      {
+        "id": "eca53ee6cf4cb2a6eb07ebcc",
+        "name": "Small Cotton Towels",
+        "price": 146,
+        "count": 2
+      },
+      {
+        "id": "ec09c10d4d83f1c6bbb0dc3a",
+        "name": "Sleek Granite Pants",
+        "price": 992,
+        "count": 4
+      },
+      {
+        "id": "c1b0a2cfdf5307710b52fdab",
         "name": "Licensed Wooden Car",
-        "price": "998.00",
+        "price": 421,
+        "count": 4
+      },
+      {
+        "id": "31b1de1fcdd712e9e800b3de",
+        "name": "Modern Steel Towels",
+        "price": 753,
+        "count": 2
+      }
+    ],
+    "total": 7450,
+    "time": "2024-05-18T08:28:12.321Z"
+  },
+  {
+    "user": "ff047c5dcffb03d3744806ab",
+    "items": [
+      {
+        "id": "9ed4d3a39d7f5f9aedf470fc",
+        "name": "Rustic Fresh Chips",
+        "price": 526,
+        "count": 2
+      },
+      {
+        "id": "6decbdc7aca22c2fabbd21fe",
+        "name": "Awesome Plastic Pants",
+        "price": 769,
         "count": 4
       }
     ],
-    "total": 4659,
-    "time": "2024-10-03T23:53:14.438Z"
+    "total": 4128,
+    "time": "2025-08-08T06:57:50.288Z"
   },
   {
-    "user": "cfc0ba28-e4b1-4416-9512-144d2ab524df",
+    "user": "06cbf11b2b8e2f6926294dc6",
     "items": [
       {
-        "id": "5c276656-5b73-4a39-8a6b-6e191929ff80",
-        "name": "Small Bronze Ball",
-        "price": "106.00",
-        "count": 1
+        "id": "33d07de9e6c86e777514fad0",
+        "name": "Ergonomic Soft Pizza",
+        "price": 810,
+        "count": 4
       },
       {
-        "id": "d812d50a-9695-4e8d-9e71-81d6a1068ef3",
-        "name": "Handmade Fresh Fish",
-        "price": "386.00",
+        "id": "ecaaf5e51334cccffb02ba1d",
+        "name": "Refined Concrete Chicken",
+        "price": 299,
+        "count": 2
+      },
+      {
+        "id": "cba3857f2be66534d1994e90",
+        "name": "Practical Fresh Sausages",
+        "price": 300,
         "count": 2
       }
     ],
-    "total": 878,
-    "time": "2023-11-07T07:49:31.207Z"
+    "total": 4438,
+    "time": "2024-04-03T07:36:18.346Z"
   },
   {
-    "user": "723fc0c9-78df-479c-bf08-985ee20446ad",
+    "user": "06cbf11b2b8e2f6926294dc6",
     "items": [
       {
-        "id": "7b95588c-da8b-4b85-a53a-a31251a318d1",
-        "name": "Small Frozen Hat",
-        "price": "299.00",
+        "id": "eabb3dcdcdd6cdbbda9bf0c5",
+        "name": "Rustic Fresh Tuna",
+        "price": 33,
         "count": 1
       },
       {
-        "id": "1a73db2c-6278-45e0-a2a2-65d159c0b22a",
-        "name": "Tasty Soft Bike",
-        "price": "590.00",
+        "id": "ec09c10d4d83f1c6bbb0dc3a",
+        "name": "Sleek Granite Pants",
+        "price": 992,
+        "count": 1
+      }
+    ],
+    "total": 1025,
+    "time": "2024-08-22T05:50:05.236Z"
+  },
+  {
+    "user": "1a05b7a695cac0eacfc0f2ad",
+    "items": [
+      {
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
         "count": 2
       },
       {
-        "id": "7318e6c3-8520-4b2f-a77c-a53c659adec7",
-        "name": "Luxurious Soft Keyboard",
-        "price": "237.00",
-        "count": 1
+        "id": "1ebe3fba407cfe18123cb3a2",
+        "name": "Small Rubber Fish",
+        "price": 240,
+        "count": 2
       },
       {
-        "id": "1efd3555-e66d-4607-9c49-3977b8bc50c1",
-        "name": "Unbranded Plastic Bike",
-        "price": "549.00",
-        "count": 1
-      },
-      {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
+        "id": "1ebe3fba407cfe18123cb3a2",
+        "name": "Small Rubber Fish",
+        "price": 240,
         "count": 3
       },
       {
-        "id": "fa6d6100-b2db-4d65-a022-06b98b9cb8de",
-        "name": "Modern Cotton Cheese",
-        "price": "35.00",
-        "count": 4
-      },
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 2
-      }
-    ],
-    "total": 4273,
-    "time": "2023-03-16T20:47:34.243Z"
-  },
-  {
-    "user": "95e624f2-fdfb-45ca-bbd5-ee0fce02eb6d",
-    "items": [
-      {
-        "id": "bc2134da-814e-43c7-8306-a002c4e8913b",
-        "name": "Recycled Soft Pants",
-        "price": "482.00",
-        "count": 4
-      },
-      {
-        "id": "3e548ed6-7962-4eb5-aece-248c1aad2458",
-        "name": "Gorgeous Wooden Shoes",
-        "price": "16.00",
-        "count": 1
-      },
-      {
-        "id": "d1d2b703-f7fa-4b2f-bd1a-2709b32f9672",
-        "name": "Practical Rubber Salad",
-        "price": "368.00",
-        "count": 2
-      }
-    ],
-    "total": 2680,
-    "time": "2024-05-05T05:32:57.749Z"
-  },
-  {
-    "user": "a109278c-9f00-4d88-a5e6-0ac80925eacb",
-    "items": [
-      {
-        "id": "bf0c09a7-dfdc-4755-8e79-bb56725c94cf",
-        "name": "Recycled Fresh Chicken",
-        "price": "758.00",
-        "count": 4
-      },
-      {
-        "id": "0db47ac4-f404-432a-ad76-2c2ed7e3b1e8",
-        "name": "Modern Cotton Chips",
-        "price": "862.00",
-        "count": 2
-      },
-      {
-        "id": "a063535d-53ff-4815-883f-0899254c5ab9",
-        "name": "Elegant Granite Car",
-        "price": "540.00",
-        "count": 2
-      },
-      {
-        "id": "3ee5be6a-a099-420b-a2db-b659b77922eb",
-        "name": "Tasty Metal Fish",
-        "price": "714.00",
-        "count": 2
-      },
-      {
-        "id": "ec3f05c4-20d5-496b-bc2f-97a4aa512f30",
-        "name": "Refined Concrete Car",
-        "price": "267.00",
-        "count": 2
-      },
-      {
-        "id": "0bedd06f-7404-4d17-80f5-189046da30cd",
-        "name": "Gorgeous Concrete Bacon",
-        "price": "67.00",
-        "count": 1
-      }
-    ],
-    "total": 7865,
-    "time": "2023-03-21T20:06:05.762Z"
-  },
-  {
-    "user": "ed63cd7d-bdd3-4ec5-becf-14d2470dd805",
-    "items": [
-      {
-        "id": "76e3acca-b997-4839-bc46-6fa81f50ea3b",
-        "name": "Rustic Concrete Chair",
-        "price": "545.00",
-        "count": 1
-      },
-      {
-        "id": "76e3acca-b997-4839-bc46-6fa81f50ea3b",
-        "name": "Rustic Concrete Chair",
-        "price": "545.00",
-        "count": 1
-      }
-    ],
-    "total": 1090,
-    "time": "2024-03-22T16:57:19.154Z"
-  },
-  {
-    "user": "def2c9e2-63b6-4fe8-adfb-6cff2643bbd3",
-    "items": [
-      {
-        "id": "bd655a07-3f2e-4bf3-93d3-2dbaba45e0af",
-        "name": "Rustic Concrete Cheese",
-        "price": "635.00",
-        "count": 1
-      },
-      {
-        "id": "bd655a07-3f2e-4bf3-93d3-2dbaba45e0af",
-        "name": "Rustic Concrete Cheese",
-        "price": "635.00",
-        "count": 1
-      }
-    ],
-    "total": 1270,
-    "time": "2024-05-12T08:36:33.495Z"
-  },
-  {
-    "user": "8379e394-8d2f-4616-895f-3ae956cdc6e7",
-    "items": [
-      {
-        "id": "082ae09e-dac6-409f-98b1-b5ccb22d03d9",
-        "name": "Intelligent Fresh Tuna",
-        "price": "915.00",
-        "count": 4
-      },
-      {
-        "id": "7318e6c3-8520-4b2f-a77c-a53c659adec7",
-        "name": "Luxurious Soft Keyboard",
-        "price": "237.00",
+        "id": "d8a7c9ecea7bbce8fcaa1bbd",
+        "name": "Gorgeous Fresh Towels",
+        "price": 327,
         "count": 3
       },
       {
-        "id": "0bedd06f-7404-4d17-80f5-189046da30cd",
-        "name": "Gorgeous Concrete Bacon",
-        "price": "67.00",
-        "count": 3
-      },
-      {
-        "id": "0db47ac4-f404-432a-ad76-2c2ed7e3b1e8",
-        "name": "Modern Cotton Chips",
-        "price": "862.00",
-        "count": 3
-      },
-      {
-        "id": "d46ce0a8-8924-4f54-8dae-10f0941539d8",
-        "name": "Ergonomic Cotton Hat",
-        "price": "264.00",
-        "count": 3
-      },
-      {
-        "id": "5c276656-5b73-4a39-8a6b-6e191929ff80",
-        "name": "Small Bronze Ball",
-        "price": "106.00",
-        "count": 2
-      }
-    ],
-    "total": 8162,
-    "time": "2024-07-21T21:40:29.102Z"
-  },
-  {
-    "user": "a109278c-9f00-4d88-a5e6-0ac80925eacb",
-    "items": [
-      {
-        "id": "bd655a07-3f2e-4bf3-93d3-2dbaba45e0af",
-        "name": "Rustic Concrete Cheese",
-        "price": "635.00",
-        "count": 2
-      }
-    ],
-    "total": 1270,
-    "time": "2024-06-12T13:59:12.911Z"
-  },
-  {
-    "user": "95e624f2-fdfb-45ca-bbd5-ee0fce02eb6d",
-    "items": [
-      {
-        "id": "6df1e259-f15a-48aa-b0ca-09bc29b5c102",
-        "name": "Elegant Bronze Bacon",
-        "price": "305.00",
+        "id": "cf87ea6f5b03fe55a0bb0ec5",
+        "name": "Sleek Soft Hat",
+        "price": 475,
         "count": 4
       },
       {
-        "id": "c5aee834-a22a-4ea7-85ba-cc2033446b94",
-        "name": "Electronic Cotton Keyboard",
-        "price": "451.00",
-        "count": 1
+        "id": "99af9e6f98cfa1e1dbfe6c9f",
+        "name": "Rustic Fresh Chips",
+        "price": 649,
+        "count": 4
       }
     ],
-    "total": 1671,
-    "time": "2023-12-05T12:34:01.093Z"
+    "total": 7375,
+    "time": "2025-04-19T05:54:42.013Z"
   },
   {
-    "user": "24e1899b-101d-4580-acd8-70fc97c889a2",
+    "user": "fec6b030d45a04b9bafee4de",
     "items": [
       {
-        "id": "7318e6c3-8520-4b2f-a77c-a53c659adec7",
-        "name": "Luxurious Soft Keyboard",
-        "price": "237.00",
-        "count": 1
-      },
-      {
-        "id": "57502793-5d3a-4c92-9b31-028f781428e3",
-        "name": "Ergonomic Soft Chips",
-        "price": "803.00",
-        "count": 3
-      },
-      {
-        "id": "56a4c219-8f05-42ad-a403-48a55744d5dc",
-        "name": "Unbranded Wooden Bike",
-        "price": "851.00",
-        "count": 1
-      }
-    ],
-    "total": 3497,
-    "time": "2023-07-26T15:33:42.204Z"
-  },
-  {
-    "user": "23c9802c-90c7-4035-9477-c75efa93e418",
-    "items": [
-      {
-        "id": "d1d2b703-f7fa-4b2f-bd1a-2709b32f9672",
-        "name": "Practical Rubber Salad",
-        "price": "368.00",
+        "id": "2e3128bed6aa6e83b060eb7c",
+        "name": "Small Concrete Chair",
+        "price": 311,
         "count": 2
       },
       {
-        "id": "1276e1e2-48eb-4fe4-8625-9aceae8dead0",
-        "name": "Gorgeous Plastic Keyboard",
-        "price": "35.00",
-        "count": 4
-      },
-      {
-        "id": "060ff895-718e-4ed1-9559-6f23108fadc2",
-        "name": "Rustic Rubber Bacon",
-        "price": "717.00",
-        "count": 4
-      },
-      {
-        "id": "082ae09e-dac6-409f-98b1-b5ccb22d03d9",
-        "name": "Intelligent Fresh Tuna",
-        "price": "915.00",
-        "count": 2
-      }
-    ],
-    "total": 5574,
-    "time": "2023-10-15T12:21:14.326Z"
-  },
-  {
-    "user": "23c9802c-90c7-4035-9477-c75efa93e418",
-    "items": [
-      {
-        "id": "fa1e1117-7162-4be7-bfca-e120d26bf89c",
-        "name": "Intelligent Concrete Gloves",
-        "price": "684.00",
-        "count": 2
-      },
-      {
-        "id": "b0f11fba-922a-4e89-a342-b86a510a0b2b",
-        "name": "Fantastic Steel Bike",
-        "price": "868.00",
-        "count": 4
-      },
-      {
-        "id": "1efd3555-e66d-4607-9c49-3977b8bc50c1",
-        "name": "Unbranded Plastic Bike",
-        "price": "549.00",
-        "count": 3
-      },
-      {
-        "id": "3e548ed6-7962-4eb5-aece-248c1aad2458",
-        "name": "Gorgeous Wooden Shoes",
-        "price": "16.00",
-        "count": 3
-      },
-      {
-        "id": "b0f11fba-922a-4e89-a342-b86a510a0b2b",
-        "name": "Fantastic Steel Bike",
-        "price": "868.00",
-        "count": 2
-      },
-      {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
-        "count": 3
-      }
-    ],
-    "total": 10482,
-    "time": "2023-10-18T20:04:33.848Z"
-  },
-  {
-    "user": "95e624f2-fdfb-45ca-bbd5-ee0fce02eb6d",
-    "items": [
-      {
-        "id": "2f106f18-961c-49f6-af13-2ba22806a6f2",
-        "name": "Fantastic Metal Shoes",
-        "price": "300.00",
+        "id": "fee85f6a5e85e4f22febb53b",
+        "name": "Rustic Frozen Pizza",
+        "price": 501,
         "count": 1
       },
       {
-        "id": "fe1d33a8-b6b9-403c-aa84-bc033973e0b1",
-        "name": "Practical Plastic Bike",
-        "price": "952.00",
-        "count": 3
-      }
-    ],
-    "total": 3156,
-    "time": "2024-03-18T22:36:50.924Z"
-  },
-  {
-    "user": "52a7b64e-804a-42c2-95ad-3a8e0b71630c",
-    "items": [
-      {
-        "id": "7b95588c-da8b-4b85-a53a-a31251a318d1",
-        "name": "Small Frozen Hat",
-        "price": "299.00",
-        "count": 3
-      },
-      {
-        "id": "3a6d6722-4274-47d3-8b7f-f0a3ddbe4d14",
-        "name": "Modern Soft Sausages",
-        "price": "119.00",
+        "id": "6decbdc7aca22c2fabbd21fe",
+        "name": "Awesome Plastic Pants",
+        "price": 769,
         "count": 4
       },
       {
-        "id": "df2ba433-b3bf-4ecf-8b0d-e5c847664ca3",
-        "name": "Oriental Granite Chicken",
-        "price": "998.00",
+        "id": "31b1de1fcdd712e9e800b3de",
+        "name": "Modern Steel Towels",
+        "price": 753,
+        "count": 1
+      },
+      {
+        "id": "a5d73f8abfcea53ea7c404ef",
+        "name": "Intelligent Steel Hat",
+        "price": 836,
+        "count": 4
+      },
+      {
+        "id": "eabb3dcdcdd6cdbbda9bf0c5",
+        "name": "Rustic Fresh Tuna",
+        "price": 33,
+        "count": 1
+      }
+    ],
+    "total": 8329,
+    "time": "2024-10-03T20:19:15.318Z"
+  },
+  {
+    "user": "e9aed6e4efe6e2bdc0fe874e",
+    "items": [
+      {
+        "id": "36dd4139af38afd4a6ef512f",
+        "name": "Awesome Steel Mouse",
+        "price": 56,
+        "count": 4
+      },
+      {
+        "id": "d22b9faa55db25ac1fcaa1cc",
+        "name": "Electronic Fresh Bike",
+        "price": 719,
+        "count": 1
+      }
+    ],
+    "total": 943,
+    "time": "2023-12-13T08:41:50.742Z"
+  },
+  {
+    "user": "6ffae7383ee9fa1dbf1ba912",
+    "items": [
+      {
+        "id": "2e3128bed6aa6e83b060eb7c",
+        "name": "Small Concrete Chair",
+        "price": 311,
+        "count": 4
+      },
+      {
+        "id": "cc0ee7ca5fdccb9a2803ad3e",
+        "name": "Elegant Frozen Keyboard",
+        "price": 161,
+        "count": 1
+      },
+      {
+        "id": "ffa24aae45173f7d2d7bea51",
+        "name": "Awesome Frozen Chips",
+        "price": 131,
+        "count": 3
+      },
+      {
+        "id": "76591bff176d833cc88e845f",
+        "name": "Tasty Steel Sausages",
+        "price": 64,
+        "count": 1
+      }
+    ],
+    "total": 1862,
+    "time": "2025-01-10T20:56:04.596Z"
+  },
+  {
+    "user": "6ffae7383ee9fa1dbf1ba912",
+    "items": [
+      {
+        "id": "ecaaf5e51334cccffb02ba1d",
+        "name": "Refined Concrete Chicken",
+        "price": 299,
+        "count": 4
+      },
+      {
+        "id": "ad841ffeace582ad7590dbf6",
+        "name": "Gorgeous Concrete Chips",
+        "price": 642,
+        "count": 1
+      }
+    ],
+    "total": 1838,
+    "time": "2025-04-17T19:30:25.065Z"
+  },
+  {
+    "user": "1b9c57fbed2b55bf825ff42a",
+    "items": [
+      {
+        "id": "31b1de1fcdd712e9e800b3de",
+        "name": "Modern Steel Towels",
+        "price": 753,
+        "count": 4
+      },
+      {
+        "id": "a37ea9c65de96da6a44f5ac3",
+        "name": "Incredible Granite Ball",
+        "price": 980,
+        "count": 4
+      },
+      {
+        "id": "6d061c1972d9a3d0509af1ef",
+        "name": "Generic Steel Soap",
+        "price": 454,
         "count": 2
       },
       {
-        "id": "f017dc72-604d-43c4-98b5-6e6d13023919",
-        "name": "Ergonomic Concrete Table",
-        "price": "299.00",
-        "count": 1
-      }
-    ],
-    "total": 3668,
-    "time": "2024-05-15T13:34:30.137Z"
-  },
-  {
-    "user": "23c9802c-90c7-4035-9477-c75efa93e418",
-    "items": [
-      {
-        "id": "1efd3555-e66d-4607-9c49-3977b8bc50c1",
-        "name": "Unbranded Plastic Bike",
-        "price": "549.00",
-        "count": 3
-      },
-      {
-        "id": "f017dc72-604d-43c4-98b5-6e6d13023919",
-        "name": "Ergonomic Concrete Table",
-        "price": "299.00",
-        "count": 1
-      },
-      {
-        "id": "56a4c219-8f05-42ad-a403-48a55744d5dc",
-        "name": "Unbranded Wooden Bike",
-        "price": "851.00",
-        "count": 4
-      }
-    ],
-    "total": 5350,
-    "time": "2023-07-20T13:51:59.300Z"
-  },
-  {
-    "user": "c9d4b61a-679b-4a8c-b913-2ec7bdc1c3ff",
-    "items": [
-      {
-        "id": "bf0c09a7-dfdc-4755-8e79-bb56725c94cf",
-        "name": "Recycled Fresh Chicken",
-        "price": "758.00",
-        "count": 2
-      },
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 1
-      }
-    ],
-    "total": 2054,
-    "time": "2024-11-05T01:45:34.499Z"
-  },
-  {
-    "user": "a109278c-9f00-4d88-a5e6-0ac80925eacb",
-    "items": [
-      {
-        "id": "fa6d6100-b2db-4d65-a022-06b98b9cb8de",
-        "name": "Modern Cotton Cheese",
-        "price": "35.00",
-        "count": 4
-      },
-      {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
+        "id": "1b84fa8eaaafc6375ac739df",
+        "name": "Unbranded Frozen Car",
+        "price": 19,
         "count": 2
       }
     ],
-    "total": 1216,
-    "time": "2023-03-28T20:08:21.087Z"
+    "total": 7878,
+    "time": "2024-10-19T05:52:04.642Z"
   },
   {
-    "user": "cfc0ba28-e4b1-4416-9512-144d2ab524df",
+    "user": "6244d2baf304a16da3a564a9",
     "items": [
       {
-        "id": "c249c9ad-36fb-4caf-8a17-34f09e112539",
-        "name": "Luxurious Granite Bike",
-        "price": "49.00",
-        "count": 4
-      },
-      {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
+        "id": "fee85f6a5e85e4f22febb53b",
+        "name": "Rustic Frozen Pizza",
+        "price": 501,
         "count": 4
       }
     ],
-    "total": 3144,
-    "time": "2024-02-04T13:30:36.779Z"
+    "total": 2004,
+    "time": "2024-09-19T21:46:29.011Z"
   },
   {
-    "user": "c12f95dd-9446-48bc-b124-9e0142d53820",
+    "user": "1a05b7a695cac0eacfc0f2ad",
     "items": [
       {
-        "id": "d7fe8e4c-6aae-4385-bd33-23720762d097",
-        "name": "Ergonomic Soft Shirt",
-        "price": "471.00",
+        "id": "b66e33f4c6e0bda80b027cfe",
+        "name": "Elegant Metal Ball",
+        "price": 540,
+        "count": 3
+      },
+      {
+        "id": "9ccaee326d5c00161de944aa",
+        "name": "Gorgeous Granite Gloves",
+        "price": 550,
+        "count": 3
+      },
+      {
+        "id": "1ebe3fba407cfe18123cb3a2",
+        "name": "Small Rubber Fish",
+        "price": 240,
+        "count": 1
+      },
+      {
+        "id": "ffa24aae45173f7d2d7bea51",
+        "name": "Awesome Frozen Chips",
+        "price": 131,
+        "count": 3
+      }
+    ],
+    "total": 3903,
+    "time": "2025-01-07T11:09:49.838Z"
+  },
+  {
+    "user": "6244d2baf304a16da3a564a9",
+    "items": [
+      {
+        "id": "25e764ebde608da8cc28e41e",
+        "name": "Practical Metal Chair",
+        "price": 138,
         "count": 4
       },
       {
-        "id": "7a0a02b6-b653-487e-8999-f7fef102b86d",
-        "name": "Recycled Granite Keyboard",
-        "price": "26.00",
+        "id": "25e764ebde608da8cc28e41e",
+        "name": "Practical Metal Chair",
+        "price": 138,
+        "count": 4
+      },
+      {
+        "id": "eca53ee6cf4cb2a6eb07ebcc",
+        "name": "Small Cotton Towels",
+        "price": 146,
+        "count": 2
+      },
+      {
+        "id": "b4d0f67b936ba1083a80c103",
+        "name": "Handcrafted Soft Chips",
+        "price": 901,
+        "count": 4
+      }
+    ],
+    "total": 5000,
+    "time": "2024-04-17T11:28:37.852Z"
+  },
+  {
+    "user": "e9aed6e4efe6e2bdc0fe874e",
+    "items": [
+      {
+        "id": "c07f91e2cae82fe0702a06a7",
+        "name": "Handmade Steel Chips",
+        "price": 146,
+        "count": 4
+      },
+      {
+        "id": "c07f91e2cae82fe0702a06a7",
+        "name": "Handmade Steel Chips",
+        "price": 146,
+        "count": 3
+      },
+      {
+        "id": "b4d0f67b936ba1083a80c103",
+        "name": "Handcrafted Soft Chips",
+        "price": 901,
+        "count": 3
+      },
+      {
+        "id": "ec09c10d4d83f1c6bbb0dc3a",
+        "name": "Sleek Granite Pants",
+        "price": 992,
+        "count": 4
+      },
+      {
+        "id": "6decbdc7aca22c2fabbd21fe",
+        "name": "Awesome Plastic Pants",
+        "price": 769,
         "count": 2
       }
     ],
-    "total": 1936,
-    "time": "2023-11-26T09:06:26.996Z"
+    "total": 9231,
+    "time": "2025-01-15T20:25:01.979Z"
   },
   {
-    "user": "1138f46e-b5d8-4c25-a1d4-fc01e1a5d3b0",
+    "user": "1b9c57fbed2b55bf825ff42a",
     "items": [
       {
-        "id": "ae48520a-a7ce-4fd3-9db4-d33a228b5e1a",
-        "name": "Refined Fresh Fish",
-        "price": "214.00",
-        "count": 4
-      },
-      {
-        "id": "55e57cd8-1470-4551-802b-35841caa9636",
-        "name": "Licensed Wooden Cheese",
-        "price": "549.00",
+        "id": "eabb3dcdcdd6cdbbda9bf0c5",
+        "name": "Rustic Fresh Tuna",
+        "price": 33,
         "count": 1
       },
       {
-        "id": "e87e9df8-e02a-4e8f-bb91-3442755f7d25",
-        "name": "Unbranded Plastic Shirt",
-        "price": "538.00",
-        "count": 3
-      }
-    ],
-    "total": 3019,
-    "time": "2023-07-24T08:39:45.770Z"
-  },
-  {
-    "user": "23c9802c-90c7-4035-9477-c75efa93e418",
-    "items": [
-      {
-        "id": "ec3f05c4-20d5-496b-bc2f-97a4aa512f30",
-        "name": "Refined Concrete Car",
-        "price": "267.00",
-        "count": 4
-      }
-    ],
-    "total": 1068,
-    "time": "2024-02-15T01:15:15.277Z"
-  },
-  {
-    "user": "a109278c-9f00-4d88-a5e6-0ac80925eacb",
-    "items": [
-      {
-        "id": "f017dc72-604d-43c4-98b5-6e6d13023919",
-        "name": "Ergonomic Concrete Table",
-        "price": "299.00",
-        "count": 3
-      },
-      {
-        "id": "082ae09e-dac6-409f-98b1-b5ccb22d03d9",
-        "name": "Intelligent Fresh Tuna",
-        "price": "915.00",
-        "count": 1
-      },
-      {
-        "id": "bd655a07-3f2e-4bf3-93d3-2dbaba45e0af",
-        "name": "Rustic Concrete Cheese",
-        "price": "635.00",
-        "count": 4
-      },
-      {
-        "id": "3223f6f3-8456-4748-808e-7bade7fca2c2",
-        "name": "Luxurious Soft Fish",
-        "price": "737.00",
-        "count": 3
-      },
-      {
-        "id": "c5aee834-a22a-4ea7-85ba-cc2033446b94",
-        "name": "Electronic Cotton Keyboard",
-        "price": "451.00",
-        "count": 4
-      }
-    ],
-    "total": 8367,
-    "time": "2024-03-29T02:52:14.212Z"
-  },
-  {
-    "user": "2b6221e1-4141-4c83-98b2-8efbb0a7e355",
-    "items": [
-      {
-        "id": "1276e1e2-48eb-4fe4-8625-9aceae8dead0",
-        "name": "Gorgeous Plastic Keyboard",
-        "price": "35.00",
-        "count": 1
-      },
-      {
-        "id": "56a4c219-8f05-42ad-a403-48a55744d5dc",
-        "name": "Unbranded Wooden Bike",
-        "price": "851.00",
-        "count": 4
-      },
-      {
-        "id": "c5aee834-a22a-4ea7-85ba-cc2033446b94",
-        "name": "Electronic Cotton Keyboard",
-        "price": "451.00",
+        "id": "1b84fa8eaaafc6375ac739df",
+        "name": "Unbranded Frozen Car",
+        "price": 19,
         "count": 1
       }
     ],
-    "total": 3890,
-    "time": "2023-05-03T13:07:28.857Z"
+    "total": 52,
+    "time": "2025-02-25T00:30:36.272Z"
   },
   {
-    "user": "c9d4b61a-679b-4a8c-b913-2ec7bdc1c3ff",
+    "user": "fec6b030d45a04b9bafee4de",
     "items": [
       {
-        "id": "439177a8-3f6c-440d-a93b-901f519420ae",
-        "name": "Small Metal Table",
-        "price": "635.00",
+        "id": "de86d7c2d5822da17f11e8eb",
+        "name": "Recycled Metal Chair",
+        "price": 982,
         "count": 3
       },
       {
-        "id": "7f074836-6dbb-458c-bf24-b70289b44ef1",
-        "name": "Oriental Wooden Ball",
-        "price": "722.00",
+        "id": "067b518d1471f5de7f8fdc7c",
+        "name": "Handmade Concrete Soap",
+        "price": 482,
+        "count": 1
+      },
+      {
+        "id": "e5b1deff9cc0adbee21a9511",
+        "name": "Modern Wooden Fish",
+        "price": 335,
+        "count": 1
+      }
+    ],
+    "total": 3763,
+    "time": "2024-07-06T00:42:47.596Z"
+  },
+  {
+    "user": "ffb4fac28eeca9c592f9da2a",
+    "items": [
+      {
+        "id": "d69c88e02ada26e17b7be014",
+        "name": "Incredible Steel Towels",
+        "price": 572,
+        "count": 3
+      },
+      {
+        "id": "b66e33f4c6e0bda80b027cfe",
+        "name": "Elegant Metal Ball",
+        "price": 540,
+        "count": 4
+      },
+      {
+        "id": "c07f91e2cae82fe0702a06a7",
+        "name": "Handmade Steel Chips",
+        "price": 146,
+        "count": 2
+      },
+      {
+        "id": "99af9e6f98cfa1e1dbfe6c9f",
+        "name": "Rustic Fresh Chips",
+        "price": 649,
+        "count": 3
+      }
+    ],
+    "total": 6115,
+    "time": "2024-10-23T13:42:59.860Z"
+  },
+  {
+    "user": "ce2b5e42525dbeadf4b8aebd",
+    "items": [
+      {
+        "id": "ecaaf5e51334cccffb02ba1d",
+        "name": "Refined Concrete Chicken",
+        "price": 299,
+        "count": 3
+      },
+      {
+        "id": "31b1de1fcdd712e9e800b3de",
+        "name": "Modern Steel Towels",
+        "price": 753,
+        "count": 4
+      }
+    ],
+    "total": 3909,
+    "time": "2024-10-05T02:15:05.716Z"
+  },
+  {
+    "user": "d35a275151da1ae3eaaebea4",
+    "items": [
+      {
+        "id": "ad841ffeace582ad7590dbf6",
+        "name": "Gorgeous Concrete Chips",
+        "price": 642,
+        "count": 2
+      },
+      {
+        "id": "99af9e6f98cfa1e1dbfe6c9f",
+        "name": "Rustic Fresh Chips",
+        "price": 649,
+        "count": 1
+      }
+    ],
+    "total": 1933,
+    "time": "2023-12-13T21:59:18.717Z"
+  },
+  {
+    "user": "c452edf2e1e8dacf61bc1f09",
+    "items": [
+      {
+        "id": "a5d73f8abfcea53ea7c404ef",
+        "name": "Intelligent Steel Hat",
+        "price": 836,
+        "count": 2
+      },
+      {
+        "id": "749e0d22ddb72eef124894bc",
+        "name": "Electronic Wooden Gloves",
+        "price": 541,
+        "count": 3
+      },
+      {
+        "id": "9ccaee326d5c00161de944aa",
+        "name": "Gorgeous Granite Gloves",
+        "price": 550,
+        "count": 4
+      },
+      {
+        "id": "ffa24aae45173f7d2d7bea51",
+        "name": "Awesome Frozen Chips",
+        "price": 131,
+        "count": 3
+      },
+      {
+        "id": "99af9e6f98cfa1e1dbfe6c9f",
+        "name": "Rustic Fresh Chips",
+        "price": 649,
+        "count": 4
+      },
+      {
+        "id": "067b518d1471f5de7f8fdc7c",
+        "name": "Handmade Concrete Soap",
+        "price": 482,
         "count": 2
       }
     ],
-    "total": 3349,
-    "time": "2024-09-29T09:28:54.414Z"
+    "total": 9448,
+    "time": "2024-11-02T22:19:36.666Z"
+  },
+  {
+    "user": "1b7d4f3e6ca3f6f35c9ea416",
+    "items": [
+      {
+        "id": "9ccaee326d5c00161de944aa",
+        "name": "Gorgeous Granite Gloves",
+        "price": 550,
+        "count": 1
+      },
+      {
+        "id": "cba3857f2be66534d1994e90",
+        "name": "Practical Fresh Sausages",
+        "price": 300,
+        "count": 4
+      },
+      {
+        "id": "fdac5da0f210bb0fb792600c",
+        "name": "Modern Concrete Cheese",
+        "price": 313,
+        "count": 4
+      },
+      {
+        "id": "eca53ee6cf4cb2a6eb07ebcc",
+        "name": "Small Cotton Towels",
+        "price": 146,
+        "count": 3
+      }
+    ],
+    "total": 3440,
+    "time": "2024-01-17T12:45:08.468Z"
+  },
+  {
+    "user": "351f3b4edd61449afedbf0b7",
+    "items": [
+      {
+        "id": "31b1de1fcdd712e9e800b3de",
+        "name": "Modern Steel Towels",
+        "price": 753,
+        "count": 4
+      },
+      {
+        "id": "d69c88e02ada26e17b7be014",
+        "name": "Incredible Steel Towels",
+        "price": 572,
+        "count": 3
+      },
+      {
+        "id": "76591bff176d833cc88e845f",
+        "name": "Tasty Steel Sausages",
+        "price": 64,
+        "count": 4
+      }
+    ],
+    "total": 4984,
+    "time": "2024-11-15T23:03:53.361Z"
+  },
+  {
+    "user": "1b7d4f3e6ca3f6f35c9ea416",
+    "items": [
+      {
+        "id": "b66e33f4c6e0bda80b027cfe",
+        "name": "Elegant Metal Ball",
+        "price": 540,
+        "count": 2
+      },
+      {
+        "id": "c1b0a2cfdf5307710b52fdab",
+        "name": "Licensed Wooden Car",
+        "price": 421,
+        "count": 4
+      },
+      {
+        "id": "fdac5da0f210bb0fb792600c",
+        "name": "Modern Concrete Cheese",
+        "price": 313,
+        "count": 3
+      }
+    ],
+    "total": 3703,
+    "time": "2025-07-21T12:04:23.446Z"
+  },
+  {
+    "user": "c452edf2e1e8dacf61bc1f09",
+    "items": [
+      {
+        "id": "31b1de1fcdd712e9e800b3de",
+        "name": "Modern Steel Towels",
+        "price": 753,
+        "count": 2
+      },
+      {
+        "id": "aca913b0ed43acc1aa6f0b04",
+        "name": "Awesome Granite Pizza",
+        "price": 323,
+        "count": 3
+      }
+    ],
+    "total": 2475,
+    "time": "2024-07-05T07:11:32.018Z"
+  },
+  {
+    "user": "14fea1a30bebd5faadcd448c",
+    "items": [
+      {
+        "id": "6d061c1972d9a3d0509af1ef",
+        "name": "Generic Steel Soap",
+        "price": 454,
+        "count": 2
+      },
+      {
+        "id": "bbbee2fe7a799ae26f62ed70",
+        "name": "Oriental Rubber Cheese",
+        "price": 425,
+        "count": 1
+      },
+      {
+        "id": "36dd4139af38afd4a6ef512f",
+        "name": "Awesome Steel Mouse",
+        "price": 56,
+        "count": 3
+      },
+      {
+        "id": "d8a7c9ecea7bbce8fcaa1bbd",
+        "name": "Gorgeous Fresh Towels",
+        "price": 327,
+        "count": 4
+      },
+      {
+        "id": "ad841ffeace582ad7590dbf6",
+        "name": "Gorgeous Concrete Chips",
+        "price": 642,
+        "count": 4
+      },
+      {
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
+        "count": 3
+      }
+    ],
+    "total": 7030,
+    "time": "2024-12-13T18:45:13.425Z"
+  },
+  {
+    "user": "6244d2baf304a16da3a564a9",
+    "items": [
+      {
+        "id": "9ed4d3a39d7f5f9aedf470fc",
+        "name": "Rustic Fresh Chips",
+        "price": 526,
+        "count": 3
+      },
+      {
+        "id": "aca913b0ed43acc1aa6f0b04",
+        "name": "Awesome Granite Pizza",
+        "price": 323,
+        "count": 4
+      },
+      {
+        "id": "cf87ea6f5b03fe55a0bb0ec5",
+        "name": "Sleek Soft Hat",
+        "price": 475,
+        "count": 3
+      },
+      {
+        "id": "cffda107c4307ecc08ecbcfe",
+        "name": "Practical Metal Computer",
+        "price": 500,
+        "count": 4
+      }
+    ],
+    "total": 6295,
+    "time": "2025-08-27T18:38:09.116Z"
+  },
+  {
+    "user": "fec6b030d45a04b9bafee4de",
+    "items": [
+      {
+        "id": "eca53ee6cf4cb2a6eb07ebcc",
+        "name": "Small Cotton Towels",
+        "price": 146,
+        "count": 3
+      },
+      {
+        "id": "de86d7c2d5822da17f11e8eb",
+        "name": "Recycled Metal Chair",
+        "price": 982,
+        "count": 3
+      },
+      {
+        "id": "ec09c10d4d83f1c6bbb0dc3a",
+        "name": "Sleek Granite Pants",
+        "price": 992,
+        "count": 4
+      },
+      {
+        "id": "c1b0a2cfdf5307710b52fdab",
+        "name": "Licensed Wooden Car",
+        "price": 421,
+        "count": 1
+      }
+    ],
+    "total": 7773,
+    "time": "2025-01-17T04:08:09.264Z"
+  },
+  {
+    "user": "883c30fe95ef809aa32ded8a",
+    "items": [
+      {
+        "id": "bbbee2fe7a799ae26f62ed70",
+        "name": "Oriental Rubber Cheese",
+        "price": 425,
+        "count": 4
+      },
+      {
+        "id": "749e0d22ddb72eef124894bc",
+        "name": "Electronic Wooden Gloves",
+        "price": 541,
+        "count": 1
+      },
+      {
+        "id": "fdac5da0f210bb0fb792600c",
+        "name": "Modern Concrete Cheese",
+        "price": 313,
+        "count": 3
+      }
+    ],
+    "total": 3180,
+    "time": "2024-12-24T12:11:13.150Z"
+  },
+  {
+    "user": "fc7b6e5ab0dbf76a078fd97a",
+    "items": [
+      {
+        "id": "76591bff176d833cc88e845f",
+        "name": "Tasty Steel Sausages",
+        "price": 64,
+        "count": 1
+      },
+      {
+        "id": "36dd4139af38afd4a6ef512f",
+        "name": "Awesome Steel Mouse",
+        "price": 56,
+        "count": 1
+      }
+    ],
+    "total": 120,
+    "time": "2025-04-16T04:39:18.866Z"
+  },
+  {
+    "user": "14fea1a30bebd5faadcd448c",
+    "items": [
+      {
+        "id": "33d07de9e6c86e777514fad0",
+        "name": "Ergonomic Soft Pizza",
+        "price": 810,
+        "count": 2
+      },
+      {
+        "id": "ecaaf5e51334cccffb02ba1d",
+        "name": "Refined Concrete Chicken",
+        "price": 299,
+        "count": 2
+      },
+      {
+        "id": "fee85f6a5e85e4f22febb53b",
+        "name": "Rustic Frozen Pizza",
+        "price": 501,
+        "count": 3
+      },
+      {
+        "id": "9ed4d3a39d7f5f9aedf470fc",
+        "name": "Rustic Fresh Chips",
+        "price": 526,
+        "count": 3
+      }
+    ],
+    "total": 5299,
+    "time": "2024-01-05T16:10:34.507Z"
+  },
+  {
+    "user": "d35a275151da1ae3eaaebea4",
+    "items": [
+      {
+        "id": "33d07de9e6c86e777514fad0",
+        "name": "Ergonomic Soft Pizza",
+        "price": 810,
+        "count": 2
+      },
+      {
+        "id": "a37ea9c65de96da6a44f5ac3",
+        "name": "Incredible Granite Ball",
+        "price": 980,
+        "count": 4
+      },
+      {
+        "id": "eabb3dcdcdd6cdbbda9bf0c5",
+        "name": "Rustic Fresh Tuna",
+        "price": 33,
+        "count": 2
+      }
+    ],
+    "total": 5606,
+    "time": "2024-07-21T01:12:48.214Z"
+  },
+  {
+    "user": "14fea1a30bebd5faadcd448c",
+    "items": [
+      {
+        "id": "1b84fa8eaaafc6375ac739df",
+        "name": "Unbranded Frozen Car",
+        "price": 19,
+        "count": 3
+      }
+    ],
+    "total": 57,
+    "time": "2025-03-05T01:28:38.215Z"
+  },
+  {
+    "user": "d35a275151da1ae3eaaebea4",
+    "items": [
+      {
+        "id": "cc0ee7ca5fdccb9a2803ad3e",
+        "name": "Elegant Frozen Keyboard",
+        "price": 161,
+        "count": 4
+      },
+      {
+        "id": "fee85f6a5e85e4f22febb53b",
+        "name": "Rustic Frozen Pizza",
+        "price": 501,
+        "count": 3
+      }
+    ],
+    "total": 2147,
+    "time": "2025-04-06T14:24:33.371Z"
+  },
+  {
+    "user": "14fea1a30bebd5faadcd448c",
+    "items": [
+      {
+        "id": "f5198cfbaae2694a41cb15dd",
+        "name": "Ergonomic Steel Table",
+        "price": 349,
+        "count": 3
+      },
+      {
+        "id": "ecaaf5e51334cccffb02ba1d",
+        "name": "Refined Concrete Chicken",
+        "price": 299,
+        "count": 2
+      }
+    ],
+    "total": 1645,
+    "time": "2024-12-14T20:00:04.643Z"
+  },
+  {
+    "user": "fec6b030d45a04b9bafee4de",
+    "items": [
+      {
+        "id": "9ccaee326d5c00161de944aa",
+        "name": "Gorgeous Granite Gloves",
+        "price": 550,
+        "count": 3
+      },
+      {
+        "id": "fee85f6a5e85e4f22febb53b",
+        "name": "Rustic Frozen Pizza",
+        "price": 501,
+        "count": 1
+      },
+      {
+        "id": "31b1de1fcdd712e9e800b3de",
+        "name": "Modern Steel Towels",
+        "price": 753,
+        "count": 4
+      },
+      {
+        "id": "0f7a9acf9dbacf2b9e0b71ce",
+        "name": "Awesome Granite Ball",
+        "price": 163,
+        "count": 2
+      }
+    ],
+    "total": 5489,
+    "time": "2023-12-01T16:58:22.367Z"
+  },
+  {
+    "user": "e9aed6e4efe6e2bdc0fe874e",
+    "items": [
+      {
+        "id": "9ccaee326d5c00161de944aa",
+        "name": "Gorgeous Granite Gloves",
+        "price": 550,
+        "count": 4
+      },
+      {
+        "id": "ad841ffeace582ad7590dbf6",
+        "name": "Gorgeous Concrete Chips",
+        "price": 642,
+        "count": 3
+      },
+      {
+        "id": "1ebe3fba407cfe18123cb3a2",
+        "name": "Small Rubber Fish",
+        "price": 240,
+        "count": 4
+      },
+      {
+        "id": "fdac5da0f210bb0fb792600c",
+        "name": "Modern Concrete Cheese",
+        "price": 313,
+        "count": 4
+      },
+      {
+        "id": "a37ea9c65de96da6a44f5ac3",
+        "name": "Incredible Granite Ball",
+        "price": 980,
+        "count": 4
+      },
+      {
+        "id": "b66e33f4c6e0bda80b027cfe",
+        "name": "Elegant Metal Ball",
+        "price": 540,
+        "count": 4
+      }
+    ],
+    "total": 12418,
+    "time": "2024-09-17T22:16:11.732Z"
+  },
+  {
+    "user": "ffb4fac28eeca9c592f9da2a",
+    "items": [
+      {
+        "id": "cc0ee7ca5fdccb9a2803ad3e",
+        "name": "Elegant Frozen Keyboard",
+        "price": 161,
+        "count": 1
+      },
+      {
+        "id": "d8a7c9ecea7bbce8fcaa1bbd",
+        "name": "Gorgeous Fresh Towels",
+        "price": 327,
+        "count": 3
+      }
+    ],
+    "total": 1142,
+    "time": "2024-10-28T05:23:29.620Z"
+  },
+  {
+    "user": "c452edf2e1e8dacf61bc1f09",
+    "items": [
+      {
+        "id": "f91d62c6c46f5def1adba5af",
+        "name": "Oriental Plastic Table",
+        "price": 509,
+        "count": 4
+      },
+      {
+        "id": "f91d62c6c46f5def1adba5af",
+        "name": "Oriental Plastic Table",
+        "price": 509,
+        "count": 4
+      }
+    ],
+    "total": 4072,
+    "time": "2023-11-21T18:20:11.865Z"
+  },
+  {
+    "user": "6244d2baf304a16da3a564a9",
+    "items": [
+      {
+        "id": "1ebe3fba407cfe18123cb3a2",
+        "name": "Small Rubber Fish",
+        "price": 240,
+        "count": 1
+      },
+      {
+        "id": "ff46f1a131ef9504cae1bab1",
+        "name": "Small Metal Car",
+        "price": 551,
+        "count": 2
+      },
+      {
+        "id": "a5d73f8abfcea53ea7c404ef",
+        "name": "Intelligent Steel Hat",
+        "price": 836,
+        "count": 4
+      }
+    ],
+    "total": 4686,
+    "time": "2023-12-08T09:47:29.054Z"
   }
 ]
