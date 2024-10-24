@@ -14,14 +14,22 @@
     "build-storybook": "storybook build",
     "prepare": "husky",
     "generate-large-data": "node ./scripts/generateLargeData.js",
-    "generate-small-data": "node ./scripts/generateSmallData.js"
+    "generate-small-data": "node ./scripts/generateSmallData.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "engines": {
     "node": ">=18",
     "pnpm": ">=8"
   },
   "dependencies": {
+    "@vercel/functions": "^1.4.2",
+    "@vercel/postgres": "^0.10.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.35.3",
     "fs": "0.0.1-security",
+    "lodash.chunk": "^4.2.0",
     "next": "14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -37,10 +45,12 @@
     "@storybook/react": "^7.6.15",
     "@storybook/test": "^7.6.15",
     "@types/jest": "^29.5.12",
+    "@types/lodash.chunk": "^4.2.9",
     "@types/node": "^20.11.17",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.17",
+    "drizzle-kit": "^0.26.2",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-storybook": "^0.6.15",
