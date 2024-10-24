@@ -1,10 +1,4 @@
-export type Product = {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  category: string;
-  rating: number;
-  numReviews: number;
-  countInStock: number;
-};
+import { productsTable } from '@/infra/db/schema';
+
+export type NewProduct = typeof productsTable.$inferInsert;
+export type Product = typeof productsTable.$inferSelect;

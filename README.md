@@ -26,6 +26,7 @@ This is a dummy product site that needs help adding new features and maturing th
 
 ### Prerequisite
 
+- [Install NVM](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 - [Install Node v18+](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
 - [Install PNPM v8+](https://pnpm.io/installation)
 - [Install Docker Desktop](https://www.docker.com/products/docker-desktop)
