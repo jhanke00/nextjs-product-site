@@ -1,4 +1,5 @@
-import { integer, pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core';
+import { sql } from 'drizzle-orm';
+import { index, integer, pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core';
 
 const timestamps = () => ({
   createdAt: timestamp('created_at').notNull().defaultNow(),
@@ -19,17 +20,28 @@ export const usersTable = pgTable('users', {
 });
 
 // Products
-export const productsTable = pgTable('products', {
-  id: serial('id').primaryKey(),
-  name: text('name').notNull(),
-  price: integer('price').notNull(),
-  description: text('description').notNull(),
-  category: text('category').notNull(),
-  rating: integer('rating'),
-  numReviews: integer('num_reviews').default(0),
-  countInStock: integer('count_in_stock').notNull(),
-  ...timestamps(),
-});
+export const productsTable = pgTable(
+  'products',
+  {
+    id: serial('id').primaryKey(),
+    name: text('name').notNull(),
+    price: integer('price').notNull(),
+    description: text('description').notNull(),
+    category: text('category').notNull(),
+    rating: integer('rating'),
+    numReviews: integer('num_reviews').default(0),
+    countInStock: integer('count_in_stock').notNull(),
+    ...timestamps(),
+  },
+  (table) => ({
+    nameSearchIdx: index('name_search_idx').using('gin', sql`to_tsvector('english', ${table.name})`),
+    priceIdx: index('price_idx').on(table.price),
+    categoryIdx: index('category_idx').on(table.category),
+    ratingIdx: index('rating_idx').on(table.rating),
+    numReviewsIdx: index('numReviews_idx').on(table.numReviews),
+    countInStockIdx: index('countInStock_idx').on(table.countInStock),
+  })
+);
 
 // Orders
 export const ordersTable = pgTable('orders', {

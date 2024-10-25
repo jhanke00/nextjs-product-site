@@ -1,7 +1,9 @@
+import { desc } from 'drizzle-orm';
 import { ProductRepository } from './repository';
 
 type dbMocks = {
   selectFrom: jest.Mock;
+  selectDistinctFrom: jest.Mock;
   findMany: jest.Mock;
   findFirst: jest.Mock;
   insertValues: jest.Mock;
@@ -10,6 +12,9 @@ type dbMocks = {
 const buildDependencies = (mockOverrides: Partial<dbMocks>): any => {
   const defaultMocks = {
     selectFrom: jest.fn(() => ({
+      from: jest.fn(() => []),
+    })),
+    selectDistinctFrom: jest.fn(() => ({
       from: jest.fn(() => []),
     })),
     findMany: jest.fn(() => {}),
@@ -27,6 +32,9 @@ const buildDependencies = (mockOverrides: Partial<dbMocks>): any => {
     db: {
       select: jest.fn(() => ({
         from: mocks.selectFrom,
+      })),
+      selectDistinct: jest.fn(() => ({
+        from: mocks.selectDistinctFrom,
       })),
       query: {
         productsTable: {
@@ -168,6 +176,34 @@ describe('ProductRepository', () => {
       expect(insertValues).toHaveBeenCalledWith(products.slice(2000, 3000));
       expect(insertValues).toHaveBeenCalledWith(products.slice(3000, 4000));
       expect(insertValues).toHaveBeenCalledWith(products.slice(4000, 5000));
+    });
+  });
+
+  describe('#getCategories', () => {
+    it('should return the distinct categories', async () => {
+      const selectDistinctFrom = jest.fn().mockResolvedValue([{ category: 'CATEGORY_1' }, { category: 'CATEGORY_2' }]);
+      const { productRepository } = setup({ mockOverrides: { selectDistinctFrom } });
+      const result = await productRepository.getCategories();
+
+      expect(result).toEqual(['CATEGORY_1', 'CATEGORY_2']);
+    });
+  });
+
+  describe('#getPriceRange', () => {
+    it('should return the price range', async () => {
+      const selectFrom = jest.fn().mockResolvedValue([{ min: 10, max: 100 }]);
+      const { productRepository } = setup({ mockOverrides: { selectFrom } });
+      const result = await productRepository.getPriceRange();
+
+      expect(result).toEqual([10, 100]);
+    });
+
+    it('should return 0 for min and max if there are no products', async () => {
+      const selectFrom = jest.fn().mockResolvedValue([]);
+      const { productRepository } = setup({ mockOverrides: { selectFrom } });
+      const result = await productRepository.getPriceRange();
+
+      expect(result).toEqual([0, 0]);
     });
   });
 });
