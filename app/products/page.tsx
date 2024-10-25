@@ -1,64 +1,90 @@
-'use client';
-import largeData from '@/src/mock/large/products.json';
-import smallData from '@/src/mock/small/products.json';
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { z } from 'zod';
+import { createSearchParamsCache, parseAsBoolean, parseAsInteger, parseAsString } from 'nuqs/server';
+import { db } from '@/infra/db';
+import { ProductRepository } from '@/src/utils/products/repository';
+import { nonNullishValues } from '@/src/utils/helpers';
+import ProductsSection from '@components/products/Section';
+
+type Props = {
+  searchParams: Promise<Record<string, string>>;
+};
 
 const PAGE_SIZE = 20;
+const productRepository = ProductRepository({ db });
 
-export default function Products() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const data = [...largeData, ...smallData];
-  const startIndex = (currentPage - 1) * PAGE_SIZE;
-  const endIndex = startIndex + PAGE_SIZE;
-  const productData = data.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(data.length / PAGE_SIZE);
+const searchParamsValidator = z.object({
+  page: z.number().int().positive().default(1),
+  search: z.string().optional(),
+  category: z.string().optional(),
+  minPrice: z.number().int().optional(),
+  maxPrice: z.number().int().optional(),
+  topRated: z.boolean().optional(),
+  inStock: z.boolean().optional(),
+  withReviews: z.boolean().optional(),
+});
 
-  const nextPage = () => {
-    setCurrentPage(currentPage + 1);
-  };
+const searchParamsCache = createSearchParamsCache({
+  page: parseAsInteger.withDefault(1),
+  search: parseAsString,
+  category: parseAsString,
+  minPrice: parseAsInteger,
+  maxPrice: parseAsInteger,
+  topRated: parseAsBoolean,
+  inStock: parseAsBoolean,
+  withReviews: parseAsBoolean,
+});
 
-  const prevPage = () => {
-    setCurrentPage(currentPage - 1);
-  };
+export default async function Products({ searchParams }: Props) {
+  const urlParams = await searchParams;
+  const cachedSearchParams = searchParamsCache.parse(urlParams);
+  const parsedParams = searchParamsValidator.parse(nonNullishValues(cachedSearchParams));
+  const { page, search, category, minPrice, maxPrice, topRated, withReviews, inStock } = parsedParams;
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [currentPage]);
+  const [{ products, previousPage, totalPages, nextPage }, categories, priceRange] = await Promise.all([
+    productRepository.getAllPaginated({
+      search,
+      page,
+      size: PAGE_SIZE,
+      filter: {
+        category,
+        minPrice,
+        maxPrice,
+        topRated,
+        inStock,
+        withReviews,
+      },
+    }),
+    productRepository.getCategories(),
+    productRepository.getPriceRange(),
+  ]);
 
   return (
-    <main className='flex min-h-screen flex-col items-center p-24'>
-      <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex'>
-        <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-2 lg:text-left'>
-          {productData.map((product) => (
-            <div
-              key={product.id}
-              className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
-            >
-              <Link href={`/products/${product.id}`}>
-                <h3 className={`mb-3 text-2xl font-semibold`}>{product.name}</h3>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Price: {product.price}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Description: {product.description}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Category: {product.category}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Rating: {product.rating}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Reviews: {product.numReviews}</p>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Stock: {product.countInStock}</p>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
+    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+      <ProductsSection products={products} categories={categories} priceRange={priceRange} params={parsedParams} />
 
       <div className='flex justify-around w-full border-t-2 pt-4'>
-        <button onClick={prevPage} disabled={currentPage === 1}>
+        <Link
+          className='cursor-pointer hover:underline'
+          href={{
+            pathname: '/products',
+            query: { ...parsedParams, page: previousPage },
+          }}
+        >
           Previous
-        </button>
+        </Link>
         <span>
-          Page {currentPage} of {totalPages}
+          Page {page} of {totalPages}
         </span>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>
+        <Link
+          className='cursor-pointer hover:underline'
+          href={{
+            pathname: '/products',
+            query: { ...parsedParams, page: nextPage },
+          }}
+        >
           Next
-        </button>
+        </Link>
       </div>
     </main>
   );
