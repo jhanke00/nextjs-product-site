@@ -10,6 +10,21 @@ env:
   PNPM_VERSION: 8
 
 jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: mheap/github-action-required-labels@v5
+        with:
+          mode: mode
+          count: 1
+          labels: |
+            patch
+            minor
+            major
+          add_comment: true
   build:
     runs-on: ubuntu-latest
     steps:
