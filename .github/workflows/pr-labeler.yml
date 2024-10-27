@@ -1,0 +1,27 @@
+name: Pull Request
+
+on:
+  pull_request:
+    types: [opened, labeled, unlabeled, synchronize]
+    branches: [main]
+
+env:
+  NODE_VERSION: 18.x
+  PNPM_VERSION: 8
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: mheap/github-action-required-labels@v5
+        with:
+          mode: minimum
+          count: 1
+          labels: |
+            patch
+            minor
+            major
+          add_comment: true
