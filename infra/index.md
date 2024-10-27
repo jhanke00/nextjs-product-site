@@ -26,6 +26,13 @@ To check if the containers are running successfully, execute:
 docker ps
 ```
 
+##Generate mock data
+To generate mock data, run the following command:
+
+```bash
+pnpm run generate-data
+```
+
 ##Seed Database
 To populate the database with initial data such as products, orders, and users, run the following command:
 
