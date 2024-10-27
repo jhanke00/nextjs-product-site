@@ -16,7 +16,7 @@
     "generate-large-data": "node ./scripts/generateLargeData.js",
     "generate-small-data": "node ./scripts/generateSmallData.js",
     "generate-data": "node ./scripts/generateSmallData.js && node ./scripts/generateLargeData.js",
-    "postinstall": "pnpm prisma generate",
+    "postinstall": "pnpm run generate-data && pnpm prisma generate",
     "seed": "pnpm prisma db push --force-reset && pnpm prisma db seed"
   },
   "prisma": {
