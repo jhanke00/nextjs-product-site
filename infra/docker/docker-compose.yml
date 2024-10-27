@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: admin
+    volumes:
+      - mongo-data:/data/db
+      - ./keyfile:/etc/mongo/keyfile
+    command: ['mongod', '--replSet', 'rs0', '--bind_ip_all', '--keyFile', '/etc/mongo/keyfile']
+    networks:
+      - mongo-network
+
+  mongo-init:
+    image: mongo:latest
+    depends_on:
+      - mongodb
+    command: >
+      bash -c "
+        sleep 10 &&
+        mongosh --host mongodb:27017 -u admin -p password --authenticationDatabase admin --eval '
+          rs.initiate({
+            _id: \"rs0\",
+            members: [{
+              _id: 0,
+              host: \"mongodb:27017\"
+            }]
+          })
+        '
+      "
+    networks:
+      - mongo-network
+
+volumes:
+  mongo-data:
+    driver: local
+
+networks:
+  mongo-network:
+    driver: bridge

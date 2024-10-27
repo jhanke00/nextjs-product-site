@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  name         String
+  price        Float
+  description  String
+  rating       Float
+  numReviews   Int
+  countInStock Int
+
+  category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId String?   @db.ObjectId
+
+  orders ProductOrder[]
+
+  @@index([name, price, rating, numReviews, countInStock])
+}
+
+model User {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  firstName   String
+  lastName    String
+  phoneNumber String
+  email       String @unique
+  password    String
+
+  orders Order[]
+}
+
+model ProductOrder {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  count Int
+
+  product   Product? @relation(fields: [productId], references: [id])
+  productId String?  @db.ObjectId
+
+  order   Order?  @relation(fields: [orderId], references: [id])
+  orderId String? @db.ObjectId
+}
+
+model Order {
+  id    String   @id @default(auto()) @map("_id") @db.ObjectId
+  total Float
+  time  DateTime
+
+  user   User?   @relation(fields: [userId], references: [id])
+  userId String? @db.ObjectId
+
+  products ProductOrder[]
+}
+
+model Category {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  name     String    @unique
+  products Product[]
+}

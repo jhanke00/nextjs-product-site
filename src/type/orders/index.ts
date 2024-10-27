@@ -9,5 +9,5 @@ export type Order = {
   user: string;
   items: Array<Item>;
   total: number;
-  time: Date;
+  time: String;
 };

@@ -7,9 +7,9 @@ function generateProducts() {
 
   for (let i = 0; i < 50; i++) {
     const product = {
-      id: faker.string.uuid(),
+      id: faker.database.mongodbObjectId().toString(),
       name: faker.commerce.productName(),
-      price: faker.commerce.price(),
+      price: Number(faker.commerce.price()),
       description: faker.commerce.productDescription(),
       category: faker.commerce.department(),
       rating: faker.number.float({ min: 0, max: 5 }),
@@ -31,7 +31,7 @@ function generateUsers() {
     const lastName = faker.person.lastName();
 
     const user = {
-      id: faker.string.uuid(),
+      id: faker.database.mongodbObjectId().toString(),
       firstName,
       lastName,
       phoneNumber: faker.phone.number(),
