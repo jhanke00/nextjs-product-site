@@ -1,19 +1,21 @@
 'use client';
-import largeData from '@/src/mock/large/products.json';
-import smallData from '@/src/mock/small/products.json';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+
+import { Product } from '@/src/type/products';
+import { QuickFilter } from '@/src/components/quickFilter';
 
 const PAGE_SIZE = 20;
 
 export default function Products() {
   const [currentPage, setCurrentPage] = useState(1);
-  const data = [...largeData, ...smallData];
+  const [data, setData] = useState<Product[]>([]);
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = startIndex + PAGE_SIZE;
   const productData = data.slice(startIndex, endIndex);
   const totalPages = Math.ceil(data.length / PAGE_SIZE);
-
+  const searchParams = useSearchParams();
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
   };
@@ -26,9 +28,16 @@ export default function Products() {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
+  useEffect(() => {
+    fetch('/api/products' + '?' + searchParams?.toString())
+      .then((res) => res.json())
+      .then((parsed) => setData(parsed));
+  }, [searchParams]);
+
   return (
     <main className='flex min-h-screen flex-col items-center p-24'>
       <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex'>
+        <QuickFilter />
         <div className='grid lg:max-w-5xl lg:w-full lg:grid-cols-2 lg:text-left'>
           {productData.map((product) => (
             <div
