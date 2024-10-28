@@ -20,6 +20,6 @@ function quickFilterOptions(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({
     rating: ['1', '2', '3', '4', '5'],
-    category: Object.keys(categories),
+    category: Object.keys(categories).sort((a, b) => a.localeCompare(b)),
   });
 }
