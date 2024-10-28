@@ -6,6 +6,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   switch (req.method) {
     case 'GET':
       listProducts(req, res);
+      break;
     default:
       res.status(404);
   }
