@@ -4,13 +4,13 @@ const fs = require('fs');
 
 mongoose
   .connect('mongodb://admin:admin@localhost:27017/product_api?authSource=admin')
-  .then(() => console.log('Conectado ao MongoDB'))
-  .catch((err) => console.error('Erro ao conectar:', err));
+  .then(() => console.log('[MongoDB] Connected to MongoDB'))
+  .catch((err) => console.error('[MongoDB] Failed to Connect', err));
 
-const importData = async (model, dataPath) => {
+const importData = async (model, dataPath, name) => {
   const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
   await model.insertMany(data);
-  console.log(`Dados importados de ${dataPath}`);
+  console.log(`[MongoDB] Import collection '${name}' from '${dataPath}'`);
 };
 
 const usersSchema = new mongoose.Schema({}, { strict: false });
@@ -28,13 +28,13 @@ const setupDatabase = async () => {
     await Products.deleteMany();
     await Orders.deleteMany();
 
-    await importData(Users, './db/users.json');
-    await importData(Products, './db/products.json');
-    await importData(Orders, './db/orders.json');
+    await importData(Users, './db/users.json', 'users');
+    await importData(Products, './db/products.json', 'products');
+    await importData(Orders, './db/orders.json', 'orders');
 
-    console.log('Banco de dados configurado e dados importados!');
+    console.log('[MongoDB] Data imported!');
   } catch (error) {
-    console.error('Erro ao configurar o banco de dados:', error);
+    console.error('[MongoDB] Failed on seed data', error);
   } finally {
     mongoose.connection.close();
   }
