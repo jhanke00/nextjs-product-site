@@ -1,0 +1,28 @@
+.container {
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+
+.placedAt {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.orderItemsSection {
+  margin-top: 12px;
+}
+
+.orderItemsList {
+  list-style: none;
+}
+
+.orderItemsListItem {
+  margin-top: 4px;
+}
+
+.total {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
