@@ -1,0 +1,82 @@
+.container {
+  height: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 12px;
+}
+
+.userSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ordersSummarySection {
+  margin-top: 20px;
+}
+
+@mixin sectionTitle {
+  font-size: 36px;
+}
+
+.ordersSummarySectionTitle {
+  @include sectionTitle;
+}
+
+.ordersSummary {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+@mixin ordersSummaryText {
+  font-size: 18px;
+}
+
+.ordersSummaryOrderCount {
+  @include ordersSummaryText;
+}
+
+.ordersSummaryTotalExpenditure {
+  @include ordersSummaryText;
+}
+
+.ordersSection {
+  margin-top: 40px;
+}
+
+.ordersSectionTitle {
+  @include sectionTitle;
+}
+
+.ordersList {
+  margin-top: 12px;
+  list-style: none;
+}
+
+.ordersListItem {
+  margin-top: 12px;
+}
+
+.paginationSection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  align-items: center;
+}
+
+@mixin paginationButton {
+  padding: 12px;
+}
+
+.goToPreviousPageButton {
+  @include paginationButton;
+}
+
+.goToNextPageButton {
+  @include paginationButton;
+}
