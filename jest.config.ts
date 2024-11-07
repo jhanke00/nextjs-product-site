@@ -11,6 +11,7 @@ const config: Config = {
   passWithNoTests: true,
   collectCoverageFrom: ['src/**/*.ts'],
   collectCoverage: true,
+  testPathIgnorePatterns: ['tests/e2e/'],
 };
 
 export default config;
