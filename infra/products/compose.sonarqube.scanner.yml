@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  sonarqube-scanner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../../:/data
+    environment:
+      - SONAR_HOST_URL=${SONAR_HOST_URL}
+      - SONAR_TOKEN=${SONAR_TOKEN}
+      - SONAR_PROJECT_KEY:${SONAR_PROJECT_KEY}
+      - SONAR_PROJECT_NAME:${SONAR_PROJECT_NAME}
+    network_mode: host
