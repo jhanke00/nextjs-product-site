@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { getProductById } from '../../../../src/utils/products';
 
-export async function GET(request: { url: string | URL }) {
+export async function GET(request: Request | NextRequest) {
   try {
     const { pathname } = new URL(request.url);
     const segments = pathname.split('/');
