@@ -1,17 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getUserById, decodeJWT, validateJWT } from '@/src/utils/users';
+import { getUserById, isAuthorized } from '@/src/utils/users';
 
 export async function GET(request: Request | NextRequest) {
-  const authorization = request.headers.get('authorization');
-  if (!authorization) {
-    return NextResponse.json({ message: 'No authorization header was provided' }, { status: 401 });
-  }
-  if (!validateJWT(authorization)) {
-    return NextResponse.json({ message: 'Invalid token' }, { status: 401 });
+  const authorization = isAuthorized(request);
+  if (!authorization.success) {
+    return NextResponse.json({ message: authorization.message }, { status: 401 });
   }
 
-  const { id } = decodeJWT(authorization);
-  const user = getUserById(id);
+  const user = getUserById(authorization.id);
   if (!user) {
     return NextResponse.json({ message: 'User not found' }, { status: 404 });
   }

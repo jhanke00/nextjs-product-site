@@ -1,19 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { decodeJWT, validateJWT } from '@/src/utils/users';
+import { isAuthorized } from '@/src/utils/users';
 import { getOrdersByUserId, calculateTotalSpent } from '@/src/utils/orders';
 
 export async function GET(request: Request | NextRequest) {
-  const authorization = request.headers.get('authorization');
-  if (!authorization) {
-    return NextResponse.json({ message: 'No authorization header was provided' }, { status: 401 });
-  }
-  if (!validateJWT(authorization)) {
-    return NextResponse.json({ message: 'Invalid token' }, { status: 401 });
+  const authorization = isAuthorized(request);
+  if (!authorization.success) {
+    return NextResponse.json({ message: authorization.message }, { status: 401 });
   }
 
-  const { id } = decodeJWT(authorization);
-
-  const orders = getOrdersByUserId(id);
+  const orders = getOrdersByUserId(authorization.id);
 
   if (orders.length > 0) {
     const totalSpent = calculateTotalSpent(orders);

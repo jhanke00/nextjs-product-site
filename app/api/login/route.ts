@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getUserById, authorize } from '@/src/utils/users';
+import { login } from '@/src/utils/users';
 
 export async function POST(request: Request | NextRequest) {
   const { email, password } = await request.json();
-  const isUserAuthorized = await authorize(email, password);
-  const { success, token, message } = isUserAuthorized;
+  const { success, token, message } = await login(email, password);
 
   if (!success) {
     return NextResponse.json({ message }, { status: 401 });

@@ -6,15 +6,32 @@ This document outlines the implementation of the users API endpoints for the sma
 
 ## Endpoints
 
-### 1. Authenticate
+### 1. Singup
+
+**POST /api/signup**:
+Create an user if the conditions are valid.
+
+**Body Parameters:**
+
+- email (string): User's e-mail.
+- password (string): User's password.
+- firstName (string): User's first name.
+- lastName (string): User's last name.
+- phoneNumber (string): User's phone number.
+
+Response returns a 201 CREATED status.
+
+---
+
+### 2. Login
 
 **POST /api/auth**:
 Retrieve a Json Web Token if the credentials are valid.
 
 **Body Parameters:**
 
-- email (string): User e-mail.
-- password (string): User password. For the sake of testing, use "SampleP4ss" for every user.
+- email (string): User's e-mail.
+- password (string): User's password. For the sake of testing, use "SampleP4ss" for every user that is original to the mock data set.
 
 Response returns a JSON with the token in this format:
 
@@ -26,7 +43,7 @@ Response returns a JSON with the token in this format:
 
 ---
 
-### 2. Get Authenticated User Information
+### 3. Get Authenticated User Information
 
 **GET /api/users**:
 Retrieves detailed information about the authenticated user.
@@ -49,7 +66,7 @@ Response returns a JSON object of the product in this format:
 
 ---
 
-### 3. Get Authenticated User Orders
+### 4. Get Authenticated User Orders
 
 **GET /api/users/orders**:
 Retrieves the orders of the authenticated user.
@@ -89,7 +106,7 @@ Response always returns a JSON array of order objects matching the criteria in t
 
 ---
 
-### 4. Get Authenticated User Total Spent Amount
+### 5. Get Authenticated User Total Spent Amount
 
 **GET /api/users/orders/total-spent**:
 Retrieves the total spent amount of the authenticated user in all orders.
