@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { login } from '@/src/utils/users';
+import { login, LoginDto } from '@/src/utils/users';
 
 export async function POST(request: Request | NextRequest) {
-  const { email, password } = await request.json();
-  const { success, token, message } = await login(email, password);
+  const data = await request.json();
+  const dto = new LoginDto();
+  Object.assign(dto, data);
+
+  const { success, token, message } = await login(dto);
 
   if (!success) {
     return NextResponse.json({ message }, { status: 401 });

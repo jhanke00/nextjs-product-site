@@ -27,6 +27,15 @@ export class SignupDto {
   phoneNumber!: string;
 }
 
+export class LoginDto {
+  @IsEmail({}, { message: 'Invalid email address' })
+  @IsNotEmpty({ message: 'Email is required' })
+  email!: string;
+
+  @IsNotEmpty({ message: 'Password is required' })
+  password!: string;
+}
+
 /**
  * Finds a user by their id.
  * @param {string} id
@@ -48,11 +57,18 @@ export function getUserByEmail(email: string) {
 
 /**
  * Authorizes a user by email and password.
- * @param {string} email
- * @param {string} password
+ * @param {LoginDto} dto
  * @returns {Object}
  */
-export function login(email: string, password: string) {
+export function login(dto: LoginDto) {
+  const errors = validateSync(dto);
+  if (errors.length > 0) {
+    const messages = errors.map((err) => Object.values(err.constraints || {})).flat();
+    return { success: false, message: messages.join(', ') };
+  }
+
+  const { email, password } = dto;
+
   const user = getUserByEmail(email);
   if (!user) return { success: false, token: null, message: 'Invalid credentials' };
 
@@ -63,7 +79,7 @@ export function login(email: string, password: string) {
 
   if (isPasswordValid(password, user.password)) {
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-    return { success: true, token: token, message: '' };
+    return { success: true, token: token };
   } else {
     return { success: false, token: null, message: 'Invalid credentials' };
   }
@@ -97,7 +113,7 @@ export function signup(dto: SignupDto) {
   };
   users.push(newUser);
   fs.writeFileSync('src/mock/small/users.json', JSON.stringify(users, null, 2));
-  return { success: true, message: '' };
+  return { success: true };
 }
 
 /**
@@ -148,16 +164,16 @@ export const decodeJWT = (token: string) => {
  * @param {Request | NextRequest} request - The request to verify the authorization header from.
  * @returns {{ success: boolean; message: string; id: string }} - An object containing a boolean indicating whether the authorization was successful, a message indicating the reason for failure if applicable, and the user ID if the authorization was successful.
  */
-export function isAuthorized(request: Request | NextRequest): { success: boolean; message: string; id: string } {
+export function isAuthorized(request: Request | NextRequest) {
   const authorization = request.headers.get('authorization');
   if (!authorization) {
-    return { success: false, message: 'No authorization header was provided', id: '' };
+    return { success: false, message: 'No authorization header was provided' };
   }
   if (!validateJWT(authorization)) {
-    return { success: false, message: 'Invalid token', id: '' };
+    return { success: false, message: 'Invalid token' };
   }
 
   const { id } = decodeJWT(authorization);
 
-  return { success: true, message: '', id: id };
+  return { success: true, id: id };
 }
