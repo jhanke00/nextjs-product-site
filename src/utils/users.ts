@@ -87,12 +87,12 @@ export function login(dto: LoginDto) {
   if (!user) return { success: false, token: null, message: 'Invalid credentials' };
   if (!user.password) {
     // In this scenario, the data set does not have passwords stored. So, login for mocked users will always work
-    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRE_TIME });
     return { success: true, token: token };
   }
 
   if (isPasswordValid(password, user.password)) {
-    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRE_TIME });
     return { success: true, token: token };
   }
 
