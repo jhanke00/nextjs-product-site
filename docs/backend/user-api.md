@@ -6,7 +6,7 @@ This document outlines the implementation of the users API endpoints for the sma
 
 ## Endpoints
 
-### 1. Singup
+### 1. Signup
 
 **POST /api/signup**:
 Create an user if the conditions are valid.
@@ -27,6 +27,7 @@ Response returns a 201 CREATED status.
 
 **POST /api/auth**:
 Retrieve a Json Web Token if the credentials are valid.
+Credentials are always valid if a mocked user e-mail is used.
 
 **Body Parameters:**
 

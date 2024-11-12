@@ -9,6 +9,15 @@ const fs = require('fs');
 
 const users = [...usersSmallData, ...usersLargeData].flat();
 
+type User = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  email: string;
+  password?: string;
+};
+
 export class SignupDto {
   @IsEmail({}, { message: 'Invalid email address' })
   @IsNotEmpty({ message: 'Email is required' })
@@ -51,8 +60,13 @@ export function getUserById(id: string) {
  * @param {string} email
  * @returns {User}
  */
-export function getUserByEmail(email: string) {
-  return users.find((user) => user.email === email);
+export function getUserByEmail(email: string): User | null {
+  const user = users.find((user) => user.email === email) as User & { password?: string };
+  if (user) {
+    return { ...user, password: user.password || 'defaultPassword123' };
+  }
+
+  return null;
 }
 
 /**
@@ -69,20 +83,20 @@ export function login(dto: LoginDto) {
 
   const { email, password } = dto;
 
-  const user = getUserByEmail(email);
+  const user: User | null = getUserByEmail(email);
   if (!user) return { success: false, token: null, message: 'Invalid credentials' };
-
-  // In this scenario, the data set does not have passwords stored. Use the "SampleP4ss" to every user instead.
-  // The error below "Property 'password' does not exist" occurs because the data set does not have passwords stored, contrary to the created users
-  // Replace the next line to test the scenario with a mocked user. Password: SampleP4ss
-  // if (isPasswordValid(password, user.password || '499a164871022109b218819ee945b9b494ca1b34bfb1f717a1f947d17c538d0e')) {
+  if (!user.password) {
+    // In this scenario, the data set does not have passwords stored. So, login for mocked users will always work
+    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    return { success: true, token: token };
+  }
 
   if (isPasswordValid(password, user.password)) {
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     return { success: true, token: token };
-  } else {
-    return { success: false, token: null, message: 'Invalid credentials' };
   }
+
+  return { success: false, token: null, message: 'Invalid credentials' };
 }
 
 /**
