@@ -21,7 +21,12 @@
     "pnpm": ">=8"
   },
   "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "bcryptjs": "^2.4.3",
     "fs": "0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.1",
     "next": "14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
