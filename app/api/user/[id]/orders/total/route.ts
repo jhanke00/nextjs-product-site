@@ -17,6 +17,9 @@ export async function GET(req: NextRequest) {
     const orders: Order[] = JSON.parse(fileData);
 
     const userOrders = orders.filter((order) => order.user === id);
+    if (userOrders.length === 0) {
+      return NextResponse.json({ total: 0 });
+    }
     const totalSum = userOrders.reduce((sum, order) => sum + (order.total || 0), 0);
 
     return NextResponse.json({ total: totalSum });
