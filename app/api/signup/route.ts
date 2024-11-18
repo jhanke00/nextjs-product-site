@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { connectToDatabase } from '@/infra/db/mongo/mongo';
 import User from '@/infra/db/mongo/models/User';
@@ -15,13 +15,20 @@ export async function POST(req: NextRequest) {
     }
 
     await connectToDatabase();
+    console.log('connected to database');
 
     const existingUser = await User.findOne({ email });
+
     if (existingUser) {
       return NextResponse.json({ message: 'Email is already registered' }, { status: 400 });
     }
 
+    console.log('password', password);
+
     const hashedPassword = await bcrypt.hash(password, 10);
+    console.log('hashedPassword', hashedPassword);
+
+    console.log('newUser 0', User);
 
     const newUser = new User({
       firstname,
@@ -30,9 +37,13 @@ export async function POST(req: NextRequest) {
       password: hashedPassword,
     });
 
+    console.log('newUser 1', newUser);
     await newUser.save();
 
+    console.log('newUser 2', newUser);
+
     const token = jwt.sign({ id: newUser._id, email: newUser.email }, JWT_SECRET, { expiresIn: '1h' });
+    console.log('token', token);
 
     return NextResponse.json({ token, user: { firstname, lastname, email } }, { status: 201 });
   } catch (error) {

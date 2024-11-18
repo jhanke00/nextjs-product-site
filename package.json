@@ -21,10 +21,9 @@
     "pnpm": ">=8"
   },
   "dependencies": {
-    "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.7",
     "@types/supertest": "^6.0.2",
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^5.1.1",
     "fs": "0.0.1-security",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.1",
@@ -43,6 +42,7 @@
     "@storybook/nextjs": "^7.6.15",
     "@storybook/react": "^7.6.15",
     "@storybook/test": "^7.6.15",
+    "@types/bcrypt": "^5.0.2",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.17",
     "@types/react": "^18.2.55",

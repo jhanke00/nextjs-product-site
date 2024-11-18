@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     const product = products.find((product) => product.id === id);
 
     if (!product) {
-      return NextResponse.json({ message: 'Produto não encontrado' }, { status: 404 });
+      return NextResponse.json({ message: 'Product not found' }, { status: 404 });
     }
     return NextResponse.json(product, { status: 200 });
   } catch (error) {
