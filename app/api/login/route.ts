@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { connectToDatabase } from '@/infra/db/mongo/mongo';
 import User from '@/infra/db/mongo/models/User';
