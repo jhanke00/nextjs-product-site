@@ -1,16 +1,18 @@
 import type { Config } from 'jest';
-import { pathsToModuleNameMapper } from 'ts-jest';
-import { compilerOptions } from './tsconfig.json';
+import nextJest from 'next/jest.js';
+
+const createJestConfig = nextJest({
+  dir: './',
+});
 
 const config: Config = {
+  testEnvironment: 'jsdom',
   setupFiles: ['<rootDir>/tests/setupJest.ts'],
-  moduleFileExtensions: ['ts', 'js', 'json'],
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
-  transform: { '^.+\\.ts$': 'ts-jest' },
   verbose: true,
   passWithNoTests: true,
-  collectCoverageFrom: ['src/**/*.ts'],
+  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
   collectCoverage: true,
+  coverageProvider: 'v8',
 };
 
-export default config;
+export default createJestConfig(config);
